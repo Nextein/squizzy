@@ -1,0 +1,19 @@
+{
+    "Health": "1811/2500",
+    "Total Damage": "100/400",
+    "Physical Attack Damage": "100/200",
+    "Energy Attack Damage": "0/200",
+    "Attack Speed": "75/250",
+    "Physical Resist": "58/100",
+    "Energy Resist": "53/100",
+    "Attack Range": "3/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "80/150",
+    "Movement Speed": "5/5",
+    "Tier": "4",
+    "Stage": "2",
+    "Affinities": "Magma",
+    "Classes": "Bulwark"
+}

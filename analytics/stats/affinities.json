@@ -1,0 +1,846 @@
+{
+    "Air": [
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "value": "8",
+                    "text": "Dodge Chance",
+                    "specific": {
+                        "value": "16",
+                        "text": "for Air Units"
+                    }
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 5,
+            "details": [
+                {
+                    "value": "12",
+                    "text": "Dodge Chance",
+                    "specific": {
+                        "value": "24",
+                        "text": "for Air Units"
+                    }
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 7,
+            "details": [
+                {
+                    "value": "18",
+                    "text": "Dodge Chance",
+                    "specific": {
+                        "value": "36",
+                        "text": "for Air Units"
+                    }
+                }
+            ]
+        }
+    ],
+    "Bloom": [
+        {
+            "min_monsters_required": 2,
+            "details": [
+                {
+                    "value": "140",
+                    "text": "Max Health"
+                },
+                {
+                    "value": "10",
+                    "text": "Omega Power"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "value": "170",
+                    "text": "Max Health"
+                },
+                {
+                    "value": "14",
+                    "text": "Omega Power"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 4,
+            "details": [
+                {
+                    "value": "220",
+                    "text": "Max Health"
+                },
+                {
+                    "value": "20",
+                    "text": "Omega Power"
+                }
+            ]
+        }
+    ],
+    "Dust": [
+        {
+            "min_monsters_required": 2,
+            "details": [
+                {
+                    "value": "20",
+                    "text": "Omega Power"
+                },
+                {
+                    "value": "3",
+                    "text": "seconds"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "value": "30",
+                    "text": "Omega Power"
+                },
+                {
+                    "value": "5",
+                    "text": "seconds"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 4,
+            "details": [
+                {
+                    "value": "40",
+                    "text": "Omega Power"
+                },
+                {
+                    "value": "6",
+                    "text": "seconds"
+                }
+            ]
+        }
+    ],
+    "Earth": [
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "value": "10",
+                    "text": "Grit",
+                    "specific": {
+                        "value": "25",
+                        "text": "for Earth Units"
+                    }
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 5,
+            "details": [
+                {
+                    "value": "15",
+                    "text": "Grit",
+                    "specific": {
+                        "value": "45",
+                        "text": "for Earth Units"
+                    }
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 7,
+            "details": [
+                {
+                    "value": "30",
+                    "text": "Grit",
+                    "specific": {
+                        "value": "75",
+                        "text": "for Earth Units"
+                    }
+                }
+            ]
+        }
+    ],
+    "Fire": [
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "percentage": "10%",
+                    "text": "Additional damage",
+                    "specific": {
+                        "percentage": "30%",
+                        "text": "for Fire Units"
+                    }
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 5,
+            "details": [
+                {
+                    "percentage": "20%",
+                    "text": "Additional damage",
+                    "specific": {
+                        "percentage": "50%",
+                        "text": "for Fire Units"
+                    }
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 7,
+            "details": [
+                {
+                    "percentage": "35%",
+                    "text": "Additional damage",
+                    "specific": {
+                        "percentage": "75%",
+                        "text": "for Fire Units"
+                    }
+                }
+            ]
+        }
+    ],
+    "Frost": [
+        {
+            "min_monsters_required": 2,
+            "details": [
+                {
+                    "value": "4",
+                    "text": "Seconds"
+                },
+                {
+                    "value": "1",
+                    "text": "Frost"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "value": "4",
+                    "text": "Seconds"
+                },
+                {
+                    "value": "2",
+                    "text": "Frost"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 4,
+            "details": [
+                {
+                    "value": "4",
+                    "text": "Seconds"
+                },
+                {
+                    "value": "3",
+                    "text": "Frost"
+                }
+            ]
+        }
+    ],
+    "Granite": [
+        {
+            "min_monsters_required": 2,
+            "details": [
+                {
+                    "value": "15",
+                    "text": "Grit  Resolve"
+                },
+                {
+                    "value": "4",
+                    "text": "Seconds"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "value": "25",
+                    "text": "Grit  Resolve"
+                },
+                {
+                    "value": "5",
+                    "text": "Seconds"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 4,
+            "details": [
+                {
+                    "value": "40",
+                    "text": "Grit  Resolve"
+                },
+                {
+                    "value": "6",
+                    "text": "Seconds"
+                }
+            ]
+        }
+    ],
+    "Inferno": [
+        {
+            "min_monsters_required": 2,
+            "details": [
+                {
+                    "percentage": "3%",
+                    "text": "Max Health as Pure Damage"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "percentage": "5%",
+                    "text": "Max Health as Pure Damage"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 4,
+            "details": [
+                {
+                    "percentage": "8%",
+                    "text": "Max Health as Pure Damage"
+                }
+            ]
+        }
+    ],
+    "Magma": [
+        {
+            "min_monsters_required": 2,
+            "details": [
+                {
+                    "value": "30",
+                    "text": "Energy Damage per second"
+                },
+                {
+                    "value": "10",
+                    "text": "Grit  Resolve"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "value": "40",
+                    "text": "Energy Damage per second"
+                },
+                {
+                    "value": "12",
+                    "text": "Grit  Resolve"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 4,
+            "details": [
+                {
+                    "value": "60",
+                    "text": "Energy Damage per second"
+                },
+                {
+                    "value": "16",
+                    "text": "Grit  Resolve"
+                }
+            ]
+        }
+    ],
+    "Mud": [
+        {
+            "min_monsters_required": 2,
+            "details": [
+                {
+                    "value": "2",
+                    "text": "Energy"
+                },
+                {
+                    "percentage": "4%",
+                    "text": "Attack Speed Reduction"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "value": "3",
+                    "text": "Energy"
+                },
+                {
+                    "percentage": "5%",
+                    "text": "Attack Speed Reduction"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 4,
+            "details": [
+                {
+                    "value": "4",
+                    "text": "Energy"
+                },
+                {
+                    "percentage": "6%",
+                    "text": "Attack Speed Reduction"
+                }
+            ]
+        }
+    ],
+    "Nature": [
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "value": "75",
+                    "text": "Health"
+                },
+                {
+                    "percentage": "5%",
+                    "text": "Regen"
+                },
+                {
+                    "value": "200",
+                    "text": "",
+                    "specific": {
+                        "percentage": "1%",
+                        "text": "for Nature Units"
+                    }
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 5,
+            "details": [
+                {
+                    "value": "150",
+                    "text": "Health"
+                },
+                {
+                    "percentage": "6%",
+                    "text": "Regen"
+                },
+                {
+                    "value": "400",
+                    "text": "",
+                    "specific": {
+                        "percentage": "2%",
+                        "text": "for Nature Units"
+                    }
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 7,
+            "details": [
+                {
+                    "value": "225",
+                    "text": "Health"
+                },
+                {
+                    "percentage": "1%",
+                    "text": "Regen"
+                },
+                {
+                    "value": "600",
+                    "text": "",
+                    "specific": {
+                        "percentage": "2%",
+                        "text": "for Nature Units"
+                    }
+                }
+            ]
+        }
+    ],
+    "Toxic": [
+        {
+            "min_monsters_required": 2,
+            "details": [
+                {
+                    "value": "1",
+                    "text": "Poison  gain"
+                },
+                {
+                    "value": "150",
+                    "text": "Health"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "value": "1",
+                    "text": "Poison  gain"
+                },
+                {
+                    "value": "200",
+                    "text": "Health"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 4,
+            "details": [
+                {
+                    "value": "2",
+                    "text": "Poison  gain"
+                },
+                {
+                    "value": "300",
+                    "text": "Health"
+                }
+            ]
+        }
+    ],
+    "Shock": [
+        {
+            "min_monsters_required": 2,
+            "details": [
+                {
+                    "value": "250",
+                    "text": "Energy Damage"
+                },
+                {
+                    "value": "4",
+                    "text": "Energy Resist"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "value": "300",
+                    "text": "Energy Damage"
+                },
+                {
+                    "value": "6",
+                    "text": "Energy Resist"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 4,
+            "details": [
+                {
+                    "value": "350",
+                    "text": "Energy Damage"
+                },
+                {
+                    "value": "8",
+                    "text": "Energy Resist"
+                }
+            ]
+        }
+    ],
+    "Spore": [
+        {
+            "min_monsters_required": 2,
+            "details": [
+                {
+                    "value": "20",
+                    "text": "Dodge Chance"
+                },
+                {
+                    "value": "50",
+                    "text": "Heal"
+                },
+                {
+                    "percentage": "4%",
+                    "text": "enemy Energy reduced"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "value": "25",
+                    "text": "Dodge Chance"
+                },
+                {
+                    "value": "75",
+                    "text": "Heal"
+                },
+                {
+                    "percentage": "6%",
+                    "text": "enemy Energy reduced"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 4,
+            "details": [
+                {
+                    "value": "30",
+                    "text": "Dodge Chance"
+                },
+                {
+                    "value": "100",
+                    "text": "Heal"
+                },
+                {
+                    "percentage": "10%",
+                    "text": "enemy Energy reduced"
+                }
+            ]
+        }
+    ],
+    "Steam": [
+        {
+            "min_monsters_required": 2,
+            "details": [
+                {
+                    "value": "20",
+                    "text": "Omega Power"
+                },
+                {
+                    "value": "4",
+                    "text": "Energy Regen for"
+                },
+                {
+                    "value": "5",
+                    "text": "seconds"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "value": "30",
+                    "text": "Omega Power"
+                },
+                {
+                    "value": "7",
+                    "text": "Energy Regen for"
+                },
+                {
+                    "value": "5",
+                    "text": "seconds"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 4,
+            "details": [
+                {
+                    "value": "40",
+                    "text": "Omega Power"
+                },
+                {
+                    "value": "8",
+                    "text": "Energy Regen for"
+                },
+                {
+                    "value": "5",
+                    "text": "seconds"
+                }
+            ]
+        }
+    ],
+    "Tempest": [
+        {
+            "min_monsters_required": 2,
+            "details": [
+                {
+                    "value": "25",
+                    "text": "Dodge Chance"
+                },
+                {
+                    "value": "4",
+                    "text": "Energy"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "value": "30",
+                    "text": "Dodge Chance"
+                },
+                {
+                    "value": "5",
+                    "text": "Energy"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 4,
+            "details": [
+                {
+                    "value": "35",
+                    "text": "Dodge Chance"
+                },
+                {
+                    "value": "6",
+                    "text": "Energy"
+                }
+            ]
+        }
+    ],
+    "Tsunami": [
+        {
+            "min_monsters_required": 2,
+            "details": [
+                {
+                    "percentage": "35%",
+                    "text": "of Energy cost gained"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "percentage": "45%",
+                    "text": "of Energy cost gained"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 4,
+            "details": [
+                {
+                    "percentage": "60%",
+                    "text": "of Energy cost gained"
+                }
+            ]
+        }
+    ],
+    "Verdant": [
+        {
+            "min_monsters_required": 2,
+            "details": [
+                {
+                    "percentage": "35%",
+                    "text": "of Max Health Recovered"
+                },
+                {
+                    "value": "25",
+                    "text": "Health Recovery per Second"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "percentage": "50%",
+                    "text": "of Max Health Recovered"
+                },
+                {
+                    "value": "35",
+                    "text": "Health Recovery per Second"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 4,
+            "details": [
+                {
+                    "percentage": "70%",
+                    "text": "of Max Health Recovered"
+                },
+                {
+                    "value": "50",
+                    "text": "Health Recovery per Second"
+                }
+            ]
+        }
+    ],
+    "Water": [
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "value": "2",
+                    "text": "Energy Regen",
+                    "specific": {
+                        "value": "4",
+                        "text": "for Water Units"
+                    }
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 5,
+            "details": [
+                {
+                    "value": "3",
+                    "text": "Energy Regen",
+                    "specific": {
+                        "value": "6",
+                        "text": "for Water Units"
+                    }
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 7,
+            "details": [
+                {
+                    "value": "5",
+                    "text": "Energy Regen",
+                    "specific": {
+                        "value": "10",
+                        "text": "for Water Units"
+                    }
+                }
+            ]
+        }
+    ],
+    "Wildfire": [
+        {
+            "min_monsters_required": 2,
+            "details": [
+                {
+                    "percentage": "175%",
+                    "text": "Max Energy as Energy Damage over the duration with"
+                },
+                {
+                    "percentage": "20%",
+                    "text": "Vamp"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 3,
+            "details": [
+                {
+                    "percentage": "225%",
+                    "text": "Max Energy as Energy Damage over the duration with"
+                },
+                {
+                    "percentage": "30%",
+                    "text": "Vamp"
+                }
+            ]
+        },
+        {
+            "min_monsters_required": 4,
+            "details": [
+                {
+                    "percentage": "300%",
+                    "text": "Max Energy as Energy Damage over the duration with"
+                },
+                {
+                    "percentage": "50%",
+                    "text": "Vamp"
+                }
+            ]
+        }
+    ]
+}

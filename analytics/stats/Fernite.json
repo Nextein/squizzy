@@ -1,0 +1,19 @@
+{
+    "Health": "1496/2500",
+    "Total Damage": "60/400",
+    "Physical Attack Damage": "0/200",
+    "Energy Attack Damage": "60/200",
+    "Attack Speed": "85/250",
+    "Physical Resist": "23/100",
+    "Energy Resist": "23/100",
+    "Attack Range": "40/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "40/130",
+    "Movement Speed": "5/5",
+    "Tier": "4",
+    "Stage": "2",
+    "Affinities": "Nature",
+    "Classes": "Templar"
+}

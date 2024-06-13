@@ -1,0 +1,19 @@
+{
+    "Health": "2244/2500",
+    "Total Damage": "118/400",
+    "Physical Attack Damage": "118/200",
+    "Energy Attack Damage": "0/200",
+    "Attack Speed": "70/250",
+    "Physical Resist": "63/100",
+    "Energy Resist": "53/100",
+    "Attack Range": "5/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "80/150",
+    "Movement Speed": "75/5",
+    "Tier": "4",
+    "Stage": "3",
+    "Affinities": "Magma",
+    "Classes": "Behemoth"
+}

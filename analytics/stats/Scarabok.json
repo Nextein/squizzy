@@ -1,0 +1,19 @@
+{
+    "Health": "1500/2500",
+    "Total Damage": "86/400",
+    "Physical Attack Damage": "86/200",
+    "Energy Attack Damage": "0/200",
+    "Attack Speed": "80/250",
+    "Physical Resist": "65/100",
+    "Energy Resist": "55/100",
+    "Attack Range": "3/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "120/220",
+    "Movement Speed": "75/5",
+    "Tier": "5",
+    "Stage": "1",
+    "Affinities": "Earth",
+    "Classes": "Bulwark"
+}

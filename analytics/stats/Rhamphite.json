@@ -1,0 +1,19 @@
+{
+    "Health": "1700/2500",
+    "Total Damage": "107/400",
+    "Physical Attack Damage": "0/200",
+    "Energy Attack Damage": "107/200",
+    "Attack Speed": "80/250",
+    "Physical Resist": "50/100",
+    "Energy Resist": "50/100",
+    "Attack Range": "3/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "40/180",
+    "Movement Speed": "3/5",
+    "Tier": "5",
+    "Stage": "2",
+    "Affinities": "Fire",
+    "Classes": "Phantom"
+}

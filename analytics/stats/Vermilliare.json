@@ -1,0 +1,19 @@
+{
+    "Health": "1900/2500",
+    "Total Damage": "111/400",
+    "Physical Attack Damage": "0/200",
+    "Energy Attack Damage": "111/200",
+    "Attack Speed": "65/250",
+    "Physical Resist": "46/100",
+    "Energy Resist": "46/100",
+    "Attack Range": "5/100",
+    "Dodge": "5/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "50/100",
+    "Movement Speed": "75/5",
+    "Tier": "3",
+    "Stage": "3",
+    "Affinities": "Spore",
+    "Classes": "Revenant"
+}

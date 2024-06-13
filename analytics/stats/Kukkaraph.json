@@ -1,0 +1,19 @@
+{
+    "Health": "1450/2500",
+    "Total Damage": "65/400",
+    "Physical Attack Damage": "0/200",
+    "Energy Attack Damage": "65/200",
+    "Attack Speed": "65/250",
+    "Physical Resist": "32/100",
+    "Energy Resist": "32/100",
+    "Attack Range": "10/100",
+    "Dodge": "10/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "20/120",
+    "Movement Speed": "25/5",
+    "Tier": "1",
+    "Stage": "3",
+    "Affinities": "Tempest",
+    "Classes": "Enchanter"
+}

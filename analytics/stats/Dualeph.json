@@ -1,0 +1,19 @@
+{
+    "Health": "1480/2500",
+    "Total Damage": "68/400",
+    "Physical Attack Damage": "0/200",
+    "Energy Attack Damage": "68/200",
+    "Attack Speed": "70/250",
+    "Physical Resist": "25/100",
+    "Energy Resist": "35/100",
+    "Attack Range": "70/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "40/140",
+    "Movement Speed": "5/5",
+    "Tier": "5",
+    "Stage": "3",
+    "Affinities": "Steam",
+    "Classes": "Invoker"
+}

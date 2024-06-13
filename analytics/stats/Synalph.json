@@ -1,0 +1,19 @@
+{
+    "Health": "1280/2500",
+    "Total Damage": "52/400",
+    "Physical Attack Damage": "0/200",
+    "Energy Attack Damage": "52/200",
+    "Attack Speed": "80/250",
+    "Physical Resist": "25/100",
+    "Energy Resist": "35/100",
+    "Attack Range": "70/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "40/140",
+    "Movement Speed": "25/5",
+    "Tier": "5",
+    "Stage": "2",
+    "Affinities": "Water",
+    "Classes": "Invoker"
+}

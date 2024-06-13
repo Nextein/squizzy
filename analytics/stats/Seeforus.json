@@ -1,0 +1,19 @@
+{
+    "Health": "1210/2500",
+    "Total Damage": "55/400",
+    "Physical Attack Damage": "0/200",
+    "Energy Attack Damage": "55/200",
+    "Attack Speed": "70/250",
+    "Physical Resist": "37/100",
+    "Energy Resist": "17/100",
+    "Attack Range": "60/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "0/80",
+    "Movement Speed": "25/5",
+    "Tier": "1",
+    "Stage": "3",
+    "Affinities": "Granite",
+    "Classes": "Invoker"
+}

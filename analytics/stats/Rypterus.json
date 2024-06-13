@@ -1,0 +1,19 @@
+{
+    "Health": "1377/2500",
+    "Total Damage": "118/400",
+    "Physical Attack Damage": "118/200",
+    "Energy Attack Damage": "0/200",
+    "Attack Speed": "85/250",
+    "Physical Resist": "41/100",
+    "Energy Resist": "50/100",
+    "Attack Range": "2/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "0/80",
+    "Movement Speed": "5/5",
+    "Tier": "3",
+    "Stage": "2",
+    "Affinities": "Toxic",
+    "Classes": "Fighter"
+}

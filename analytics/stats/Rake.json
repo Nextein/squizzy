@@ -1,0 +1,19 @@
+{
+    "Health": "1890/2500",
+    "Total Damage": "116/400",
+    "Physical Attack Damage": "116/200",
+    "Energy Attack Damage": "0/200",
+    "Attack Speed": "80/250",
+    "Physical Resist": "48/100",
+    "Energy Resist": "58/100",
+    "Attack Range": "3/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "0/140",
+    "Movement Speed": "25/5",
+    "Tier": "4",
+    "Stage": "2",
+    "Affinities": "Steam",
+    "Classes": "Rogue"
+}

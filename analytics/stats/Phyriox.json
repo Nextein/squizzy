@@ -1,0 +1,19 @@
+{
+    "Health": "1501/2500",
+    "Total Damage": "67/400",
+    "Physical Attack Damage": "0/200",
+    "Energy Attack Damage": "67/200",
+    "Attack Speed": "85/250",
+    "Physical Resist": "28/100",
+    "Energy Resist": "23/100",
+    "Attack Range": "60/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "20/130",
+    "Movement Speed": "25/5",
+    "Tier": "4",
+    "Stage": "2",
+    "Affinities": "Fire",
+    "Classes": "Arcanite"
+}

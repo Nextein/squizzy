@@ -1,0 +1,19 @@
+{
+    "Health": "1850/2500",
+    "Total Damage": "104/400",
+    "Physical Attack Damage": "104/200",
+    "Energy Attack Damage": "0/200",
+    "Attack Speed": "60/250",
+    "Physical Resist": "47/100",
+    "Energy Resist": "67/100",
+    "Attack Range": "5/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "120/200",
+    "Movement Speed": "75/5",
+    "Tier": "1",
+    "Stage": "3",
+    "Affinities": "Tsunami",
+    "Classes": "Harbinger"
+}

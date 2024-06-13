@@ -1,0 +1,19 @@
+{
+    "Health": "1580/2500",
+    "Total Damage": "89/400",
+    "Physical Attack Damage": "0/200",
+    "Energy Attack Damage": "89/200",
+    "Attack Speed": "90/250",
+    "Physical Resist": "50/100",
+    "Energy Resist": "50/100",
+    "Attack Range": "2/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "40/160",
+    "Movement Speed": "5/5",
+    "Tier": "5",
+    "Stage": "1",
+    "Affinities": "Fire",
+    "Classes": "Rogue"
+}

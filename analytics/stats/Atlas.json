@@ -1,0 +1,19 @@
+{
+    "Health": "1169/2500",
+    "Total Damage": "78/400",
+    "Physical Attack Damage": "78/200",
+    "Energy Attack Damage": "0/200",
+    "Attack Speed": "80/250",
+    "Physical Resist": "47/100",
+    "Energy Resist": "57/100",
+    "Attack Range": "2/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "120/200",
+    "Movement Speed": "2/5",
+    "Tier": "1",
+    "Stage": "1",
+    "Affinities": "Water",
+    "Classes": "Bulwark"
+}

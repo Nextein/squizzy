@@ -1,0 +1,19 @@
+{
+    "Health": "2389/2500",
+    "Total Damage": "121/400",
+    "Physical Attack Damage": "121/200",
+    "Energy Attack Damage": "0/200",
+    "Attack Speed": "60/250",
+    "Physical Resist": "80/100",
+    "Energy Resist": "60/100",
+    "Attack Range": "4/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "120/220",
+    "Movement Speed": "5/5",
+    "Tier": "5",
+    "Stage": "3",
+    "Affinities": "Granite",
+    "Classes": "Colossus"
+}

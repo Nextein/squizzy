@@ -1,0 +1,19 @@
+{
+    "Health": "1080/2500",
+    "Total Damage": "35/400",
+    "Physical Attack Damage": "0/200",
+    "Energy Attack Damage": "35/200",
+    "Attack Speed": "90/250",
+    "Physical Resist": "25/100",
+    "Energy Resist": "35/100",
+    "Attack Range": "70/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "40/140",
+    "Movement Speed": "75/5",
+    "Tier": "5",
+    "Stage": "1",
+    "Affinities": "Water",
+    "Classes": "Psion"
+}

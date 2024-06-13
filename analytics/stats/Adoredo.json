@@ -1,0 +1,19 @@
+{
+    "Health": "1380/2500",
+    "Total Damage": "49/400",
+    "Physical Attack Damage": "0/200",
+    "Energy Attack Damage": "49/200",
+    "Attack Speed": "80/250",
+    "Physical Resist": "25/100",
+    "Energy Resist": "25/100",
+    "Attack Range": "70/100",
+    "Dodge": "5/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "80/160",
+    "Movement Speed": "5/5",
+    "Tier": "5",
+    "Stage": "2",
+    "Affinities": "Spore",
+    "Classes": "Empath"
+}

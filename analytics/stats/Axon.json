@@ -1,0 +1,19 @@
+{
+    "Health": "1434/2500",
+    "Total Damage": "90/400",
+    "Physical Attack Damage": "90/200",
+    "Energy Attack Damage": "0/200",
+    "Attack Speed": "70/250",
+    "Physical Resist": "47/100",
+    "Energy Resist": "62/100",
+    "Attack Range": "3/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "120/200",
+    "Movement Speed": "5/5",
+    "Tier": "1",
+    "Stage": "2",
+    "Affinities": "Water",
+    "Classes": "Harbinger"
+}

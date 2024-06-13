@@ -1,0 +1,19 @@
+{
+    "Health": "1918/2500",
+    "Total Damage": "101/400",
+    "Physical Attack Damage": "101/200",
+    "Energy Attack Damage": "0/200",
+    "Attack Speed": "75/250",
+    "Physical Resist": "59/100",
+    "Energy Resist": "49/100",
+    "Attack Range": "3/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "100/200",
+    "Movement Speed": "3/5",
+    "Tier": "3",
+    "Stage": "2",
+    "Affinities": "Bloom",
+    "Classes": "Rogue"
+}

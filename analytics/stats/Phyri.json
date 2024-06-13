@@ -1,0 +1,19 @@
+{
+    "Health": "1200/2500",
+    "Total Damage": "45/400",
+    "Physical Attack Damage": "0/200",
+    "Energy Attack Damage": "45/200",
+    "Attack Speed": "90/250",
+    "Physical Resist": "23/100",
+    "Energy Resist": "23/100",
+    "Attack Range": "60/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "20/130",
+    "Movement Speed": "75/5",
+    "Tier": "4",
+    "Stage": "1",
+    "Affinities": "Fire",
+    "Classes": "Psion"
+}

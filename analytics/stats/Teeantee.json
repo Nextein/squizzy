@@ -1,0 +1,19 @@
+{
+    "Health": "1085/2500",
+    "Total Damage": "44/400",
+    "Physical Attack Damage": "0/200",
+    "Energy Attack Damage": "44/200",
+    "Attack Speed": "80/250",
+    "Physical Resist": "32/100",
+    "Energy Resist": "17/100",
+    "Attack Range": "60/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "0/80",
+    "Movement Speed": "2/5",
+    "Tier": "1",
+    "Stage": "2",
+    "Affinities": "Granite",
+    "Classes": "Psion"
+}

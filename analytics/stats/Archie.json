@@ -1,0 +1,19 @@
+{
+    "Health": "1100/2500",
+    "Total Damage": "34/400",
+    "Physical Attack Damage": "0/200",
+    "Energy Attack Damage": "34/200",
+    "Attack Speed": "90/250",
+    "Physical Resist": "20/100",
+    "Energy Resist": "20/100",
+    "Attack Range": "40/100",
+    "Dodge": "0/100",
+    "Crit Chance": "25/100",
+    "Crit Amp": "150/200",
+    "Energy": "80/220",
+    "Movement Speed": "75/5",
+    "Tier": "1",
+    "Stage": "1",
+    "Affinities": "Nature",
+    "Classes": "Empath"
+}
