@@ -27,15 +27,15 @@ fig = make_subplots(
     specs=[
         [{"type": "pie"}, {"type": "pie"}],
         [{"type": "pie"}, {"type": "pie"}],
-        [{"type": "pie"}, {"type": "pie"}],
+        [{"type": "pie", "colspan": 2}, None],
         [{"type": "table", "colspan": 2}, None],
     ],
     subplot_titles=[
         'Collections by Count',
         'Collections by Total $ Value',
-        'Illuvials by Count',
-        'Illuvials by Total $ Value',
-        'Illuvials by Avg Price',
+        'Illuvials Count',
+        'Illuvials Total $ Value',
+        'Illuvials Avg Price',
         'Illuvials Offer Pricing Table',
         'Illuvials Past Pricing Table'
     ]
@@ -89,12 +89,28 @@ fig.add_trace(
 )
 
 # 3 Pie chart of Illuvials by count
+
+# count_per_illuvial = illuvials_df['sell.data.properties.name'].value_counts().reset_index()
+# count_per_illuvial.columns = ['name', 'count']  # Rename columns for clarity
+
+# Illuvials count pie chart with aggregation for small percentages
 count_per_illuvial = illuvials_df['sell.data.properties.name'].value_counts().reset_index()
-count_per_illuvial.columns = ['name', 'count']  # Rename columns for clarity
+count_per_illuvial.columns = ['name', 'count']
+total_count = count_per_illuvial['count'].sum()
+threshold = 0.005 * total_count  # 0.5% of total
+# Separate small percentage counts into "Other"
+small_counts = count_per_illuvial[count_per_illuvial['count'] < threshold]
+other_count = small_counts['count'].sum()
+filtered_counts = count_per_illuvial[count_per_illuvial['count'] >= threshold]
+# Add the 'Other' category if there are any small counts
+# if not small_counts.empty:
+#     other_row = pd.DataFrame([{'name': 'Other', 'count': other_count}])
+#     filtered_counts = pd.concat([filtered_counts, other_row], ignore_index=True)
 
 fig.add_trace(
     px.pie(
-        count_per_illuvial,
+        # count_per_illuvial,
+        filtered_counts,
         values='count',
         names='name',
         color_discrete_map=color_discrete_map
@@ -121,12 +137,21 @@ avg_price_per_illuvial = illuvials_df.groupby('sell.data.properties.name')['buy.
 avg_price_per_illuvial.columns = ['name', 'average_price']  # Rename columns for clarity
 
 fig.add_trace(
-    px.pie(
-        avg_price_per_illuvial,
-        values='average_price',
-        names='name',
-        color_discrete_map=color_discrete_map
-    ).data[0],
+    # px.pie(
+    #     avg_price_per_illuvial,
+    #     values='average_price',
+    #     names='name',
+    #     color_discrete_map=color_discrete_map
+    # ).data[0],
+    go.Pie(
+        values=avg_price_per_illuvial['average_price'],
+        labels=avg_price_per_illuvial['name'],
+        text=['label' if val > avg_price_per_illuvial['average_price'].mean() else '' for val in avg_price_per_illuvial['average_price']],
+        hoverinfo='label+percent',
+        textinfo='none'
+        # pull=0.1,
+    ),
+    
     row=3, col=1
 )
 
@@ -189,7 +214,7 @@ fig.add_trace(
 )
 
 # Update layout and display the figure
-fig.update_layout(height=3000, showlegend=False, title_text="DEX Analysis")
+fig.update_layout(height=5000, showlegend=False, title_text="DEX Analysis")
 
 # Get current date and time
 now = datetime.datetime.now()

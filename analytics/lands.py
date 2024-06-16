@@ -13,10 +13,6 @@ def fetch_data(cursor=None):
         "cursor": cursor
     }
     response = requests.get(base_url, params=params)
-
-    # pprint(response.json())
-    # exit()
-    
     
     if response.status_code == 200:
         return response.json()
@@ -25,22 +21,33 @@ def fetch_data(cursor=None):
         return None
 
 def extract_relevant_data(item):
-    # Extract and return relevant details from the item
+    coordinates = item["metadata"].get("coordinate", "").split(',')
+    x, y = coordinates if len(coordinates) == 2 else (None, None)
     return {
         "token_id": item.get("token_id"),
         "name": item.get("name"),
         "image_url": item.get("image_url"),
         "user": item.get("user"),
         "region": item["metadata"].get("region"),
-        "coordinates": item["metadata"].get("coordinate"),
+        "x_coordinate": x,
+        "y_coordinate": y,
         "landmark": item['metadata'].get("landmark"),
+        "tier": item['metadata'].get("tier"),
+        "fuels": item['metadata'].get("fuels"),
+        "solon": item['metadata'].get("solon"),
+        "carbon": item['metadata'].get("carbon"),
+        "crypton": item['metadata'].get("crypton"),
+        "silicon": item['metadata'].get("silicon"),
+        "elements": item['metadata'].get("elements"),
+        "hydrogen": item['metadata'].get("hydrogen"),
+        "hyperion": item['metadata'].get("hyperion"),
     }
 
 def main():
     cursor = None
     
     with open("./data/imx/lands.csv", 'w', newline='') as file:
-        fieldnames = ['token_id', 'name', 'image_url', 'user', 'region', 'coordinates', 'landmark']
+        fieldnames = ['token_id', 'name', 'image_url', 'user', 'region', 'x_coordinate', 'y_coordinate', 'landmark', 'tier', 'fuels', 'solon', 'carbon', 'crypton', 'silicon', 'elements', 'hydrogen', 'hyperion']
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
     
@@ -52,7 +59,7 @@ def main():
             items = data.get("result", [])
             for item in items:
                 extracted_data = extract_relevant_data(item)
-                writer.writerow(extracted_data)  # Write to CSV file
+                writer.writerow(extracted_data)
             
             cursor = data.get("cursor")
             if not cursor:
