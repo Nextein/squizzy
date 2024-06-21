@@ -1,0 +1,129 @@
+function fetchIMXData() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var configSheetName = "CALCS"; // Sheet name where B1 and B2 are located
+  var dataSheetName = "CALCS"; // Sheet name where data should be populated
+
+  var configSheet = ss.getSheetByName(configSheetName);
+  if (!configSheet) {
+    throw new Error("Config sheet not found");
+  }
+
+  var dataSheet = ss.getSheetByName(dataSheetName);
+  if (!dataSheet) {
+    dataSheet = ss.insertSheet(dataSheetName); // Create the sheet if it doesn't exist
+  }
+
+  var userAddress = configSheet.getRange("B1").getValue();
+  var collectionAddress = configSheet.getRange("B2").getValue();
+
+  var numColumns = 18; // Define the number of data columns, increased to include "Captured By", "Tier", "Stage", and "Finish"
+  var dataStartRow = 4; // Initial row where data should start
+
+  var cursor = ''; 
+  var apiBaseUrl = "https://api.sandbox.x.immutable.com/v1/assets?page_size=200&order_by=updated_at&user=" + userAddress + "&collection=" + collectionAddress;
+  var rateLimitPause = 200; // milliseconds to pause for rate limiting
+
+  // Clear existing data from data start row to the last row with data
+  var lastContentRow = dataSheet.getLastRow();
+  if (lastContentRow >= dataStartRow) {
+    // If there are rows with data, clear them
+    dataSheet.getRange(dataStartRow, 1, lastContentRow - dataStartRow + 1, numColumns).clearContent();
+  }
+
+  // After clearing, set lastDataRow to dataStartRow - 1 since it will add +1 when inserting
+  var lastDataRow = dataStartRow - 1;
+
+  var pointsTable = {
+    "Holo": {
+      "T0S1": 20, "T0S2": 100, "T0S3": 500,
+      "T1S1": 75, "T1S2": 375, "T1S3": 1875,
+      "T2S1": 500, "T2S2": 2500, "T2S3": 12500,
+      "T3S1": 200, "T3S2": 1500, "T3S3": 7500,
+      "T4S1": 600, "T4S2": 3000, "T4S3": 15000,
+      "T5S1": 4000, "T5S2": 20000, "T5S3": 100000
+    },
+    "DarkHolo": {
+      "T0S1": 200, "T0S2": 1000, "T0S3": 5000,
+      "T1S1": 750, "T1S2": 3750, "T1S3": 18750,
+      "T2S1": 5000, "T2S2": 25000, "T2S3": 125000,
+      "T3S1": 3000, "T3S2": 15000, "T3S3": 75000,
+      "T4S1": 6000, "T4S2": 30000, "T4S3": 150000,
+      "T5S1": 40000, "T5S2": 200000, "T5S3": 1000000
+    }
+  };
+
+  do {
+    Utilities.sleep(rateLimitPause); // Pause to respect API rate limit
+    var apiUrl = apiBaseUrl + "&cursor=" + cursor;
+    var options = {
+      'method' : 'get',
+      'contentType': 'application/json',
+    };
+
+    var response = UrlFetchApp.fetch(apiUrl, options);
+    var json = JSON.parse(response.getContentText());
+    var results = json.result;
+    if (!results || results.length === 0) break; // If no results, break the loop
+
+    var data = results.map(function(item) {
+      var tier = item.metadata ? item.metadata["Tier"] : "";
+      var stage = item.metadata ? item.metadata["Stage"] : "";
+      var finish = item.metadata ? item.metadata["Finish"] : "";
+      var tierStage = "T" + tier + "S" + stage;
+
+      var points = 0;
+      if (finish in pointsTable && tierStage in pointsTable[finish]) {
+        points = pointsTable[finish][tierStage];
+      }
+
+      return [
+        item.token_address,
+        item.token_id,
+        item.id,
+        item.user,
+        item.status,
+        item.uri,
+        item.name,
+        item.description,
+        item.image_url,
+        JSON.stringify(item.metadata),
+        item.collection.name,
+        item.collection.icon_url,
+        item.created_at,
+        item.updated_at,
+        item.metadata ? item.metadata["Captured By"] : "", // Adding "Captured By" field with check
+        tier, // Adding "Tier" field
+        stage, // Adding "Stage" field
+        finish, // Adding "Finish" field
+        points // Adding "Points" field
+      ];
+    });
+
+    // Insert new data
+    if (data.length > 0) {
+      // Calculate the row to start insertion, which is immediately after the last used row
+      dataSheet.getRange(lastDataRow + 1, 1, data.length, numColumns + 1).setValues(data);
+      lastDataRow += data.length; // Update last data row for the next batch
+    }
+
+    cursor = json.cursor || ''; // Update cursor for the next page
+  } while (cursor !== '');
+}
+
+function SUM_COMPLETE_SETS(...ranges) {
+  var total = 0;
+
+  ranges.forEach(function(range) {
+    var filteredValues = range.flat().filter(function(value) {
+      return value !== "" && value !== null;
+    });
+
+    if (filteredValues.length === 0 || filteredValues.includes(0)) {
+      total += 0;
+    } else {
+      total += Math.min.apply(null, filteredValues);
+    }
+  });
+
+  return total;
+}

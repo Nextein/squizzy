@@ -1,0 +1,26 @@
+I want to create the best team possible given the following information:
+
+If each monster has the stats given in aggregated_stats.json.
+Better stats make a better team.
+A team that can defeat any other team is optimal.
+Having several monsters in a team of the same type gives them affinity boosts according to the stats mentioned in affinities.json. This boost is only received when 3, 5 or 7 of the same affinity appear in the same team.
+Teams can have a maximum of 8 monsters.
+I must have these monsters in my collection, which is provided further below.
+The team cannot cost more than 500 coins in total.
+
+Monsters cost different amounts of coin based on their stage and tier as follows:
+
+Tier 5. Stage 1: 50 coins.
+Tier 5. Stage 2: 70 coins.
+Tier 5. Stage 3: 90 coins.
+Tier 4. Stage 1: 50 coins.
+Tier 4. Stage 2: 65 coins.
+Tier 4. Stage 3: 90 coins.
+Tier 3. Stage 1: 50 coins.
+Tier 3. Stage 2: 50 coins.
+Tier 3. Stage 3: 75 coins.
+All else: 60 coins.
+
+Create multiple options of the best teams that meet this criteria and explain why they are optimal.
+
+My collection is formed of the following monsters:

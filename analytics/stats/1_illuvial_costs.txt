@@ -1,0 +1,12 @@
+Monsters cost different amounts of coin based on their stage and tier as follows:
+
+Tier 5. Stage 1: 50 coins.
+Tier 5. Stage 2: 70 coins.
+Tier 5. Stage 3: 90 coins.
+Tier 4. Stage 1: 50 coins.
+Tier 4. Stage 2: 65 coins.
+Tier 4. Stage 3: 90 coins.
+Tier 3. Stage 1: 50 coins.
+Tier 3. Stage 2: 50 coins.
+Tier 3. Stage 3: 75 coins.
+All else: 60 coins.

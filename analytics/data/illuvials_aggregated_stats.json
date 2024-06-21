@@ -1,0 +1,1809 @@
+[
+    {
+        "Health": "1501/2500",
+        "Total Damage": "67/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "67/200",
+        "Attack Speed": "85/250",
+        "Physical Resist": "28/100",
+        "Energy Resist": "23/100",
+        "Attack Range": "60/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "20/130",
+        "Movement Speed": "25/5",
+        "Tier": "4",
+        "Stage": "2",
+        "Affinities": "Fire",
+        "Classes": "Arcanite",
+        "name": "Phyriox"
+    },
+    {
+        "Health": "1434/2500",
+        "Total Damage": "90/400",
+        "Physical Attack Damage": "90/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "70/250",
+        "Physical Resist": "47/100",
+        "Energy Resist": "62/100",
+        "Attack Range": "3/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "120/200",
+        "Movement Speed": "5/5",
+        "Tier": "1",
+        "Stage": "2",
+        "Affinities": "Water",
+        "Classes": "Harbinger",
+        "name": "Axon"
+    },
+    {
+        "Health": "1280/2500",
+        "Total Damage": "52/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "52/200",
+        "Attack Speed": "80/250",
+        "Physical Resist": "25/100",
+        "Energy Resist": "35/100",
+        "Attack Range": "70/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "40/140",
+        "Movement Speed": "25/5",
+        "Tier": "5",
+        "Stage": "2",
+        "Affinities": "Water",
+        "Classes": "Invoker",
+        "name": "Synalph"
+    },
+    {
+        "Health": "1085/2500",
+        "Total Damage": "44/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "44/200",
+        "Attack Speed": "80/250",
+        "Physical Resist": "32/100",
+        "Energy Resist": "17/100",
+        "Attack Range": "60/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "0/80",
+        "Movement Speed": "2/5",
+        "Tier": "1",
+        "Stage": "2",
+        "Affinities": "Granite",
+        "Classes": "Psion",
+        "name": "Teeantee"
+    },
+    {
+        "Health": "1480/2500",
+        "Total Damage": "68/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "68/200",
+        "Attack Speed": "70/250",
+        "Physical Resist": "25/100",
+        "Energy Resist": "35/100",
+        "Attack Range": "70/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "40/140",
+        "Movement Speed": "5/5",
+        "Tier": "5",
+        "Stage": "3",
+        "Affinities": "Steam",
+        "Classes": "Invoker",
+        "name": "Dualeph"
+    },
+    {
+        "Health": "2157/2500",
+        "Total Damage": "141/400",
+        "Physical Attack Damage": "141/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "75/250",
+        "Physical Resist": "48/100",
+        "Energy Resist": "58/100",
+        "Attack Range": "5/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "0/140",
+        "Movement Speed": "5/5",
+        "Tier": "4",
+        "Stage": "3",
+        "Affinities": "Steam",
+        "Classes": "Slayer",
+        "name": "Umbre"
+    },
+    {
+        "Health": "2244/2500",
+        "Total Damage": "118/400",
+        "Physical Attack Damage": "118/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "70/250",
+        "Physical Resist": "63/100",
+        "Energy Resist": "53/100",
+        "Attack Range": "5/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "80/150",
+        "Movement Speed": "75/5",
+        "Tier": "4",
+        "Stage": "3",
+        "Affinities": "Magma",
+        "Classes": "Behemoth",
+        "name": "Sear"
+    },
+    {
+        "Health": "1300/2500",
+        "Total Damage": "82/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "82/200",
+        "Attack Speed": "80/250",
+        "Physical Resist": "46/100",
+        "Energy Resist": "46/100",
+        "Attack Range": "2/100",
+        "Dodge": "10/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "50/100",
+        "Movement Speed": "2/5",
+        "Tier": "3",
+        "Stage": "2",
+        "Affinities": "Air",
+        "Classes": "Revenant",
+        "name": "Verminio"
+    },
+    {
+        "Health": "1480/2500",
+        "Total Damage": "68/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "68/200",
+        "Attack Speed": "70/250",
+        "Physical Resist": "25/100",
+        "Energy Resist": "25/100",
+        "Attack Range": "60/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "10/120",
+        "Movement Speed": "75/5",
+        "Tier": "5",
+        "Stage": "3",
+        "Affinities": "Shock",
+        "Classes": "Invoker",
+        "name": "Ophisto"
+    },
+    {
+        "Health": "1330/2500",
+        "Total Damage": "55/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "55/200",
+        "Attack Speed": "80/250",
+        "Physical Resist": "25/100",
+        "Energy Resist": "25/100",
+        "Attack Range": "60/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "10/120",
+        "Movement Speed": "75/5",
+        "Tier": "5",
+        "Stage": "2",
+        "Affinities": "Shock",
+        "Classes": "Psion",
+        "name": "Octius"
+    },
+    {
+        "Health": "1510/2500",
+        "Total Damage": "92/400",
+        "Physical Attack Damage": "92/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "85/250",
+        "Physical Resist": "48/100",
+        "Energy Resist": "58/100",
+        "Attack Range": "2/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "0/140",
+        "Movement Speed": "75/5",
+        "Tier": "4",
+        "Stage": "1",
+        "Affinities": "Water",
+        "Classes": "Rogue",
+        "name": "Dash"
+    },
+    {
+        "Health": "1450/2500",
+        "Total Damage": "65/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "65/200",
+        "Attack Speed": "65/250",
+        "Physical Resist": "32/100",
+        "Energy Resist": "32/100",
+        "Attack Range": "10/100",
+        "Dodge": "10/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "20/120",
+        "Movement Speed": "25/5",
+        "Tier": "1",
+        "Stage": "3",
+        "Affinities": "Tempest",
+        "Classes": "Enchanter",
+        "name": "Kukkaraph"
+    },
+    {
+        "Health": "1862/2500",
+        "Total Damage": "89/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "89/200",
+        "Attack Speed": "80/250",
+        "Physical Resist": "33/100",
+        "Energy Resist": "23/100",
+        "Attack Range": "60/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "20/130",
+        "Movement Speed": "5/5",
+        "Tier": "4",
+        "Stage": "3",
+        "Affinities": "Magma",
+        "Classes": "Arcanite",
+        "name": "Scoriox"
+    },
+    {
+        "Health": "1250/2500",
+        "Total Damage": "38/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "38/200",
+        "Attack Speed": "90/250",
+        "Physical Resist": "23/100",
+        "Energy Resist": "23/100",
+        "Attack Range": "40/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "40/130",
+        "Movement Speed": "2/5",
+        "Tier": "4",
+        "Stage": "1",
+        "Affinities": "Nature",
+        "Classes": "Empath",
+        "name": "Fern"
+    },
+    {
+        "Health": "1300/2500",
+        "Total Damage": "82/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "82/200",
+        "Attack Speed": "80/250",
+        "Physical Resist": "46/100",
+        "Energy Resist": "46/100",
+        "Attack Range": "2/100",
+        "Dodge": "10/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "50/100",
+        "Movement Speed": "2/5",
+        "Tier": "3",
+        "Stage": "1",
+        "Affinities": "Air",
+        "Classes": "Empath",
+        "name": "Vermillia"
+    },
+    {
+        "Health": "1500/2500",
+        "Total Damage": "86/400",
+        "Physical Attack Damage": "86/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "80/250",
+        "Physical Resist": "65/100",
+        "Energy Resist": "55/100",
+        "Attack Range": "3/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "120/220",
+        "Movement Speed": "75/5",
+        "Tier": "5",
+        "Stage": "1",
+        "Affinities": "Earth",
+        "Classes": "Bulwark",
+        "name": "Scarabok"
+    },
+    {
+        "Health": "1945/2500",
+        "Total Damage": "103/400",
+        "Physical Attack Damage": "103/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "70/250",
+        "Physical Resist": "73/100",
+        "Energy Resist": "58/100",
+        "Attack Range": "3/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "120/220",
+        "Movement Speed": "25/5",
+        "Tier": "5",
+        "Stage": "2",
+        "Affinities": "Granite",
+        "Classes": "Bulwark",
+        "name": "Goliant"
+    },
+    {
+        "Health": "1100/2500",
+        "Total Damage": "34/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "34/200",
+        "Attack Speed": "90/250",
+        "Physical Resist": "20/100",
+        "Energy Resist": "20/100",
+        "Attack Range": "40/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "80/220",
+        "Movement Speed": "75/5",
+        "Tier": "1",
+        "Stage": "1",
+        "Affinities": "Nature",
+        "Classes": "Empath",
+        "name": "Archie"
+    },
+    {
+        "Health": "1811/2500",
+        "Total Damage": "100/400",
+        "Physical Attack Damage": "100/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "75/250",
+        "Physical Resist": "58/100",
+        "Energy Resist": "53/100",
+        "Attack Range": "3/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "80/150",
+        "Movement Speed": "5/5",
+        "Tier": "4",
+        "Stage": "2",
+        "Affinities": "Magma",
+        "Classes": "Bulwark",
+        "name": "Singe"
+    },
+    {
+        "Health": "1377/2500",
+        "Total Damage": "118/400",
+        "Physical Attack Damage": "118/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "85/250",
+        "Physical Resist": "41/100",
+        "Energy Resist": "50/100",
+        "Attack Range": "2/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "0/80",
+        "Movement Speed": "5/5",
+        "Tier": "3",
+        "Stage": "2",
+        "Affinities": "Toxic",
+        "Classes": "Fighter",
+        "name": "Rypterus"
+    },
+    {
+        "Health": "1918/2500",
+        "Total Damage": "101/400",
+        "Physical Attack Damage": "101/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "75/250",
+        "Physical Resist": "59/100",
+        "Energy Resist": "49/100",
+        "Attack Range": "3/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "100/200",
+        "Movement Speed": "3/5",
+        "Tier": "3",
+        "Stage": "2",
+        "Affinities": "Bloom",
+        "Classes": "Rogue",
+        "name": "Loulura"
+    },
+    {
+        "Health": "1890/2500",
+        "Total Damage": "116/400",
+        "Physical Attack Damage": "116/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "80/250",
+        "Physical Resist": "48/100",
+        "Energy Resist": "58/100",
+        "Attack Range": "3/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "0/140",
+        "Movement Speed": "25/5",
+        "Tier": "4",
+        "Stage": "2",
+        "Affinities": "Steam",
+        "Classes": "Rogue",
+        "name": "Rake"
+    },
+    {
+        "Air": [
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "value": "8",
+                        "text": "Dodge Chance",
+                        "specific": {
+                            "value": "16",
+                            "text": "for Air Units"
+                        }
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 5,
+                "details": [
+                    {
+                        "value": "12",
+                        "text": "Dodge Chance",
+                        "specific": {
+                            "value": "24",
+                            "text": "for Air Units"
+                        }
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 7,
+                "details": [
+                    {
+                        "value": "18",
+                        "text": "Dodge Chance",
+                        "specific": {
+                            "value": "36",
+                            "text": "for Air Units"
+                        }
+                    }
+                ]
+            }
+        ],
+        "Bloom": [
+            {
+                "min_monsters_required": 2,
+                "details": [
+                    {
+                        "value": "140",
+                        "text": "Max Health"
+                    },
+                    {
+                        "value": "10",
+                        "text": "Omega Power"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "value": "170",
+                        "text": "Max Health"
+                    },
+                    {
+                        "value": "14",
+                        "text": "Omega Power"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 4,
+                "details": [
+                    {
+                        "value": "220",
+                        "text": "Max Health"
+                    },
+                    {
+                        "value": "20",
+                        "text": "Omega Power"
+                    }
+                ]
+            }
+        ],
+        "Dust": [
+            {
+                "min_monsters_required": 2,
+                "details": [
+                    {
+                        "value": "20",
+                        "text": "Omega Power"
+                    },
+                    {
+                        "value": "3",
+                        "text": "seconds"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "value": "30",
+                        "text": "Omega Power"
+                    },
+                    {
+                        "value": "5",
+                        "text": "seconds"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 4,
+                "details": [
+                    {
+                        "value": "40",
+                        "text": "Omega Power"
+                    },
+                    {
+                        "value": "6",
+                        "text": "seconds"
+                    }
+                ]
+            }
+        ],
+        "Earth": [
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "value": "10",
+                        "text": "Grit",
+                        "specific": {
+                            "value": "25",
+                            "text": "for Earth Units"
+                        }
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 5,
+                "details": [
+                    {
+                        "value": "15",
+                        "text": "Grit",
+                        "specific": {
+                            "value": "45",
+                            "text": "for Earth Units"
+                        }
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 7,
+                "details": [
+                    {
+                        "value": "30",
+                        "text": "Grit",
+                        "specific": {
+                            "value": "75",
+                            "text": "for Earth Units"
+                        }
+                    }
+                ]
+            }
+        ],
+        "Fire": [
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "percentage": "10%",
+                        "text": "Additional damage",
+                        "specific": {
+                            "percentage": "30%",
+                            "text": "for Fire Units"
+                        }
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 5,
+                "details": [
+                    {
+                        "percentage": "20%",
+                        "text": "Additional damage",
+                        "specific": {
+                            "percentage": "50%",
+                            "text": "for Fire Units"
+                        }
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 7,
+                "details": [
+                    {
+                        "percentage": "35%",
+                        "text": "Additional damage",
+                        "specific": {
+                            "percentage": "75%",
+                            "text": "for Fire Units"
+                        }
+                    }
+                ]
+            }
+        ],
+        "Frost": [
+            {
+                "min_monsters_required": 2,
+                "details": [
+                    {
+                        "value": "4",
+                        "text": "Seconds"
+                    },
+                    {
+                        "value": "1",
+                        "text": "Frost"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "value": "4",
+                        "text": "Seconds"
+                    },
+                    {
+                        "value": "2",
+                        "text": "Frost"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 4,
+                "details": [
+                    {
+                        "value": "4",
+                        "text": "Seconds"
+                    },
+                    {
+                        "value": "3",
+                        "text": "Frost"
+                    }
+                ]
+            }
+        ],
+        "Granite": [
+            {
+                "min_monsters_required": 2,
+                "details": [
+                    {
+                        "value": "15",
+                        "text": "Grit  Resolve"
+                    },
+                    {
+                        "value": "4",
+                        "text": "Seconds"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "value": "25",
+                        "text": "Grit  Resolve"
+                    },
+                    {
+                        "value": "5",
+                        "text": "Seconds"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 4,
+                "details": [
+                    {
+                        "value": "40",
+                        "text": "Grit  Resolve"
+                    },
+                    {
+                        "value": "6",
+                        "text": "Seconds"
+                    }
+                ]
+            }
+        ],
+        "Inferno": [
+            {
+                "min_monsters_required": 2,
+                "details": [
+                    {
+                        "percentage": "3%",
+                        "text": "Max Health as Pure Damage"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "percentage": "5%",
+                        "text": "Max Health as Pure Damage"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 4,
+                "details": [
+                    {
+                        "percentage": "8%",
+                        "text": "Max Health as Pure Damage"
+                    }
+                ]
+            }
+        ],
+        "Magma": [
+            {
+                "min_monsters_required": 2,
+                "details": [
+                    {
+                        "value": "30",
+                        "text": "Energy Damage per second"
+                    },
+                    {
+                        "value": "10",
+                        "text": "Grit  Resolve"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "value": "40",
+                        "text": "Energy Damage per second"
+                    },
+                    {
+                        "value": "12",
+                        "text": "Grit  Resolve"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 4,
+                "details": [
+                    {
+                        "value": "60",
+                        "text": "Energy Damage per second"
+                    },
+                    {
+                        "value": "16",
+                        "text": "Grit  Resolve"
+                    }
+                ]
+            }
+        ],
+        "Mud": [
+            {
+                "min_monsters_required": 2,
+                "details": [
+                    {
+                        "value": "2",
+                        "text": "Energy"
+                    },
+                    {
+                        "percentage": "4%",
+                        "text": "Attack Speed Reduction"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "value": "3",
+                        "text": "Energy"
+                    },
+                    {
+                        "percentage": "5%",
+                        "text": "Attack Speed Reduction"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 4,
+                "details": [
+                    {
+                        "value": "4",
+                        "text": "Energy"
+                    },
+                    {
+                        "percentage": "6%",
+                        "text": "Attack Speed Reduction"
+                    }
+                ]
+            }
+        ],
+        "Nature": [
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "value": "75",
+                        "text": "Health"
+                    },
+                    {
+                        "percentage": "5%",
+                        "text": "Regen"
+                    },
+                    {
+                        "value": "200",
+                        "text": "",
+                        "specific": {
+                            "percentage": "1%",
+                            "text": "for Nature Units"
+                        }
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 5,
+                "details": [
+                    {
+                        "value": "150",
+                        "text": "Health"
+                    },
+                    {
+                        "percentage": "6%",
+                        "text": "Regen"
+                    },
+                    {
+                        "value": "400",
+                        "text": "",
+                        "specific": {
+                            "percentage": "2%",
+                            "text": "for Nature Units"
+                        }
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 7,
+                "details": [
+                    {
+                        "value": "225",
+                        "text": "Health"
+                    },
+                    {
+                        "percentage": "1%",
+                        "text": "Regen"
+                    },
+                    {
+                        "value": "600",
+                        "text": "",
+                        "specific": {
+                            "percentage": "2%",
+                            "text": "for Nature Units"
+                        }
+                    }
+                ]
+            }
+        ],
+        "Toxic": [
+            {
+                "min_monsters_required": 2,
+                "details": [
+                    {
+                        "value": "1",
+                        "text": "Poison  gain"
+                    },
+                    {
+                        "value": "150",
+                        "text": "Health"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "value": "1",
+                        "text": "Poison  gain"
+                    },
+                    {
+                        "value": "200",
+                        "text": "Health"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 4,
+                "details": [
+                    {
+                        "value": "2",
+                        "text": "Poison  gain"
+                    },
+                    {
+                        "value": "300",
+                        "text": "Health"
+                    }
+                ]
+            }
+        ],
+        "Shock": [
+            {
+                "min_monsters_required": 2,
+                "details": [
+                    {
+                        "value": "250",
+                        "text": "Energy Damage"
+                    },
+                    {
+                        "value": "4",
+                        "text": "Energy Resist"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "value": "300",
+                        "text": "Energy Damage"
+                    },
+                    {
+                        "value": "6",
+                        "text": "Energy Resist"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 4,
+                "details": [
+                    {
+                        "value": "350",
+                        "text": "Energy Damage"
+                    },
+                    {
+                        "value": "8",
+                        "text": "Energy Resist"
+                    }
+                ]
+            }
+        ],
+        "Spore": [
+            {
+                "min_monsters_required": 2,
+                "details": [
+                    {
+                        "value": "20",
+                        "text": "Dodge Chance"
+                    },
+                    {
+                        "value": "50",
+                        "text": "Heal"
+                    },
+                    {
+                        "percentage": "4%",
+                        "text": "enemy Energy reduced"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "value": "25",
+                        "text": "Dodge Chance"
+                    },
+                    {
+                        "value": "75",
+                        "text": "Heal"
+                    },
+                    {
+                        "percentage": "6%",
+                        "text": "enemy Energy reduced"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 4,
+                "details": [
+                    {
+                        "value": "30",
+                        "text": "Dodge Chance"
+                    },
+                    {
+                        "value": "100",
+                        "text": "Heal"
+                    },
+                    {
+                        "percentage": "10%",
+                        "text": "enemy Energy reduced"
+                    }
+                ]
+            }
+        ],
+        "Steam": [
+            {
+                "min_monsters_required": 2,
+                "details": [
+                    {
+                        "value": "20",
+                        "text": "Omega Power"
+                    },
+                    {
+                        "value": "4",
+                        "text": "Energy Regen for"
+                    },
+                    {
+                        "value": "5",
+                        "text": "seconds"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "value": "30",
+                        "text": "Omega Power"
+                    },
+                    {
+                        "value": "7",
+                        "text": "Energy Regen for"
+                    },
+                    {
+                        "value": "5",
+                        "text": "seconds"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 4,
+                "details": [
+                    {
+                        "value": "40",
+                        "text": "Omega Power"
+                    },
+                    {
+                        "value": "8",
+                        "text": "Energy Regen for"
+                    },
+                    {
+                        "value": "5",
+                        "text": "seconds"
+                    }
+                ]
+            }
+        ],
+        "Tempest": [
+            {
+                "min_monsters_required": 2,
+                "details": [
+                    {
+                        "value": "25",
+                        "text": "Dodge Chance"
+                    },
+                    {
+                        "value": "4",
+                        "text": "Energy"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "value": "30",
+                        "text": "Dodge Chance"
+                    },
+                    {
+                        "value": "5",
+                        "text": "Energy"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 4,
+                "details": [
+                    {
+                        "value": "35",
+                        "text": "Dodge Chance"
+                    },
+                    {
+                        "value": "6",
+                        "text": "Energy"
+                    }
+                ]
+            }
+        ],
+        "Tsunami": [
+            {
+                "min_monsters_required": 2,
+                "details": [
+                    {
+                        "percentage": "35%",
+                        "text": "of Energy cost gained"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "percentage": "45%",
+                        "text": "of Energy cost gained"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 4,
+                "details": [
+                    {
+                        "percentage": "60%",
+                        "text": "of Energy cost gained"
+                    }
+                ]
+            }
+        ],
+        "Verdant": [
+            {
+                "min_monsters_required": 2,
+                "details": [
+                    {
+                        "percentage": "35%",
+                        "text": "of Max Health Recovered"
+                    },
+                    {
+                        "value": "25",
+                        "text": "Health Recovery per Second"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "percentage": "50%",
+                        "text": "of Max Health Recovered"
+                    },
+                    {
+                        "value": "35",
+                        "text": "Health Recovery per Second"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 4,
+                "details": [
+                    {
+                        "percentage": "70%",
+                        "text": "of Max Health Recovered"
+                    },
+                    {
+                        "value": "50",
+                        "text": "Health Recovery per Second"
+                    }
+                ]
+            }
+        ],
+        "Water": [
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "value": "2",
+                        "text": "Energy Regen",
+                        "specific": {
+                            "value": "4",
+                            "text": "for Water Units"
+                        }
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 5,
+                "details": [
+                    {
+                        "value": "3",
+                        "text": "Energy Regen",
+                        "specific": {
+                            "value": "6",
+                            "text": "for Water Units"
+                        }
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 7,
+                "details": [
+                    {
+                        "value": "5",
+                        "text": "Energy Regen",
+                        "specific": {
+                            "value": "10",
+                            "text": "for Water Units"
+                        }
+                    }
+                ]
+            }
+        ],
+        "Wildfire": [
+            {
+                "min_monsters_required": 2,
+                "details": [
+                    {
+                        "percentage": "175%",
+                        "text": "Max Energy as Energy Damage over the duration with"
+                    },
+                    {
+                        "percentage": "20%",
+                        "text": "Vamp"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 3,
+                "details": [
+                    {
+                        "percentage": "225%",
+                        "text": "Max Energy as Energy Damage over the duration with"
+                    },
+                    {
+                        "percentage": "30%",
+                        "text": "Vamp"
+                    }
+                ]
+            },
+            {
+                "min_monsters_required": 4,
+                "details": [
+                    {
+                        "percentage": "300%",
+                        "text": "Max Energy as Energy Damage over the duration with"
+                    },
+                    {
+                        "percentage": "50%",
+                        "text": "Vamp"
+                    }
+                ]
+            }
+        ],
+        "name": "affinities"
+    },
+    {
+        "Health": "1800/2500",
+        "Total Damage": "124/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "124/200",
+        "Attack Speed": "70/250",
+        "Physical Resist": "50/100",
+        "Energy Resist": "50/100",
+        "Attack Range": "6/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "40/180",
+        "Movement Speed": "25/5",
+        "Tier": "5",
+        "Stage": "3",
+        "Affinities": "Inferno",
+        "Classes": "Phantom",
+        "name": "Rhamphyre"
+    },
+    {
+        "Health": "1450/2500",
+        "Total Damage": "86/400",
+        "Physical Attack Damage": "86/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "85/250",
+        "Physical Resist": "56/100",
+        "Energy Resist": "46/100",
+        "Attack Range": "2/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "100/200",
+        "Movement Speed": "5/5",
+        "Tier": "3",
+        "Stage": "1",
+        "Affinities": "Earth",
+        "Classes": "Rogue",
+        "name": "Lura"
+    },
+    {
+        "Health": "2389/2500",
+        "Total Damage": "121/400",
+        "Physical Attack Damage": "121/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "60/250",
+        "Physical Resist": "80/100",
+        "Energy Resist": "60/100",
+        "Attack Range": "4/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "120/220",
+        "Movement Speed": "5/5",
+        "Tier": "5",
+        "Stage": "3",
+        "Affinities": "Granite",
+        "Classes": "Colossus",
+        "name": "Titanor"
+    },
+    {
+        "Health": "1580/2500",
+        "Total Damage": "89/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "89/200",
+        "Attack Speed": "90/250",
+        "Physical Resist": "50/100",
+        "Energy Resist": "50/100",
+        "Attack Range": "2/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "40/160",
+        "Movement Speed": "5/5",
+        "Tier": "5",
+        "Stage": "1",
+        "Affinities": "Fire",
+        "Classes": "Rogue",
+        "name": "Rhamphy"
+    },
+    {
+        "Health": "1725/2500",
+        "Total Damage": "58/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "58/200",
+        "Attack Speed": "70/250",
+        "Physical Resist": "30/100",
+        "Energy Resist": "30/100",
+        "Attack Range": "40/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "80/220",
+        "Movement Speed": "5/5",
+        "Tier": "1",
+        "Stage": "3",
+        "Affinities": "Verdant",
+        "Classes": "Aegis",
+        "name": "Archeleon"
+    },
+    {
+        "Health": "1210/2500",
+        "Total Damage": "55/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "55/200",
+        "Attack Speed": "70/250",
+        "Physical Resist": "37/100",
+        "Energy Resist": "17/100",
+        "Attack Range": "60/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "0/80",
+        "Movement Speed": "25/5",
+        "Tier": "1",
+        "Stage": "3",
+        "Affinities": "Granite",
+        "Classes": "Invoker",
+        "name": "Seeforus"
+    },
+    {
+        "Health": "1231/2500",
+        "Total Damage": "96/400",
+        "Physical Attack Damage": "96/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "90/250",
+        "Physical Resist": "41/100",
+        "Energy Resist": "50/100",
+        "Attack Range": "2/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "0/80",
+        "Movement Speed": "2/5",
+        "Tier": "3",
+        "Stage": "1",
+        "Affinities": "Water",
+        "Classes": "Fighter",
+        "name": "Rypter"
+    },
+    {
+        "Health": "2206/2500",
+        "Total Damage": "116/400",
+        "Physical Attack Damage": "116/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "65/250",
+        "Physical Resist": "61/100",
+        "Energy Resist": "51/100",
+        "Attack Range": "5/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "100/200",
+        "Movement Speed": "25/5",
+        "Tier": "3",
+        "Stage": "3",
+        "Affinities": "Bloom",
+        "Classes": "Vanguard",
+        "name": "Malura"
+    },
+    {
+        "Health": "1580/2500",
+        "Total Damage": "62/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "62/200",
+        "Attack Speed": "70/250",
+        "Physical Resist": "25/100",
+        "Energy Resist": "25/100",
+        "Attack Range": "70/100",
+        "Dodge": "5/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "80/160",
+        "Movement Speed": "75/5",
+        "Tier": "5",
+        "Stage": "3",
+        "Affinities": "Spore",
+        "Classes": "Mystic",
+        "name": "Adorius"
+    },
+    {
+        "Health": "1413/2500",
+        "Total Damage": "46/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "46/200",
+        "Attack Speed": "80/250",
+        "Physical Resist": "25/100",
+        "Energy Resist": "25/100",
+        "Attack Range": "40/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "80/220",
+        "Movement Speed": "25/5",
+        "Tier": "1",
+        "Stage": "2",
+        "Affinities": "Nature",
+        "Classes": "Aegis",
+        "name": "Archos"
+    },
+    {
+        "Health": "1100/2500",
+        "Total Damage": "39/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "39/200",
+        "Attack Speed": "85/250",
+        "Physical Resist": "32/100",
+        "Energy Resist": "32/100",
+        "Attack Range": "5/100",
+        "Dodge": "10/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "20/120",
+        "Movement Speed": "5/5",
+        "Tier": "1",
+        "Stage": "1",
+        "Affinities": "Air",
+        "Classes": "Empath",
+        "name": "Kukka"
+    },
+    {
+        "Health": "960/2500",
+        "Total Damage": "32/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "32/200",
+        "Attack Speed": "90/250",
+        "Physical Resist": "27/100",
+        "Energy Resist": "17/100",
+        "Attack Range": "60/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "0/80",
+        "Movement Speed": "5/5",
+        "Tier": "1",
+        "Stage": "1",
+        "Affinities": "Earth",
+        "Classes": "Psion",
+        "name": "Tatopee"
+    },
+    {
+        "Health": "1496/2500",
+        "Total Damage": "60/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "60/200",
+        "Attack Speed": "85/250",
+        "Physical Resist": "23/100",
+        "Energy Resist": "23/100",
+        "Attack Range": "40/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "40/130",
+        "Movement Speed": "5/5",
+        "Tier": "4",
+        "Stage": "2",
+        "Affinities": "Nature",
+        "Classes": "Templar",
+        "name": "Fernite"
+    },
+    {
+        "Health": "1200/2500",
+        "Total Damage": "45/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "45/200",
+        "Attack Speed": "90/250",
+        "Physical Resist": "23/100",
+        "Energy Resist": "23/100",
+        "Attack Range": "60/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "20/130",
+        "Movement Speed": "75/5",
+        "Tier": "4",
+        "Stage": "1",
+        "Affinities": "Fire",
+        "Classes": "Psion",
+        "name": "Phyri"
+    },
+    {
+        "Health": "1805/2500",
+        "Total Damage": "83/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "83/200",
+        "Attack Speed": "80/250",
+        "Physical Resist": "23/100",
+        "Energy Resist": "23/100",
+        "Attack Range": "40/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "40/130",
+        "Movement Speed": "75/5",
+        "Tier": "4",
+        "Stage": "3",
+        "Affinities": "Wildfire",
+        "Classes": "Templar",
+        "name": "Blazenite"
+    },
+    {
+        "Health": "1700/2500",
+        "Total Damage": "107/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "107/200",
+        "Attack Speed": "80/250",
+        "Physical Resist": "50/100",
+        "Energy Resist": "50/100",
+        "Attack Range": "3/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "40/180",
+        "Movement Speed": "3/5",
+        "Tier": "5",
+        "Stage": "2",
+        "Affinities": "Fire",
+        "Classes": "Phantom",
+        "name": "Rhamphite"
+    },
+    {
+        "Health": "1620/2500",
+        "Total Damage": "130/400",
+        "Physical Attack Damage": "130/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "80/250",
+        "Physical Resist": "41/100",
+        "Energy Resist": "50/100",
+        "Attack Range": "4/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "0/80",
+        "Movement Speed": "75/5",
+        "Tier": "3",
+        "Stage": "3",
+        "Affinities": "Toxic",
+        "Classes": "Berserker",
+        "name": "Ryplance"
+    },
+    {
+        "Health": "1850/2500",
+        "Total Damage": "104/400",
+        "Physical Attack Damage": "104/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "60/250",
+        "Physical Resist": "47/100",
+        "Energy Resist": "67/100",
+        "Attack Range": "5/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "120/200",
+        "Movement Speed": "75/5",
+        "Tier": "1",
+        "Stage": "3",
+        "Affinities": "Tsunami",
+        "Classes": "Harbinger",
+        "name": "Axodon"
+    },
+    {
+        "Health": "1180/2500",
+        "Total Damage": "35/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "35/200",
+        "Attack Speed": "90/250",
+        "Physical Resist": "25/100",
+        "Energy Resist": "25/100",
+        "Attack Range": "70/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "80/160",
+        "Movement Speed": "2/5",
+        "Tier": "5",
+        "Stage": "1",
+        "Affinities": "Nature",
+        "Classes": "Empath",
+        "name": "Ador"
+    },
+    {
+        "Health": "1380/2500",
+        "Total Damage": "49/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "49/200",
+        "Attack Speed": "80/250",
+        "Physical Resist": "25/100",
+        "Energy Resist": "25/100",
+        "Attack Range": "70/100",
+        "Dodge": "5/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "80/160",
+        "Movement Speed": "5/5",
+        "Tier": "5",
+        "Stage": "2",
+        "Affinities": "Spore",
+        "Classes": "Empath",
+        "name": "Adoredo"
+    },
+    {
+        "Health": "1900/2500",
+        "Total Damage": "111/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "111/200",
+        "Attack Speed": "65/250",
+        "Physical Resist": "46/100",
+        "Energy Resist": "46/100",
+        "Attack Range": "5/100",
+        "Dodge": "5/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "50/100",
+        "Movement Speed": "75/5",
+        "Tier": "3",
+        "Stage": "3",
+        "Affinities": "Spore",
+        "Classes": "Revenant",
+        "name": "Vermilliare"
+    },
+    {
+        "Health": "1275/2500",
+        "Total Damage": "52/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "52/200",
+        "Attack Speed": "75/250",
+        "Physical Resist": "32/100",
+        "Energy Resist": "32/100",
+        "Attack Range": "7/100",
+        "Dodge": "10/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "20/120",
+        "Movement Speed": "3/5",
+        "Tier": "1",
+        "Stage": "2",
+        "Affinities": "Air",
+        "Classes": "Enchanter",
+        "name": "Kukkulus"
+    },
+    {
+        "Health": "1169/2500",
+        "Total Damage": "78/400",
+        "Physical Attack Damage": "78/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "80/250",
+        "Physical Resist": "47/100",
+        "Energy Resist": "57/100",
+        "Attack Range": "2/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "120/200",
+        "Movement Speed": "2/5",
+        "Tier": "1",
+        "Stage": "1",
+        "Affinities": "Water",
+        "Classes": "Bulwark",
+        "name": "Atlas"
+    },
+    {
+        "Health": "1441/2500",
+        "Total Damage": "80/400",
+        "Physical Attack Damage": "80/200",
+        "Energy Attack Damage": "0/200",
+        "Attack Speed": "80/250",
+        "Physical Resist": "53/100",
+        "Energy Resist": "53/100",
+        "Attack Range": "2/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "80/150",
+        "Movement Speed": "2/5",
+        "Tier": "4",
+        "Stage": "1",
+        "Affinities": "Fire",
+        "Classes": "Bulwark",
+        "name": "Flare"
+    },
+    {
+        "Health": "1080/2500",
+        "Total Damage": "35/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "35/200",
+        "Attack Speed": "90/250",
+        "Physical Resist": "25/100",
+        "Energy Resist": "35/100",
+        "Attack Range": "70/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "40/140",
+        "Movement Speed": "75/5",
+        "Tier": "5",
+        "Stage": "1",
+        "Affinities": "Water",
+        "Classes": "Psion",
+        "name": "Alphie"
+    },
+    {
+        "Health": "1180/2500",
+        "Total Damage": "41/400",
+        "Physical Attack Damage": "0/200",
+        "Energy Attack Damage": "41/200",
+        "Attack Speed": "90/250",
+        "Physical Resist": "25/100",
+        "Energy Resist": "25/100",
+        "Attack Range": "60/100",
+        "Dodge": "0/100",
+        "Crit Chance": "25/100",
+        "Crit Amp": "150/200",
+        "Energy": "10/120",
+        "Movement Speed": "55/5",
+        "Tier": "5",
+        "Stage": "1",
+        "Affinities": "Shock",
+        "Classes": "Psion",
+        "name": "Squizz"
+    }
+]

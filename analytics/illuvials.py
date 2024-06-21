@@ -43,5 +43,8 @@ illuvials = [
     "Scoriox",
     "Tatopee",
     "Teeantee",
-    "Seeforus"
+    "Seeforus",
+    "Ophisto",
+    "Squizz",
+    "Octius"
 ]
