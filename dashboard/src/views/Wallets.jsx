@@ -1,42 +1,33 @@
 import React from 'react';
-import { Box, Heading, Text, SimpleGrid, Flex, Center } from '@chakra-ui/react';
-import { Line } from 'react-chartjs-2';
-import { Pie } from 'react-chartjs-2';
+import { Box, Heading, Text, SimpleGrid, Flex } from '@chakra-ui/react';
+import { Line, Pie } from 'react-chartjs-2';
 import '../chartConfig';
 import { lineData, pieData, options } from '../data/charts';
 
-function Wallets() {
+const Wallets = () => {
 
   return (
     <Box p={5}>
-      <Center>
-        <Heading as="h1" mb={5}>Wallets</Heading>
-      </Center>
+      <Heading as="h1" mb={5}>Wallets</Heading>
+      <Text mb={5}>Information and trends about wallets on the platform.</Text>
       <SimpleGrid columns={[1, null, 3]} spacing="40px">
         <Box bg="gray.100" p={5} borderRadius="md">
-          <Text fontSize="2xl">Stat 1</Text>
-          <Text>Value</Text>
+          <Text fontSize="2xl">Total Wallets Over Time</Text>
+          <Line data={lineData} options={options} />
         </Box>
         <Box bg="gray.100" p={5} borderRadius="md">
-          <Text fontSize="2xl">Stat 2</Text>
-          <Text>Value</Text>
-        </Box>
-        <Box bg="gray.100" p={5} borderRadius="md">
-          <Text fontSize="2xl">Stat 3</Text>
-          <Text>Value</Text>
+          <Text fontSize="2xl">Average $ Value of Wallets Over Time</Text>
+          <Line data={lineData} options={options} />
         </Box>
       </SimpleGrid>
       <Flex mt={10} direction="column" gap={10}>
-        <Box>
-          <Line data={lineData} options={options} />
-        </Box>
-        <Box>
+        <Box bg="gray.100" p={5} borderRadius="md">
+          <Text fontSize="2xl">Wallets Market Capitalization Distribution</Text>
           <Pie data={pieData} options={options} />
         </Box>
-        {/* Add more charts or tables as needed */}
       </Flex>
     </Box>
   );
-}
+};
 
 export default Wallets;

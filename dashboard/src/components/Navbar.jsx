@@ -3,7 +3,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { Box, Flex, HStack, Link, IconButton, useDisclosure, useColorModeValue, Stack } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-const Links = ['Home', 'Illuvitars', 'Illuvials', 'Lands', 'Wallets', 'Profiles', 'Other'];
+const Links = ['Home', 'Illuvitars', 'Illuvials', 'Lands', 'Wallets', 'Baloth', 'Clan', 'Other'];
 
 const NavLink = ({ children }) => (
   <Link
