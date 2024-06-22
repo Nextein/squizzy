@@ -16,18 +16,16 @@ const Illuvials = () => {
           <Line data={lineData} options={options} />
         </Box>
         <Box bg="gray.100" p={5} borderRadius="md">
-          <Text fontSize="2xl">Distribution of Illuvials for Sale</Text>
-          <Pie data={pieData} options={options} />
-        </Box>
-      </SimpleGrid>
-      <Flex mt={10} direction="column" gap={10}>
-        <Box bg="gray.100" p={5} borderRadius="md">
           <Text fontSize="2xl">Total Amount of Illuvials for Sale Over Time</Text>
           <Line data={lineData} options={options} />
         </Box>
         <Box bg="gray.100" p={5} borderRadius="md">
           <Text fontSize="2xl">Change in Amount of Illuvials for Sale Over Time</Text>
           <Line data={lineData} options={options} />
+        </Box>
+        <Box bg="gray.100" p={5} borderRadius="md">
+          <Text fontSize="2xl">Distribution of Illuvials for Sale</Text>
+          <Pie data={pieData} options={options} />
         </Box>
         <Box bg="gray.100" p={5} borderRadius="md">
           <Text fontSize="2xl">Market Cap of Illuvials</Text>
@@ -37,6 +35,11 @@ const Illuvials = () => {
           <Text fontSize="2xl">Average Price for Sale of Illuvials</Text>
           <Pie data={pieData} options={options} />
         </Box>
+      </SimpleGrid>
+      <Flex mt={10} direction="column" gap={10}>
+        
+        
+        
       </Flex>
     </Box>
   );

@@ -6,14 +6,14 @@ import AppRouter from './Router';
 
 function App() {
   return (
-    <ChakraProvider>
-      <Router>
-        <VStack w="100vw">
-          <Navbar />
-          <AppRouter />
-        </VStack>
-      </Router>
-    </ChakraProvider>
+      <ChakraProvider>
+        <Router>
+          <VStack w="100vw">
+            <Navbar />
+            <AppRouter />
+          </VStack>
+        </Router>
+      </ChakraProvider>
   );
 }
 

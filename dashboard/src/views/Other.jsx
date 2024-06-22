@@ -1,12 +1,25 @@
 import React from 'react';
-import { Box, Heading, Text, SimpleGrid, Flex, Center } from '@chakra-ui/react';
+import { Box, Heading, Button, Text, SimpleGrid, Flex, Center, useToast } from '@chakra-ui/react';
 import { Line } from 'react-chartjs-2';
 import { Pie } from 'react-chartjs-2';
 import { lineData, pieData, options } from '../data/charts';
 import '../chartConfig';
+import ADDRESS from '../data/addresses';
 
 
 export default function Other() {
+  const toast = useToast();
+
+  const handleCellClick = (value) => {
+    navigator.clipboard.writeText(value);
+    toast({
+      title: "Copied to clipboard",
+      description: value,
+      status: "success",
+      duration: 1500,
+      position: 'top',
+    });
+  };
 
   return (
     <Box p={5}>
@@ -26,17 +39,24 @@ export default function Other() {
           <Text fontSize="2xl">Stat 3</Text>
           <Text>Value</Text>
         </Box>
-      </SimpleGrid>
-      <Flex mt={10} direction="column" gap={10}>
         <Box>
           <Line data={lineData} options={options} />
         </Box>
         <Box>
           <Pie data={pieData} options={options} />
         </Box>
+      </SimpleGrid>
+      <Flex mt={10} direction="column" gap={10}>
+        <Box>
+          <Text fontSize="xl">
+            Lands Collection Address:{" "}
+            <Button onClick={() => handleCellClick(ADDRESS.lands)} variant="link" colorScheme="teal">
+              {ADDRESS.lands}
+            </Button>
+          </Text>
+        </Box>
         {/* Add more charts or tables as needed */}
       </Flex>
     </Box>
   );
 }
-

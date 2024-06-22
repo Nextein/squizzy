@@ -8,7 +8,7 @@ API_URL = "https://api.sandbox.x.immutable.com/v3/orders"
 def fetch_all_active_orders():
     all_orders = []
     params = {
-        "status": "active",  # Only fetch orders that are currently active
+        "status": "active",  # Only fetch orders that are currently active. Set to "filled" to fetch past orders.
         "page_size": 200  # Request the maximum number of items per page
     }
     

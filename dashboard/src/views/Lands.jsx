@@ -23,12 +23,11 @@ const Lands = () => {
           <Text fontSize="2xl">Average Land Price Change Over Time</Text>
           <Line data={lineData} options={options} />
         </Box>
-      </SimpleGrid>
-      <Flex mt={10} direction="column" gap={10}>
         <Box bg="gray.100" p={5} borderRadius="md">
           <Text fontSize="2xl">Min Land Price Change Over Time</Text>
           <Line data={lineData} options={options} />
         </Box>
+        <Box></Box>
         <Box bg="gray.100" p={5} borderRadius="md">
           <Text fontSize="2xl">Market Cap of Lands for Sale Over Time</Text>
           <Line data={lineData} options={options} />
@@ -45,6 +44,8 @@ const Lands = () => {
           <Text fontSize="2xl">Average Price for Sale of Lands</Text>
           <Pie data={pieData} options={options} />
         </Box>
+      </SimpleGrid>
+      <Flex mt={10} direction="column" gap={10}>
       </Flex>
     </Box>
   );

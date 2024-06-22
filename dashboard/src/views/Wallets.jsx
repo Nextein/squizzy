@@ -19,12 +19,12 @@ const Wallets = () => {
           <Text fontSize="2xl">Average $ Value of Wallets Over Time</Text>
           <Line data={lineData} options={options} />
         </Box>
-      </SimpleGrid>
-      <Flex mt={10} direction="column" gap={10}>
         <Box bg="gray.100" p={5} borderRadius="md">
           <Text fontSize="2xl">Wallets Market Capitalization Distribution</Text>
           <Pie data={pieData} options={options} />
         </Box>
+      </SimpleGrid>
+      <Flex mt={10} direction="column" gap={10}>
       </Flex>
     </Box>
   );
