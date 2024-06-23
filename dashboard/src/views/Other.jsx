@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Heading, Button, Text, SimpleGrid, Flex, Center, useToast } from '@chakra-ui/react';
 import { Line } from 'react-chartjs-2';
 import { Pie } from 'react-chartjs-2';
-import { lineData, pieData, options } from '../data/charts';
+import { lineData, samplePieData, options } from '../data/charts';
 import '../chartConfig';
 import ADDRESS from '../data/addresses';
 
@@ -43,7 +43,7 @@ export default function Other() {
           <Line data={lineData} options={options} />
         </Box>
         <Box>
-          <Pie data={pieData} options={options} />
+          <Pie data={samplePieData} options={options} />
         </Box>
       </SimpleGrid>
       <Flex mt={10} direction="column" gap={10}>

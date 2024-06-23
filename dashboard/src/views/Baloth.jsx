@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Heading, Text, SimpleGrid, Flex, Button } from '@chakra-ui/react';
 import { Line, Pie } from 'react-chartjs-2';
 import '../chartConfig';
-import { lineData, pieData, options } from '../data/charts';
+import { lineData, samplePieData, options } from '../data/charts';
 
 const Baloth = () => {
 
@@ -27,7 +27,7 @@ const Baloth = () => {
       <Flex mt={10} direction="column" gap={10}>
         <Box bg="gray.100" p={5} borderRadius="md">
           <Text fontSize="2xl">Distribution of Good vs. Bad Assets</Text>
-          <Pie data={pieData} options={options} />
+          <Pie data={samplePieData} options={options} />
         </Box>
         <Button>SELL BAD ASSETS</Button>
         <Button>SAFE LIQUIDATE</Button>

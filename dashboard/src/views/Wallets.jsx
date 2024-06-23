@@ -8,7 +8,7 @@ import users from '../data/users';
 
 const Wallets = () => {
   const [lineData, setLineData] = useState({});
-  const [pieData, setPieData] = useState({});
+  const [samplePieData, setPieData] = useState({});
   const [loading, setLoading] = useState(true);
 
   const fetchOwnersForContract = async () => {
@@ -149,7 +149,7 @@ const Wallets = () => {
         </Box>
         <Box bg="gray.100" p={5} borderRadius="md">
           <Text fontSize="2xl">Wallets Market Capitalization Distribution</Text>
-          <Pie data={pieData} />
+          <Pie data={samplePieData} />
         </Box>
       </SimpleGrid>
       <Flex mt={10} direction="column" gap={10}>

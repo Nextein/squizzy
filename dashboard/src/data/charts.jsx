@@ -11,7 +11,7 @@ export const lineData = {
     ],
 };
 
-export const pieData = {
+export const samplePieData = {
     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
     datasets: [
         {

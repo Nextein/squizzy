@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Box, Heading, Text, SimpleGrid, Flex } from '@chakra-ui/react';
 import { Line, Pie } from 'react-chartjs-2';
 import '../chartConfig';
-import { lineData, pieData, options } from '../data/charts';
+import { lineData, samplePieData, options } from '../data/charts';
 
 const Lands = () => {
 
@@ -34,15 +34,15 @@ const Lands = () => {
         </Box>
         <Box bg="gray.100" p={5} borderRadius="md">
           <Text fontSize="2xl">Distribution of Lands for Sale</Text>
-          <Pie data={pieData} options={options} />
+          <Pie data={samplePieData} options={options} />
         </Box>
         <Box bg="gray.100" p={5} borderRadius="md">
           <Text fontSize="2xl">Market Cap of Lands</Text>
-          <Pie data={pieData} options={options} />
+          <Pie data={samplePieData} options={options} />
         </Box>
         <Box bg="gray.100" p={5} borderRadius="md">
           <Text fontSize="2xl">Average Price for Sale of Lands</Text>
-          <Pie data={pieData} options={options} />
+          <Pie data={samplePieData} options={options} />
         </Box>
       </SimpleGrid>
       <Flex mt={10} direction="column" gap={10}>

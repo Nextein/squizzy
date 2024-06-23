@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Heading, Text, Grid } from '@chakra-ui/react';
+import { Box, Heading, Text, Grid, VStack } from '@chakra-ui/react';
 import { Line, Pie } from 'react-chartjs-2';
 import axios from 'axios';
-import ProgressBar from '@ramonak/react-progress-bar';
-import { lineData, options } from '../data/charts';
+import { lineData, samplePieData, options } from '../data/charts';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { Chart as ChartJS } from 'chart.js/auto';
 
-const API_URL = "https://api.sandbox.x.immutable.com/v3/orders";
+ChartJS.register(ChartDataLabels);
+
 
 function sortData(data) {
   const sortedEntries = Object.entries(data).sort(([, a], [, b]) => b - a);
@@ -15,49 +17,6 @@ function sortData(data) {
   };
 };
 
-async function fetchAllActiveOrders(setProgress) {
-  let allOrders = [];
-  let params = {
-    status: "active",
-    page_size: 200
-  };
-  let totalFetched = 0;
-  let progress = 0;
-  let estimatedTotal = 1000; // Initial estimate for total records, adjust as needed
-  let db=0; let debug_break = 30; // 0 for no debugging
-
-  while (true) {
-    try {
-      const response = await axios.get(API_URL, { params });
-      if (response.status !== 200) break;
-
-      const data = response.data;
-      const activeOrders = data.result.filter(order => order.amount_sold === null);
-      allOrders = [...allOrders, ...activeOrders];
-      totalFetched += activeOrders.length;
-
-      // Update estimated total if more data is fetched
-      estimatedTotal = Math.max(estimatedTotal, totalFetched * 2); // Adjust estimation logic as needed
-
-      // Calculate progress as a percentage
-      progress = Math.min((totalFetched / estimatedTotal) * 100, 100);
-      setProgress(progress);
-
-      db += 1;
-      const cursor = data.cursor;
-      if (cursor && db < debug_break) {
-        params.cursor = cursor;
-      } else {
-        break;
-      }
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      break;
-    }
-  }
-
-  return allOrders;
-};
 
 const processOrderData = (orders) => {
   console.log("Received orders: ", orders);
@@ -102,24 +61,24 @@ const processOrderData = (orders) => {
   // Log the processed data to debug
   console.log("Sorted Count Data: ", sortedCountData);
   console.log("Sorted Value Data: ", sortedValueData);
-  
+
   // Calculate average prices
   for (let i = 0; i < sortedCountData.labels.length; i++) {
     const illuvialName = sortedCountData.labels[i];
     console.log(i);
     console.log(illuvialName, illuvialsValue[illuvialName], illuvialsCount[illuvialName]);
-    
+
     if (illuvialsValue[illuvialName] && illuvialsCount[illuvialName]) {
       illuvialsPrice[illuvialName] = illuvialsValue[illuvialName] / illuvialsCount[illuvialName];
     } else {
       illuvialsPrice[illuvialName] = 0;
     }
   }
-  
+
   console.log('prices:', illuvialsPrice);
   const sortedAveragePriceData = sortData(illuvialsPrice);
   console.log('sorted prices:', sortedAveragePriceData);
-  
+
   const countData = {
     labels: sortedCountData.labels,
     datasets: [{
@@ -171,26 +130,71 @@ const processOrderData = (orders) => {
   return { countData, valueData, averagePriceData };
 };
 
-export default function Illuvials() {
+const pieOptions = {
+  plugins: {
+    legend: {
+      display: false,
+    },
+    datalabels: {
+      color: '#fff',
+      formatter: (value, context) => {
+        return context.chart.data.labels[context.dataIndex];
+      },
+      anchor: 'end',
+      align: 'start',
+      offset: 10,
+      borderRadius: 4,
+      backgroundColor: 'rgba(0, 0, 0, 0.7)',
+      padding: 6,
+    },
+  },
+};
+
+export default function Illuvials({ orders }) {
   const [pieData, setPieData] = useState(null);
-  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const orders = await fetchAllActiveOrders(setProgress);
-      const data = processOrderData(orders);
-      setPieData(data);
-    };
-    fetchData();
-  }, []);
+    if (!orders) return;
+    const data = processOrderData(orders);
+    setPieData(data);
+  }, [orders]);
 
   return (
     <Box p={5}>
       <Heading as="h1" mb={5}>Illuvials</Heading>
       <Text mb={5}>Information and trends about Illuvials on the platform.</Text>
-      <Grid templateColumns="repeat(12, 1fr)" gap={6}>
-        {pieData ? (
-          <>
+      {pieData ? (
+        <Grid templateColumns="repeat(12, 1fr)" gap={6}>
+          <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 4">
+            <Text fontSize="2xl">Illuvials Market Cap over Time</Text>
+            <Line data={lineData} options={options} />
+          </Box>
+          <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 4">
+            <Text fontSize="2xl">Total Amount of Illuvials for Sale Over Time</Text>
+            <Line data={lineData} options={options} />
+          </Box>
+          <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 4">
+            <Text fontSize="2xl">Change in Amount of Illuvials for Sale Over Time</Text>
+            <Line data={lineData} options={options} />
+          </Box>
+          <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 5">
+            <Text fontSize="2xl">Distribution of Illuvials for Sale</Text>
+            <Pie data={pieData.countData} options={pieOptions} />
+          </Box>
+          <Box gridColumn="span 2"></Box>
+          <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 5">
+            <Text fontSize="2xl">Total Value of Illuvials for Sale</Text>
+            <Pie data={pieData.valueData} options={pieOptions} />
+          </Box>
+          <Box gridColumn="span 3"></Box>
+          <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 6">
+            <Text fontSize="2xl">Average Price for Sale of Illuvials</Text>
+            <Pie data={pieData.averagePriceData} options={pieOptions} />
+          </Box>
+        </Grid>
+      ) : (
+        <VStack>
+          <Grid templateColumns="repeat(12, 1fr)" gap={6}>
             <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 4">
               <Text fontSize="2xl">Illuvials Market Cap over Time</Text>
               <Line data={lineData} options={options} />
@@ -205,26 +209,21 @@ export default function Illuvials() {
             </Box>
             <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 5">
               <Text fontSize="2xl">Distribution of Illuvials for Sale</Text>
-              <Pie data={pieData.countData} options={options} />
+              <Pie data={samplePieData} options={pieOptions} />
             </Box>
             <Box gridColumn="span 2"></Box>
             <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 5">
               <Text fontSize="2xl">Total Value of Illuvials for Sale</Text>
-              <Pie data={pieData.valueData} options={options} />
+              <Pie data={samplePieData} options={pieOptions} />
             </Box>
             <Box gridColumn="span 3"></Box>
             <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 6">
               <Text fontSize="2xl">Average Price for Sale of Illuvials</Text>
-              <Pie data={pieData.averagePriceData} options={options} />
+              <Pie data={samplePieData} options={pieOptions} />
             </Box>
-          </>
-        ) : (
-          <Box gridColumn="span 12">
-            <Text>Loading data...</Text>
-            <ProgressBar completed={progress} />
-          </Box>
-        )}
-      </Grid>
+          </Grid>
+        </VStack>
+      )}
     </Box>
   );
 };

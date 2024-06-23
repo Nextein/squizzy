@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Heading, Text, SimpleGrid, Flex, Button, VStack } from '@chakra-ui/react';
 import { Line, Pie } from 'react-chartjs-2';
 import '../chartConfig';
-import { lineData, pieData, options } from '../data/charts';
+import { lineData, samplePieData, options } from '../data/charts';
 
 const Home = () => {
 
@@ -25,8 +25,12 @@ const Home = () => {
         </Box>
         <Box></Box>
         <Box bg="gray.100" p={5} borderRadius="md">
-          <Text fontSize="2xl">Market Capitalization Distribution</Text>
-          <Pie data={pieData} options={options} />
+          <Text fontSize="2xl">Market Cap of each Collection</Text>
+          <Pie data={samplePieData} options={options} />
+        </Box>
+        <Box bg="gray.100" p={5} borderRadius="md">
+          <Text fontSize="2xl">Amount of items for sale of each Collection</Text>
+          <Pie data={samplePieData} options={options} />
         </Box>
         <Box>
           <VStack>
