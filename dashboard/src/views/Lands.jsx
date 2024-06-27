@@ -70,8 +70,12 @@ const processLandData = (lands) => {
   });
 
   const tierMedianPrice = {};
+  const tierPercentileBelowMedian = {};
   Object.keys(tierPrices).forEach((tier) => {
-    tierMedianPrice[tier] = calculateMedian(tierPrices[tier]);
+    const median = calculateMedian(tierPrices[tier]);
+    tierMedianPrice[tier] = median;
+    const belowMedianCount = tierPrices[tier].filter(price => price < median).length;
+    tierPercentileBelowMedian[tier] = (belowMedianCount / tierPrices[tier].length) * 100;
   });
 
   const sortedCountData = filterNonZeroEntries(tierCount);
@@ -123,7 +127,7 @@ const processLandData = (lands) => {
     ],
   };
 
-  return { countData, valueData, averagePriceData, medianPriceData, tierPrices, tierFloorPrice, tierAveragePrice, tierMedianPrice, totalTierCount };
+  return { countData, valueData, averagePriceData, medianPriceData, tierPrices, tierFloorPrice, tierAveragePrice, tierMedianPrice, totalTierCount, tierPercentileBelowMedian };
 };
 
 const pieOptions = {
@@ -168,6 +172,7 @@ export default function Lands({ lands }) {
         floorPrice: data.tierFloorPrice[tier],
         averagePrice: data.tierAveragePrice[tier],
         medianPrice: data.tierMedianPrice[tier],
+        percentileBelowMedian: data.tierPercentileBelowMedian[tier],
       }));
       setLandStats(stats);
     }
@@ -177,6 +182,50 @@ export default function Lands({ lands }) {
     <Box p={5}>
       <Heading as="h1" mb={5}>Lands</Heading>
       <Text mb={5}>Information and trends about Lands on the platform.</Text>
+      <Flex my={10} direction="column" gap={10}>
+        <Box bg="gray.100" p={5} borderRadius="md">
+          <Text fontSize="2xl" mb={5}>Land Statistics</Text>
+          <Table variant="simple">
+            <Thead>
+              <Tr>
+                <Th>Tier</Th>
+                <Th>Total</Th>
+                <Th>For Sale</Th>
+                <Th>Floor Price</Th>
+                <Th>Median Price</Th>
+                <Th>Average Price</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              {landStats.map((stat) => (
+                <Tr key={stat.tier}>
+                  <Td>{stat.tier}</Td>
+                  <Td>{stat.totalCount}</Td>
+                  <Td>
+                    {stat.count}
+                    <Box as="span" color="gray.500" ml={2}>
+                      ({((stat.count / stat.totalCount) * 100).toFixed(1)}%)
+                    </Box>
+                  </Td>
+                  <Td>
+                    {stat.floorPrice.toFixed(2)}
+                    <Box as="span" color="gray.500" ml={2}>
+                      ({((1-stat.floorPrice/stat.medianPrice)*100).toFixed(1)}%)
+                    </Box>
+                  </Td>
+                  <Td>
+                    {stat.medianPrice.toFixed(2)}
+                    <Box as="span" color="gray.500" ml={2}>
+                      ({stat.percentileBelowMedian.toFixed(1)}%)
+                    </Box>
+                  </Td>
+                  <Td>{stat.averagePrice.toFixed(2)}</Td>
+                </Tr>
+              ))}
+            </Tbody>
+          </Table>
+        </Box>
+      </Flex>
       <SimpleGrid columns={[1, null, 3]} spacing="40px">
         <Box bg="gray.100" p={5} borderRadius="md">
           <Text fontSize="2xl">Total Lands for Sale Change Over Time</Text>
@@ -216,35 +265,6 @@ export default function Lands({ lands }) {
           <Pie data={averagePricePieData || samplePieData} options={pieOptions} />
         </Box>
       </SimpleGrid>
-      <Flex mt={10} direction="column" gap={10}>
-        <Box bg="gray.100" p={5} borderRadius="md">
-          <Text fontSize="2xl" mb={5}>Land Tier Statistics</Text>
-          <Table variant="simple">
-            <Thead>
-              <Tr>
-                <Th>Tier</Th>
-                <Th>Total Count</Th>
-                <Th>For Sale Count</Th>
-                <Th>Floor Price</Th>
-                <Th>Average Price</Th>
-                <Th>Median Price</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              {landStats.map((stat) => (
-                <Tr key={stat.tier}>
-                  <Td>{stat.tier}</Td>
-                  <Td>{stat.totalCount}</Td>
-                  <Td>{stat.count}</Td>
-                  <Td>{stat.floorPrice.toFixed(2)}</Td>
-                  <Td>{stat.averagePrice.toFixed(2)}</Td>
-                  <Td>{stat.medianPrice.toFixed(2)}</Td>
-                </Tr>
-              ))}
-            </Tbody>
-          </Table>
-        </Box>
-      </Flex>
     </Box>
   );
 }
