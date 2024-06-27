@@ -1,19 +1,12 @@
 import React, { useState } from 'react';
-import { Box, Heading, Text, Select, useToast, Button, Table, Thead, Tbody, Tr, Th, Td, useColorModeValue } from '@chakra-ui/react';
+import { Box, Heading, Text, Select, useToast, Button, SimpleGrid } from '@chakra-ui/react';
 import axios from 'axios';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
+import users from '../data/users';
 
 const theme = createTheme();
-
-const users = [
-  { username: 'Baloth', walletAddress: '0x2179577a53b40874a821476281c45096fe2bfd60' },
-  { username: 'chupacabras', walletAddress: '0xa4c798ef92f4c538b2f581ff68a01fc7bfad5e90' },
-  { username: 'Capacitor | HYPE', walletAddress: '0xd78f0506c427a53b7ff0850ddde6d30fd0249069' },
-  { username: 'ArepaChan', walletAddress: '0x253117d5ebbf096bc9da9f2d8daf3d5e0f08a33c' },
-  { username: 'pumpumpam', walletAddress: '0xabf8d53486de65d49b0abcbb61c9003b17d9079d' },
-];
 
 const Clan = () => {
   const [selectedUser, setSelectedUser] = useState(null);
@@ -62,9 +55,9 @@ const Clan = () => {
       let darkHolo = 0;
 
       contents.forEach(item => {
-        const { name, holo: holoItem, darkHolo: darkHoloItem } = item.metadata || {};
+        const { name, holo: holoItem, darkHolo: darkHoloItem, Tier } = item.metadata || {};
         if (item.collection.name === 'Illuvium Illuvials') {
-          illuvials[name] = (illuvials[name] || 0) + 1;
+          illuvials[name] = { count: (illuvials[name]?.count || 0) + 1, tier: Tier };
           if (holoItem) holo += 1;
           if (darkHoloItem) darkHolo += 1;
         } else if (item.collection.name === 'Illuvium Shards') {
@@ -122,6 +115,14 @@ const Clan = () => {
     },
   ];
 
+  const tierColors = {
+    1: "blue.100",
+    2: "green.100",
+    3: "yellow.100",
+    4: "orange.100",
+    5: "red.100"
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -148,26 +149,16 @@ const Clan = () => {
         {isLoading && <Text mt={5}>Loading wallet contents...</Text>}
         {selectedUser && walletContents.length > 0 && (
           <>
-            <Box mt={5} overflowX="auto">
-              <Table variant="striped" colorScheme="teal">
-                <Thead>
-                  <Tr>
-                    <Th>Illuvial</Th>
-                    <Th isNumeric>Count</Th>
-                  </Tr>
-                </Thead>
-                <Tbody>
-                  {Object.entries(stats.illuvials)
-                    .sort(([a], [b]) => a.localeCompare(b))
-                    .map(([illuvial, count]) => (
-                      <Tr key={illuvial}>
-                        <Td>{illuvial}</Td>
-                        <Td isNumeric>{count}</Td>
-                      </Tr>
-                    ))}
-                </Tbody>
-              </Table>
-            </Box>
+            <SimpleGrid columns={[1, null, 8]} spacing="40px" mt={5}>
+              {Object.entries(stats.illuvials)
+                .sort(([a], [b]) => a.localeCompare(b))
+                .map(([illuvial, { count, tier }]) => (
+                  <Box bg={tierColors[tier]} p={5} borderRadius="md" key={illuvial}>
+                    <Text fontSize="xl">{illuvial}</Text>
+                    <Text>{count}</Text>
+                  </Box>
+                ))}
+            </SimpleGrid>
             <Box mt={10} height="75vh">
               <DataGrid
                 rows={walletContents}
