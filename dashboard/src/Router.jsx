@@ -9,11 +9,12 @@ import Wallets from './views/Wallets';
 import Other from './views/Other';
 import Baloth from './views/Baloth';
 import Clan from './views/Clan';
-import { Box, Button, Center, Flex, Spinner, Text } from '@chakra-ui/react';
+import { Box, Button, Center, Flex, Spinner, Text, useToast } from '@chakra-ui/react';
 import axios from 'axios';
 
 const ORDERS_API_URL = "https://api.sandbox.x.immutable.com/v3/orders";
 const LANDS_API_URL = "https://api.x.immutable.com/v1/assets";
+const ILLUVIUM_API_URL = "https://api.sandbox.immutable.com/v3/orders";
 const LANDS_TOTAL = 20000;
 const PAGE_SIZE = 200;
 
@@ -101,24 +102,74 @@ async function fetchAllLandsData(setProgress) {
   return allLands;
 };
 
+async function fetchAllIlluvialsData(setProgress) {
+  let allIlluvials = [];
+  let params = {
+    sell_token_address: "0xa732097446130b699bea80475ca571e73f9a7b17",
+    status: "active",
+    page_size: PAGE_SIZE
+  };
+  let totalFetched = 0;
+  let progress = 0;
+
+  while (true) {
+    try {
+      const response = await axios.get(ILLUVIUM_API_URL, { params });
+      if (response.status !== 200) break;
+
+      const data = response.data;
+      const illuvials = data.result;
+      allIlluvials = [...allIlluvials, ...illuvials];
+      totalFetched += illuvials.length;
+
+      // Calculate progress as a percentage
+      progress = Math.min((totalFetched / LANDS_TOTAL) * 100, 100);
+      setProgress(progress);
+
+      const cursor = data.cursor;
+      if (cursor) {
+        params.cursor = cursor;
+      } else {
+        break;
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      break;
+    }
+  }
+
+  return allIlluvials;
+};
+
 function AppRouter() {
-  const [rootData, setRootData] = useState({orders: [], lands: []});
+  const [rootData, setRootData] = useState({ orders: [], lands: [], illuvials: [] });
   const [progress, setProgress] = useState(0);
   const [loading, setLoading] = useState(false);
+  const toast = useToast();
 
   async function fetchData() {
     setLoading(true);
-    const [orders, lands] = await Promise.all([
+    const [orders, lands, illuvials] = await Promise.all([
       fetchAllActiveOrders(setProgress),
-      fetchAllLandsData(setProgress)
+      fetchAllLandsData(setProgress),
+      fetchAllIlluvialsData(setProgress)
     ]);
-    setRootData({ orders, lands });
+    setRootData({ orders, lands, illuvials });
+    console.log({ orders, lands, illuvials });
+    if (orders.length==0 || lands.length==0 || illuvials.length==0) {
+      toast({
+        title: "Failed to load data",
+        status: "error",
+        duration: 3000,
+        position: 'top',
+      });
+    }
     setLoading(false);
   }
 
   return (
     <>
-      {rootData.orders.length>0 && rootData.lands.length>0 ?
+      {rootData.orders.length > 0 && rootData.lands.length > 0 && rootData.illuvials.length > 0 ?
         null
         :
         <Flex mt={8}>
@@ -138,7 +189,7 @@ function AppRouter() {
       <Routes>
         <Route path="/home" element={<Home data={rootData} />} />
         <Route path="/illuvitars" element={<Illuvitars data={rootData} />} />
-        <Route path="/illuvials" element={<Illuvials orders={rootData.orders} />} />
+        <Route path="/illuvials" element={<Illuvials illuvials={rootData.illuvials} />} />
         <Route path="/lands" element={<Lands lands={rootData.lands} />} />
         <Route path="/wallets" element={<Wallets data={rootData} />} />
         <Route path="/baloth" element={<Baloth data={rootData} />} />

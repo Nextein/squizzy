@@ -18,10 +18,10 @@ function sortData(data) {
 };
 
 
-const processOrderData = (orders) => {
-  console.log("Received orders: ", orders);
+const processOrderData = (illuvials) => {
+  console.log("Received illuvials: ", illuvials);
 
-  const illuvialsData = orders.filter(order =>
+  const illuvialsData = illuvials.filter(order =>
     order.sell &&
     order.sell.data &&
     order.sell.data.properties &&
@@ -150,14 +150,14 @@ const pieOptions = {
   },
 };
 
-export default function Illuvials({orders}) {
+export default function Illuvials({illuvials}) {
   const [pieData, setPieData] = useState(null);
 
   useEffect(() => {
-    if (!orders) return;
-    const data = processOrderData(orders);
+    if (illuvials.length == 0) return;
+    const data = processOrderData(illuvials);
     setPieData(data);
-  }, [orders]);
+  }, [illuvials]);
 
   return (
     <Box p={5}>
