@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Box, Heading, Text, Select, useToast, Button, SimpleGrid, Center, VStack } from '@chakra-ui/react';
+import { Box, Heading, Text, Select, useToast, Button, SimpleGrid, Center, VStack, Input, Spinner, IconButton } from '@chakra-ui/react';
+import { FaExternalLinkAlt, FaClipboard } from 'react-icons/fa';
 import axios from 'axios';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -13,6 +14,7 @@ const Clan = () => {
   const [walletContents, setWalletContents] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedWalletAddress, setSelectedWalletAddress] = useState('');
+  const [manualWalletAddress, setManualWalletAddress] = useState('');
   const [stats, setStats] = useState({
     totalItems: 0,
     totalPoints: 0,
@@ -25,12 +27,7 @@ const Clan = () => {
   });
   const toast = useToast();
 
-  const handleUserChange = async (event) => {
-    const walletAddress = event.target.value;
-    setSelectedUser(walletAddress);
-    setSelectedWalletAddress(walletAddress);
-    setIsLoading(true);
-
+  const fetchUserData = async (walletAddress) => {
     let contents = [];
     let cursor = '';
     try {
@@ -48,54 +45,92 @@ const Clan = () => {
         cursor = response.data.cursor;
 
       } while (cursor);
-
-      setWalletContents(contents);
-
-      // Calculate stats
-      const totalItems = contents.length;
-      const totalPoints = contents.reduce((sum, item) => sum + (item.metadata?.points || 0), 0);
-
-      // Initialize stats
-      const illuvials = {};
-      const shards = {};
-      const plants = {};
-      const essences = {};
-      let holo = 0;
-      let darkHolo = 0;
-
-      contents.forEach(item => {
-        const { name, holo: holoItem, darkHolo: darkHoloItem, Tier } = item.metadata || {};
-        if (item.collection.name === 'Illuvium Illuvials') {
-          if (!illuvials[name]) {
-            illuvials[name] = { count: 0, tier: Tier };
-          }
-          illuvials[name].count += 1;
-          if (holoItem) holo += 1;
-          if (darkHoloItem) darkHolo += 1;
-        } else if (item.collection.name === 'Illuvium Shards') {
-          if (!shards[name]) {
-            shards[name] = { count: 0 };
-          }
-          shards[name].count += 1;
-        } else if (item.collection.name === 'Illuvium Plants') {
-          if (!plants[name]) {
-            plants[name] = { count: 0 };
-          }
-          plants[name].count += 1;
-        } else if (item.collection.name === 'Illuvium Essences') {
-          if (!essences[name]) {
-            essences[name] = { count: 0 };
-          }
-          essences[name].count += 1;
-        }
-      });
-
-      setStats({ totalItems, totalPoints, illuvials, shards, plants, essences, holo, darkHolo });
     } catch (error) {
       console.error('Error fetching wallet data:', error);
-    } finally {
-      setIsLoading(false);
     }
+    return contents;
+  };
+
+  const aggregateStats = (contents) => {
+    const totalItems = contents.length;
+    const totalPoints = contents.reduce((sum, item) => sum + (item.metadata?.points || 0), 0);
+
+    const illuvials = {};
+    const shards = {};
+    const plants = {};
+    const essences = {};
+    let holo = 0;
+    let darkHolo = 0;
+
+    contents.forEach(item => {
+      const { name, Finish, Tier } = item.metadata || {};
+      if (item.collection.name === 'Illuvium Illuvials') {
+        if (!illuvials[name]) {
+          illuvials[name] = { count: 0, tier: Tier, holoCount: 0, darkHoloCount: 0 };
+        }
+        illuvials[name].count += 1;
+        if (Finish === 'Holo') {
+          illuvials[name].holoCount += 1;
+          holo += 1;
+        }
+        if (Finish === 'DarkHolo') {
+          illuvials[name].darkHoloCount += 1;
+          darkHolo += 1;
+        }
+      } else if (item.collection.name === 'Illuvium Shards') {
+        if (!shards[name]) {
+          shards[name] = { count: 0 };
+        }
+        shards[name].count += 1;
+      } else if (item.collection.name === 'Illuvium Plants') {
+        if (!plants[name]) {
+          plants[name] = { count: 0 };
+        }
+        plants[name].count += 1;
+      } else if (item.collection.name === 'Illuvium Essences') {
+        if (!essences[name]) {
+          essences[name] = { count: 0 };
+        }
+        essences[name].count += 1;
+      }
+    });
+
+    return { totalItems, totalPoints, illuvials, shards, plants, essences, holo, darkHolo };
+  };
+
+  const handleUserChange = async (event) => {
+    const walletAddress = event.target.value;
+    setSelectedUser(walletAddress);
+    setSelectedWalletAddress(walletAddress);
+    setIsLoading(true);
+
+    if (walletAddress === "all") {
+      let allContents = [];
+      for (const user of users) {
+        const userContents = await fetchUserData(user.walletAddress);
+        allContents = [...allContents, ...userContents];
+      }
+      setWalletContents(allContents);
+      setStats(aggregateStats(allContents));
+    } else {
+      const contents = await fetchUserData(walletAddress);
+      setWalletContents(contents);
+      setStats(aggregateStats(contents));
+    }
+
+    setIsLoading(false);
+  };
+
+  const handleManualAddressSubmit = async () => {
+    setSelectedUser(manualWalletAddress);
+    setSelectedWalletAddress(manualWalletAddress);
+    setIsLoading(true);
+
+    const contents = await fetchUserData(manualWalletAddress);
+    setWalletContents(contents);
+    setStats(aggregateStats(contents));
+
+    setIsLoading(false);
   };
 
   const handleCellClick = (value) => {
@@ -112,6 +147,18 @@ const Clan = () => {
   const handleButtonClick = (token_address, token_id) => {
     const url = `https://sandbox.illuvidex.illuvium.io/asset/${token_address}/${token_id}`;
     window.open(url, '_blank');
+  };
+
+  const handleCopyLink = (token_address, token_id) => {
+    const url = `https://sandbox.illuvidex.illuvium.io/asset/${token_address}/${token_id}`;
+    navigator.clipboard.writeText(url);
+    toast({
+      title: "Link copied to clipboard",
+      description: url,
+      status: "success",
+      duration: 1500,
+      position: 'top',
+    });
   };
 
   const columns = [
@@ -140,11 +187,21 @@ const Clan = () => {
       )
     },
     {
-      field: "action", headerName: "Link", flex: 1,
+      field: "action", headerName: "Actions", flex: 1,
       renderCell: (params) => (
-        <Button m={0} onClick={() => handleButtonClick(params.row.token_address, params.row.token_id)}>
-          View
-        </Button>
+        <Box>
+          <IconButton
+            icon={<FaClipboard />}
+            aria-label="Copy Link"
+            onClick={() => handleCopyLink(params.row.token_address, params.row.token_id)}
+            mr={2}
+          />
+          <IconButton
+            icon={<FaExternalLinkAlt />}
+            aria-label="View"
+            onClick={() => handleButtonClick(params.row.token_address, params.row.token_id)}
+          />
+        </Box>
       )
     },
   ];
@@ -163,10 +220,12 @@ const Clan = () => {
       <SimpleGrid columns={[1, null, 8]} spacing="40px">
         {Object.entries(data || {})
           .sort(([a], [b]) => a.localeCompare(b))
-          .map(([name, { count, tier }]) => (
+          .map(([name, { count, tier, holoCount = 0, darkHoloCount = 0 }]) => (
             <Box bg={tierColors[tier] || color} p={5} borderRadius="md" key={name}>
               <Text fontSize="xl">{name}</Text>
-              <Text>{count}</Text>
+              <Text>Total: {count}</Text>
+              {holoCount > 0 && <Text>Holo: {holoCount}</Text>}
+              {darkHoloCount > 0 && <Text>Dark Holo: {darkHoloCount}</Text>}
             </Box>
           ))}
       </SimpleGrid>
@@ -177,32 +236,65 @@ const Clan = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box p={5} w='100vw'>
-        <Center>
-          <VStack>
-          <Heading as="h1" mb={5}>Clan</Heading>
-          <Text mb={5}>Select a user to view their IMX wallet contents.</Text>
-          <Select placeholder="Select user" onChange={handleUserChange}>
-            {users.map((user) => (
-              <option key={user.walletAddress} value={user.walletAddress}>
-                {user.username}
-              </option>
-            ))}
-          </Select>
-          {selectedWalletAddress && (
-            <Box mt={5}>
-              <Text fontSize="xl">
-                Wallet Address:{" "}
-                <Button onClick={() => handleCellClick(selectedWalletAddress)} variant="link" colorScheme="teal">
-                  {selectedWalletAddress}
+        <Box bg="gray.100" p={5} borderRadius="md">
+          <Center>
+            <VStack>
+              <Heading as="h1" mb={5}>Clan</Heading>
+              <Text mb={5}>Select a user to view their IMX wallet contents.</Text>
+              <Select placeholder="Select user" onChange={handleUserChange}>
+                <option value="all">All Users</option>
+                {users.map((user) => (
+                  <option key={user.walletAddress} value={user.walletAddress}>
+                    {user.username}
+                  </option>
+                ))}
+              </Select>
+              <Box mt={5}>
+                <Text>Or enter a wallet address:</Text>
+                <Input
+                  placeholder="Wallet Address"
+                  value={manualWalletAddress}
+                  onChange={(e) => setManualWalletAddress(e.target.value)}
+                  mt={2}
+                />
+                <Button onClick={handleManualAddressSubmit} m={2} colorScheme="teal">
+                  Load Wallet
                 </Button>
-              </Text>
-            </Box>
-          )}
-          </VStack>
+              </Box>
+              {selectedWalletAddress && selectedWalletAddress !== 'all' && (
+                <Box mt={5}>
+                  <Text fontSize="xl">
+                    Wallet Address:{" "}
+                    <Button onClick={() => handleCellClick(selectedWalletAddress)} variant="link" colorScheme="teal">
+                      {selectedWalletAddress}
+                    </Button>
+                  </Text>
+                </Box>
+              )}
+            </VStack>
           </Center>
-        {isLoading && <Text mt={5}>Loading wallet contents...</Text>}
+        </Box>
+        {isLoading &&
+          <>
+            <Text mt={5}>Loading wallet contents...</Text>
+            <Spinner />
+          </>
+        }
         {selectedUser && walletContents.length > 0 && (
           <>
+            <Box mt={5} overflowX="auto">
+              <Heading as="h2" size="md" mb={3}>Holos</Heading>
+              <SimpleGrid columns={[1, null, 8]} spacing="40px" mt={5}>
+                <Box borderRadius={'md'} bg='purple.100' p={5}>
+                  <Text fontSize="xl">Holos</Text>
+                  <Text>{stats.holo}</Text>
+                </Box>
+                <Box borderRadius={'md'} bg='purple.100' p={5}>
+                  <Text fontSize="xl">Dark Holos</Text>
+                  <Text>{stats.darkHolo}</Text>
+                </Box>
+              </SimpleGrid>
+            </Box>
             {renderStatsSection('Shards', stats.shards, 'gray.100')}
             {renderStatsSection('Illuvials', stats.illuvials, tierColors)}
             {renderStatsSection('Plants', stats.plants, 'green.100')}

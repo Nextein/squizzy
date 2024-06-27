@@ -1,91 +1,80 @@
 import requests
 import json
 import time
-import lands
 import functools
-
 import pandas as pd
+import csv
 
 def separator():
     print('-'*20 + '*'*7 + '-'*20)
-    
+
 def timed(func):
     """Print the runtime of the decorated function"""
     @functools.wraps(func)
     def wrapper_timer(*args, **kwargs):
-        tic = time.perf_counter()    # 1
+        tic = time.perf_counter()
         value = func(*args, **kwargs)
-        toc = time.perf_counter()      # 2
-        run_time = toc - tic    # 3
+        toc = time.perf_counter()
+        run_time = toc - tic
         print(f"Finished {func.__name__!r} in {run_time:.4f} secs")
         return value
     return wrapper_timer
 
-
-# URL of the Immutable X API endpoint for fetching orders
 API_URL = "https://api.x.immutable.com/v3/orders"
+csv_file_path = './data/imx/lands_orders.csv'
 
-def fetch_orders(user):
-    all_orders = []
+def fetch_orders(user, writer):
     params = {
-        "status": "active",  # Only fetch orders that are currently active
-        "user": user,  # Land owner address
-        "page_size": 200,  # Request the maximum number of items per page
+        "status": "active",
+        "user": user,
+        "page_size": 200,
     }
 
     while True:
-        print(f"{time.time()} Fetching next batch...")
+        print(f"{time.time()} Fetching next batch for user {user}...")
         response = requests.get(API_URL, params=params)
         if response.status_code != 200:
             print("Failed to fetch data: HTTP Status Code", response.status_code)
             break
 
         data = response.json()
-        # Filter to ensure orders are not filled (amount_sold is None)
         active_orders = [order for order in data["result"] if order.get("amount_sold") is None]
-        all_orders.extend(active_orders)
 
-        # Check if a cursor is provided to fetch the next page
+        for order in active_orders:
+            writer.writerow([
+                order.get('order_id'),
+                order.get('status'),
+                order.get('user'),
+                order.get('sell'),
+                order.get('buy'),
+                order.get('created_at'),
+                order.get('updated_at'),
+                json.dumps(order.get('metadata'))
+            ])
+
         cursor = data.get("cursor")
         if cursor:
             params["cursor"] = cursor
         else:
             break
 
-    return all_orders
-
-def save_to_file(data, filename):
-    # Save the collected data to a JSON file
-    with open(filename, 'w') as file:
-        json.dump(data, file, indent=4)
-
 @timed
 def main():
-    # Fetch land owners
     filepath = "./data/imx/lands.csv"
-    # lands.create_csv(filepath)
+    lands_df = pd.read_csv(filepath)
+    lands_df.sort_values(by='name', inplace=True)
+    users = lands_df['user'].unique()
+    n_users = users.shape[0]
 
-    lands = pd.read_csv(filepath)
-    lands.sort_values(by='name', inplace=True)
-    users = lands['user'].unique()
+    with open(csv_file_path, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Order ID', 'Status', 'User', 'Sell', 'Buy', 'Created At', 'Updated At', 'Metadata'])
 
-    all_orders = []
-    i = 0
-    for user in users:
-        separator()
-        print(i)
-        i+=1
-        orders = fetch_orders(user)
-        print(orders)
-        all_orders.extend(orders)
-        
-    separator()
-    separator()
-    separator()
+        for i, user in enumerate(users):
+            print(f"{i}/{n_users}", end='-')
+            fetch_orders(user, writer)
 
-    # Save the orders to a file
-    save_to_file(all_orders, 'data/imx/lands_orders.json')
-    print(f"Saved {len(all_orders)} active orders to 'lands_orders.json'")
+    print(f"Data has been written to '{csv_file_path}'")
 
 if __name__ == "__main__":
     main()

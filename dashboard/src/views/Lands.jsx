@@ -4,7 +4,7 @@ import { Line, Pie } from 'react-chartjs-2';
 import '../chartConfig';
 import { lineData, samplePieData, options } from '../data/charts';
 
-const Lands = () => {
+export default function Lands({lands}) {
 
   return (
     <Box p={5}>
@@ -50,5 +50,3 @@ const Lands = () => {
     </Box>
   );
 };
-
-export default Lands;

@@ -150,7 +150,7 @@ const pieOptions = {
   },
 };
 
-export default function Illuvials({ orders }) {
+export default function Illuvials({orders}) {
   const [pieData, setPieData] = useState(null);
 
   useEffect(() => {

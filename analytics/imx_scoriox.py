@@ -4,7 +4,7 @@ import csv
 import json
 
 def fetch_imx_data_csv():
-    user_address = '0xb73e758ecfec06f16a22802b6bed827731e2a078'
+    user_address = '0x2179577a53b40874a821476281c45096fe2bfd60'
     collection_address = '0xa732097446130b699bea80475ca571e73f9a7b17'
     api_base_url = f"https://api.sandbox.x.immutable.com/v1/assets?page_size=200&order_by=updated_at&user={user_address}&collection={collection_address}"
     rate_limit_pause = 0.2  # seconds to pause for rate limiting
