@@ -13,7 +13,16 @@ const Clan = () => {
   const [walletContents, setWalletContents] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedWalletAddress, setSelectedWalletAddress] = useState('');
-  const [stats, setStats] = useState({ totalItems: 0, totalPoints: 0, illuvials: {}, shards: {}, plants: {}, essences: {}, holo: 0, darkHolo: 0 });
+  const [stats, setStats] = useState({
+    totalItems: 0,
+    totalPoints: 0,
+    illuvials: {},
+    shards: {},
+    plants: {},
+    essences: {},
+    holo: 0,
+    darkHolo: 0
+  });
   const toast = useToast();
 
   const handleUserChange = async (event) => {
@@ -57,15 +66,27 @@ const Clan = () => {
       contents.forEach(item => {
         const { name, holo: holoItem, darkHolo: darkHoloItem, Tier } = item.metadata || {};
         if (item.collection.name === 'Illuvium Illuvials') {
-          illuvials[name] = { count: (illuvials[name]?.count || 0) + 1, tier: Tier };
+          if (!illuvials[name]) {
+            illuvials[name] = { count: 0, tier: Tier };
+          }
+          illuvials[name].count += 1;
           if (holoItem) holo += 1;
           if (darkHoloItem) darkHolo += 1;
         } else if (item.collection.name === 'Illuvium Shards') {
-          shards[name] = (shards[name] || 0) + 1;
+          if (!shards[name]) {
+            shards[name] = { count: 0 };
+          }
+          shards[name].count += 1;
         } else if (item.collection.name === 'Illuvium Plants') {
-          plants[name] = (plants[name] || 0) + 1;
+          if (!plants[name]) {
+            plants[name] = { count: 0 };
+          }
+          plants[name].count += 1;
         } else if (item.collection.name === 'Illuvium Essences') {
-          essences[name] = (essences[name] || 0) + 1;
+          if (!essences[name]) {
+            essences[name] = { count: 0 };
+          }
+          essences[name].count += 1;
         }
       });
 
@@ -86,6 +107,11 @@ const Clan = () => {
       duration: 1500,
       position: 'top',
     });
+  };
+
+  const handleButtonClick = (token_address, token_id) => {
+    const url = `https://sandbox.illuvidex.illuvium.io/asset/${token_address}/${token_id}`;
+    window.open(url, '_blank');
   };
 
   const columns = [
@@ -113,6 +139,14 @@ const Clan = () => {
         <img src={params.value} alt={params.row.name} width="50" />
       )
     },
+    {
+      field: "action", headerName: "Link", flex: 1,
+      renderCell: (params) => (
+        <Button m={0} onClick={() => handleButtonClick(params.row.token_address, params.row.token_id)}>
+          View
+        </Button>
+      )
+    },
   ];
 
   const tierColors = {
@@ -122,6 +156,22 @@ const Clan = () => {
     4: "orange.100",
     5: "red.100"
   };
+
+  const renderStatsSection = (title, data, color) => (
+    <Box mt={5} overflowX="auto">
+      <Heading as="h2" size="md" mb={3}>{title}</Heading>
+      <SimpleGrid columns={[1, null, 8]} spacing="40px">
+        {Object.entries(data || {})
+          .sort(([a], [b]) => a.localeCompare(b))
+          .map(([name, { count, tier }]) => (
+            <Box bg={tierColors[tier] || color} p={5} borderRadius="md" key={name}>
+              <Text fontSize="xl">{name}</Text>
+              <Text>{count}</Text>
+            </Box>
+          ))}
+      </SimpleGrid>
+    </Box>
+  );
 
   return (
     <ThemeProvider theme={theme}>
@@ -149,16 +199,10 @@ const Clan = () => {
         {isLoading && <Text mt={5}>Loading wallet contents...</Text>}
         {selectedUser && walletContents.length > 0 && (
           <>
-            <SimpleGrid columns={[1, null, 8]} spacing="40px" mt={5}>
-              {Object.entries(stats.illuvials)
-                .sort(([a], [b]) => a.localeCompare(b))
-                .map(([illuvial, { count, tier }]) => (
-                  <Box bg={tierColors[tier]} p={5} borderRadius="md" key={illuvial}>
-                    <Text fontSize="xl">{illuvial}</Text>
-                    <Text>{count}</Text>
-                  </Box>
-                ))}
-            </SimpleGrid>
+            {renderStatsSection('Shards', stats.shards, 'gray.100')}
+            {renderStatsSection('Illuvials', stats.illuvials, tierColors)}
+            {renderStatsSection('Plants', stats.plants, 'green.100')}
+            {renderStatsSection('Essences', stats.essences, 'purple.100')}
             <Box mt={10} height="75vh">
               <DataGrid
                 rows={walletContents}
