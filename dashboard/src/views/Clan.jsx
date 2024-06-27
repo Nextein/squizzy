@@ -282,6 +282,7 @@ const Clan = () => {
         }
         {selectedUser && walletContents.length > 0 && (
           <>
+            {renderStatsSection('Shards', stats.shards, 'gray.100')}
             <Box mt={5} overflowX="auto">
               <Heading as="h2" size="md" mb={3}>Holos</Heading>
               <SimpleGrid columns={[1, null, 8]} spacing="40px" mt={5}>
@@ -295,7 +296,6 @@ const Clan = () => {
                 </Box>
               </SimpleGrid>
             </Box>
-            {renderStatsSection('Shards', stats.shards, 'gray.100')}
             {renderStatsSection('Illuvials', stats.illuvials, tierColors)}
             {renderStatsSection('Plants', stats.plants, 'green.100')}
             {renderStatsSection('Essences', stats.essences, 'purple.100')}
