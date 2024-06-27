@@ -25,6 +25,14 @@ const filterNonZeroEntries = (data) => {
   };
 };
 
+const removeBottomPercentile = (data, percentile = 80) => {
+  const thresholdIndex = Math.floor(data.values.length * (percentile / 100));
+  return {
+    labels: data.labels.slice(0, -thresholdIndex),
+    values: data.values.slice(0, -thresholdIndex),
+  };
+};
+
 const calculateMedian = (values) => {
   if (values.length === 0) return 0;
   values.sort((a, b) => a - b);
@@ -98,11 +106,16 @@ const processOrderData = (illuvials) => {
   const sortedAveragePriceData = filterNonZeroEntries(illuvialsAveragePrice);
   const sortedMedianPriceData = filterNonZeroEntries(illuvialsMedianPrice);
 
+  const filteredCountData = removeBottomPercentile(sortedCountData);
+  const filteredValueData = removeBottomPercentile(sortedValueData);
+  const filteredAveragePriceData = removeBottomPercentile(sortedAveragePriceData);
+  const filteredMedianPriceData = removeBottomPercentile(sortedMedianPriceData);
+
   const countData = {
-    labels: sortedCountData.labels,
+    labels: filteredCountData.labels,
     datasets: [
       {
-        data: sortedCountData.values,
+        data: filteredCountData.values,
         backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#FF9F40', '#FFCD56', '#4BC0C0', '#9966FF'],
         borderWidth: 0,
       },
@@ -110,10 +123,10 @@ const processOrderData = (illuvials) => {
   };
 
   const valueData = {
-    labels: sortedValueData.labels,
+    labels: filteredValueData.labels,
     datasets: [
       {
-        data: sortedValueData.values,
+        data: filteredValueData.values,
         backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#FF9F40', '#FFCD56', '#4BC0C0', '#9966FF'],
         borderWidth: 0,
       },
@@ -121,10 +134,10 @@ const processOrderData = (illuvials) => {
   };
 
   const averagePriceData = {
-    labels: sortedAveragePriceData.labels,
+    labels: filteredAveragePriceData.labels,
     datasets: [
       {
-        data: sortedAveragePriceData.values,
+        data: filteredAveragePriceData.values,
         backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#FF9F40', '#FFCD56', '#4BC0C0', '#9966FF'],
         borderWidth: 0,
       },
@@ -132,10 +145,10 @@ const processOrderData = (illuvials) => {
   };
 
   const medianPriceData = {
-    labels: sortedMedianPriceData.labels,
+    labels: filteredMedianPriceData.labels,
     datasets: [
       {
-        data: sortedMedianPriceData.values,
+        data: filteredMedianPriceData.values,
         backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#FF9F40', '#FFCD56', '#4BC0C0', '#9966FF'],
         borderWidth: 0,
       },
