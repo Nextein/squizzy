@@ -71,11 +71,13 @@ const processLandData = (lands) => {
 
   const tierMedianPrice = {};
   const tierPercentileBelowMedian = {};
+  const tierMedianDiscount = {};
   Object.keys(tierPrices).forEach((tier) => {
     const median = calculateMedian(tierPrices[tier]);
     tierMedianPrice[tier] = median;
-    const belowMedianCount = tierPrices[tier].filter(price => price < median).length;
-    tierPercentileBelowMedian[tier] = (belowMedianCount / tierPrices[tier].length) * 100;
+    const belowMedianPrices = tierPrices[tier].filter(price => price < median);
+    tierPercentileBelowMedian[tier] = (belowMedianPrices.length / tierPrices[tier].length) * 100;
+    tierMedianDiscount[tier] = belowMedianPrices.length > 0 ? calculateMedian(belowMedianPrices) : 0;
   });
 
   const sortedCountData = filterNonZeroEntries(tierCount);
@@ -127,7 +129,7 @@ const processLandData = (lands) => {
     ],
   };
 
-  return { countData, valueData, averagePriceData, medianPriceData, tierPrices, tierFloorPrice, tierAveragePrice, tierMedianPrice, totalTierCount, tierPercentileBelowMedian };
+  return { countData, valueData, averagePriceData, medianPriceData, tierPrices, tierFloorPrice, tierAveragePrice, tierMedianPrice, totalTierCount, tierPercentileBelowMedian, tierMedianDiscount };
 };
 
 const pieOptions = {
@@ -173,6 +175,8 @@ export default function Lands({ lands }) {
         averagePrice: data.tierAveragePrice[tier],
         medianPrice: data.tierMedianPrice[tier],
         percentileBelowMedian: data.tierPercentileBelowMedian[tier],
+        medianDiscount: data.tierMedianDiscount[tier],
+        floorDiscount: ((data.tierMedianPrice[tier] - data.tierFloorPrice[tier]) / data.tierMedianPrice[tier]) * 100,
       }));
       setLandStats(stats);
     }
@@ -193,6 +197,7 @@ export default function Lands({ lands }) {
                 <Th>For Sale</Th>
                 <Th>Floor Price</Th>
                 <Th>Median Price</Th>
+                <Th>Median Discount</Th>
                 <Th>Average Price</Th>
               </Tr>
             </Thead>
@@ -217,6 +222,12 @@ export default function Lands({ lands }) {
                     {stat.medianPrice.toFixed(2)}
                     <Box as="span" color="gray.500" ml={2}>
                       ({stat.percentileBelowMedian.toFixed(1)}%)
+                    </Box>
+                  </Td>
+                  <Td>
+                    {stat.medianDiscount.toFixed(2)}
+                    <Box as="span" color="gray.500" ml={2}>
+                      ({((1-stat.medianDiscount/stat.medianPrice)*100).toFixed(1)}%)
                     </Box>
                   </Td>
                   <Td>{stat.averagePrice.toFixed(2)}</Td>
