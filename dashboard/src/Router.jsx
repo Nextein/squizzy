@@ -9,7 +9,7 @@ import Wallets from './views/Wallets';
 import Other from './views/Other';
 import Baloth from './views/Baloth';
 import Clan from './views/Clan';
-import { Box, Button, Flex, Text } from '@chakra-ui/react';
+import { Box, Button, Center, Flex, Spinner, Text } from '@chakra-ui/react';
 import axios from 'axios';
 const API_URL = "https://api.sandbox.x.immutable.com/v3/orders";
 
@@ -62,12 +62,12 @@ function AppRouter() {
   const [progress, setProgress] = useState(0);
   const [loading, setLoading] = useState(false);
 
-    async function fetchData() {
-      setLoading(true);
-      const orders = await fetchAllActiveOrders(setProgress);
-      setRootData(orders);
-      setLoading(false);
-    }
+  async function fetchData() {
+    setLoading(true);
+    const orders = await fetchAllActiveOrders(setProgress);
+    setRootData(orders);
+    setLoading(false);
+  }
 
   return (
     <>
@@ -75,26 +75,29 @@ function AppRouter() {
         null
         :
         <Flex mt={8}>
-          <Button onClick={fetchData}>load<br />data</Button>
           {loading ?
             <Box ml={4}>
               <Text>Loading data...</Text>
+              <Center my={2}>
+                <Spinner />
+              </Center>
               <ProgressBar completed={progress} />
             </Box>
-            : null
+            :
+            <Button onClick={fetchData} bg={'purple.100'}>load<br />data</Button>
           }
         </Flex>
       }
       <Routes>
-        <Route path="/home" element={<Home orders={rootData}/>} />
-        <Route path="/illuvitars" element={<Illuvitars orders={rootData}/>} />
-        <Route path="/illuvials" element={<Illuvials orders={rootData}/>} />
-        <Route path="/lands" element={<Lands orders={rootData}/>} />
-        <Route path="/wallets" element={<Wallets orders={rootData}/>} />
-        <Route path="/baloth" element={<Baloth orders={rootData}/>} />
-        <Route path="/clan" element={<Clan orders={rootData}/>} />
-        <Route path="/other" element={<Other orders={rootData}/>} />
-        <Route path="*" element={<Home orders={rootData}/>} />
+        <Route path="/home" element={<Home orders={rootData} />} />
+        <Route path="/illuvitars" element={<Illuvitars orders={rootData} />} />
+        <Route path="/illuvials" element={<Illuvials orders={rootData} />} />
+        <Route path="/lands" element={<Lands orders={rootData} />} />
+        <Route path="/wallets" element={<Wallets orders={rootData} />} />
+        <Route path="/baloth" element={<Baloth orders={rootData} />} />
+        <Route path="/clan" element={<Clan orders={rootData} />} />
+        <Route path="/other" element={<Other orders={rootData} />} />
+        <Route path="*" element={<Home orders={rootData} />} />
       </Routes>
     </>
   );

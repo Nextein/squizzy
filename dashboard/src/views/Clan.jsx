@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Heading, Text, Select, useToast, Button, SimpleGrid } from '@chakra-ui/react';
+import { Box, Heading, Text, Select, useToast, Button, SimpleGrid, Center, VStack } from '@chakra-ui/react';
 import axios from 'axios';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -177,25 +177,29 @@ const Clan = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box p={5} w='100vw'>
-        <Heading as="h1" mb={5}>Clan</Heading>
-        <Text mb={5}>Select a user to view their IMX wallet contents.</Text>
-        <Select placeholder="Select user" onChange={handleUserChange}>
-          {users.map((user) => (
-            <option key={user.walletAddress} value={user.walletAddress}>
-              {user.username} - {user.walletAddress}
-            </option>
-          ))}
-        </Select>
-        {selectedWalletAddress && (
-          <Box mt={5}>
-            <Text fontSize="xl">
-              Wallet Address:{" "}
-              <Button onClick={() => handleCellClick(selectedWalletAddress)} variant="link" colorScheme="teal">
-                {selectedWalletAddress}
-              </Button>
-            </Text>
-          </Box>
-        )}
+        <Center>
+          <VStack>
+          <Heading as="h1" mb={5}>Clan</Heading>
+          <Text mb={5}>Select a user to view their IMX wallet contents.</Text>
+          <Select placeholder="Select user" onChange={handleUserChange}>
+            {users.map((user) => (
+              <option key={user.walletAddress} value={user.walletAddress}>
+                {user.username}
+              </option>
+            ))}
+          </Select>
+          {selectedWalletAddress && (
+            <Box mt={5}>
+              <Text fontSize="xl">
+                Wallet Address:{" "}
+                <Button onClick={() => handleCellClick(selectedWalletAddress)} variant="link" colorScheme="teal">
+                  {selectedWalletAddress}
+                </Button>
+              </Text>
+            </Box>
+          )}
+          </VStack>
+          </Center>
         {isLoading && <Text mt={5}>Loading wallet contents...</Text>}
         {selectedUser && walletContents.length > 0 && (
           <>
