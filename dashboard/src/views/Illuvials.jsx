@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Heading, Text, SimpleGrid, Flex, Table, Thead, Tbody, Tr, Th, Td } from '@chakra-ui/react';
+import { Box, Heading, Text, SimpleGrid, Flex, Table, Thead, Tbody, Tr, Th, Td, Grid } from '@chakra-ui/react';
 import { Line, Pie } from 'react-chartjs-2';
 import axios from 'axios';
 import { lineData, samplePieData, options } from '../data/charts';
@@ -18,9 +18,10 @@ function sortData(data) {
 
 const filterNonZeroEntries = (data) => {
   const filteredEntries = Object.entries(data).filter(([, value]) => value > 0);
+  const sortedEntries = filteredEntries.sort(([, a], [, b]) => b - a); // Sorting by value in descending order
   return {
-    labels: filteredEntries.map(([label]) => label),
-    values: filteredEntries.map(([, value]) => value),
+    labels: sortedEntries.map(([label]) => label),
+    values: sortedEntries.map(([, value]) => value),
   };
 };
 
@@ -38,7 +39,8 @@ const processOrderData = (illuvials) => {
     order.sell.data &&
     order.sell.data.properties &&
     order.sell.data.properties.collection &&
-    order.sell.data.properties.collection.name === 'Illuvium Illuvials'
+    order.sell.data.properties.collection.name === 'Illuvium Illuvials' &&
+    order.buy.data.quantity_with_fees > 0
   );
 
   const illuvialsCount = {};
@@ -189,6 +191,9 @@ export default function Illuvials({ illuvials }) {
         medianDiscount: data.illuvialsMedianDiscount[illuvialName],
         floorDiscount: ((data.illuvialsMedianPrice[illuvialName] - data.illuvialsFloorPrice[illuvialName]) / data.illuvialsMedianPrice[illuvialName]) * 100,
       }));
+
+      stats.sort((a, b) => a.illuvialName.localeCompare(b.illuvialName)); // Sorting stats alphabetically by illuvialName
+
       setIlluvialStats(stats);
     }
   }, [illuvials]);
@@ -248,36 +253,36 @@ export default function Illuvials({ illuvials }) {
           </Table>
         </Box>
       </Flex>
-      <SimpleGrid columns={[1, null, 3]} spacing="40px">
-        <Box bg="gray.100" p={5} borderRadius="md">
+      <Grid templateColumns="repeat(12, 1fr)" gap={6}>
+        <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 4">
           <Text fontSize="2xl">Illuvials Market Cap over Time</Text>
           <Line data={lineData} options={options} />
         </Box>
-        <Box bg="gray.100" p={5} borderRadius="md">
+        <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 4">
           <Text fontSize="2xl">Total Amount of Illuvials for Sale Over Time</Text>
           <Line data={lineData} options={options} />
         </Box>
-        <Box bg="gray.100" p={5} borderRadius="md">
+        <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 4">
           <Text fontSize="2xl">Change in Amount of Illuvials for Sale Over Time</Text>
           <Line data={lineData} options={options} />
         </Box>
-        <Box bg="gray.100" p={5} borderRadius="md">
+        <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 6">
           <Text fontSize="2xl">Distribution of Illuvials for Sale</Text>
           <Pie data={countPieData || samplePieData} options={pieOptions} />
         </Box>
-        <Box bg="gray.100" p={5} borderRadius="md">
+        <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 6">
           <Text fontSize="2xl">Total Value of Illuvials for Sale</Text>
           <Pie data={valuePieData || samplePieData} options={pieOptions} />
         </Box>
-        <Box bg="gray.100" p={5} borderRadius="md">
+        <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 6">
           <Text fontSize="2xl">Median Price for Sale of Illuvials</Text>
           <Pie data={medianPricePieData || samplePieData} options={pieOptions} />
         </Box>
-        <Box bg="gray.100" p={5} borderRadius="md">
+        <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 6">
           <Text fontSize="2xl">Average Price for Sale of Illuvials</Text>
           <Pie data={averagePricePieData || samplePieData} options={pieOptions} />
         </Box>
-      </SimpleGrid>
+      </Grid>
     </Box>
   );
 }
