@@ -1,4 +1,82 @@
 token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuels,solon,carbon,crypton,silicon,elements,hydrogen,hyperion
+64301,"Crimson Waste (644,391)",https://assets.illuvium-game.io/illuvidex/land/land-64301.svg,0xf0dafdc67cc517f8135354d51779f633ee7cca58,Crimson Waste,644,391,Halogenic Geode,3,6,1,1,4,5,9,3,1
+47614,"Abyssal Basin (152,368)",https://assets.illuvium-game.io/illuvidex/land/land-47614.svg,0x6ca5a91c6c22b3738969d4f4cb71a23752d8e89f,Abyssal Basin,152,368,None,1,1,0,1,1,1,3,1,0
+7087,"Taiga Boreal (201,217)",https://assets.illuvium-game.io/illuvidex/land/land-7087.svg,0xe9eded1cc8b4777bda4dde4057ee035d7ec89257,Taiga Boreal,201,217,None,1,1,1,1,0,0,3,2,0
+94044,"Halcyon Sea (611,528)",https://assets.illuvium-game.io/illuvidex/land/land-94044.svg,0x34bf45fefbcd80aa40896b58ebdbc95085f77746,Halcyon Sea,611,528,None,1,1,0,0,0,1,3,2,1
+17281,"Crystal Shores (780,436)",https://assets.illuvium-game.io/illuvidex/land/land-17281.svg,0x34bf45fefbcd80aa40896b58ebdbc95085f77746,Crystal Shores,780,436,None,1,1,1,2,0,0,3,1,0
+83384,"Brightland Steppes (521,419)",https://assets.illuvium-game.io/illuvidex/land/land-83384.svg,0xdfe9445af00412ded1439fefa8ec76577c9d41bf,Brightland Steppes,521,419,None,1,1,0,1,1,1,3,1,0
+62779,"Crimson Waste (623,381)",https://assets.illuvium-game.io/illuvidex/land/land-62779.svg,0x387dfc8e27b64eca3820d592b9d045ed86c8caee,Crimson Waste,623,381,None,1,1,0,1,0,0,3,2,1
+17089,"Crystal Shores (738,434)",https://assets.illuvium-game.io/illuvidex/land/land-17089.svg,0x84000560a003c32a2fc843d2309ae2fe6b1a2ee0,Crystal Shores,738,434,None,2,3,0,0,1,3,6,3,2
+19079,"Crystal Shores (820,454)",https://assets.illuvium-game.io/illuvidex/land/land-19079.svg,0xb9a84ba1c61826c8833697d2c38344090dacb5ad,Crystal Shores,820,454,None,1,1,0,1,0,1,3,1,1
+66424,"Crimson Waste (689,408)",https://assets.illuvium-game.io/illuvidex/land/land-66424.svg,0xb9a84ba1c61826c8833697d2c38344090dacb5ad,Crimson Waste,689,408,None,1,1,0,3,1,0,3,0,0
+56222,"Abyssal Basin (241,464)",https://assets.illuvium-game.io/illuvidex/land/land-56222.svg,0x34606af4e159a04024bbf211a64410494369922a,Abyssal Basin,241,464,None,2,3,2,1,0,2,6,3,1
+27902,"Crystal Shores (754,515)",https://assets.illuvium-game.io/illuvidex/land/land-27902.svg,0xe84b59379ef7f33aa3f930e098d6d14861402c26,Crystal Shores,754,515,None,2,3,1,4,1,2,6,0,1
+93026,"Halcyon Sea (582,521)",https://assets.illuvium-game.io/illuvidex/land/land-93026.svg,0xa9334f6d59906595736f4ca1182d7e301b2e173a,Halcyon Sea,582,521,None,2,3,1,2,1,3,6,1,1
+39043,"Shardbluff Labyrinth (760,324)",https://assets.illuvium-game.io/illuvidex/land/land-39043.svg,0xb9a84ba1c61826c8833697d2c38344090dacb5ad,Shardbluff Labyrinth,760,324,None,1,1,0,1,0,1,3,1,1
+55037,"Abyssal Basin (258,439)",https://assets.illuvium-game.io/illuvidex/land/land-55037.svg,0x21388f181d09cdce47ee5c545ca17549bc299b9f,Abyssal Basin,258,439,None,2,3,0,0,1,4,6,2,2
+55036,"Abyssal Basin (257,439)",https://assets.illuvium-game.io/illuvidex/land/land-55036.svg,0x21388f181d09cdce47ee5c545ca17549bc299b9f,Abyssal Basin,257,439,None,1,1,1,2,0,0,3,1,0
+55081,"Abyssal Basin (258,440)",https://assets.illuvium-game.io/illuvidex/land/land-55081.svg,0x21388f181d09cdce47ee5c545ca17549bc299b9f,Abyssal Basin,258,440,None,1,1,1,0,0,1,3,2,0
+55080,"Abyssal Basin (257,440)",https://assets.illuvium-game.io/illuvidex/land/land-55080.svg,0x21388f181d09cdce47ee5c545ca17549bc299b9f,Abyssal Basin,257,440,None,1,1,1,2,0,0,3,1,0
+39673,"Shardbluff Labyrinth (769,329)",https://assets.illuvium-game.io/illuvidex/land/land-39673.svg,0x6fec79efccdeea3d485d93c8d1435c4f98fb7b02,Shardbluff Labyrinth,769,329,None,1,1,0,2,1,0,3,1,0
+73272,"Brightland Steppes (594,276)",https://assets.illuvium-game.io/illuvidex/land/land-73272.svg,0x6f4646312e0a166e0e8bad77d4358d6c4a87e658,Brightland Steppes,594,276,None,1,1,0,1,0,1,3,1,1
+65892,"Crimson Waste (548,404)",https://assets.illuvium-game.io/illuvidex/land/land-65892.svg,0x794744ee36b958c07bab7c3d22bccb1d98d11b89,Crimson Waste,548,404,None,1,1,0,2,1,0,3,1,0
+41141,"Shardbluff Labyrinth (855,343)",https://assets.illuvium-game.io/illuvidex/land/land-41141.svg,0xd827bfaec32269223223d57a7578fc6a771c652f,Shardbluff Labyrinth,855,343,None,1,1,0,2,1,0,3,1,0
+87488,"Halcyon Sea (607,479)",https://assets.illuvium-game.io/illuvidex/land/land-87488.svg,0x433604a30833f06614759b6a5b37fbc4fe985111,Halcyon Sea,607,479,None,2,3,0,4,2,0,6,2,1
+46478,"Abyssal Basin (175,360)",https://assets.illuvium-game.io/illuvidex/land/land-46478.svg,0x6d52387fec1ccd79d23877545699164e273ef919,Abyssal Basin,175,360,None,1,1,1,0,0,2,3,1,0
+35794,"Shardbluff Labyrinth (751,302)",https://assets.illuvium-game.io/illuvidex/land/land-35794.svg,0xeb45650ae23d681152a4e27dbb18a9920a242609,Shardbluff Labyrinth,751,302,None,1,1,0,1,0,2,3,0,1
+66846,"Crimson Waste (679,412)",https://assets.illuvium-game.io/illuvidex/land/land-66846.svg,0xf4e14d778c2dbd6fd1a04f08721941eb3e1c9d6c,Crimson Waste,679,412,Eternal Spring,3,6,0,1,4,5,9,3,2
+54790,"Abyssal Basin (242,435)",https://assets.illuvium-game.io/illuvidex/land/land-54790.svg,0x447edf86aa46733252282ead9cfe88babda2d1d4,Abyssal Basin,242,435,Halogenic Geode,3,6,4,2,0,4,9,3,2
+40172,"Shardbluff Labyrinth (853,333)",https://assets.illuvium-game.io/illuvidex/land/land-40172.svg,0x645488d2c5d2888998e91218ac1be4a77c910f8e,Shardbluff Labyrinth,853,333,Halogenic Geode,3,6,1,3,3,2,9,4,2
+39731,"Shardbluff Labyrinth (827,329)",https://assets.illuvium-game.io/illuvidex/land/land-39731.svg,0x287044953b90d650fe1a7b1ba139ae49c668eff0,Shardbluff Labyrinth,827,329,None,1,1,0,1,1,1,3,1,0
+39729,"Shardbluff Labyrinth (825,329)",https://assets.illuvium-game.io/illuvidex/land/land-39729.svg,0x287044953b90d650fe1a7b1ba139ae49c668eff0,Shardbluff Labyrinth,825,329,None,2,3,0,1,3,3,6,2,0
+39836,"Shardbluff Labyrinth (827,330)",https://assets.illuvium-game.io/illuvidex/land/land-39836.svg,0x287044953b90d650fe1a7b1ba139ae49c668eff0,Shardbluff Labyrinth,827,330,None,2,3,1,3,2,3,6,0,0
+76045,"Brightland Steppes (550,304)",https://assets.illuvium-game.io/illuvidex/land/land-76045.svg,0x18061c84ccd49a48a4b2bcbdfbc195a1a30e26cd,Brightland Steppes,550,304,None,2,3,1,4,0,0,6,2,2
+83816,"Brightland Steppes (483,428)",https://assets.illuvium-game.io/illuvidex/land/land-83816.svg,0x18061c84ccd49a48a4b2bcbdfbc195a1a30e26cd,Brightland Steppes,483,428,None,2,3,1,2,2,3,6,1,0
+41690,"Shardbluff Labyrinth (841,349)",https://assets.illuvium-game.io/illuvidex/land/land-41690.svg,0x0eeae1035f0aef0dfa4652410391b08de270855f,Shardbluff Labyrinth,841,349,None,1,1,0,0,1,1,3,2,0
+52335,"Abyssal Basin (174,405)",https://assets.illuvium-game.io/illuvidex/land/land-52335.svg,0x0eeae1035f0aef0dfa4652410391b08de270855f,Abyssal Basin,174,405,None,1,1,0,1,0,0,3,2,1
+13319,"Taiga Boreal (204,283)",https://assets.illuvium-game.io/illuvidex/land/land-13319.svg,0x0eeae1035f0aef0dfa4652410391b08de270855f,Taiga Boreal,204,283,None,1,1,1,1,0,2,3,0,0
+57929,"Crimson Waste (640,342)",https://assets.illuvium-game.io/illuvidex/land/land-57929.svg,0x375c19ebf4941c2bcb9bf0419d6476f97f86b8a0,Crimson Waste,640,342,None,2,3,0,1,1,3,6,2,2
+57893,"Crimson Waste (667,341)",https://assets.illuvium-game.io/illuvidex/land/land-57893.svg,0xc2d431633bd6194c6c7006aea0352f16d6b9ea25,Crimson Waste,667,341,None,1,1,0,0,0,2,3,1,1
+39413,"Shardbluff Labyrinth (854,326)",https://assets.illuvium-game.io/illuvidex/land/land-39413.svg,0x8fcf8db7afaa8c865b693beed5858712abbe4ddb,Shardbluff Labyrinth,854,326,None,2,3,1,4,2,1,6,1,0
+36475,"Shardbluff Labyrinth (842,306)",https://assets.illuvium-game.io/illuvidex/land/land-36475.svg,0x4da499c96dd8684c526a07b0bb4e9c1593f1e585,Shardbluff Labyrinth,842,306,None,1,1,0,0,0,2,3,1,1
+81219,"Brightland Steppes (530,356)",https://assets.illuvium-game.io/illuvidex/land/land-81219.svg,0xf4e14d778c2dbd6fd1a04f08721941eb3e1c9d6c,Brightland Steppes,530,356,None,1,1,0,1,0,0,3,2,1
+28117,"Crystal Shores (752,519)",https://assets.illuvium-game.io/illuvidex/land/land-28117.svg,0xf4e14d778c2dbd6fd1a04f08721941eb3e1c9d6c,Crystal Shores,752,519,None,1,1,1,1,0,2,3,0,0
+92998,"Halcyon Sea (554,521)",https://assets.illuvium-game.io/illuvidex/land/land-92998.svg,0xf4e14d778c2dbd6fd1a04f08721941eb3e1c9d6c,Halcyon Sea,554,521,None,1,1,0,1,1,1,3,1,0
+44877,"Abyssal Basin (147,346)",https://assets.illuvium-game.io/illuvidex/land/land-44877.svg,0xf4e14d778c2dbd6fd1a04f08721941eb3e1c9d6c,Abyssal Basin,147,346,None,1,1,0,1,0,1,3,1,1
+5445,"Taiga Boreal (172,198)",https://assets.illuvium-game.io/illuvidex/land/land-5445.svg,0xf4e14d778c2dbd6fd1a04f08721941eb3e1c9d6c,Taiga Boreal,172,198,None,1,1,1,1,0,2,3,0,0
+6077,"Taiga Boreal (202,205)",https://assets.illuvium-game.io/illuvidex/land/land-6077.svg,0xf4e14d778c2dbd6fd1a04f08721941eb3e1c9d6c,Taiga Boreal,202,205,None,1,1,0,0,0,1,3,2,1
+39189,"Shardbluff Labyrinth (768,325)",https://assets.illuvium-game.io/illuvidex/land/land-39189.svg,0xf4e14d778c2dbd6fd1a04f08721941eb3e1c9d6c,Shardbluff Labyrinth,768,325,None,1,1,1,0,0,0,3,3,0
+39327,"Shardbluff Labyrinth (768,326)",https://assets.illuvium-game.io/illuvidex/land/land-39327.svg,0xf4e14d778c2dbd6fd1a04f08721941eb3e1c9d6c,Shardbluff Labyrinth,768,326,None,1,1,0,0,0,2,3,1,1
+93898,"Halcyon Sea (623,527)",https://assets.illuvium-game.io/illuvidex/land/land-93898.svg,0x3b890095ad8e364f5886d092377a904934bb9742,Halcyon Sea,623,527,None,1,1,1,1,0,2,3,0,0
+27570,"Crystal Shores (675,512)",https://assets.illuvium-game.io/illuvidex/land/land-27570.svg,0x3754260bea808bc1af025e43a599dfd72454074b,Crystal Shores,675,512,None,1,1,0,3,1,0,3,0,0
+5976,"Taiga Boreal (189,204)",https://assets.illuvium-game.io/illuvidex/land/land-5976.svg,0x7f0d8507fe62a4c0110c0d99995efbaa6d3bda95,Taiga Boreal,189,204,None,1,1,1,2,0,1,3,0,0
+67864,"Crimson Waste (695,421)",https://assets.illuvium-game.io/illuvidex/land/land-67864.svg,0x38f3f628a2925aae1f2c8421b5848b178a42a2cc,Crimson Waste,695,421,None,1,1,0,1,0,2,3,0,1
+56435,"Abyssal Basin (241,468)",https://assets.illuvium-game.io/illuvidex/land/land-56435.svg,0x38f3f628a2925aae1f2c8421b5848b178a42a2cc,Abyssal Basin,241,468,None,1,1,1,2,0,0,3,1,0
+40263,"Shardbluff Labyrinth (844,334)",https://assets.illuvium-game.io/illuvidex/land/land-40263.svg,0x38f3f628a2925aae1f2c8421b5848b178a42a2cc,Shardbluff Labyrinth,844,334,None,2,3,2,3,0,1,6,2,1
+79673,"Brightland Steppes (534,336)",https://assets.illuvium-game.io/illuvidex/land/land-79673.svg,0x38f3f628a2925aae1f2c8421b5848b178a42a2cc,Brightland Steppes,534,336,None,2,3,2,4,1,2,6,0,0
+97855,"Halcyon Sea (574,555)",https://assets.illuvium-game.io/illuvidex/land/land-97855.svg,0x38f3f628a2925aae1f2c8421b5848b178a42a2cc,Halcyon Sea,574,555,None,2,3,2,4,0,0,6,2,1
+38561,"Shardbluff Labyrinth (852,320)",https://assets.illuvium-game.io/illuvidex/land/land-38561.svg,0xe1fd744f21c70c5b1e802d9cbb923c08725905cd,Shardbluff Labyrinth,852,320,None,2,3,0,2,1,4,6,0,2
+19542,"Crystal Shores (672,458)",https://assets.illuvium-game.io/illuvidex/land/land-19542.svg,0xe6a98ef80d5177b56c2a8b5c240c9c206366ede4,Crystal Shores,672,458,Halogenic Geode,3,6,1,3,3,4,9,2,2
+7580,"Taiga Boreal (180,223)",https://assets.illuvium-game.io/illuvidex/land/land-7580.svg,0x3b890095ad8e364f5886d092377a904934bb9742,Taiga Boreal,180,223,None,1,1,0,1,1,2,3,0,0
+80942,"Brightland Steppes (512,352)",https://assets.illuvium-game.io/illuvidex/land/land-80942.svg,0xe1fd744f21c70c5b1e802d9cbb923c08725905cd,Brightland Steppes,512,352,None,2,3,1,1,2,3,6,2,0
+95929,"Halcyon Sea (564,540)",https://assets.illuvium-game.io/illuvidex/land/land-95929.svg,0xe496f0b3edddc2799850f32d0015f5cf019dec92,Halcyon Sea,564,540,None,1,1,0,1,0,2,3,0,1
+39291,"Shardbluff Labyrinth (731,326)",https://assets.illuvium-game.io/illuvidex/land/land-39291.svg,0xb2b92ae29ecded2d02d427f47684962409215ea2,Shardbluff Labyrinth,731,326,Eternal Spring,3,6,1,6,1,1,9,2,4
+46966,"Abyssal Basin (269,363)",https://assets.illuvium-game.io/illuvidex/land/land-46966.svg,0x3b890095ad8e364f5886d092377a904934bb9742,Abyssal Basin,269,363,None,1,1,1,1,0,2,3,0,0
+44492,"Abyssal Basin (176,342)",https://assets.illuvium-game.io/illuvidex/land/land-44492.svg,0xd5d72f13931e8a3919d5e26a6e7474691c441599,Abyssal Basin,176,342,None,1,1,0,1,0,0,3,2,1
+81516,"Brightland Steppes (514,361)",https://assets.illuvium-game.io/illuvidex/land/land-81516.svg,0xdf5c7e547b8a4d0a9b8f6ea423dc73cf67e17e1f,Brightland Steppes,514,361,Pegmatite Swarm,4,9,4,2,3,3,12,7,2
+95135,"Halcyon Sea (515,535)",https://assets.illuvium-game.io/illuvidex/land/land-95135.svg,0x951ee60f45680b601521644fcb584e113dae21b3,Halcyon Sea,515,535,Halogenic Geode,3,6,0,5,5,2,9,2,1
+5986,"Taiga Boreal (199,204)",https://assets.illuvium-game.io/illuvidex/land/land-5986.svg,0x4da21988c4162bf0abfb58d7b34b1f93a3c65b0b,Taiga Boreal,199,204,Halogenic Geode,3,6,1,3,4,4,9,2,1
+16675,"Crystal Shores (759,428)",https://assets.illuvium-game.io/illuvidex/land/land-16675.svg,0x9b759d6c4851cf13a38d919972ad08d2e20867fc,Crystal Shores,759,428,None,2,3,1,3,2,0,6,3,0
+96618,"Halcyon Sea (578,545)",https://assets.illuvium-game.io/illuvidex/land/land-96618.svg,0x9b759d6c4851cf13a38d919972ad08d2e20867fc,Halcyon Sea,578,545,None,2,3,0,2,1,2,6,2,2
+46556,"Abyssal Basin (274,360)",https://assets.illuvium-game.io/illuvidex/land/land-46556.svg,0x8fb6e7e482584a4e4e1af3cfdc4aad38ed98df8a,Abyssal Basin,274,360,None,2,3,1,0,0,3,6,3,2
+41418,"Shardbluff Labyrinth (851,346)",https://assets.illuvium-game.io/illuvidex/land/land-41418.svg,0xcdfc858ba72979c473ca2c6a6c62c98dbeaf8ae9,Shardbluff Labyrinth,851,346,None,1,1,0,1,1,1,3,1,0
+47479,"Abyssal Basin (173,367)",https://assets.illuvium-game.io/illuvidex/land/land-47479.svg,0xcdfc858ba72979c473ca2c6a6c62c98dbeaf8ae9,Abyssal Basin,173,367,None,1,1,1,1,0,1,3,1,0
+39257,"Shardbluff Labyrinth (836,325)",https://assets.illuvium-game.io/illuvidex/land/land-39257.svg,0x6a88afdf3db371b9093b9fe7dd61f28495804598,Shardbluff Labyrinth,836,325,None,2,3,0,4,2,1,6,1,1
+39738,"Shardbluff Labyrinth (834,329)",https://assets.illuvium-game.io/illuvidex/land/land-39738.svg,0xcdfc858ba72979c473ca2c6a6c62c98dbeaf8ae9,Shardbluff Labyrinth,834,329,None,1,1,0,1,0,1,3,1,1
+41225,"Shardbluff Labyrinth (845,344)",https://assets.illuvium-game.io/illuvidex/land/land-41225.svg,0xcdfc858ba72979c473ca2c6a6c62c98dbeaf8ae9,Shardbluff Labyrinth,845,344,None,1,1,1,1,0,1,3,1,0
+69590,"Crimson Waste (580,435)",https://assets.illuvium-game.io/illuvidex/land/land-69590.svg,0xcdfc858ba72979c473ca2c6a6c62c98dbeaf8ae9,Crimson Waste,580,435,None,1,1,0,1,1,1,3,1,0
+66735,"Crimson Waste (675,411)",https://assets.illuvium-game.io/illuvidex/land/land-66735.svg,0xcdfc858ba72979c473ca2c6a6c62c98dbeaf8ae9,Crimson Waste,675,411,None,1,1,0,1,0,1,3,1,1
+98888,"Halcyon Sea (600,564)",https://assets.illuvium-game.io/illuvidex/land/land-98888.svg,0xcdfc858ba72979c473ca2c6a6c62c98dbeaf8ae9,Halcyon Sea,600,564,None,1,1,0,1,1,1,3,1,0
 35864,"Shardbluff Labyrinth (821,302)",https://assets.illuvium-game.io/illuvidex/land/land-35864.svg,0xcdfc858ba72979c473ca2c6a6c62c98dbeaf8ae9,Shardbluff Labyrinth,821,302,None,1,1,1,1,0,1,3,1,0
 90297,"Halcyon Sea (579,500)",https://assets.illuvium-game.io/illuvidex/land/land-90297.svg,0xd0e01db197e5c14bae75c2bad1aaec014c46c18f,Halcyon Sea,579,500,None,1,1,0,1,1,1,3,1,0
 60237,"Crimson Waste (641,364)",https://assets.illuvium-game.io/illuvidex/land/land-60237.svg,0xd0e01db197e5c14bae75c2bad1aaec014c46c18f,Crimson Waste,641,364,None,1,1,1,1,0,1,3,1,0
@@ -15,7 +93,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 5127,"Taiga Boreal (223,193)",https://assets.illuvium-game.io/illuvidex/land/land-5127.svg,0xe4bec9a52520b93108dd3bf59c1e0ea8da73bf54,Taiga Boreal,223,193,None,1,1,0,1,1,1,3,1,0
 47493,"Abyssal Basin (187,367)",https://assets.illuvium-game.io/illuvidex/land/land-47493.svg,0xe4bec9a52520b93108dd3bf59c1e0ea8da73bf54,Abyssal Basin,187,367,None,1,1,1,1,0,1,3,1,0
 98439,"Halcyon Sea (584,560)",https://assets.illuvium-game.io/illuvidex/land/land-98439.svg,0x6a377b7b348abe073f0e0dfadc97c38a00c03391,Halcyon Sea,584,560,None,1,1,0,1,1,1,3,1,0
-94044,"Halcyon Sea (611,528)",https://assets.illuvium-game.io/illuvidex/land/land-94044.svg,0x5269532061b509ac0be1ca73f2b2fdf00f68478e,Halcyon Sea,611,528,None,1,1,0,0,0,1,3,2,1
 98208,"Halcyon Sea (579,558)",https://assets.illuvium-game.io/illuvidex/land/land-98208.svg,0x6a377b7b348abe073f0e0dfadc97c38a00c03391,Halcyon Sea,579,558,None,1,1,1,1,0,1,3,1,0
 63706,"Crimson Waste (642,387)",https://assets.illuvium-game.io/illuvidex/land/land-63706.svg,0x5269532061b509ac0be1ca73f2b2fdf00f68478e,Crimson Waste,642,387,None,1,1,0,0,0,1,3,2,1
 47189,"Abyssal Basin (190,365)",https://assets.illuvium-game.io/illuvidex/land/land-47189.svg,0x6a377b7b348abe073f0e0dfadc97c38a00c03391,Abyssal Basin,190,365,None,1,1,0,1,1,1,3,1,0
@@ -54,8 +131,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 41407,"Shardbluff Labyrinth (840,346)",https://assets.illuvium-game.io/illuvidex/land/land-41407.svg,0x7484148d94713f8b32fa98f4e8240a34db40094c,Shardbluff Labyrinth,840,346,None,2,3,3,3,0,0,6,3,0
 41406,"Shardbluff Labyrinth (839,346)",https://assets.illuvium-game.io/illuvidex/land/land-41406.svg,0x7484148d94713f8b32fa98f4e8240a34db40094c,Shardbluff Labyrinth,839,346,None,1,1,0,1,1,1,3,1,0
 39162,"Shardbluff Labyrinth (741,325)",https://assets.illuvium-game.io/illuvidex/land/land-39162.svg,0x4b86bd899088ee44f29aff1a824777cc0389a95a,Shardbluff Labyrinth,741,325,Primeval Marsh,3,6,0,4,3,1,9,4,3
-79673,"Brightland Steppes (534,336)",https://assets.illuvium-game.io/illuvidex/land/land-79673.svg,0x433604a30833f06614759b6a5b37fbc4fe985111,Brightland Steppes,534,336,None,2,3,2,4,1,2,6,0,0
-7087,"Taiga Boreal (201,217)",https://assets.illuvium-game.io/illuvidex/land/land-7087.svg,0x8b9724f7c90c42f4efeb78572903896a17bc8c79,Taiga Boreal,201,217,None,1,1,1,1,0,0,3,2,0
 80800,"Brightland Steppes (512,350)",https://assets.illuvium-game.io/illuvidex/land/land-80800.svg,0x94004b0a3b1ecd9690a423b9e0883bfef123d1bd,Brightland Steppes,512,350,None,1,1,1,2,0,0,3,1,0
 16608,"Crystal Shores (762,427)",https://assets.illuvium-game.io/illuvidex/land/land-16608.svg,0x94004b0a3b1ecd9690a423b9e0883bfef123d1bd,Crystal Shores,762,427,None,1,1,1,2,0,1,3,0,0
 88456,"Halcyon Sea (623,486)",https://assets.illuvium-game.io/illuvidex/land/land-88456.svg,0x94004b0a3b1ecd9690a423b9e0883bfef123d1bd,Halcyon Sea,623,486,None,1,1,0,0,0,0,3,3,1
@@ -81,7 +156,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 83482,"Brightland Steppes (516,421)",https://assets.illuvium-game.io/illuvidex/land/land-83482.svg,0x459f2266fe484a10a9c9e2de5cf285f1307aaef7,Brightland Steppes,516,421,None,1,1,0,1,0,0,3,2,1
 88419,"Halcyon Sea (586,486)",https://assets.illuvium-game.io/illuvidex/land/land-88419.svg,0x459f2266fe484a10a9c9e2de5cf285f1307aaef7,Halcyon Sea,586,486,None,1,1,0,2,1,0,3,1,0
 8707,"Taiga Boreal (191,236)",https://assets.illuvium-game.io/illuvidex/land/land-8707.svg,0x459f2266fe484a10a9c9e2de5cf285f1307aaef7,Taiga Boreal,191,236,None,1,1,0,1,0,2,3,0,1
-93898,"Halcyon Sea (623,527)",https://assets.illuvium-game.io/illuvidex/land/land-93898.svg,0x7acd11ec4a811a3ee4fbff3dedb069ee2e3b7e7b,Halcyon Sea,623,527,None,1,1,1,1,0,2,3,0,0
 54094,"Abyssal Basin (284,426)",https://assets.illuvium-game.io/illuvidex/land/land-54094.svg,0x41feac5153cf2520c471f4fae08883444eb40dfb,Abyssal Basin,284,426,None,2,3,1,3,1,3,6,0,1
 77462,"Brightland Steppes (599,316)",https://assets.illuvium-game.io/illuvidex/land/land-77462.svg,0xa37405fa58b237dcd3c867c018449035cad55b07,Brightland Steppes,599,316,Fallen Star,4,9,0,3,6,3,12,6,3
 21904,"Crystal Shores (776,476)",https://assets.illuvium-game.io/illuvidex/land/land-21904.svg,0x39fbd57ced2378276243f41f552e72e7b48a414a,Crystal Shores,776,476,None,1,1,1,0,0,2,3,1,0
@@ -169,7 +243,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 85243,"Brightland Steppes (474,452)",https://assets.illuvium-game.io/illuvidex/land/land-85243.svg,0x404a6ee7cf6c1b1ce740ed5beb3f9b49b25ab6c3,Brightland Steppes,474,452,None,1,1,1,2,0,1,3,0,0
 73387,"Brightland Steppes (555,278)",https://assets.illuvium-game.io/illuvidex/land/land-73387.svg,0xef0bde602d28e5418c22cb1f5391d114e01d7852,Brightland Steppes,555,278,Halogenic Geode,3,6,3,3,3,2,9,4,0
 52587,"Abyssal Basin (187,408)",https://assets.illuvium-game.io/illuvidex/land/land-52587.svg,0x5f02ce0fe004b15ec1a793f33147f5f14952fccb,Abyssal Basin,187,408,None,1,1,0,2,0,0,3,1,1
-27570,"Crystal Shores (675,512)",https://assets.illuvium-game.io/illuvidex/land/land-27570.svg,0xcecedcb6d64ce7e097f2b7947bd420b8ef690845,Crystal Shores,675,512,None,1,1,0,3,1,0,3,0,0
 40957,"Shardbluff Labyrinth (860,341)",https://assets.illuvium-game.io/illuvidex/land/land-40957.svg,0xae48b51a33040bdecb65fb59da6a933a71d7fbb1,Shardbluff Labyrinth,860,341,None,1,1,0,3,0,0,3,0,1
 96489,"Halcyon Sea (580,544)",https://assets.illuvium-game.io/illuvidex/land/land-96489.svg,0xbd5697c9b09ae7a986b75e5c7b96de6f882f8636,Halcyon Sea,580,544,None,1,1,0,2,0,0,3,1,1
 94672,"Halcyon Sea (554,532)",https://assets.illuvium-game.io/illuvidex/land/land-94672.svg,0xc466bd207eae56677f2f6ad90e6c3304387dfbd1,Halcyon Sea,554,532,None,1,1,1,0,0,2,3,1,0
@@ -181,11 +254,9 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 33595,"Shardbluff Labyrinth (761,287)",https://assets.illuvium-game.io/illuvidex/land/land-33595.svg,0x6ca5a91c6c22b3738969d4f4cb71a23752d8e89f,Shardbluff Labyrinth,761,287,None,1,1,0,2,0,0,3,1,1
 80003,"Brightland Steppes (583,339)",https://assets.illuvium-game.io/illuvidex/land/land-80003.svg,0x985c2db8acfebb43917f928c628a42683260dd36,Brightland Steppes,583,339,None,1,1,0,0,1,2,3,1,0
 23394,"Crystal Shores (658,487)",https://assets.illuvium-game.io/illuvidex/land/land-23394.svg,0xd5d72f13931e8a3919d5e26a6e7474691c441599,Crystal Shores,658,487,None,1,1,0,0,0,1,3,2,1
-7580,"Taiga Boreal (180,223)",https://assets.illuvium-game.io/illuvidex/land/land-7580.svg,0x678f57532904287f4be001f3e3026a50b5d6c6ea,Taiga Boreal,180,223,None,1,1,0,1,1,2,3,0,0
 9357,"Taiga Boreal (184,244)",https://assets.illuvium-game.io/illuvidex/land/land-9357.svg,0x51cdcbae11e663fd6ea7dac51909265bbc8911bb,Taiga Boreal,184,244,None,1,1,0,1,0,1,3,1,1
 1595,"Taiga Boreal (209,126)",https://assets.illuvium-game.io/illuvidex/land/land-1595.svg,0x204195e92904e02cb87409b2b0e1b7e6ddcff07f,Taiga Boreal,209,126,None,1,1,1,1,0,2,3,0,0
 11216,"Taiga Boreal (197,263)",https://assets.illuvium-game.io/illuvidex/land/land-11216.svg,0xb8ec8e5ccdcfbc01fa148d88b81b8c97b5ff1875,Taiga Boreal,197,263,None,1,1,0,1,0,0,3,2,1
-46478,"Abyssal Basin (175,360)",https://assets.illuvium-game.io/illuvidex/land/land-46478.svg,0x204195e92904e02cb87409b2b0e1b7e6ddcff07f,Abyssal Basin,175,360,None,1,1,1,0,0,2,3,1,0
 44301,"Abyssal Basin (176,340)",https://assets.illuvium-game.io/illuvidex/land/land-44301.svg,0xd6d662c50fc1e797e488f320c90e563b5017c5bc,Abyssal Basin,176,340,None,1,1,0,1,1,0,3,2,0
 95224,"Halcyon Sea (604,535)",https://assets.illuvium-game.io/illuvidex/land/land-95224.svg,0xd6bba0e7f3a3833b6066b0bef63615c1d6d93336,Halcyon Sea,604,535,None,2,3,0,1,1,2,6,3,2
 7694,"Taiga Boreal (204,224)",https://assets.illuvium-game.io/illuvidex/land/land-7694.svg,0x6926138d1cc923c1a9d0cf7c8fd4e6f45e8d68e6,Taiga Boreal,204,224,None,1,1,0,0,0,0,3,3,1
@@ -232,7 +303,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 41138,"Shardbluff Labyrinth (852,343)",https://assets.illuvium-game.io/illuvidex/land/land-41138.svg,0x5cf4f09c5be610eb17dee8c70ca3f69d13cfec83,Shardbluff Labyrinth,852,343,None,1,1,0,2,0,0,3,1,1
 11201,"Taiga Boreal (182,263)",https://assets.illuvium-game.io/illuvidex/land/land-11201.svg,0xf889b0f7ac1855b9fe8fa3c0c82e5f3cc02bf684,Taiga Boreal,182,263,None,1,1,0,1,0,1,3,1,1
 67964,"Crimson Waste (676,422)",https://assets.illuvium-game.io/illuvidex/land/land-67964.svg,0x7d7219ba97d4d9f5135cd7c489e407bb1eaa0a1e,Crimson Waste,676,422,None,1,1,0,0,0,1,3,2,1
-39413,"Shardbluff Labyrinth (854,326)",https://assets.illuvium-game.io/illuvidex/land/land-39413.svg,0x84000560a003c32a2fc843d2309ae2fe6b1a2ee0,Shardbluff Labyrinth,854,326,None,2,3,1,4,2,1,6,1,0
 39044,"Shardbluff Labyrinth (761,324)",https://assets.illuvium-game.io/illuvidex/land/land-39044.svg,0xe8a763194ec0d9eaf41e05d7bf18b3c12a5a6813,Shardbluff Labyrinth,761,324,Primeval Marsh,3,6,2,3,2,4,9,2,2
 8385,"Taiga Boreal (193,232)",https://assets.illuvium-game.io/illuvidex/land/land-8385.svg,0x92f87dc0295dab31269230222a71221ec6a9ecba,Taiga Boreal,193,232,None,2,3,1,1,2,3,6,2,0
 76269,"Brightland Steppes (550,306)",https://assets.illuvium-game.io/illuvidex/land/land-76269.svg,0xbe34f912c0df6902497f4eb56e0d279544f78e99,Brightland Steppes,550,306,None,2,3,1,1,1,4,6,1,1
@@ -282,8 +352,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 4806,"Taiga Boreal (179,188)",https://assets.illuvium-game.io/illuvidex/land/land-4806.svg,0x21da1104b976bbfe28fb9eaf2141d7aed68c90ff,Taiga Boreal,179,188,None,1,1,0,0,1,1,3,2,0
 15966,"Crystal Shores (757,417)",https://assets.illuvium-game.io/illuvidex/land/land-15966.svg,0xdcda70ea0ddf155dcc8d213b60b87f182a9e3c57,Crystal Shores,757,417,None,2,3,1,2,1,4,6,0,1
 35427,"Shardbluff Labyrinth (825,299)",https://assets.illuvium-game.io/illuvidex/land/land-35427.svg,0x1e8a9425e0e77ffdbf859799f4dcd859129f817c,Shardbluff Labyrinth,825,299,None,1,1,0,0,0,2,3,1,1
-95135,"Halcyon Sea (515,535)",https://assets.illuvium-game.io/illuvidex/land/land-95135.svg,0x629607b39b97290570a5017ad737a1c91e48ee57,Halcyon Sea,515,535,Halogenic Geode,3,6,0,5,5,2,9,2,1
-44492,"Abyssal Basin (176,342)",https://assets.illuvium-game.io/illuvidex/land/land-44492.svg,0x76d3a59fa959845381276786a9245c5f6284caa9,Abyssal Basin,176,342,None,1,1,0,1,0,0,3,2,1
 99220,"Halcyon Sea (523,568)",https://assets.illuvium-game.io/illuvidex/land/land-99220.svg,0x831a3a7ff1770b91ff5f5695370624a0d9df5196,Halcyon Sea,523,568,None,1,1,1,2,0,0,3,1,0
 54675,"Abyssal Basin (273,433)",https://assets.illuvium-game.io/illuvidex/land/land-54675.svg,0x07ef512a4baf274705afa5bdbaa094261d915d64,Abyssal Basin,273,433,None,1,1,1,2,0,1,3,0,0
 33596,"Shardbluff Labyrinth (762,287)",https://assets.illuvium-game.io/illuvidex/land/land-33596.svg,0x919557af58043992b26668ab15df84bfd170f633,Shardbluff Labyrinth,762,287,Primeval Marsh,3,6,2,4,1,2,9,3,3
@@ -311,7 +379,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 24787,"Crystal Shores (755,495)",https://assets.illuvium-game.io/illuvidex/land/land-24787.svg,0x7febb02dd9cfb2f54b674f0ef1590bef71520b35,Crystal Shores,755,495,None,1,1,0,0,0,2,3,1,1
 39339,"Shardbluff Labyrinth (780,326)",https://assets.illuvium-game.io/illuvidex/land/land-39339.svg,0xf0a96b23cb5f14d64a0d5c78bc347894065b3d8f,Shardbluff Labyrinth,780,326,None,2,3,1,0,1,3,6,3,1
 79936,"Brightland Steppes (516,339)",https://assets.illuvium-game.io/illuvidex/land/land-79936.svg,0x0defbe41d04042fe7428556840ec096d23ae0203,Brightland Steppes,516,339,None,1,1,1,1,0,1,3,1,0
-46966,"Abyssal Basin (269,363)",https://assets.illuvium-game.io/illuvidex/land/land-46966.svg,0x58b2989653d62aa7bd20acdcb7a43c4173de1dd0,Abyssal Basin,269,363,None,1,1,1,1,0,2,3,0,0
 78770,"Brightland Steppes (591,327)",https://assets.illuvium-game.io/illuvidex/land/land-78770.svg,0x83f5e3bebe02425a6c2fbfd8915cb3250b619aae,Brightland Steppes,591,327,None,1,1,0,3,1,0,3,0,0
 50263,"Abyssal Basin (271,384)",https://assets.illuvium-game.io/illuvidex/land/land-50263.svg,0x17a0fa0d12fc3b56003083d62a506ba0cf732fab,Abyssal Basin,271,384,None,1,1,0,1,1,1,3,1,0
 95454,"Halcyon Sea (522,537)",https://assets.illuvium-game.io/illuvidex/land/land-95454.svg,0x17a0fa0d12fc3b56003083d62a506ba0cf732fab,Halcyon Sea,522,537,None,2,3,0,3,2,0,6,3,1
@@ -452,8 +519,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 19814,"Crystal Shores (668,460)",https://assets.illuvium-game.io/illuvidex/land/land-19814.svg,0x3af6ebf893ca5802d45913a198ee63affdaa1fb4,Crystal Shores,668,460,None,1,1,1,1,0,1,3,1,0
 51252,"Abyssal Basin (248,392)",https://assets.illuvium-game.io/illuvidex/land/land-51252.svg,0x17dbd34059193484ab025442854d0773548bf054,Abyssal Basin,248,392,None,1,1,0,0,1,2,3,1,0
 47045,"Abyssal Basin (195,364)",https://assets.illuvium-game.io/illuvidex/land/land-47045.svg,0xaafe6cf6f8bbc57d697c8ac59233d0a41334b1e0,Abyssal Basin,195,364,None,1,1,0,2,0,1,3,0,1
-47479,"Abyssal Basin (173,367)",https://assets.illuvium-game.io/illuvidex/land/land-47479.svg,0xbf088cd56318370e795362f52e7138a72817b8dc,Abyssal Basin,173,367,None,1,1,1,1,0,1,3,1,0
-39257,"Shardbluff Labyrinth (836,325)",https://assets.illuvium-game.io/illuvidex/land/land-39257.svg,0xbf088cd56318370e795362f52e7138a72817b8dc,Shardbluff Labyrinth,836,325,None,2,3,0,4,2,1,6,1,1
 66952,"Crimson Waste (676,413)",https://assets.illuvium-game.io/illuvidex/land/land-66952.svg,0x658eee4fc5a26edf0032a91633bbab06d35e0190,Crimson Waste,676,413,None,2,3,2,2,0,1,6,3,1
 83026,"Brightland Steppes (513,412)",https://assets.illuvium-game.io/illuvidex/land/land-83026.svg,0x6f4e4dd9bd0ba95791951df62875c8a8edf02f9f,Brightland Steppes,513,412,None,1,1,1,1,0,1,3,1,0
 67994,"Crimson Waste (706,422)",https://assets.illuvium-game.io/illuvidex/land/land-67994.svg,0xa4265c8ea4d5be9e96aef6e82d761843bea55f04,Crimson Waste,706,422,None,2,3,1,1,2,3,6,2,0
@@ -487,14 +552,11 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 59264,"Crimson Waste (668,357)",https://assets.illuvium-game.io/illuvidex/land/land-59264.svg,0x779dbf57bf352105ff6da973530e1a5bd93411f4,Crimson Waste,668,357,None,1,1,0,2,0,1,3,0,1
 66199,"Crimson Waste (684,406)",https://assets.illuvium-game.io/illuvidex/land/land-66199.svg,0x0b29d0ede6b757586892adb53f8bbc4875733484,Crimson Waste,684,406,None,2,3,1,4,1,1,6,1,1
 53795,"Abyssal Basin (257,423)",https://assets.illuvium-game.io/illuvidex/land/land-53795.svg,0x7ee1418acc771b96e7be34efe645f09b9913db0e,Abyssal Basin,257,423,None,2,3,3,2,0,4,6,0,0
-81516,"Brightland Steppes (514,361)",https://assets.illuvium-game.io/illuvidex/land/land-81516.svg,0x433604a30833f06614759b6a5b37fbc4fe985111,Brightland Steppes,514,361,Pegmatite Swarm,4,9,4,2,3,3,12,7,2
 16152,"Crystal Shores (768,420)",https://assets.illuvium-game.io/illuvidex/land/land-16152.svg,0x433604a30833f06614759b6a5b37fbc4fe985111,Crystal Shores,768,420,Fallen Star,4,9,5,3,1,4,12,5,3
 67147,"Crimson Waste (653,415)",https://assets.illuvium-game.io/illuvidex/land/land-67147.svg,0x68f1d965c335a712ffc4159ad2af4a79d474433c,Crimson Waste,653,415,None,2,3,1,2,1,2,6,2,1
 6407,"Taiga Boreal (185,209)",https://assets.illuvium-game.io/illuvidex/land/land-6407.svg,0x65a21e3237cafc6f98419f26213971ad8e9fe67d,Taiga Boreal,185,209,None,1,1,1,2,0,0,3,1,0
 80384,"Brightland Steppes (547,344)",https://assets.illuvium-game.io/illuvidex/land/land-80384.svg,0x000f1c3133c28bf69c2ecbe7081dc5c9717b5ff3,Brightland Steppes,547,344,Eternal Spring,3,6,3,2,0,6,9,1,3
 68479,"Crimson Waste (679,426)",https://assets.illuvium-game.io/illuvidex/land/land-68479.svg,0x000f1c3133c28bf69c2ecbe7081dc5c9717b5ff3,Crimson Waste,679,426,Halogenic Geode,3,6,3,6,2,1,9,2,1
-66846,"Crimson Waste (679,412)",https://assets.illuvium-game.io/illuvidex/land/land-66846.svg,0x000f1c3133c28bf69c2ecbe7081dc5c9717b5ff3,Crimson Waste,679,412,Eternal Spring,3,6,0,1,4,5,9,3,2
-54790,"Abyssal Basin (242,435)",https://assets.illuvium-game.io/illuvidex/land/land-54790.svg,0x000f1c3133c28bf69c2ecbe7081dc5c9717b5ff3,Abyssal Basin,242,435,Halogenic Geode,3,6,4,2,0,4,9,3,2
 66113,"Crimson Waste (546,406)",https://assets.illuvium-game.io/illuvidex/land/land-66113.svg,0xabe501b1573490987fdd1de1e69c161ff892696b,Crimson Waste,546,406,None,1,1,1,2,0,1,3,0,0
 8399,"Taiga Boreal (207,232)",https://assets.illuvium-game.io/illuvidex/land/land-8399.svg,0x7c9fcd0d2f192b572f9ca6c3b500c7d0dfd655f9,Taiga Boreal,207,232,None,1,1,1,2,0,1,3,0,0
 41691,"Shardbluff Labyrinth (842,349)",https://assets.illuvium-game.io/illuvidex/land/land-41691.svg,0xf753befe986e8be8ebe7598c9d2b6297d9dd6662,Shardbluff Labyrinth,842,349,Halogenic Geode,3,6,2,2,1,6,9,1,3
@@ -506,7 +568,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 8369,"Taiga Boreal (177,232)",https://assets.illuvium-game.io/illuvidex/land/land-8369.svg,0x6586661931924fd013294b3a42bd2824c59c285f,Taiga Boreal,177,232,Dimensional Anchor,4,9,4,5,4,3,12,4,1
 52882,"Abyssal Basin (192,412)",https://assets.illuvium-game.io/illuvidex/land/land-52882.svg,0x200a5acf832fabe66ae33f621142f93790ba1205,Abyssal Basin,192,412,None,2,3,1,2,0,0,6,4,2
 46167,"Abyssal Basin (270,357)",https://assets.illuvium-game.io/illuvidex/land/land-46167.svg,0xd8a61c5421bba862300b5bdf21df9282dfee7e9a,Abyssal Basin,270,357,None,1,1,0,0,1,0,3,3,0
-83816,"Brightland Steppes (483,428)",https://assets.illuvium-game.io/illuvidex/land/land-83816.svg,0x34606af4e159a04024bbf211a64410494369922a,Brightland Steppes,483,428,None,2,3,1,2,2,3,6,1,0
 5029,"Taiga Boreal (188,192)",https://assets.illuvium-game.io/illuvidex/land/land-5029.svg,0xaf7992113747ddc7b09a4adde3b3be03b0025a60,Taiga Boreal,188,192,Primeval Marsh,3,6,1,2,1,3,9,4,4
 85490,"Brightland Steppes (466,458)",https://assets.illuvium-game.io/illuvidex/land/land-85490.svg,0xef51551441410f7795a9ec0f8e8030929784576c,Brightland Steppes,466,458,None,1,1,0,1,0,1,3,1,1
 58292,"Crimson Waste (667,347)",https://assets.illuvium-game.io/illuvidex/land/land-58292.svg,0xca325197c42991f3291f02f83ca6fa75d1e04cca,Crimson Waste,667,347,None,2,3,1,2,0,2,6,2,2
@@ -668,7 +729,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 25562,"Crystal Shores (801,499)",https://assets.illuvium-game.io/illuvidex/land/land-25562.svg,0x7f51b9eb388c2b7aff971f0d2ca310781dceab6a,Crystal Shores,801,499,None,1,1,1,1,0,0,3,2,0
 23674,"Crystal Shores (823,488)",https://assets.illuvium-game.io/illuvidex/land/land-23674.svg,0x87e9ddb68e0b0f06beb413e3053a6ea61ae48959,Crystal Shores,823,488,Primeval Marsh,3,6,1,3,3,4,9,2,2
 13971,"Taiga Boreal (230,290)",https://assets.illuvium-game.io/illuvidex/land/land-13971.svg,0x9391ad393967b0fd40d2c23723a294191b314eff,Taiga Boreal,230,290,None,2,3,0,1,2,3,6,2,1
-19542,"Crystal Shores (672,458)",https://assets.illuvium-game.io/illuvidex/land/land-19542.svg,0xe5cf04873e99bc12be0bddcc99513a937807b785,Crystal Shores,672,458,Halogenic Geode,3,6,1,3,3,4,9,2,2
 40744,"Shardbluff Labyrinth (837,339)",https://assets.illuvium-game.io/illuvidex/land/land-40744.svg,0x492ab85d98b3b2979116c9a47b44f69d606b7045,Shardbluff Labyrinth,837,339,None,2,3,1,3,1,3,6,0,1
 17164,"Crystal Shores (739,435)",https://assets.illuvium-game.io/illuvidex/land/land-17164.svg,0x4a36892f7ad0072d899566f49a8fba58a5d7fed1,Crystal Shores,739,435,None,1,1,0,0,1,2,3,1,0
 79877,"Brightland Steppes (549,338)",https://assets.illuvium-game.io/illuvidex/land/land-79877.svg,0x35f075ce96f7607a0486cd3f79fb71a2612b5ed8,Brightland Steppes,549,338,None,1,1,0,2,0,0,3,1,1
@@ -724,7 +784,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 26940,"Crystal Shores (807,507)",https://assets.illuvium-game.io/illuvidex/land/land-26940.svg,0xc64888b7c8076760c1884681968c3a4401892add,Crystal Shores,807,507,None,2,3,0,1,2,4,6,1,1
 41327,"Shardbluff Labyrinth (853,345)",https://assets.illuvium-game.io/illuvidex/land/land-41327.svg,0xb9d2a195485f5e6a2e15f225adb6aa70a9e3fa48,Shardbluff Labyrinth,853,345,None,2,3,1,4,1,1,6,1,1
 44998,"Abyssal Basin (162,347)",https://assets.illuvium-game.io/illuvidex/land/land-44998.svg,0xf353d2c92855054512d3c8c17d754bb171242eb2,Abyssal Basin,162,347,Primeval Marsh,3,6,1,2,3,4,9,3,2
-36475,"Shardbluff Labyrinth (842,306)",https://assets.illuvium-game.io/illuvidex/land/land-36475.svg,0x0208dd5257d31c888cf89a967c1cfb723638f328,Shardbluff Labyrinth,842,306,None,1,1,0,0,0,2,3,1,1
 42402,"Shardbluff Labyrinth (826,357)",https://assets.illuvium-game.io/illuvidex/land/land-42402.svg,0x2e02957bda15d5b709b94644f48cbeed24fafb97,Shardbluff Labyrinth,826,357,None,1,1,1,1,0,1,3,1,0
 66314,"Crimson Waste (690,407)",https://assets.illuvium-game.io/illuvidex/land/land-66314.svg,0xf6a2ffbdebaa90735779a4bc5314815e5b7efee0,Crimson Waste,690,407,None,2,3,1,4,0,2,6,0,2
 22647,"Crystal Shores (657,482)",https://assets.illuvium-game.io/illuvidex/land/land-22647.svg,0xde3ac052d891fd1e80104fa8ca104ba2b7799699,Crystal Shores,657,482,None,2,3,1,3,1,2,6,1,1
@@ -876,7 +935,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 75643,"Brightland Steppes (673,300)",https://assets.illuvium-game.io/illuvidex/land/land-75643.svg,0x44a25eaf51eee6a368c2e27f577cc738478b2c08,Brightland Steppes,673,300,None,1,1,0,2,1,1,3,0,0
 90095,"Halcyon Sea (451,499)",https://assets.illuvium-game.io/illuvidex/land/land-90095.svg,0x87e9ddb68e0b0f06beb413e3053a6ea61ae48959,Halcyon Sea,451,499,None,1,1,0,2,1,0,3,1,0
 24057,"Crystal Shores (674,491)",https://assets.illuvium-game.io/illuvidex/land/land-24057.svg,0x47fd0b53c725b10d3379e67343b5b750cc3dd88f,Crystal Shores,674,491,None,1,1,0,1,0,1,3,1,1
-87488,"Halcyon Sea (607,479)",https://assets.illuvium-game.io/illuvidex/land/land-87488.svg,0x5e7c1963664431ae3ac4e6f2f85910fe49916dfc,Halcyon Sea,607,479,None,2,3,0,4,2,0,6,2,1
 70466,"Crimson Waste (605,442)",https://assets.illuvium-game.io/illuvidex/land/land-70466.svg,0x6cdd7327a426aeb2e1259d2432efa5c1dec2dc4c,Crimson Waste,605,442,None,1,1,0,3,0,0,3,0,1
 86544,"Halcyon Sea (610,471)",https://assets.illuvium-game.io/illuvidex/land/land-86544.svg,0x6fa15ad5d45ca79c04038c48c9d692f685ff0423,Halcyon Sea,610,471,None,1,1,1,1,0,1,3,1,0
 21034,"Crystal Shores (782,469)",https://assets.illuvium-game.io/illuvidex/land/land-21034.svg,0x3150ed89d2f960994971aff04967c5ad63b745d8,Crystal Shores,782,469,None,1,1,0,2,1,0,3,1,0
@@ -885,7 +943,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 66201,"Crimson Waste (686,406)",https://assets.illuvium-game.io/illuvidex/land/land-66201.svg,0x87e9ddb68e0b0f06beb413e3053a6ea61ae48959,Crimson Waste,686,406,None,1,1,0,3,0,0,3,0,1
 66309,"Crimson Waste (685,407)",https://assets.illuvium-game.io/illuvidex/land/land-66309.svg,0x87e9ddb68e0b0f06beb413e3053a6ea61ae48959,Crimson Waste,685,407,None,2,3,1,5,1,1,6,0,1
 59882,"Crimson Waste (732,361)",https://assets.illuvium-game.io/illuvidex/land/land-59882.svg,0xe90dcb43f76ba593ed231adbc01a3076be867120,Crimson Waste,732,361,None,1,1,0,1,1,1,3,1,0
-93026,"Halcyon Sea (582,521)",https://assets.illuvium-game.io/illuvidex/land/land-93026.svg,0x7ac749a364dd66e1e7ada65d59f598de0144b4ed,Halcyon Sea,582,521,None,2,3,1,2,1,3,6,1,1
 78297,"Brightland Steppes (587,323)",https://assets.illuvium-game.io/illuvidex/land/land-78297.svg,0xd1cde203e8c9a5bfc898f58a1c9fe8efb4c24810,Brightland Steppes,587,323,None,1,1,0,1,0,1,3,1,1
 17053,"Crystal Shores (775,433)",https://assets.illuvium-game.io/illuvidex/land/land-17053.svg,0xe77c2ac549bf14b296d3c12f3283fbb73688ef38,Crystal Shores,775,433,None,2,3,0,1,3,1,6,4,0
 66752,"Crimson Waste (692,411)",https://assets.illuvium-game.io/illuvidex/land/land-66752.svg,0xe77c2ac549bf14b296d3c12f3283fbb73688ef38,Crimson Waste,692,411,None,2,3,1,2,1,2,6,2,1
@@ -924,7 +981,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 24296,"Crystal Shores (777,492)",https://assets.illuvium-game.io/illuvidex/land/land-24296.svg,0x537ba21dba00517cee5c86753a791809f3ba54d0,Crystal Shores,777,492,None,1,1,1,0,0,2,3,1,0
 55263,"Abyssal Basin (244,445)",https://assets.illuvium-game.io/illuvidex/land/land-55263.svg,0x34bf45fefbcd80aa40896b58ebdbc95085f77746,Abyssal Basin,244,445,None,1,1,0,1,0,2,3,0,1
 48467,"Abyssal Basin (229,373)",https://assets.illuvium-game.io/illuvidex/land/land-48467.svg,0x85617d0340234d7e522fc46bb79abb7a8b27d461,Abyssal Basin,229,373,None,2,3,0,1,2,1,6,4,1
-57893,"Crimson Waste (667,341)",https://assets.illuvium-game.io/illuvidex/land/land-57893.svg,0xd8c761830291c975dab381c01d392066aa4f66a1,Crimson Waste,667,341,None,1,1,0,0,0,2,3,1,1
 59410,"Crimson Waste (687,358)",https://assets.illuvium-game.io/illuvidex/land/land-59410.svg,0x074df44e0ea8ddf5b2e858e7d8023a233c3e6a36,Crimson Waste,687,358,None,1,1,0,0,1,2,3,1,0
 59276,"Crimson Waste (680,357)",https://assets.illuvium-game.io/illuvidex/land/land-59276.svg,0x98991a399b8de379503d343fca45eccb9f406cfa,Crimson Waste,680,357,None,2,3,0,0,0,6,6,0,3
 76473,"Brightland Steppes (532,308)",https://assets.illuvium-game.io/illuvidex/land/land-76473.svg,0xa0e3c36564abb02cefd0adaaa9a4984b84e514e0,Brightland Steppes,532,308,None,1,1,0,0,0,1,3,2,1
@@ -1020,7 +1076,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 16082,"Crystal Shores (755,419)",https://assets.illuvium-game.io/illuvidex/land/land-16082.svg,0xedd6fd3f82aa37a4f7c6e886704d964659a8b7ce,Crystal Shores,755,419,Primeval Marsh,3,6,2,4,2,3,9,2,2
 86152,"Halcyon Sea (596,467)",https://assets.illuvium-game.io/illuvidex/land/land-86152.svg,0xef0c64ba15860129b5182b00430a003b7b6809b1,Halcyon Sea,596,467,None,1,1,0,1,0,0,3,2,1
 76362,"Brightland Steppes (532,307)",https://assets.illuvium-game.io/illuvidex/land/land-76362.svg,0x47fd0b53c725b10d3379e67343b5b750cc3dd88f,Brightland Steppes,532,307,None,1,1,0,1,1,1,3,1,0
-16675,"Crystal Shores (759,428)",https://assets.illuvium-game.io/illuvidex/land/land-16675.svg,0x3828394d46fc6f9326956231d3245d1076a18d71,Crystal Shores,759,428,None,2,3,1,3,2,0,6,3,0
 79865,"Brightland Steppes (537,338)",https://assets.illuvium-game.io/illuvidex/land/land-79865.svg,0xe8a763194ec0d9eaf41e05d7bf18b3c12a5a6813,Brightland Steppes,537,338,None,1,1,1,0,0,1,3,2,0
 79967,"Brightland Steppes (547,339)",https://assets.illuvium-game.io/illuvidex/land/land-79967.svg,0x0b9a2bc8b54ff80c352c7f13586b16e7d3f1407b,Brightland Steppes,547,339,None,1,1,0,2,1,1,3,0,0
 70708,"Crimson Waste (618,444)",https://assets.illuvium-game.io/illuvidex/land/land-70708.svg,0x0b9a2bc8b54ff80c352c7f13586b16e7d3f1407b,Crimson Waste,618,444,None,1,1,0,2,1,1,3,0,0
@@ -1337,9 +1392,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 52473,"Abyssal Basin (232,406)",https://assets.illuvium-game.io/illuvidex/land/land-52473.svg,0x7431fc6533d3714180b2c266875d999fb308cc13,Abyssal Basin,232,406,None,1,1,1,1,0,0,3,2,0
 83813,"Brightland Steppes (480,428)",https://assets.illuvium-game.io/illuvidex/land/land-83813.svg,0x20d87da484c23b8c91f48d4a95114c0d6dc5c2df,Brightland Steppes,480,428,None,2,3,1,2,1,3,6,1,1
 4812,"Taiga Boreal (185,188)",https://assets.illuvium-game.io/illuvidex/land/land-4812.svg,0x28e21db782e07cbf55887b41e6a8e0295919a2e9,Taiga Boreal,185,188,None,1,1,1,1,0,2,3,0,0
-39836,"Shardbluff Labyrinth (827,330)",https://assets.illuvium-game.io/illuvidex/land/land-39836.svg,0x495d03ea87d9090b101136a6b89e21855147af4f,Shardbluff Labyrinth,827,330,None,2,3,1,3,2,3,6,0,0
-39729,"Shardbluff Labyrinth (825,329)",https://assets.illuvium-game.io/illuvidex/land/land-39729.svg,0x495d03ea87d9090b101136a6b89e21855147af4f,Shardbluff Labyrinth,825,329,None,2,3,0,1,3,3,6,2,0
-39731,"Shardbluff Labyrinth (827,329)",https://assets.illuvium-game.io/illuvidex/land/land-39731.svg,0x495d03ea87d9090b101136a6b89e21855147af4f,Shardbluff Labyrinth,827,329,None,1,1,0,1,1,1,3,1,0
 67132,"Crimson Waste (638,415)",https://assets.illuvium-game.io/illuvidex/land/land-67132.svg,0xcfc9e3f97bb0686a02d598dedd9a09aab53aae1b,Crimson Waste,638,415,None,2,3,2,4,0,0,6,2,1
 34009,"Shardbluff Labyrinth (740,290)",https://assets.illuvium-game.io/illuvidex/land/land-34009.svg,0xc2cb60806598988b5d653c177009c71cfc4a0ae1,Shardbluff Labyrinth,740,290,None,1,1,0,1,1,0,3,2,0
 67131,"Crimson Waste (637,415)",https://assets.illuvium-game.io/illuvidex/land/land-67131.svg,0xcfc9e3f97bb0686a02d598dedd9a09aab53aae1b,Crimson Waste,637,415,None,1,1,1,2,0,1,3,0,0
@@ -1392,14 +1444,12 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 98434,"Halcyon Sea (579,560)",https://assets.illuvium-game.io/illuvidex/land/land-98434.svg,0x5b8e1dacd0e2e0142e4d46b2ac1c85c912e2dc67,Halcyon Sea,579,560,None,2,3,3,2,0,2,6,2,0
 98099,"Halcyon Sea (584,557)",https://assets.illuvium-game.io/illuvidex/land/land-98099.svg,0x57ae9b015455cb10288890e61c5fa12167ac1faf,Halcyon Sea,584,557,None,2,3,0,1,1,3,6,2,2
 97867,"Halcyon Sea (586,555)",https://assets.illuvium-game.io/illuvidex/land/land-97867.svg,0x2d987388cd49aff3d0f3729f8bc2f731b131eb22,Halcyon Sea,586,555,None,2,3,3,3,0,2,6,1,0
-97855,"Halcyon Sea (574,555)",https://assets.illuvium-game.io/illuvidex/land/land-97855.svg,0xad411d278227ccc4a7dd82fcc40a5238244bbedf,Halcyon Sea,574,555,None,2,3,2,4,0,0,6,2,1
 31870,"Shardbluff Labyrinth (788,274)",https://assets.illuvium-game.io/illuvidex/land/land-31870.svg,0xa0e3c36564abb02cefd0adaaa9a4984b84e514e0,Shardbluff Labyrinth,788,274,None,2,3,0,1,1,3,6,2,2
 95149,"Halcyon Sea (529,535)",https://assets.illuvium-game.io/illuvidex/land/land-95149.svg,0x527b5a398e72ba08eb725e8ae27af64c43667776,Halcyon Sea,529,535,None,1,1,0,3,1,0,3,0,0
 25575,"Crystal Shores (814,499)",https://assets.illuvium-game.io/illuvidex/land/land-25575.svg,0x3150ed89d2f960994971aff04967c5ad63b745d8,Crystal Shores,814,499,None,2,3,2,2,0,1,6,3,1
 40161,"Shardbluff Labyrinth (842,333)",https://assets.illuvium-game.io/illuvidex/land/land-40161.svg,0xcbc0f425b69b4eaab087051ee2b34f4ed1bf3487,Shardbluff Labyrinth,842,333,None,2,3,2,2,1,1,6,3,0
 14916,"Crystal Shores (791,400)",https://assets.illuvium-game.io/illuvidex/land/land-14916.svg,0x388d650ae37c05c62b50c54416c553a85d4abfd1,Crystal Shores,791,400,None,2,3,1,2,2,3,6,1,0
 31874,"Shardbluff Labyrinth (792,274)",https://assets.illuvium-game.io/illuvidex/land/land-31874.svg,0x903a19e896d5d3235148f5fe45bb6a7ae22e5f44,Shardbluff Labyrinth,792,274,None,2,3,1,1,1,3,6,2,1
-96618,"Halcyon Sea (578,545)",https://assets.illuvium-game.io/illuvidex/land/land-96618.svg,0x30fcba384ee723401150349b18f061097453968a,Halcyon Sea,578,545,None,2,3,0,2,1,2,6,2,2
 96076,"Halcyon Sea (572,541)",https://assets.illuvium-game.io/illuvidex/land/land-96076.svg,0xd80d1e581cfe6dd53c35809ed7fb3a78a7368e7f,Halcyon Sea,572,541,None,2,3,0,3,1,1,6,2,2
 94047,"Halcyon Sea (614,528)",https://assets.illuvium-game.io/illuvidex/land/land-94047.svg,0x15138c792afd91e8cd5a2a1edda5776bf9316c82,Halcyon Sea,614,528,None,1,1,0,1,1,2,3,0,0
 96432,"Halcyon Sea (523,544)",https://assets.illuvium-game.io/illuvidex/land/land-96432.svg,0x5808717db53c6bc96a7042762889946bab59b84b,Halcyon Sea,523,544,Halogenic Geode,3,6,1,2,2,3,9,4,3
@@ -1461,9 +1511,7 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 29400,"Shardbluff Labyrinth (832,247)",https://assets.illuvium-game.io/illuvidex/land/land-29400.svg,0x932a44c5393a58512be407f335431e1d16ce6500,Shardbluff Labyrinth,832,247,None,2,3,0,4,1,2,6,0,2
 51851,"Abyssal Basin (192,399)",https://assets.illuvium-game.io/illuvidex/land/land-51851.svg,0x932a44c5393a58512be407f335431e1d16ce6500,Abyssal Basin,192,399,None,2,3,1,1,0,3,6,2,2
 32167,"Shardbluff Labyrinth (825,276)",https://assets.illuvium-game.io/illuvidex/land/land-32167.svg,0x932a44c5393a58512be407f335431e1d16ce6500,Shardbluff Labyrinth,825,276,Eternal Spring,3,6,1,1,3,4,9,4,2
-81219,"Brightland Steppes (530,356)",https://assets.illuvium-game.io/illuvidex/land/land-81219.svg,0x29d97d0206f54728d15553ad2c891220effd7eb9,Brightland Steppes,530,356,None,1,1,0,1,0,0,3,2,1
 81220,"Brightland Steppes (531,356)",https://assets.illuvium-game.io/illuvidex/land/land-81220.svg,0x29d97d0206f54728d15553ad2c891220effd7eb9,Brightland Steppes,531,356,Primeval Marsh,3,6,3,3,2,2,9,4,1
-76045,"Brightland Steppes (550,304)",https://assets.illuvium-game.io/illuvidex/land/land-76045.svg,0x29d97d0206f54728d15553ad2c891220effd7eb9,Brightland Steppes,550,304,None,2,3,1,4,0,0,6,2,2
 58228,"Crimson Waste (675,346)",https://assets.illuvium-game.io/illuvidex/land/land-58228.svg,0x48575882b3e436154c73f738c4eb5553a77a556b,Crimson Waste,675,346,None,1,1,1,1,0,1,3,1,0
 97401,"Halcyon Sea (603,551)",https://assets.illuvium-game.io/illuvidex/land/land-97401.svg,0x85ec9e9cdec6ca5c307eabcfb032da0545ba15e2,Halcyon Sea,603,551,Primeval Marsh,3,6,2,2,2,4,9,3,2
 30913,"Shardbluff Labyrinth (848,266)",https://assets.illuvium-game.io/illuvidex/land/land-30913.svg,0x48575882b3e436154c73f738c4eb5553a77a556b,Shardbluff Labyrinth,848,266,None,1,1,0,0,0,1,3,2,1
@@ -1778,7 +1826,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 93553,"Halcyon Sea (578,525)",https://assets.illuvium-game.io/illuvidex/land/land-93553.svg,0xfab050cb5a743960f71b010242609d0c1edd19ee,Halcyon Sea,578,525,None,1,1,0,0,1,1,3,2,0
 17414,"Crystal Shores (744,438)",https://assets.illuvium-game.io/illuvidex/land/land-17414.svg,0xf0c34c62ea74f05974dcf16eca174cf52a713336,Crystal Shores,744,438,None,2,3,1,3,2,1,6,2,0
 69400,"Crimson Waste (640,433)",https://assets.illuvium-game.io/illuvidex/land/land-69400.svg,0xf0c34c62ea74f05974dcf16eca174cf52a713336,Crimson Waste,640,433,None,2,3,0,3,2,2,6,1,1
-56435,"Abyssal Basin (241,468)",https://assets.illuvium-game.io/illuvidex/land/land-56435.svg,0x4da499c96dd8684c526a07b0bb4e9c1593f1e585,Abyssal Basin,241,468,None,1,1,1,2,0,0,3,1,0
 4913,"Taiga Boreal (180,190)",https://assets.illuvium-game.io/illuvidex/land/land-4913.svg,0xfc0abce59160ca55d036456eae8ff90e80af0b95,Taiga Boreal,180,190,None,1,1,0,2,1,0,3,1,0
 64060,"Crimson Waste (696,389)",https://assets.illuvium-game.io/illuvidex/land/land-64060.svg,0x32757d8f7616749b97818d1c8e3ea76a19fd7f40,Crimson Waste,696,389,Eternal Spring,3,6,2,2,1,3,9,4,3
 35906,"Shardbluff Labyrinth (863,302)",https://assets.illuvium-game.io/illuvidex/land/land-35906.svg,0xc4a5302b4f4e627e71c2a2d065ef8516b42529c2,Shardbluff Labyrinth,863,302,Eternal Spring,3,6,4,4,1,2,9,3,1
@@ -1946,7 +1993,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 88688,"Halcyon Sea (575,488)",https://assets.illuvium-game.io/illuvidex/land/land-88688.svg,0xf328898ed9a181025a7deebbfe259a71e1f3759a,Halcyon Sea,575,488,Eternal Spring,3,6,2,3,3,3,9,3,1
 48391,"Abyssal Basin (153,373)",https://assets.illuvium-game.io/illuvidex/land/land-48391.svg,0x932a44c5393a58512be407f335431e1d16ce6500,Abyssal Basin,153,373,Eternal Spring,3,6,0,3,2,2,9,4,4
 44399,"Abyssal Basin (180,341)",https://assets.illuvium-game.io/illuvidex/land/land-44399.svg,0x914d5b61fa592be97a8b35e645f9cf7085920774,Abyssal Basin,180,341,None,1,1,0,0,1,1,3,2,0
-39673,"Shardbluff Labyrinth (769,329)",https://assets.illuvium-game.io/illuvidex/land/land-39673.svg,0x6fec79efccdeea3d485d93c8d1435c4f98fb7b02,Shardbluff Labyrinth,769,329,None,1,1,0,2,1,0,3,1,0
 30241,"Shardbluff Labyrinth (746,260)",https://assets.illuvium-game.io/illuvidex/land/land-30241.svg,0x932a44c5393a58512be407f335431e1d16ce6500,Shardbluff Labyrinth,746,260,Eternal Spring,3,6,0,2,3,6,9,1,3
 76591,"Brightland Steppes (538,309)",https://assets.illuvium-game.io/illuvidex/land/land-76591.svg,0xa917c254cf6a12d5d1bf1d23cf3e70d24e61cd14,Brightland Steppes,538,309,None,1,1,1,0,0,1,3,2,0
 65404,"Crimson Waste (699,399)",https://assets.illuvium-game.io/illuvidex/land/land-65404.svg,0xfdb559fb1e552575a7cc1bc123538d577398f367,Crimson Waste,699,399,None,2,3,0,3,1,2,6,1,2
@@ -2096,7 +2142,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 39255,"Shardbluff Labyrinth (834,325)",https://assets.illuvium-game.io/illuvidex/land/land-39255.svg,0xc8403c4ee4b176c26ee91570ed9ba9de4ece5ae7,Shardbluff Labyrinth,834,325,Pegmatite Swarm,4,9,4,4,3,3,12,5,2
 15019,"Crystal Shores (766,402)",https://assets.illuvium-game.io/illuvidex/land/land-15019.svg,0xc8403c4ee4b176c26ee91570ed9ba9de4ece5ae7,Crystal Shores,766,402,Pegmatite Swarm,4,9,2,3,4,5,12,4,3
 13035,"Taiga Boreal (209,280)",https://assets.illuvium-game.io/illuvidex/land/land-13035.svg,0xc8403c4ee4b176c26ee91570ed9ba9de4ece5ae7,Taiga Boreal,209,280,Halogenic Geode,3,6,1,4,1,4,9,1,4
-64301,"Crimson Waste (644,391)",https://assets.illuvium-game.io/illuvidex/land/land-64301.svg,0xc8403c4ee4b176c26ee91570ed9ba9de4ece5ae7,Crimson Waste,644,391,Halogenic Geode,3,6,1,1,4,5,9,3,1
 13688,"Taiga Boreal (206,287)",https://assets.illuvium-game.io/illuvidex/land/land-13688.svg,0x85617d0340234d7e522fc46bb79abb7a8b27d461,Taiga Boreal,206,287,None,1,1,0,1,1,1,3,1,0
 58934,"Crimson Waste (679,354)",https://assets.illuvium-game.io/illuvidex/land/land-58934.svg,0x0fd081daef000567608beacb3e209bfbfe7197b7,Crimson Waste,679,354,None,2,3,2,1,0,4,6,1,1
 12217,"Taiga Boreal (227,272)",https://assets.illuvium-game.io/illuvidex/land/land-12217.svg,0x8646448901d97aeb31b4509d18d096138ca89b62,Taiga Boreal,227,272,None,2,3,0,1,1,2,6,3,2
@@ -2253,7 +2298,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 5180,"Taiga Boreal (208,194)",https://assets.illuvium-game.io/illuvidex/land/land-5180.svg,0xe15e568806bed33113a94b8881d94ded3330056e,Taiga Boreal,208,194,None,1,1,0,0,0,0,3,3,1
 95240,"Halcyon Sea (620,535)",https://assets.illuvium-game.io/illuvidex/land/land-95240.svg,0xe15e568806bed33113a94b8881d94ded3330056e,Halcyon Sea,620,535,None,1,1,1,1,0,2,3,0,0
 39058,"Shardbluff Labyrinth (775,324)",https://assets.illuvium-game.io/illuvidex/land/land-39058.svg,0x25505094f98a11936fb78a4dc581321591c1ebec,Shardbluff Labyrinth,775,324,None,1,1,0,1,1,1,3,1,0
-39043,"Shardbluff Labyrinth (760,324)",https://assets.illuvium-game.io/illuvidex/land/land-39043.svg,0x054e0ed0e909d128ced43c58627c81a1d0c5a870,Shardbluff Labyrinth,760,324,None,1,1,0,1,0,1,3,1,1
 52270,"Abyssal Basin (189,404)",https://assets.illuvium-game.io/illuvidex/land/land-52270.svg,0x083d008dc45f72b2117a795b5222cd0f7372e0a8,Abyssal Basin,189,404,None,1,1,0,1,1,1,3,1,0
 53800,"Abyssal Basin (262,423)",https://assets.illuvium-game.io/illuvidex/land/land-53800.svg,0xe73d902283c117df4035a08e0781129961d17ca8,Abyssal Basin,262,423,None,1,1,0,0,0,1,3,2,1
 31657,"Shardbluff Labyrinth (835,272)",https://assets.illuvium-game.io/illuvidex/land/land-31657.svg,0x0543a995164604defcd1a4d56ce487f0fba1b98c,Shardbluff Labyrinth,835,272,None,1,1,0,1,0,0,3,2,1
@@ -2267,7 +2311,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 39294,"Shardbluff Labyrinth (734,326)",https://assets.illuvium-game.io/illuvidex/land/land-39294.svg,0x932a44c5393a58512be407f335431e1d16ce6500,Shardbluff Labyrinth,734,326,None,1,1,0,1,0,1,3,1,1
 70815,"Crimson Waste (619,445)",https://assets.illuvium-game.io/illuvidex/land/land-70815.svg,0x966ed9edf648ea84af22fe43ba309a75858fd1ca,Crimson Waste,619,445,None,1,1,0,1,0,2,3,0,1
 47033,"Abyssal Basin (183,364)",https://assets.illuvium-game.io/illuvidex/land/land-47033.svg,0x11255a01829372f9056c3b4febb2409594436258,Abyssal Basin,183,364,None,2,3,1,3,0,2,6,1,2
-67864,"Crimson Waste (695,421)",https://assets.illuvium-game.io/illuvidex/land/land-67864.svg,0x29d97d0206f54728d15553ad2c891220effd7eb9,Crimson Waste,695,421,None,1,1,0,1,0,2,3,0,1
 77173,"Brightland Steppes (549,314)",https://assets.illuvium-game.io/illuvidex/land/land-77173.svg,0x44b82fb384a139576091f3f362fcdb179f4e9596,Brightland Steppes,549,314,Fallen Star,4,9,3,3,3,6,12,3,3
 78766,"Brightland Steppes (587,327)",https://assets.illuvium-game.io/illuvidex/land/land-78766.svg,0x9f3f99cb9acf71b30fd9ee26ad1f71d600cf0d69,Brightland Steppes,587,327,None,1,1,0,1,1,1,3,1,0
 86548,"Halcyon Sea (614,471)",https://assets.illuvium-game.io/illuvidex/land/land-86548.svg,0x56f8913f19092f3164ff02f308461b5f4cd6aab2,Halcyon Sea,614,471,None,1,1,0,1,1,1,3,1,0
@@ -2612,7 +2655,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 15242,"Crystal Shores (791,405)",https://assets.illuvium-game.io/illuvidex/land/land-15242.svg,0x01bf8ceedb083f78f6597105c42c332767879569,Crystal Shores,791,405,None,1,1,1,0,0,3,3,0,0
 40936,"Shardbluff Labyrinth (839,341)",https://assets.illuvium-game.io/illuvidex/land/land-40936.svg,0x01bf8ceedb083f78f6597105c42c332767879569,Shardbluff Labyrinth,839,341,None,1,1,1,1,0,2,3,0,0
 44185,"Abyssal Basin (147,339)",https://assets.illuvium-game.io/illuvidex/land/land-44185.svg,0x01bf8ceedb083f78f6597105c42c332767879569,Abyssal Basin,147,339,Primeval Marsh,3,6,2,6,2,0,9,3,2
-46556,"Abyssal Basin (274,360)",https://assets.illuvium-game.io/illuvidex/land/land-46556.svg,0x516789fa7d7909a0c17e52f50f559a4b124fe145,Abyssal Basin,274,360,None,2,3,1,0,0,3,6,3,2
 88417,"Halcyon Sea (584,486)",https://assets.illuvium-game.io/illuvidex/land/land-88417.svg,0x703e2d75a8bcb13448d83a4742ac9289c2b4173e,Halcyon Sea,584,486,None,1,1,0,2,1,0,3,1,0
 28062,"Crystal Shores (746,518)",https://assets.illuvium-game.io/illuvidex/land/land-28062.svg,0x703e2d75a8bcb13448d83a4742ac9289c2b4173e,Crystal Shores,746,518,None,2,3,3,2,0,2,6,2,0
 96493,"Halcyon Sea (584,544)",https://assets.illuvium-game.io/illuvidex/land/land-96493.svg,0x703e2d75a8bcb13448d83a4742ac9289c2b4173e,Halcyon Sea,584,544,None,1,1,0,3,1,0,3,0,0
@@ -2620,7 +2662,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 1677,"Taiga Boreal (209,127)",https://assets.illuvium-game.io/illuvidex/land/land-1677.svg,0xc317b7b2f27796e1e68dc40544fd98b6da2bda21,Taiga Boreal,209,127,None,2,3,1,1,2,0,6,5,0
 5228,"Taiga Boreal (183,195)",https://assets.illuvium-game.io/illuvidex/land/land-5228.svg,0x4f723f16b2de463e9d8bf8e5587a5502ae1becd6,Taiga Boreal,183,195,None,2,3,2,1,0,1,6,4,1
 87910,"Halcyon Sea (624,482)",https://assets.illuvium-game.io/illuvidex/land/land-87910.svg,0x4f723f16b2de463e9d8bf8e5587a5502ae1becd6,Halcyon Sea,624,482,None,2,3,0,2,2,1,6,3,1
-40263,"Shardbluff Labyrinth (844,334)",https://assets.illuvium-game.io/illuvidex/land/land-40263.svg,0x516789fa7d7909a0c17e52f50f559a4b124fe145,Shardbluff Labyrinth,844,334,None,2,3,2,3,0,1,6,2,1
 20202,"Crystal Shores (833,462)",https://assets.illuvium-game.io/illuvidex/land/land-20202.svg,0x87d68876cda6184378efcccbfc3b299857f884b4,Crystal Shores,833,462,None,1,1,0,2,1,1,3,0,0
 40284,"Shardbluff Labyrinth (764,335)",https://assets.illuvium-game.io/illuvidex/land/land-40284.svg,0xed756c9502972df37cf6ee193abaedc7f493bb30,Shardbluff Labyrinth,764,335,None,2,3,1,3,2,1,6,2,0
 56624,"Abyssal Basin (243,473)",https://assets.illuvium-game.io/illuvidex/land/land-56624.svg,0xf747e31974ba5cee89a0e1777e06ab5d85350c85,Abyssal Basin,243,473,None,1,1,0,1,1,0,3,2,0
@@ -3630,7 +3671,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 40224,"Shardbluff Labyrinth (805,334)",https://assets.illuvium-game.io/illuvidex/land/land-40224.svg,0x5e34f77f8222a55c0d4cd646dd1efe8a22d6766b,Shardbluff Labyrinth,805,334,None,2,3,0,2,1,1,6,3,2
 22166,"Crystal Shores (776,478)",https://assets.illuvium-game.io/illuvidex/land/land-22166.svg,0x5e34f77f8222a55c0d4cd646dd1efe8a22d6766b,Crystal Shores,776,478,Halogenic Geode,3,6,1,3,3,3,9,3,2
 70938,"Crimson Waste (641,446)",https://assets.illuvium-game.io/illuvidex/land/land-70938.svg,0x911a28cd28a6bfdd63a29a92512de7fc71f6cc63,Crimson Waste,641,446,None,2,3,0,2,1,3,6,1,2
-41690,"Shardbluff Labyrinth (841,349)",https://assets.illuvium-game.io/illuvidex/land/land-41690.svg,0x97f25d7dfda8c1bc7dc578c6dc853f73aed5b37c,Shardbluff Labyrinth,841,349,None,1,1,0,0,1,1,3,2,0
 56235,"Abyssal Basin (254,464)",https://assets.illuvium-game.io/illuvidex/land/land-56235.svg,0x9eed51d874cafcdb3ebbc4d5eb94f554247a5a5f,Abyssal Basin,254,464,None,1,1,1,1,0,2,3,0,0
 67977,"Crimson Waste (689,422)",https://assets.illuvium-game.io/illuvidex/land/land-67977.svg,0x2124a2f1670cf864c9dd024d78a2aceb355614a7,Crimson Waste,689,422,None,2,3,2,1,0,3,6,2,1
 11731,"Taiga Boreal (175,268)",https://assets.illuvium-game.io/illuvidex/land/land-11731.svg,0x2124a2f1670cf864c9dd024d78a2aceb355614a7,Taiga Boreal,175,268,None,2,3,2,5,1,0,6,1,0
@@ -3762,7 +3802,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 79509,"Brightland Steppes (567,334)",https://assets.illuvium-game.io/illuvidex/land/land-79509.svg,0x85eb1c61734d92d915cb54296e85473e35603ecf,Brightland Steppes,567,334,None,1,1,0,0,0,2,3,1,1
 41456,"Shardbluff Labyrinth (795,347)",https://assets.illuvium-game.io/illuvidex/land/land-41456.svg,0x5be78f9092d4c85697b2614fcefeccda88e5ebdf,Shardbluff Labyrinth,795,347,None,1,1,0,1,0,2,3,0,1
 83762,"Brightland Steppes (482,427)",https://assets.illuvium-game.io/illuvidex/land/land-83762.svg,0x253e49adb18e6c2b86bb928f436a5803be3d505b,Brightland Steppes,482,427,None,1,1,0,2,1,0,3,1,0
-35794,"Shardbluff Labyrinth (751,302)",https://assets.illuvium-game.io/illuvidex/land/land-35794.svg,0x253e49adb18e6c2b86bb928f436a5803be3d505b,Shardbluff Labyrinth,751,302,None,1,1,0,1,0,2,3,0,1
 98100,"Halcyon Sea (585,557)",https://assets.illuvium-game.io/illuvidex/land/land-98100.svg,0x65a21e3237cafc6f98419f26213971ad8e9fe67d,Halcyon Sea,585,557,Halogenic Geode,3,6,1,2,2,6,9,1,3
 30036,"Shardbluff Labyrinth (770,257)",https://assets.illuvium-game.io/illuvidex/land/land-30036.svg,0x65a21e3237cafc6f98419f26213971ad8e9fe67d,Shardbluff Labyrinth,770,257,Halogenic Geode,3,6,1,3,2,5,9,1,3
 23393,"Crystal Shores (657,487)",https://assets.illuvium-game.io/illuvidex/land/land-23393.svg,0x65a21e3237cafc6f98419f26213971ad8e9fe67d,Crystal Shores,657,487,Eternal Spring,3,6,0,2,1,2,9,5,5
@@ -3841,7 +3880,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 59049,"Crimson Waste (686,355)",https://assets.illuvium-game.io/illuvidex/land/land-59049.svg,0x21a256841f4048df89480126f869cfb328fc850c,Crimson Waste,686,355,None,2,3,1,4,2,1,6,1,0
 24545,"Crystal Shores (664,494)",https://assets.illuvium-game.io/illuvidex/land/land-24545.svg,0x34229530b0e0e4c3a5b5b51000b98000d29854c0,Crystal Shores,664,494,None,1,1,0,0,0,1,3,2,1
 59431,"Crimson Waste (708,358)",https://assets.illuvium-game.io/illuvidex/land/land-59431.svg,0x703551aafa3e69e31db58e412cfe33b902ad2dfe,Crimson Waste,708,358,None,2,3,1,4,1,1,6,1,1
-56222,"Abyssal Basin (241,464)",https://assets.illuvium-game.io/illuvidex/land/land-56222.svg,0x96f2f193933618a6925442297bd658a52dc94842,Abyssal Basin,241,464,None,2,3,2,1,0,2,6,3,1
 91846,"Halcyon Sea (569,512)",https://assets.illuvium-game.io/illuvidex/land/land-91846.svg,0x2d7569f7e0e9e3a524dc53f2bc877ca5e7045873,Halcyon Sea,569,512,None,1,1,1,1,0,2,3,0,0
 15841,"Crystal Shores (751,415)",https://assets.illuvium-game.io/illuvidex/land/land-15841.svg,0x3e634cea4e5f7b514b1135bf5b37d088d18cc857,Crystal Shores,751,415,None,1,1,0,0,0,1,3,2,1
 15842,"Crystal Shores (752,415)",https://assets.illuvium-game.io/illuvidex/land/land-15842.svg,0x3e634cea4e5f7b514b1135bf5b37d088d18cc857,Crystal Shores,752,415,None,1,1,0,1,1,1,3,1,0
@@ -3864,8 +3902,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 81508,"Brightland Steppes (568,360)",https://assets.illuvium-game.io/illuvidex/land/land-81508.svg,0x824dd476952201bb5a713e63ebb3acbb6bd9214b,Brightland Steppes,568,360,None,1,1,0,2,0,0,3,1,1
 76467,"Brightland Steppes (526,308)",https://assets.illuvium-game.io/illuvidex/land/land-76467.svg,0xd12f912f574528c0fd9801ad1642558d32e33d30,Brightland Steppes,526,308,Halogenic Geode,3,6,1,2,1,4,9,3,4
 38260,"Shardbluff Labyrinth (844,318)",https://assets.illuvium-game.io/illuvidex/land/land-38260.svg,0xe13714695121955f4e3d87243a55d25933d46dda,Shardbluff Labyrinth,844,318,None,1,1,1,1,0,1,3,1,0
-66735,"Crimson Waste (675,411)",https://assets.illuvium-game.io/illuvidex/land/land-66735.svg,0xcd5c273b3a462e213544746218843ad59cbe7f26,Crimson Waste,675,411,None,1,1,0,1,0,1,3,1,1
-98888,"Halcyon Sea (600,564)",https://assets.illuvium-game.io/illuvidex/land/land-98888.svg,0xc6266ac86a1a60a295b2e8565f194d0f277665e1,Halcyon Sea,600,564,None,1,1,0,1,1,1,3,1,0
 24519,"Crystal Shores (831,493)",https://assets.illuvium-game.io/illuvidex/land/land-24519.svg,0x6812b9ece52368950146161607f074d69db6cad4,Crystal Shores,831,493,Pegmatite Swarm,4,9,4,3,2,4,12,5,3
 39386,"Shardbluff Labyrinth (827,326)",https://assets.illuvium-game.io/illuvidex/land/land-39386.svg,0x6812b9ece52368950146161607f074d69db6cad4,Shardbluff Labyrinth,827,326,Pegmatite Swarm,4,9,4,5,3,1,12,6,2
 36178,"Shardbluff Labyrinth (841,304)",https://assets.illuvium-game.io/illuvidex/land/land-36178.svg,0x6812b9ece52368950146161607f074d69db6cad4,Shardbluff Labyrinth,841,304,Pegmatite Swarm,4,9,3,3,3,5,12,4,3
@@ -4013,10 +4049,8 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 88253,"Halcyon Sea (559,485)",https://assets.illuvium-game.io/illuvidex/land/land-88253.svg,0x6a0a015d3eb5bd3750dd19bdfd4faba3735ffc88,Halcyon Sea,559,485,None,1,1,0,1,0,1,3,1,1
 70846,"Crimson Waste (650,445)",https://assets.illuvium-game.io/illuvidex/land/land-70846.svg,0x3843c03191b8d08e2c503f6ab6444d994839f829,Crimson Waste,650,445,None,1,1,1,2,0,1,3,0,0
 11668,"Taiga Boreal (221,267)",https://assets.illuvium-game.io/illuvidex/land/land-11668.svg,0x8e0724c2aabeb3c5ad9b4853c8bd91f768d7380b,Taiga Boreal,221,267,None,2,3,1,0,2,3,6,3,0
-69590,"Crimson Waste (580,435)",https://assets.illuvium-game.io/illuvidex/land/land-69590.svg,0x3dade114b931dfbf3fb17d1a4a4a62a7f8579acd,Crimson Waste,580,435,None,1,1,0,1,1,1,3,1,0
 8851,"Taiga Boreal (177,238)",https://assets.illuvium-game.io/illuvidex/land/land-8851.svg,0xc86e4a58c8295f0d98d5ea74cee29f46dffd97c9,Taiga Boreal,177,238,None,1,1,1,1,0,0,3,2,0
 42117,"Shardbluff Labyrinth (798,354)",https://assets.illuvium-game.io/illuvidex/land/land-42117.svg,0xc86e4a58c8295f0d98d5ea74cee29f46dffd97c9,Shardbluff Labyrinth,798,354,None,1,1,0,0,1,3,3,0,0
-55080,"Abyssal Basin (257,440)",https://assets.illuvium-game.io/illuvidex/land/land-55080.svg,0x71129bbf2955ff66c93c701cbb53b38af08e2427,Abyssal Basin,257,440,None,1,1,1,2,0,0,3,1,0
 67118,"Crimson Waste (624,415)",https://assets.illuvium-game.io/illuvidex/land/land-67118.svg,0x73427b8257162166463f82ecf13dcca9e36bcb75,Crimson Waste,624,415,None,1,1,0,0,1,2,3,1,0
 8477,"Taiga Boreal (202,233)",https://assets.illuvium-game.io/illuvidex/land/land-8477.svg,0xfc1f13667c2cbc511a26e4986b535699dc9fa7e1,Taiga Boreal,202,233,None,1,1,0,1,0,2,3,0,1
 86542,"Halcyon Sea (608,471)",https://assets.illuvium-game.io/illuvidex/land/land-86542.svg,0xfc1f13667c2cbc511a26e4986b535699dc9fa7e1,Halcyon Sea,608,471,None,1,1,0,2,1,0,3,1,0
@@ -4096,11 +4130,9 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 70598,"Crimson Waste (620,443)",https://assets.illuvium-game.io/illuvidex/land/land-70598.svg,0xb9e5c9dc25e942d9152206967893f6cfe0d822ee,Crimson Waste,620,443,Fallen Star,4,9,2,3,3,4,12,5,4
 97843,"Halcyon Sea (562,555)",https://assets.illuvium-game.io/illuvidex/land/land-97843.svg,0xb896802f0955914ef7ec8954d1ec7adad4da357c,Halcyon Sea,562,555,None,1,1,1,0,0,2,3,1,0
 60753,"Crimson Waste (708,367)",https://assets.illuvium-game.io/illuvidex/land/land-60753.svg,0x0480d0ce9f5cb18fab50e38402cd1215528eb582,Crimson Waste,708,367,None,1,1,0,1,0,2,3,0,1
-41225,"Shardbluff Labyrinth (845,344)",https://assets.illuvium-game.io/illuvidex/land/land-41225.svg,0x90833b9042373b79c9633286294d4ff8187478d8,Shardbluff Labyrinth,845,344,None,1,1,1,1,0,1,3,1,0
 23056,"Crystal Shores (824,484)",https://assets.illuvium-game.io/illuvidex/land/land-23056.svg,0xce618ef124a4ae37e79b0b639b19c8b7966de20a,Crystal Shores,824,484,None,1,1,0,1,0,2,3,0,1
 79082,"Brightland Steppes (562,330)",https://assets.illuvium-game.io/illuvidex/land/land-79082.svg,0xcdbf4efabd2445f558272c7703e28751c86a69ed,Brightland Steppes,562,330,None,1,1,0,0,1,1,3,2,0
 46166,"Abyssal Basin (269,357)",https://assets.illuvium-game.io/illuvidex/land/land-46166.svg,0xfc55bb2f4a37e16519b8260e2b032d770ff382f8,Abyssal Basin,269,357,None,1,1,0,3,0,0,3,0,1
-39738,"Shardbluff Labyrinth (834,329)",https://assets.illuvium-game.io/illuvidex/land/land-39738.svg,0x5d03a09fc87cea7ab6ec7f183777b9f1a0845661,Shardbluff Labyrinth,834,329,None,1,1,0,1,0,1,3,1,1
 54726,"Abyssal Basin (249,434)",https://assets.illuvium-game.io/illuvidex/land/land-54726.svg,0x50563f94360229dabe94fa54c88e97b471004e84,Abyssal Basin,249,434,None,2,3,2,1,0,2,6,3,1
 98658,"Halcyon Sea (585,562)",https://assets.illuvium-game.io/illuvidex/land/land-98658.svg,0xc622a7526da5f224b50c0d2dc4954ffe533c980b,Halcyon Sea,585,562,None,1,1,1,0,0,2,3,1,0
 95835,"Halcyon Sea (612,539)",https://assets.illuvium-game.io/illuvidex/land/land-95835.svg,0x56171897efcbd89e83990bc54a62244ea21f9244,Halcyon Sea,612,539,None,2,3,0,2,2,3,6,1,1
@@ -4147,7 +4179,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 89876,"Halcyon Sea (549,497)",https://assets.illuvium-game.io/illuvidex/land/land-89876.svg,0xf32d4d8e8b73c9dc16a7ba2f61196fb893f8f580,Halcyon Sea,549,497,None,2,3,1,1,1,3,6,2,1
 58962,"Crimson Waste (707,354)",https://assets.illuvium-game.io/illuvidex/land/land-58962.svg,0x1c8cb7abb16750f0e33d1e6752c3a6f11bdcf346,Crimson Waste,707,354,None,1,1,1,1,0,1,3,1,0
 39881,"Shardbluff Labyrinth (768,331)",https://assets.illuvium-game.io/illuvidex/land/land-39881.svg,0x19ac45880774b07525712cd90e6a56c8aa842bba,Shardbluff Labyrinth,768,331,None,1,1,0,1,0,2,3,0,1
-66424,"Crimson Waste (689,408)",https://assets.illuvium-game.io/illuvidex/land/land-66424.svg,0xbf088cd56318370e795362f52e7138a72817b8dc,Crimson Waste,689,408,None,1,1,0,3,1,0,3,0,0
 86660,"Halcyon Sea (617,472)",https://assets.illuvium-game.io/illuvidex/land/land-86660.svg,0x780b624adcc0e9136f8f9833212af605e0695c08,Halcyon Sea,617,472,None,2,3,1,3,1,3,6,0,1
 84261,"Brightland Steppes (515,435)",https://assets.illuvium-game.io/illuvidex/land/land-84261.svg,0x30b0a5b8203432faf888de09a8ec5704264245d2,Brightland Steppes,515,435,None,1,1,1,2,0,1,3,0,0
 96687,"Halcyon Sea (517,546)",https://assets.illuvium-game.io/illuvidex/land/land-96687.svg,0x6deaeb53721e7af07467b561ec79c7a6f6564406,Halcyon Sea,517,546,None,1,1,0,3,0,0,3,0,1
@@ -4163,7 +4194,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 73463,"Brightland Steppes (550,279)",https://assets.illuvium-game.io/illuvidex/land/land-73463.svg,0x40fb79000e16a724588d239a82efbcade280da1e,Brightland Steppes,550,279,None,1,1,0,0,1,2,3,1,0
 14101,"Taiga Boreal (233,292)",https://assets.illuvium-game.io/illuvidex/land/land-14101.svg,0x6ffbdef6d9591f3408e14298b419937582a74cc0,Taiga Boreal,233,292,None,2,3,1,2,2,3,6,1,0
 52999,"Abyssal Basin (229,413)",https://assets.illuvium-game.io/illuvidex/land/land-52999.svg,0xf2b9fbeb8c561260ae84b525e98cc3ccbd60d985,Abyssal Basin,229,413,Primeval Marsh,3,6,2,4,1,4,9,1,3
-17281,"Crystal Shores (780,436)",https://assets.illuvium-game.io/illuvidex/land/land-17281.svg,0x8e7904394c43bdaf891778762f125c078c083fc0,Crystal Shores,780,436,None,1,1,1,2,0,0,3,1,0
 85167,"Brightland Steppes (504,450)",https://assets.illuvium-game.io/illuvidex/land/land-85167.svg,0xbf75adc32cb8f5c4b37987f652cfbe21ad6f9f0a,Brightland Steppes,504,450,None,1,1,1,0,0,1,3,2,0
 13713,"Taiga Boreal (231,287)",https://assets.illuvium-game.io/illuvidex/land/land-13713.svg,0x43e60e5c2f4b9e83ee80ec2243c5e8e864fb262e,Taiga Boreal,231,287,None,2,3,1,3,1,3,6,0,1
 73160,"Brightland Steppes (554,275)",https://assets.illuvium-game.io/illuvidex/land/land-73160.svg,0x396368c8dc5547dfb47c9b161a49fe25204a1fcc,Brightland Steppes,554,275,None,1,1,0,2,0,1,3,0,1
@@ -4215,7 +4245,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 28148,"Crystal Shores (783,519)",https://assets.illuvium-game.io/illuvidex/land/land-28148.svg,0x1843c1878cc9e59fb57c1dce596cb7b847e2b1f4,Crystal Shores,783,519,None,2,3,0,0,2,4,6,2,1
 64790,"Crimson Waste (550,395)",https://assets.illuvium-game.io/illuvidex/land/land-64790.svg,0x3c3bc600bb609521a87549bae93c448dbac1df14,Crimson Waste,550,395,None,1,1,1,1,0,1,3,1,0
 78386,"Brightland Steppes (557,324)",https://assets.illuvium-game.io/illuvidex/land/land-78386.svg,0x0007e932dea8540bf0051bfe2d77e728e37a7cf4,Brightland Steppes,557,324,None,1,1,1,1,0,1,3,1,0
-47614,"Abyssal Basin (152,368)",https://assets.illuvium-game.io/illuvidex/land/land-47614.svg,0x00c0ffee00d0912058e6f7413ce86333c5c147db,Abyssal Basin,152,368,None,1,1,0,1,1,1,3,1,0
 64920,"Crimson Waste (549,396)",https://assets.illuvium-game.io/illuvidex/land/land-64920.svg,0xe1690aa4719b42b63a2d403d02f8e7d10703397f,Crimson Waste,549,396,None,1,1,0,1,0,1,3,1,1
 3199,"Taiga Boreal (218,155)",https://assets.illuvium-game.io/illuvidex/land/land-3199.svg,0x92eb92b4b6419aa782ce39a7c46908b3f21d7f1f,Taiga Boreal,218,155,Halogenic Geode,3,6,2,3,4,3,9,3,0
 74875,"Brightland Steppes (655,294)",https://assets.illuvium-game.io/illuvidex/land/land-74875.svg,0x92eb92b4b6419aa782ce39a7c46908b3f21d7f1f,Brightland Steppes,655,294,Halogenic Geode,3,6,1,4,1,1,9,4,4
@@ -4455,7 +4484,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 90301,"Halcyon Sea (583,500)",https://assets.illuvium-game.io/illuvidex/land/land-90301.svg,0xa960938b5347451656dcb2ae7d55f4144d41cd4f,Halcyon Sea,583,500,None,2,3,0,1,0,4,6,1,3
 90429,"Halcyon Sea (582,501)",https://assets.illuvium-game.io/illuvidex/land/land-90429.svg,0xa960938b5347451656dcb2ae7d55f4144d41cd4f,Halcyon Sea,582,501,None,2,3,1,1,1,3,6,2,1
 24642,"Crystal Shores (783,494)",https://assets.illuvium-game.io/illuvidex/land/land-24642.svg,0x936668521afa66ff93a75a9508ebed4b90c7dce5,Crystal Shores,783,494,None,2,3,0,3,0,2,6,1,3
-41418,"Shardbluff Labyrinth (851,346)",https://assets.illuvium-game.io/illuvidex/land/land-41418.svg,0x3dab654a2d983ccebeda77247e96df59a7741c63,Shardbluff Labyrinth,851,346,None,1,1,0,1,1,1,3,1,0
 68491,"Crimson Waste (691,426)",https://assets.illuvium-game.io/illuvidex/land/land-68491.svg,0x22d30f6ddb407ce8f9818cc6d463848f12db99d1,Crimson Waste,691,426,None,1,1,0,1,1,0,3,2,0
 47079,"Abyssal Basin (234,364)",https://assets.illuvium-game.io/illuvidex/land/land-47079.svg,0x22d30f6ddb407ce8f9818cc6d463848f12db99d1,Abyssal Basin,234,364,None,2,3,1,3,1,1,6,2,1
 44767,"Abyssal Basin (142,345)",https://assets.illuvium-game.io/illuvidex/land/land-44767.svg,0x22d30f6ddb407ce8f9818cc6d463848f12db99d1,Abyssal Basin,142,345,None,1,1,0,1,0,2,3,0,1
@@ -4703,12 +4731,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 38823,"Shardbluff Labyrinth (826,322)",https://assets.illuvium-game.io/illuvidex/land/land-38823.svg,0xb14ea032d9a531e4abb191c3d3574b67f705847e,Shardbluff Labyrinth,826,322,None,1,1,0,1,0,2,3,0,1
 63078,"Crimson Waste (624,383)",https://assets.illuvium-game.io/illuvidex/land/land-63078.svg,0x5452cce29721cdb3ff547ea7ef0069f3d4e56594,Crimson Waste,624,383,None,1,1,0,1,1,2,3,0,0
 93122,"Halcyon Sea (546,522)",https://assets.illuvium-game.io/illuvidex/land/land-93122.svg,0xb676f5a39b42161428c4eb4670d099b860159702,Halcyon Sea,546,522,Eternal Spring,3,6,1,4,1,3,9,2,4
-39327,"Shardbluff Labyrinth (768,326)",https://assets.illuvium-game.io/illuvidex/land/land-39327.svg,0xc44abffdb232befb250bc1f69e83f7c6bc2dffe1,Shardbluff Labyrinth,768,326,None,1,1,0,0,0,2,3,1,1
-28117,"Crystal Shores (752,519)",https://assets.illuvium-game.io/illuvidex/land/land-28117.svg,0xc44abffdb232befb250bc1f69e83f7c6bc2dffe1,Crystal Shores,752,519,None,1,1,1,1,0,2,3,0,0
-5445,"Taiga Boreal (172,198)",https://assets.illuvium-game.io/illuvidex/land/land-5445.svg,0xc44abffdb232befb250bc1f69e83f7c6bc2dffe1,Taiga Boreal,172,198,None,1,1,1,1,0,2,3,0,0
-39189,"Shardbluff Labyrinth (768,325)",https://assets.illuvium-game.io/illuvidex/land/land-39189.svg,0xc44abffdb232befb250bc1f69e83f7c6bc2dffe1,Shardbluff Labyrinth,768,325,None,1,1,1,0,0,0,3,3,0
-44877,"Abyssal Basin (147,346)",https://assets.illuvium-game.io/illuvidex/land/land-44877.svg,0xc44abffdb232befb250bc1f69e83f7c6bc2dffe1,Abyssal Basin,147,346,None,1,1,0,1,0,1,3,1,1
-6077,"Taiga Boreal (202,205)",https://assets.illuvium-game.io/illuvidex/land/land-6077.svg,0xc44abffdb232befb250bc1f69e83f7c6bc2dffe1,Taiga Boreal,202,205,None,1,1,0,0,0,1,3,2,1
 95633,"Halcyon Sea (555,538)",https://assets.illuvium-game.io/illuvidex/land/land-95633.svg,0xcc9861c99bb22a5bd1261190ecf59a3fd1f7f720,Halcyon Sea,555,538,None,2,3,1,3,1,1,6,2,1
 36322,"Shardbluff Labyrinth (838,305)",https://assets.illuvium-game.io/illuvidex/land/land-36322.svg,0xc1ea534f63854ba2d3c32fdcd9cd34a9c239aaaa,Shardbluff Labyrinth,838,305,None,1,1,1,0,0,1,3,2,0
 64995,"Crimson Waste (664,396)",https://assets.illuvium-game.io/illuvidex/land/land-64995.svg,0xaf9cbb8b7d92e10984a9591601122aa2018dccc4,Crimson Waste,664,396,None,1,1,0,2,1,0,3,1,0
@@ -5408,7 +5430,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 40265,"Shardbluff Labyrinth (846,334)",https://assets.illuvium-game.io/illuvidex/land/land-40265.svg,0x6d15de739459a3d55f4812725c0eb639d12a547e,Shardbluff Labyrinth,846,334,Halogenic Geode,3,6,1,1,1,3,9,5,4
 40260,"Shardbluff Labyrinth (841,334)",https://assets.illuvium-game.io/illuvidex/land/land-40260.svg,0x414da7c53e159a288e87f00e10d4791705bbaafc,Shardbluff Labyrinth,841,334,Pegmatite Swarm,4,9,4,4,3,5,12,3,2
 40180,"Shardbluff Labyrinth (761,334)",https://assets.illuvium-game.io/illuvidex/land/land-40180.svg,0x16da564d812852798cf09f8cbb076251bde864c3,Shardbluff Labyrinth,761,334,Pegmatite Swarm,4,9,0,4,5,2,12,6,4
-40172,"Shardbluff Labyrinth (853,333)",https://assets.illuvium-game.io/illuvidex/land/land-40172.svg,0x8a5f45d2f3fe5f2511c5125defb802e9e26a2420,Shardbluff Labyrinth,853,333,Halogenic Geode,3,6,1,3,3,2,9,4,2
 40086,"Shardbluff Labyrinth (767,333)",https://assets.illuvium-game.io/illuvidex/land/land-40086.svg,0x7154e961485f136fc68799f0a89cc5f04af9ec4f,Shardbluff Labyrinth,767,333,Fallen Star,4,9,3,5,3,3,12,4,3
 40066,"Shardbluff Labyrinth (849,332)",https://assets.illuvium-game.io/illuvidex/land/land-40066.svg,0x706481b4bcd66fb9ef1324b8ab18b579cda3e355,Shardbluff Labyrinth,849,332,None,1,1,1,2,0,0,3,1,0
 67805,"Crimson Waste (636,421)",https://assets.illuvium-game.io/illuvidex/land/land-67805.svg,0x822842ebe2e2a4462eedbc0c26cdd09b75ed25fd,Crimson Waste,636,421,None,1,1,0,1,0,1,3,1,1
@@ -5484,7 +5505,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 39326,"Shardbluff Labyrinth (767,326)",https://assets.illuvium-game.io/illuvidex/land/land-39326.svg,0xba723fcd8c3145a168ab797a5b9752b7407fd512,Shardbluff Labyrinth,767,326,None,1,1,0,2,0,0,3,1,1
 39325,"Shardbluff Labyrinth (766,326)",https://assets.illuvium-game.io/illuvidex/land/land-39325.svg,0x889fef059c6798591670c9ccf0273d3278b269df,Shardbluff Labyrinth,766,326,Halogenic Geode,3,6,2,3,3,3,9,3,1
 39293,"Shardbluff Labyrinth (733,326)",https://assets.illuvium-game.io/illuvidex/land/land-39293.svg,0x8390cbaed50d75b10a77601abffc56da881c0287,Shardbluff Labyrinth,733,326,None,2,3,2,2,1,2,6,2,0
-39291,"Shardbluff Labyrinth (731,326)",https://assets.illuvium-game.io/illuvidex/land/land-39291.svg,0x05398e1e4754cfa065fee36c03190214dee04278,Shardbluff Labyrinth,731,326,Eternal Spring,3,6,1,6,1,1,9,2,4
 39288,"Shardbluff Labyrinth (728,326)",https://assets.illuvium-game.io/illuvidex/land/land-39288.svg,0x1382270b6e816a5b7824b9ae846d76e042eed0be,Shardbluff Labyrinth,728,326,Pegmatite Swarm,4,9,2,2,2,6,12,4,5
 39287,"Shardbluff Labyrinth (727,326)",https://assets.illuvium-game.io/illuvidex/land/land-39287.svg,0x3833f61597d990b7f2136f4a8632444a78a0345a,Shardbluff Labyrinth,727,326,Fallen Star,4,9,6,1,1,7,12,4,2
 39286,"Shardbluff Labyrinth (726,326)",https://assets.illuvium-game.io/illuvidex/land/land-39286.svg,0x0eb86dd4ea4c70c749ac45460378b8aa08d6e936,Shardbluff Labyrinth,726,326,None,1,1,0,0,0,2,3,1,1
@@ -5602,7 +5622,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 25928,"Crystal Shores (808,501)",https://assets.illuvium-game.io/illuvidex/land/land-25928.svg,0xd866b9520e734c919686a5419fab182bb87d2978,Crystal Shores,808,501,None,1,1,0,1,0,1,3,1,1
 8649,"Taiga Boreal (212,235)",https://assets.illuvium-game.io/illuvidex/land/land-8649.svg,0xbc43ecc12b7a7b346a6b760822abd567e82e7b0d,Taiga Boreal,212,235,None,1,1,0,1,0,1,3,1,1
 11561,"Taiga Boreal (222,266)",https://assets.illuvium-game.io/illuvidex/land/land-11561.svg,0xca93a29eb18e571de60ece15313d8d5094744c08,Taiga Boreal,222,266,None,1,1,1,0,0,1,3,2,0
-38561,"Shardbluff Labyrinth (852,320)",https://assets.illuvium-game.io/illuvidex/land/land-38561.svg,0x3ddd3adb10ff98654ae17cadcb958a59028f9973,Shardbluff Labyrinth,852,320,None,2,3,0,2,1,4,6,0,2
 46620,"Abyssal Basin (187,361)",https://assets.illuvium-game.io/illuvidex/land/land-46620.svg,0x0ed6b59609b24df5a63513e08477ae2b2c8305e6,Abyssal Basin,187,361,Dimensional Anchor,4,9,5,2,2,7,12,3,2
 86237,"Halcyon Sea (597,468)",https://assets.illuvium-game.io/illuvidex/land/land-86237.svg,0x0ed6b59609b24df5a63513e08477ae2b2c8305e6,Halcyon Sea,597,468,Primeval Marsh,3,6,3,3,1,4,9,2,2
 15759,"Crystal Shores (793,413)",https://assets.illuvium-game.io/illuvidex/land/land-15759.svg,0x0ed6b59609b24df5a63513e08477ae2b2c8305e6,Crystal Shores,793,413,None,2,3,1,2,0,1,6,3,2
@@ -5686,7 +5705,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 79482,"Brightland Steppes (540,334)",https://assets.illuvium-game.io/illuvidex/land/land-79482.svg,0x7a49d8061494d1fca37e27b59d6516b3dc5a1df3,Brightland Steppes,540,334,None,2,3,2,3,0,2,6,1,1
 22346,"Crystal Shores (822,479)",https://assets.illuvium-game.io/illuvidex/land/land-22346.svg,0xdec143cf04c0e3e9ee0bc97a8a5c0aba169548fe,Crystal Shores,822,479,None,2,3,0,1,0,0,6,5,3
 98205,"Halcyon Sea (576,558)",https://assets.illuvium-game.io/illuvidex/land/land-98205.svg,0x9830805df365a74cf3a872ba0c57345334350633,Halcyon Sea,576,558,None,1,1,0,1,1,0,3,2,0
-92998,"Halcyon Sea (554,521)",https://assets.illuvium-game.io/illuvidex/land/land-92998.svg,0xc44abffdb232befb250bc1f69e83f7c6bc2dffe1,Halcyon Sea,554,521,None,1,1,0,1,1,1,3,1,0
 86069,"Halcyon Sea (598,466)",https://assets.illuvium-game.io/illuvidex/land/land-86069.svg,0x9777daabf322d38af7a49a66dc55f3086127baea,Halcyon Sea,598,466,Eternal Spring,3,6,2,3,3,2,9,4,1
 47494,"Abyssal Basin (188,367)",https://assets.illuvium-game.io/illuvidex/land/land-47494.svg,0xa94bf31a7425dba2c4a8e9aaef7adf11e3901268,Abyssal Basin,188,367,None,1,1,0,1,1,1,3,1,0
 17087,"Crystal Shores (736,434)",https://assets.illuvium-game.io/illuvidex/land/land-17087.svg,0x8dace19fe85e4049be16a8cb010b83be9a7250c5,Crystal Shores,736,434,None,1,1,0,1,0,1,3,1,1
@@ -5806,7 +5824,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 2143,"Taiga Boreal (189,134)",https://assets.illuvium-game.io/illuvidex/land/land-2143.svg,0xf5fe654e978a24ce812e270655a094e0b7612417,Taiga Boreal,189,134,None,1,1,0,2,1,1,3,0,0
 19404,"Crystal Shores (677,457)",https://assets.illuvium-game.io/illuvidex/land/land-19404.svg,0x99a42144f1d91a7515888371cacf579889f6fc8d,Crystal Shores,677,457,None,2,3,0,1,0,2,6,3,3
 27101,"Crystal Shores (805,508)",https://assets.illuvium-game.io/illuvidex/land/land-27101.svg,0xe5dbcebfbac5413a829c54da025d72b72fc69208,Crystal Shores,805,508,None,2,3,1,1,1,3,6,2,1
-19079,"Crystal Shores (820,454)",https://assets.illuvium-game.io/illuvidex/land/land-19079.svg,0xeac956f34f4f151a151ec85f004e9772a01866f1,Crystal Shores,820,454,None,1,1,0,1,0,1,3,1,1
 1901,"Taiga Boreal (208,130)",https://assets.illuvium-game.io/illuvidex/land/land-1901.svg,0x61d4cc40fa46d283198e7a8e334a40f7c17da287,Taiga Boreal,208,130,None,2,3,1,0,1,3,6,3,1
 17844,"Crystal Shores (738,443)",https://assets.illuvium-game.io/illuvidex/land/land-17844.svg,0xf51273113a019fe6ab38d8f3db2a58b03544d058,Crystal Shores,738,443,None,2,3,2,1,1,3,6,2,0
 17234,"Crystal Shores (733,436)",https://assets.illuvium-game.io/illuvidex/land/land-17234.svg,0x3957428a4b77f4be80e73e73686b6d3b06b29ead,Crystal Shores,733,436,None,2,3,0,3,2,2,6,1,1
@@ -6022,7 +6039,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 68340,"Crimson Waste (675,425)",https://assets.illuvium-game.io/illuvidex/land/land-68340.svg,0xde9cec0b6b6bb8dd7777e1f3bc760f2ee05f2f07,Crimson Waste,675,425,None,1,1,1,0,0,1,3,2,0
 68475,"Crimson Waste (675,426)",https://assets.illuvium-game.io/illuvidex/land/land-68475.svg,0xde9cec0b6b6bb8dd7777e1f3bc760f2ee05f2f07,Crimson Waste,675,426,Halogenic Geode,3,6,0,2,1,3,9,4,5
 95151,"Halcyon Sea (531,535)",https://assets.illuvium-game.io/illuvidex/land/land-95151.svg,0x9759cd43042bb2ce7ba22d3e2beb675153442d80,Halcyon Sea,531,535,Primeval Marsh,3,6,2,3,1,1,9,5,3
-5986,"Taiga Boreal (199,204)",https://assets.illuvium-game.io/illuvidex/land/land-5986.svg,0x6bf8e2e8f93149b4b756b137ffa7c79f76ccea47,Taiga Boreal,199,204,Halogenic Geode,3,6,1,3,4,4,9,2,1
 6321,"Taiga Boreal (186,208)",https://assets.illuvium-game.io/illuvidex/land/land-6321.svg,0xe2e35dbb812de1d800cfc78ea811ae51254e843b,Taiga Boreal,186,208,None,1,1,0,2,0,0,3,1,1
 39456,"Shardbluff Labyrinth (770,327)",https://assets.illuvium-game.io/illuvidex/land/land-39456.svg,0xe2e35dbb812de1d800cfc78ea811ae51254e843b,Shardbluff Labyrinth,770,327,Pegmatite Swarm,4,9,3,3,2,5,12,4,4
 39330,"Shardbluff Labyrinth (771,326)",https://assets.illuvium-game.io/illuvidex/land/land-39330.svg,0xe2e35dbb812de1d800cfc78ea811ae51254e843b,Shardbluff Labyrinth,771,326,None,1,1,0,0,0,2,3,1,1
@@ -6089,7 +6105,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 39555,"Shardbluff Labyrinth (756,328)",https://assets.illuvium-game.io/illuvidex/land/land-39555.svg,0xf2113911002adc347d883a786d038bd6c70cc86a,Shardbluff Labyrinth,756,328,Halogenic Geode,3,6,4,3,0,2,9,4,2
 39556,"Shardbluff Labyrinth (757,328)",https://assets.illuvium-game.io/illuvidex/land/land-39556.svg,0xf2113911002adc347d883a786d038bd6c70cc86a,Shardbluff Labyrinth,757,328,None,2,3,1,4,2,2,6,0,0
 39443,"Shardbluff Labyrinth (757,327)",https://assets.illuvium-game.io/illuvidex/land/land-39443.svg,0xf2113911002adc347d883a786d038bd6c70cc86a,Shardbluff Labyrinth,757,327,None,1,1,0,0,1,1,3,2,0
-73272,"Brightland Steppes (594,276)",https://assets.illuvium-game.io/illuvidex/land/land-73272.svg,0xe853c8e9f394ed77dae818a928374ad24c2235e0,Brightland Steppes,594,276,None,1,1,0,1,0,1,3,1,1
 40273,"Shardbluff Labyrinth (854,334)",https://assets.illuvium-game.io/illuvidex/land/land-40273.svg,0x8e06fdd7ea1dd85ead701e8b019a7df4252d4494,Shardbluff Labyrinth,854,334,None,2,3,1,1,2,3,6,2,0
 87010,"Halcyon Sea (622,475)",https://assets.illuvium-game.io/illuvidex/land/land-87010.svg,0xa6a47ed33682b6c46cb83cb4927cb16bc5e046b9,Halcyon Sea,622,475,Pegmatite Swarm,4,9,4,6,2,2,12,4,3
 46626,"Abyssal Basin (193,361)",https://assets.illuvium-game.io/illuvidex/land/land-46626.svg,0xa19a7504edf7015d3dcf07da61928bd01bf00a6a,Abyssal Basin,193,361,None,1,1,0,2,1,1,3,0,0
@@ -6202,7 +6217,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 5082,"Taiga Boreal (178,193)",https://assets.illuvium-game.io/illuvidex/land/land-5082.svg,0xa094198fb0715cffdeb2c39695509b56ed6391b0,Taiga Boreal,178,193,None,1,1,0,1,0,1,3,1,1
 71713,"Brightland Steppes (576,237)",https://assets.illuvium-game.io/illuvidex/land/land-71713.svg,0x0ce211c30671df38d7b3e31819ae8594769b714d,Brightland Steppes,576,237,Eternal Spring,3,6,2,5,3,1,9,3,1
 57285,"Crimson Waste (652,327)",https://assets.illuvium-game.io/illuvidex/land/land-57285.svg,0xbef3f0910ba48000f3bc7435bb587a007ff0a950,Crimson Waste,652,327,None,2,3,1,0,1,2,6,4,1
-95929,"Halcyon Sea (564,540)",https://assets.illuvium-game.io/illuvidex/land/land-95929.svg,0xe853c8e9f394ed77dae818a928374ad24c2235e0,Halcyon Sea,564,540,None,1,1,0,1,0,2,3,0,1
 48623,"Abyssal Basin (226,374)",https://assets.illuvium-game.io/illuvidex/land/land-48623.svg,0x6bce30b2d30efcd5e869ae50e777251af878d521,Abyssal Basin,226,374,None,1,1,0,1,0,2,3,0,1
 41753,"Shardbluff Labyrinth (809,350)",https://assets.illuvium-game.io/illuvidex/land/land-41753.svg,0x76d0b8c40d31105b8c01975610844174af9ed36e,Shardbluff Labyrinth,809,350,None,1,1,0,0,0,1,3,2,1
 44675,"Abyssal Basin (155,344)",https://assets.illuvium-game.io/illuvidex/land/land-44675.svg,0x7ec5f2bbbc86674ff8743a7fd8287d95c3a1f1b9,Abyssal Basin,155,344,None,1,1,0,3,0,0,3,0,1
@@ -6399,7 +6413,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 47696,"Abyssal Basin (234,368)",https://assets.illuvium-game.io/illuvidex/land/land-47696.svg,0x4f473c6f7293b00da7bb78f209814753ee89d370,Abyssal Basin,234,368,None,2,3,0,2,0,2,6,2,3
 99716,"Halcyon Sea (556,573)",https://assets.illuvium-game.io/illuvidex/land/land-99716.svg,0xb9421fef328b38217a3717bf91c40ac24028d5d5,Halcyon Sea,556,573,None,2,3,0,2,2,1,6,3,1
 13947,"Taiga Boreal (206,290)",https://assets.illuvium-game.io/illuvidex/land/land-13947.svg,0x53c7bb3cc5313fdd752f690fd8842e04fc1d0e75,Taiga Boreal,206,290,None,1,1,0,1,1,1,3,1,0
-17089,"Crystal Shores (738,434)",https://assets.illuvium-game.io/illuvidex/land/land-17089.svg,0x96f2f193933618a6925442297bd658a52dc94842,Crystal Shores,738,434,None,2,3,0,0,1,3,6,3,2
 34078,"Shardbluff Labyrinth (809,290)",https://assets.illuvium-game.io/illuvidex/land/land-34078.svg,0x2a4d525faa7a3eecee6fb188987f98e7baf0593e,Shardbluff Labyrinth,809,290,None,1,1,0,0,1,2,3,1,0
 54249,"Abyssal Basin (259,428)",https://assets.illuvium-game.io/illuvidex/land/land-54249.svg,0xcab532dd7a22784afbfed080705f377e20b647e8,Abyssal Basin,259,428,None,2,3,1,1,2,2,6,3,0
 39643,"Shardbluff Labyrinth (844,328)",https://assets.illuvium-game.io/illuvidex/land/land-39643.svg,0xd6e53c4a99827431ae1126ad6d1acd660ce56215,Shardbluff Labyrinth,844,328,None,2,3,2,3,0,1,6,2,1
@@ -6584,7 +6597,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 31655,"Shardbluff Labyrinth (833,272)",https://assets.illuvium-game.io/illuvidex/land/land-31655.svg,0x1d188c419aea5a6934d199ac21d6b51428b8d7c3,Shardbluff Labyrinth,833,272,None,1,1,0,2,0,0,3,1,1
 31785,"Shardbluff Labyrinth (833,273)",https://assets.illuvium-game.io/illuvidex/land/land-31785.svg,0x1d188c419aea5a6934d199ac21d6b51428b8d7c3,Shardbluff Labyrinth,833,273,None,1,1,0,1,1,1,3,1,0
 31786,"Shardbluff Labyrinth (834,273)",https://assets.illuvium-game.io/illuvidex/land/land-31786.svg,0x1d188c419aea5a6934d199ac21d6b51428b8d7c3,Shardbluff Labyrinth,834,273,Halogenic Geode,3,6,2,2,2,5,9,2,2
-57929,"Crimson Waste (640,342)",https://assets.illuvium-game.io/illuvidex/land/land-57929.svg,0x3cd81093396d3d85f9befae4518fbc7e4bdc9369,Crimson Waste,640,342,None,2,3,0,1,1,3,6,2,2
 27507,"Crystal Shores (768,511)",https://assets.illuvium-game.io/illuvidex/land/land-27507.svg,0xed051372d1f3920b348b5e0c6fc54e733a540b5e,Crystal Shores,768,511,None,1,1,0,0,1,2,3,1,0
 46551,"Abyssal Basin (269,360)",https://assets.illuvium-game.io/illuvidex/land/land-46551.svg,0xb9421fef328b38217a3717bf91c40ac24028d5d5,Abyssal Basin,269,360,None,2,3,1,0,2,4,6,2,0
 66360,"Crimson Waste (625,408)",https://assets.illuvium-game.io/illuvidex/land/land-66360.svg,0xd80037bbb0e2bddb8382edcecb51de92cc3489f7,Crimson Waste,625,408,None,2,3,1,1,1,3,6,2,1
@@ -7120,12 +7132,10 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 80739,"Brightland Steppes (523,349)",https://assets.illuvium-game.io/illuvidex/land/land-80739.svg,0x757f9c18ff4306ad7236519e5d2a65ced9b62349,Brightland Steppes,523,349,Eternal Spring,3,6,3,2,3,2,9,5,0
 47730,"Abyssal Basin (268,368)",https://assets.illuvium-game.io/illuvidex/land/land-47730.svg,0xfb24eaa4ce4c8a43bcea7489a23d836de8fd66a5,Abyssal Basin,268,368,None,2,3,0,3,1,2,6,1,2
 46247,"Abyssal Basin (224,358)",https://assets.illuvium-game.io/illuvidex/land/land-46247.svg,0x57a71ad047a76d6dc260b93672538fdbb5f2e28b,Abyssal Basin,224,358,None,1,1,0,1,1,2,3,0,0
-52335,"Abyssal Basin (174,405)",https://assets.illuvium-game.io/illuvidex/land/land-52335.svg,0x3c82a85fd4e826c85ab633e63b2c244dbb6ac932,Abyssal Basin,174,405,None,1,1,0,1,0,0,3,2,1
 59281,"Crimson Waste (685,357)",https://assets.illuvium-game.io/illuvidex/land/land-59281.svg,0x3c82a85fd4e826c85ab633e63b2c244dbb6ac932,Crimson Waste,685,357,None,1,1,0,2,0,1,3,0,1
 98216,"Halcyon Sea (587,558)",https://assets.illuvium-game.io/illuvidex/land/land-98216.svg,0xf47031b81e2f4a2591c80195a606876315e14c6a,Halcyon Sea,587,558,None,1,1,0,1,0,1,3,1,1
 38966,"Shardbluff Labyrinth (826,323)",https://assets.illuvium-game.io/illuvidex/land/land-38966.svg,0x3c82a85fd4e826c85ab633e63b2c244dbb6ac932,Shardbluff Labyrinth,826,323,None,1,1,1,0,0,1,3,2,0
 24060,"Crystal Shores (677,491)",https://assets.illuvium-game.io/illuvidex/land/land-24060.svg,0x3c82a85fd4e826c85ab633e63b2c244dbb6ac932,Crystal Shores,677,491,None,1,1,0,1,0,2,3,0,1
-13319,"Taiga Boreal (204,283)",https://assets.illuvium-game.io/illuvidex/land/land-13319.svg,0x3c82a85fd4e826c85ab633e63b2c244dbb6ac932,Taiga Boreal,204,283,None,1,1,1,1,0,2,3,0,0
 5223,"Taiga Boreal (178,195)",https://assets.illuvium-game.io/illuvidex/land/land-5223.svg,0xaf103101035ae7e2ff40329a799e59f86cb15e89,Taiga Boreal,178,195,None,1,1,0,0,1,1,3,2,0
 39385,"Shardbluff Labyrinth (826,326)",https://assets.illuvium-game.io/illuvidex/land/land-39385.svg,0x0a5c0098bf5b5ddd830932177a0ef4f9dd8ceda4,Shardbluff Labyrinth,826,326,None,1,1,1,1,0,1,3,1,0
 39015,"Shardbluff Labyrinth (732,324)",https://assets.illuvium-game.io/illuvidex/land/land-39015.svg,0x28c8bffd64ecfc48226e60671e866998c9afd67c,Shardbluff Labyrinth,732,324,Primeval Marsh,3,6,2,2,3,2,9,5,1
@@ -9170,7 +9180,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 83423,"Brightland Steppes (508,420)",https://assets.illuvium-game.io/illuvidex/land/land-83423.svg,0x51da4926bfaca55b9d8462ad5f7d8f058e95fc64,Brightland Steppes,508,420,Pegmatite Swarm,4,9,4,8,3,2,12,2,2
 9019,"Taiga Boreal (183,240)",https://assets.illuvium-game.io/illuvidex/land/land-9019.svg,0x38702ee485f84d264c475bae61185d51e5b42ff9,Taiga Boreal,183,240,None,2,3,2,3,1,2,6,1,0
 90173,"Halcyon Sea (584,499)",https://assets.illuvium-game.io/illuvidex/land/land-90173.svg,0xffb3200a8d1aae0da4e23a2d300a2b189d310318,Halcyon Sea,584,499,None,1,1,1,0,0,2,3,1,0
-83384,"Brightland Steppes (521,419)",https://assets.illuvium-game.io/illuvidex/land/land-83384.svg,0xc3776fbc8ab390b2d122cd1fa0f241ac7449461a,Brightland Steppes,521,419,None,1,1,0,1,1,1,3,1,0
 90172,"Halcyon Sea (583,499)",https://assets.illuvium-game.io/illuvidex/land/land-90172.svg,0x421fae15cf11d8588aaffe12e08f60dc26a3b2d5,Halcyon Sea,583,499,None,1,1,1,2,0,0,3,1,0
 90169,"Halcyon Sea (580,499)",https://assets.illuvium-game.io/illuvidex/land/land-90169.svg,0xc3802dc1432a8f731946c9ebd73f1281a7e23212,Halcyon Sea,580,499,None,1,1,0,2,1,0,3,1,0
 90170,"Halcyon Sea (581,499)",https://assets.illuvium-game.io/illuvidex/land/land-90170.svg,0xc3802dc1432a8f731946c9ebd73f1281a7e23212,Halcyon Sea,581,499,None,1,1,0,2,0,0,3,1,1
@@ -9580,7 +9589,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 86440,"Halcyon Sea (612,470)",https://assets.illuvium-game.io/illuvidex/land/land-86440.svg,0x17d95eeaf723ea844621336bf096baaea148b896,Halcyon Sea,612,470,None,1,1,0,3,1,0,3,0,0
 86439,"Halcyon Sea (611,470)",https://assets.illuvium-game.io/illuvidex/land/land-86439.svg,0x7b53b8317820c01b9abf047854415f8e912f8d49,Halcyon Sea,611,470,None,1,1,0,2,0,0,3,1,1
 85419,"Brightland Steppes (474,456)",https://assets.illuvium-game.io/illuvidex/land/land-85419.svg,0x0ab407e94c7c2483cd312d5d6b28d442e1997ad5,Brightland Steppes,474,456,None,1,1,1,1,0,1,3,1,0
-80942,"Brightland Steppes (512,352)",https://assets.illuvium-game.io/illuvidex/land/land-80942.svg,0xc64914aa578aadcd65eb8a527588a5af3d27f02e,Brightland Steppes,512,352,None,2,3,1,1,2,3,6,2,0
 80945,"Brightland Steppes (515,352)",https://assets.illuvium-game.io/illuvidex/land/land-80945.svg,0x9afa04be6a6c831037db974cc537bc9d4c52c40c,Brightland Steppes,515,352,None,2,3,0,1,3,2,6,3,0
 80941,"Brightland Steppes (511,352)",https://assets.illuvium-game.io/illuvidex/land/land-80941.svg,0x6f7532f204d8484fe6eb61f13d449624758e2376,Brightland Steppes,511,352,None,2,3,1,2,1,0,6,4,1
 8093,"Taiga Boreal (243,228)",https://assets.illuvium-game.io/illuvidex/land/land-8093.svg,0xe4b1f4d9e65d5986e29dc4b6a905ef98f9d69662,Taiga Boreal,243,228,Eternal Spring,3,6,1,5,2,1,9,3,3
@@ -11381,7 +11389,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 59046,"Crimson Waste (683,355)",https://assets.illuvium-game.io/illuvidex/land/land-59046.svg,0x0160be55088164fe922ddbfc4c8ea8ac644f4f59,Crimson Waste,683,355,None,1,1,1,1,0,1,3,1,0
 59045,"Crimson Waste (682,355)",https://assets.illuvium-game.io/illuvidex/land/land-59045.svg,0x4999857a3716181d2e48534886b18f951f3c0d51,Crimson Waste,682,355,Eternal Spring,3,6,2,1,1,4,9,4,3
 65925,"Crimson Waste (632,404)",https://assets.illuvium-game.io/illuvidex/land/land-65925.svg,0x9bc3acbe66e12ffd568b3ed737c48fe46dc54181,Crimson Waste,632,404,Primeval Marsh,3,6,0,0,1,3,9,6,5
-65892,"Crimson Waste (548,404)",https://assets.illuvium-game.io/illuvidex/land/land-65892.svg,0x23b19eea1a2178d8d8906fd162e48ba200860664,Crimson Waste,548,404,None,1,1,0,2,1,0,3,1,0
 65890,"Crimson Waste (546,404)",https://assets.illuvium-game.io/illuvidex/land/land-65890.svg,0x07e59f9246315d566c94fce620320315939e16c1,Crimson Waste,546,404,None,2,3,2,3,1,3,6,0,0
 59041,"Crimson Waste (678,355)",https://assets.illuvium-game.io/illuvidex/land/land-59041.svg,0x02c960d5709a7e4ef0c957e8349abc6a30aca9bb,Crimson Waste,678,355,Halogenic Geode,3,6,2,2,1,3,9,4,3
 64200,"Crimson Waste (688,390)",https://assets.illuvium-game.io/illuvidex/land/land-64200.svg,0x20d9fbaf803199ebb85667c8fb98aebe1d8184fb,Crimson Waste,688,390,None,1,1,0,0,1,1,3,2,0
@@ -11632,7 +11639,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 62781,"Crimson Waste (625,381)",https://assets.illuvium-game.io/illuvidex/land/land-62781.svg,0x11e7a54d9e1b9781398eef1998a126c8845b5ada,Crimson Waste,625,381,None,1,1,1,0,0,3,3,0,0
 628,"Taiga Boreal (170,114)",https://assets.illuvium-game.io/illuvidex/land/land-628.svg,0x7ec3be9e0d48de3f54ba7c7dd2d1da2ea4091bef,Taiga Boreal,170,114,None,1,1,0,1,1,0,3,2,0
 62780,"Crimson Waste (624,381)",https://assets.illuvium-game.io/illuvidex/land/land-62780.svg,0x2372a99e2ef3ece6155b6b1895acdccb5230b05e,Crimson Waste,624,381,None,2,3,1,3,1,2,6,1,1
-62779,"Crimson Waste (623,381)",https://assets.illuvium-game.io/illuvidex/land/land-62779.svg,0x23b19eea1a2178d8d8906fd162e48ba200860664,Crimson Waste,623,381,None,1,1,0,1,0,0,3,2,1
 62717,"Crimson Waste (710,380)",https://assets.illuvium-game.io/illuvidex/land/land-62717.svg,0xd9c03c6c358857c3e664d326be9db36d33679696,Crimson Waste,710,380,None,1,1,1,0,0,0,3,3,0
 62716,"Crimson Waste (709,380)",https://assets.illuvium-game.io/illuvidex/land/land-62716.svg,0xeb23888dc7dcab9d9c81c7de96a5eb9d22bf64e8,Crimson Waste,709,380,Fallen Star,4,9,3,5,1,5,12,2,5
 60671,"Crimson Waste (626,367)",https://assets.illuvium-game.io/illuvidex/land/land-60671.svg,0x260a27c4c5320adcfd96ee51c0e2f62fad9acfa1,Crimson Waste,626,367,None,1,1,1,2,0,1,3,0,0
@@ -11807,7 +11813,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 6220,"Taiga Boreal (172,207)",https://assets.illuvium-game.io/illuvidex/land/land-6220.svg,0x85414e0cbd6b623a980e4eb247c32db07c24313c,Taiga Boreal,172,207,None,1,1,0,1,0,1,3,1,1
 6218,"Taiga Boreal (170,207)",https://assets.illuvium-game.io/illuvidex/land/land-6218.svg,0x5c05d93846651c509fef509f3e78634cbd3c8958,Taiga Boreal,170,207,None,1,1,0,2,0,1,3,0,1
 5975,"Taiga Boreal (188,204)",https://assets.illuvium-game.io/illuvidex/land/land-5975.svg,0x6a4ecc775077c6bcac3c794d65afd4d7b6349219,Taiga Boreal,188,204,None,1,1,0,0,1,1,3,2,0
-5976,"Taiga Boreal (189,204)",https://assets.illuvium-game.io/illuvidex/land/land-5976.svg,0x4728b493db7db3b3273189747c45c8ab4a931b93,Taiga Boreal,189,204,None,1,1,1,2,0,1,3,0,0
 5974,"Taiga Boreal (187,204)",https://assets.illuvium-game.io/illuvidex/land/land-5974.svg,0x596b4ab5e6b1774daa7377ac378ebce3c27ea4ac,Taiga Boreal,187,204,None,1,1,0,0,1,2,3,1,0
 59732,"Crimson Waste (730,360)",https://assets.illuvium-game.io/illuvidex/land/land-59732.svg,0x9bf26330c15a876834fe1425c22e7dd716a6aa84,Crimson Waste,730,360,None,1,1,0,1,1,1,3,1,0
 62174,"Crimson Waste (624,377)",https://assets.illuvium-game.io/illuvidex/land/land-62174.svg,0xc001fe6920d3c675dce5bfd0e4be5ea2f1a0bc25,Crimson Waste,624,377,None,2,3,0,3,0,1,6,2,3
@@ -12588,7 +12593,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 53002,"Abyssal Basin (232,413)",https://assets.illuvium-game.io/illuvidex/land/land-53002.svg,0xc82071b046bc21512d5c54ec8763c066ae175b81,Abyssal Basin,232,413,None,2,3,1,3,2,2,6,1,0
 48429,"Abyssal Basin (191,373)",https://assets.illuvium-game.io/illuvidex/land/land-48429.svg,0x8ffd5b0cc777f62aca9f08066f676cab2bfd15fc,Abyssal Basin,191,373,None,2,3,0,2,2,1,6,3,1
 55033,"Abyssal Basin (254,439)",https://assets.illuvium-game.io/illuvidex/land/land-55033.svg,0x244d64fd0ef74132cecef6df9ea18bc884ae6727,Abyssal Basin,254,439,None,1,1,0,1,1,0,3,2,0
-55037,"Abyssal Basin (258,439)",https://assets.illuvium-game.io/illuvidex/land/land-55037.svg,0x71129bbf2955ff66c93c701cbb53b38af08e2427,Abyssal Basin,258,439,None,2,3,0,0,1,4,6,2,2
 52998,"Abyssal Basin (228,413)",https://assets.illuvium-game.io/illuvidex/land/land-52998.svg,0x643b74cc24cb04f536a493a8e7e745c675dddc3b,Abyssal Basin,228,413,None,1,1,0,0,1,1,3,2,0
 55032,"Abyssal Basin (253,439)",https://assets.illuvium-game.io/illuvidex/land/land-55032.svg,0x244d64fd0ef74132cecef6df9ea18bc884ae6727,Abyssal Basin,253,439,None,2,3,2,0,0,3,6,3,1
 48426,"Abyssal Basin (188,373)",https://assets.illuvium-game.io/illuvidex/land/land-48426.svg,0xbc2826076477dd6484d0cb8bc2fe382c88dec02b,Abyssal Basin,188,373,Primeval Marsh,3,6,3,2,2,4,9,3,1
@@ -16146,7 +16150,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 25889,"Crystal Shores (769,501)",https://assets.illuvium-game.io/illuvidex/land/land-25889.svg,0xdcf723610fdeb412a9fe17ae9c2df98c2cbca10f,Crystal Shores,769,501,Dimensional Anchor,4,9,4,7,2,1,12,4,3
 27903,"Crystal Shores (755,515)",https://assets.illuvium-game.io/illuvidex/land/land-27903.svg,0xc2031db1acb22b4ac805a23a501f91377c0b33cd,Crystal Shores,755,515,None,1,1,0,1,0,1,3,1,1
 25890,"Crystal Shores (770,501)",https://assets.illuvium-game.io/illuvidex/land/land-25890.svg,0xdcf723610fdeb412a9fe17ae9c2df98c2cbca10f,Crystal Shores,770,501,None,1,1,1,1,0,1,3,1,0
-27902,"Crystal Shores (754,515)",https://assets.illuvium-game.io/illuvidex/land/land-27902.svg,0x14e7b165d99e31fb651c411885fc4e6bb491561e,Crystal Shores,754,515,None,2,3,1,4,1,2,6,0,1
 25888,"Crystal Shores (768,501)",https://assets.illuvium-game.io/illuvidex/land/land-25888.svg,0xdb8209e646e527ee9af6e9c0c2236f595f999645,Crystal Shores,768,501,None,1,1,1,2,0,0,3,1,0
 27900,"Crystal Shores (752,515)",https://assets.illuvium-game.io/illuvidex/land/land-27900.svg,0x4b2386c1c423418a71e2898c43fcfbdc9819b901,Crystal Shores,752,515,Halogenic Geode,3,6,2,5,1,1,9,3,3
 27899,"Crystal Shores (751,515)",https://assets.illuvium-game.io/illuvidex/land/land-27899.svg,0x070e4aacd837c32bd0ca547122c2e2e7d37d36c3,Crystal Shores,751,515,None,2,3,1,2,2,2,6,2,0
@@ -18365,12 +18368,10 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 55159,"Abyssal Basin (223,443)",https://assets.illuvium-game.io/illuvidex/land/land-55159.svg,0xe1c688427a6133a051dfd3835e80c8e8dc6d9baa,Abyssal Basin,223,443,None,2,3,1,2,1,2,6,2,1
 55101,"Abyssal Basin (240,441)",https://assets.illuvium-game.io/illuvidex/land/land-55101.svg,0xb6f7548ad352ae2981f14b4e4350947d7171ce4e,Abyssal Basin,240,441,None,2,3,1,4,1,1,6,1,1
 55068,"Abyssal Basin (245,440)",https://assets.illuvium-game.io/illuvidex/land/land-55068.svg,0xf16005be19a8cb12e02888123f4ea749c1b7f322,Abyssal Basin,245,440,None,1,1,1,1,0,2,3,0,0
-55081,"Abyssal Basin (258,440)",https://assets.illuvium-game.io/illuvidex/land/land-55081.svg,0x71129bbf2955ff66c93c701cbb53b38af08e2427,Abyssal Basin,258,440,None,1,1,1,0,0,1,3,2,0
 55040,"Abyssal Basin (261,439)",https://assets.illuvium-game.io/illuvidex/land/land-55040.svg,0xb9e5c9dc25e942d9152206967893f6cfe0d822ee,Abyssal Basin,261,439,None,2,3,1,0,1,2,6,4,1
 55143,"Abyssal Basin (244,442)",https://assets.illuvium-game.io/illuvidex/land/land-55143.svg,0x2c434867d28da51549dff76fb127ce22b9aa46c6,Abyssal Basin,244,442,Eternal Spring,3,6,1,3,2,1,9,5,3
 55063,"Abyssal Basin (240,440)",https://assets.illuvium-game.io/illuvidex/land/land-55063.svg,0xf72a6b6ed8a94142d7c3dd1b447026d9110c28fb,Abyssal Basin,240,440,None,2,3,1,3,1,3,6,0,1
 55062,"Abyssal Basin (239,440)",https://assets.illuvium-game.io/illuvidex/land/land-55062.svg,0xe114f0c488c32b39ec7b0ec6e2daa36a53ead2dd,Abyssal Basin,239,440,None,2,3,0,3,3,2,6,1,0
-55036,"Abyssal Basin (257,439)",https://assets.illuvium-game.io/illuvidex/land/land-55036.svg,0x71129bbf2955ff66c93c701cbb53b38af08e2427,Abyssal Basin,257,439,None,1,1,1,2,0,0,3,1,0
 54992,"Abyssal Basin (260,438)",https://assets.illuvium-game.io/illuvidex/land/land-54992.svg,0x4f17799994ef604826612515a06eaaadd1720068,Abyssal Basin,260,438,None,1,1,1,0,0,3,3,0,0
 55027,"Abyssal Basin (248,439)",https://assets.illuvium-game.io/illuvidex/land/land-55027.svg,0x4be78a159114ffc1e49883dd4856b67f9f7c71f6,Abyssal Basin,248,439,None,1,1,1,1,0,1,3,1,0
 55021,"Abyssal Basin (242,439)",https://assets.illuvium-game.io/illuvidex/land/land-55021.svg,0x04582531a78970bf4c7c756082fde0122d48321c,Abyssal Basin,242,439,None,1,1,0,2,1,0,3,1,0
@@ -18921,7 +18922,6 @@ token_id,name,image_url,user,region,x_coordinate,y_coordinate,landmark,tier,fuel
 41145,"Shardbluff Labyrinth (859,343)",https://assets.illuvium-game.io/illuvidex/land/land-41145.svg,0x9f47e30c0591315a2d02a777d8b50526d6e12eae,Shardbluff Labyrinth,859,343,None,1,1,0,0,1,0,3,3,0
 41144,"Shardbluff Labyrinth (858,343)",https://assets.illuvium-game.io/illuvidex/land/land-41144.svg,0x3bd6c934377f4a5172a0ed48bfe21a81223a278b,Shardbluff Labyrinth,858,343,None,1,1,1,1,0,0,3,2,0
 41230,"Shardbluff Labyrinth (850,344)",https://assets.illuvium-game.io/illuvidex/land/land-41230.svg,0x547a51002d15bbf25adb5abaca6814663bd82e79,Shardbluff Labyrinth,850,344,Eternal Spring,3,6,1,2,2,4,9,3,3
-41141,"Shardbluff Labyrinth (855,343)",https://assets.illuvium-game.io/illuvidex/land/land-41141.svg,0xabab32a1f3ffe73a1b61657aed2d6c34ea125f91,Shardbluff Labyrinth,855,343,None,1,1,0,2,1,0,3,1,0
 27286,"Crystal Shores (671,510)",https://assets.illuvium-game.io/illuvidex/land/land-27286.svg,0x1611cad092c8744ce2361a64273ec1cc049e825c,Crystal Shores,671,510,None,1,1,0,2,1,0,3,1,0
 91685,"Halcyon Sea (539,511)",https://assets.illuvium-game.io/illuvidex/land/land-91685.svg,0x11e7a54d9e1b9781398eef1998a126c8845b5ada,Halcyon Sea,539,511,None,1,1,0,1,1,2,3,0,0
 41120,"Shardbluff Labyrinth (834,343)",https://assets.illuvium-game.io/illuvidex/land/land-41120.svg,0x9f0e17f6e99809db3f6e72cb88de92e985cc83ff,Shardbluff Labyrinth,834,343,None,1,1,0,1,0,0,3,2,1

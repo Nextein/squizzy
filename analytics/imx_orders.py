@@ -42,16 +42,16 @@ def main():
     # Fetch all active, non-filled orders across all pages
     all_active_orders = fetch_all_active_orders()
     # Create a set to store unique collection names
-    unique_collections = set()
 
-    # Iterate through each order to extract the collection name
-    for order in all_active_orders:
-        collection_name = order['sell']['data']['properties']['collection']['name']
-        unique_collections.add(collection_name)
+    # # Iterate through each order to extract the collection name
+    # unique_collections = set()
+    # for order in all_active_orders:
+    #     collection_name = order['sell']['data']['properties']['collection']['name']
+    #     unique_collections.add(collection_name)
 
-    # Print all unique collection names
-    print("Unique collection names:")
-    print(unique_collections)
+    # # Print all unique collection names
+    # print("Unique collection names:")
+    # print(unique_collections)
     # Save the orders to a file
     save_to_file(all_active_orders, 'data/imx/active_orders.json')
     print(f"Saved {len(all_active_orders)} active orders to 'active_orders.json'")

@@ -43,10 +43,10 @@ def extract_relevant_data(item):
         "hyperion": item['metadata'].get("hyperion"),
     }
 
-def main():
+def create_csv(filepath):
     cursor = None
     
-    with open("./data/imx/lands.csv", 'w', newline='') as file:
+    with open(filepath, 'w', newline='') as file:
         fieldnames = ['token_id', 'name', 'image_url', 'user', 'region', 'x_coordinate', 'y_coordinate', 'landmark', 'tier', 'fuels', 'solon', 'carbon', 'crypton', 'silicon', 'elements', 'hydrogen', 'hyperion']
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
@@ -69,4 +69,4 @@ def main():
     
 
 if __name__ == "__main__":
-    main()
+    create_csv("./data/imx/lands.csv")
