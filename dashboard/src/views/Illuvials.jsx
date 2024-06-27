@@ -8,13 +8,19 @@ import { Chart as ChartJS } from 'chart.js/auto';
 
 ChartJS.register(ChartDataLabels);
 
-function sortData(data) {
-  const sortedEntries = Object.entries(data).sort(([, a], [, b]) => b - a);
-  return {
-    labels: sortedEntries.map(([label]) => label),
-    values: sortedEntries.map(([, value]) => value),
-  };
-}
+const generateColor = () => {
+  const r = Math.floor((Math.random() * 127) + 127);
+  const g = Math.floor((Math.random() * 127) + 127);
+  const b = Math.floor((Math.random() * 127) + 127);
+  return `rgb(${r}, ${g}, ${b})`;
+};
+
+const getColor = (name, colorMapping) => {
+  if (!colorMapping[name]) {
+    colorMapping[name] = generateColor();
+  }
+  return colorMapping[name];
+};
 
 const filterNonZeroEntries = (data) => {
   const filteredEntries = Object.entries(data).filter(([, value]) => value > 0);
@@ -41,7 +47,7 @@ const calculateMedian = (values) => {
   return (values[half - 1] + values[half]) / 2.0;
 };
 
-const processOrderData = (illuvials) => {
+const processOrderData = (illuvials, colorMapping) => {
   const illuvialsData = illuvials.filter(order =>
     order.sell &&
     order.sell.data &&
@@ -116,7 +122,7 @@ const processOrderData = (illuvials) => {
     datasets: [
       {
         data: filteredCountData.values,
-        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#FF9F40', '#FFCD56', '#4BC0C0', '#9966FF'],
+        backgroundColor: filteredCountData.labels.map(label => getColor(label, colorMapping)),
         borderWidth: 0,
       },
     ],
@@ -127,7 +133,7 @@ const processOrderData = (illuvials) => {
     datasets: [
       {
         data: filteredValueData.values,
-        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#FF9F40', '#FFCD56', '#4BC0C0', '#9966FF'],
+        backgroundColor: filteredValueData.labels.map(label => getColor(label, colorMapping)),
         borderWidth: 0,
       },
     ],
@@ -138,7 +144,7 @@ const processOrderData = (illuvials) => {
     datasets: [
       {
         data: filteredAveragePriceData.values,
-        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#FF9F40', '#FFCD56', '#4BC0C0', '#9966FF'],
+        backgroundColor: filteredAveragePriceData.labels.map(label => getColor(label, colorMapping)),
         borderWidth: 0,
       },
     ],
@@ -149,7 +155,7 @@ const processOrderData = (illuvials) => {
     datasets: [
       {
         data: filteredMedianPriceData.values,
-        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#FF9F40', '#FFCD56', '#4BC0C0', '#9966FF'],
+        backgroundColor: filteredMedianPriceData.labels.map(label => getColor(label, colorMapping)),
         borderWidth: 0,
       },
     ],
@@ -184,10 +190,13 @@ export default function Illuvials({ illuvials }) {
   const [averagePricePieData, setAveragePricePieData] = useState(null);
   const [medianPricePieData, setMedianPricePieData] = useState(null);
   const [illuvialStats, setIlluvialStats] = useState([]);
+  const [colorMapping, setColorMapping] = useState({});
 
   useEffect(() => {
     if (illuvials.length > 0) {
-      const data = processOrderData(illuvials);
+      const colorMap = { ...colorMapping };
+      const data = processOrderData(illuvials, colorMap);
+      setColorMapping(colorMap);
       setCountPieData(data.countData);
       setValuePieData(data.valueData);
       setAveragePricePieData(data.averagePriceData);
