@@ -149,14 +149,15 @@ function AppRouter() {
 
   async function fetchData() {
     setLoading(true);
-    const [orders, lands, illuvials] = await Promise.all([
-      fetchAllActiveOrders(setProgress),
+    // const [orders, lands, illuvials] = await Promise.all([
+    const [lands, illuvials] = await Promise.all([
+      // fetchAllActiveOrders(setProgress),
       fetchAllLandsData(setProgress),
       fetchAllIlluvialsData(setProgress)
     ]);
-    setRootData({ orders, lands, illuvials });
-    console.log({ orders, lands, illuvials });
-    if (orders.length==0 || lands.length==0 || illuvials.length==0) {
+    setRootData({lands, illuvials });
+    console.log({lands, illuvials });
+    if (lands.length==0 || illuvials.length==0) {
       toast({
         title: "Failed to load data",
         status: "error",
@@ -169,7 +170,7 @@ function AppRouter() {
 
   return (
     <>
-      {rootData.orders.length > 0 && rootData.lands.length > 0 && rootData.illuvials.length > 0 ?
+      {rootData.lands.length > 0 && rootData.illuvials.length > 0 ?
         null
         :
         <Flex mt={8}>

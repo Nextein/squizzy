@@ -22,6 +22,15 @@ const getColor = (name, colorMapping) => {
   return colorMapping[name];
 };
 
+const getISO8601Date = (ndays=7) => {
+  const now = new Date();
+  const sevenDaysAgo = new Date(now.setDate(now.getDate() - ndays));
+  return sevenDaysAgo.toISOString();
+};
+
+console.log(getISO8601Date());
+
+
 const filterNonZeroEntries = (data) => {
   const filteredEntries = Object.entries(data).filter(([, value]) => value > 0);
   const sortedEntries = filteredEntries.sort(([, a], [, b]) => b - a); // Sorting by value in descending order
