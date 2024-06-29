@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Box, Heading, Text, SimpleGrid, Flex, Table, Thead, Tbody, Tr, Th, Td } from '@chakra-ui/react';
 import { Line, Pie } from 'react-chartjs-2';
 import '../chartConfig';
-import { lineData, options, samplePieData } from '../data/charts';
+import { options, samplePieData } from '../data/charts';
 
 const sortData = (data) => {
   const sortedEntries = Object.entries(data).sort(([, a], [, b]) => b - a);
@@ -152,12 +152,49 @@ const pieOptions = {
   },
 };
 
-export default function Lands({ lands }) {
+const processHistoricalData = (historicalData) => {
+  const groupedData = historicalData.reduce((acc, data) => {
+    const timestamp = new Date(data.timestamp).toISOString().split('T')[0];
+    if (!acc[timestamp]) {
+      acc[timestamp] = {
+        totalLandsForSale: 0,
+        marketCap: 0,
+        totalPrice: 0,
+        minPrice: Infinity,
+        landCount: 0,
+      };
+    }
+    const ethPrice = parseFloat(data.buy.data.quantity) / 10 ** data.buy.data.decimals;
+    acc[timestamp].totalLandsForSale += 1;
+    acc[timestamp].marketCap += ethPrice;
+    acc[timestamp].totalPrice += ethPrice;
+    acc[timestamp].minPrice = Math.min(acc[timestamp].minPrice, ethPrice);
+    acc[timestamp].landCount += 1;
+    return acc;
+  }, {});
+
+  const labels = Object.keys(groupedData).sort();
+  const totalLandsForSaleData = labels.map(label => groupedData[label].totalLandsForSale);
+  const marketCapData = labels.map(label => groupedData[label].marketCap);
+  const averagePriceData = labels.map(label => groupedData[label].totalPrice / groupedData[label].landCount);
+  const minPriceData = labels.map(label => groupedData[label].minPrice);
+
+  return {
+    labels,
+    totalLandsForSaleData,
+    marketCapData,
+    averagePriceData,
+    minPriceData,
+  };
+};
+
+export default function Lands({ lands, historical_lands }) {
   const [countPieData, setCountPieData] = useState(null);
   const [valuePieData, setValuePieData] = useState(null);
   const [averagePricePieData, setAveragePricePieData] = useState(null);
   const [medianPricePieData, setMedianPricePieData] = useState(null);
   const [landStats, setLandStats] = useState([]);
+  const [historicalChartData, setHistoricalChartData] = useState(null);
 
   useEffect(() => {
     if (lands.length > 0) {
@@ -180,7 +217,12 @@ export default function Lands({ lands }) {
       }));
       setLandStats(stats);
     }
-  }, [lands]);
+
+    if (historical_lands.length > 0) {
+      const historicalData = processHistoricalData(historical_lands);
+      setHistoricalChartData(historicalData);
+    }
+  }, [lands, historical_lands]);
 
   return (
     <Box p={5}>
@@ -238,27 +280,82 @@ export default function Lands({ lands }) {
         </Box>
       </Flex>
       <SimpleGrid columns={[1, null, 3]} spacing="40px">
-        <Box bg="gray.100" p={5} borderRadius="md">
-          <Text fontSize="2xl">Total Lands for Sale Change Over Time</Text>
-          <Line data={lineData} options={options} />
-        </Box>
-        <Box bg="gray.100" p={5} borderRadius="md">
-          <Text fontSize="2xl">Market Cap of Lands for Sale Change Over Time</Text>
-          <Line data={lineData} options={options} />
-        </Box>
-        <Box bg="gray.100" p={5} borderRadius="md">
-          <Text fontSize="2xl">Average Land Price Change Over Time</Text>
-          <Line data={lineData} options={options} />
-        </Box>
-        <Box bg="gray.100" p={5} borderRadius="md">
-          <Text fontSize="2xl">Min Land Price Change Over Time</Text>
-          <Line data={lineData} options={options} />
-        </Box>
-        <Box></Box>
-        <Box bg="gray.100" p={5} borderRadius="md">
-          <Text fontSize="2xl">Market Cap of Lands for Sale Over Time</Text>
-          <Line data={lineData} options={options} />
-        </Box>
+        {historicalChartData && (
+          <>
+            <Box bg="gray.100" p={5} borderRadius="md">
+              <Text fontSize="2xl">Total Lands for Sale Change Over Time</Text>
+              <Line
+                data={{
+                  labels: historicalChartData.labels,
+                  datasets: [
+                    {
+                      label: 'Total Lands for Sale',
+                      data: historicalChartData.totalLandsForSaleData,
+                      fill: false,
+                      backgroundColor: 'rgba(75,192,192,0.4)',
+                      borderColor: 'rgba(75,192,192,1)',
+                    },
+                  ],
+                }}
+                options={options}
+              />
+            </Box>
+            <Box bg="gray.100" p={5} borderRadius="md">
+              <Text fontSize="2xl">Market Cap of Lands for Sale Change Over Time</Text>
+              <Line
+                data={{
+                  labels: historicalChartData.labels,
+                  datasets: [
+                    {
+                      label: 'Market Cap',
+                      data: historicalChartData.marketCapData,
+                      fill: false,
+                      backgroundColor: 'rgba(153,102,255,0.4)',
+                      borderColor: 'rgba(153,102,255,1)',
+                    },
+                  ],
+                }}
+                options={options}
+              />
+            </Box>
+            <Box bg="gray.100" p={5} borderRadius="md">
+              <Text fontSize="2xl">Average Land Price Change Over Time</Text>
+              <Line
+                data={{
+                  labels: historicalChartData.labels,
+                  datasets: [
+                    {
+                      label: 'Average Price',
+                      data: historicalChartData.averagePriceData,
+                      fill: false,
+                      backgroundColor: 'rgba(255,159,64,0.4)',
+                      borderColor: 'rgba(255,159,64,1)',
+                    },
+                  ],
+                }}
+                options={options}
+              />
+            </Box>
+            <Box bg="gray.100" p={5} borderRadius="md">
+              <Text fontSize="2xl">Min Land Price Change Over Time</Text>
+              <Line
+                data={{
+                  labels: historicalChartData.labels,
+                  datasets: [
+                    {
+                      label: 'Min Price',
+                      data: historicalChartData.minPriceData,
+                      fill: false,
+                      backgroundColor: 'rgba(255,99,132,0.4)',
+                      borderColor: 'rgba(255,99,132,1)',
+                    },
+                  ],
+                }}
+                options={options}
+              />
+            </Box>
+          </>
+        )}
         <Box bg="gray.100" p={5} borderRadius="md">
           <Text fontSize="2xl">Distribution of Lands for Sale</Text>
           <Pie data={countPieData || samplePieData} options={pieOptions} />

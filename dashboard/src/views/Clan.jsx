@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Heading, Text, Select, useToast, Button, SimpleGrid, Center, VStack, Input, Spinner, IconButton } from '@chakra-ui/react';
 import { FaExternalLinkAlt, FaClipboard } from 'react-icons/fa';
 import axios from 'axios';
@@ -9,9 +9,10 @@ import users from '../data/users';
 
 const theme = createTheme();
 
-const Clan = () => {
+const Clan = ({ illuvialOrders = [] }) => {
   const [selectedUser, setSelectedUser] = useState(null);
   const [walletContents, setWalletContents] = useState([]);
+  const [illuvialData, setIlluvialData] = useState({ floorPrice: {} });
   const [isLoading, setIsLoading] = useState(false);
   const [selectedWalletAddress, setSelectedWalletAddress] = useState('');
   const [manualWalletAddress, setManualWalletAddress] = useState('');
@@ -49,6 +50,96 @@ const Clan = () => {
       console.error('Error fetching wallet data:', error);
     }
     return contents;
+  };
+
+  const calculateMedian = (values) => {
+    if (values.length === 0) return 0;
+    values.sort((a, b) => a - b);
+    const half = Math.floor(values.length / 2);
+    if (values.length % 2) return values[half];
+    return (values[half - 1] + values[half]) / 2.0;
+  };
+
+  const filterNonZeroEntries = (data) => {
+    const filteredEntries = Object.entries(data).filter(([, value]) => value > 0);
+    return {
+      labels: filteredEntries.map(([label]) => label),
+      values: filteredEntries.map(([, value]) => value),
+    };
+  };
+
+  const removeBottomPercentile = (data, percentile = 80) => {
+    const thresholdIndex = Math.floor(data.values.length * (percentile / 100));
+    return {
+      labels: data.labels.slice(0, -thresholdIndex),
+      values: data.values.slice(0, -thresholdIndex),
+    };
+  };
+
+  const processOrderData = (illuvials) => {
+    if (!Array.isArray(illuvials) || illuvials.length === 0) return { floorPrice: {} };
+
+    const illuvialsCount = {};
+    const illuvialsValue = {};
+    const illuvialsAveragePrice = {};
+    const illuvialsPrices = {};
+    const illuvialsFloorPrice = {};
+    const totalIlluvialsCount = {};
+
+    illuvials.forEach(order => {
+      const illuvialName = order.sell.data.properties.name;
+      const quantity = parseFloat(order.buy.data.quantity_with_fees) / 10 ** 18;
+
+      if (!totalIlluvialsCount[illuvialName]) {
+        totalIlluvialsCount[illuvialName] = 0;
+      }
+      totalIlluvialsCount[illuvialName] += 1;
+
+      if (isNaN(quantity) || quantity <= 0) return;
+
+      if (!illuvialsCount[illuvialName]) {
+        illuvialsCount[illuvialName] = 0;
+        illuvialsValue[illuvialName] = 0;
+        illuvialsAveragePrice[illuvialName] = 0;
+        illuvialsPrices[illuvialName] = [];
+        illuvialsFloorPrice[illuvialName] = quantity;
+      }
+
+      illuvialsCount[illuvialName] += 1;
+      illuvialsValue[illuvialName] += quantity;
+      illuvialsPrices[illuvialName].push(quantity);
+      if (quantity < illuvialsFloorPrice[illuvialName]) {
+        illuvialsFloorPrice[illuvialName] = quantity;
+      }
+    });
+
+    Object.keys(illuvialsCount).forEach(illuvialName => {
+      illuvialsAveragePrice[illuvialName] = illuvialsValue[illuvialName] / illuvialsCount[illuvialName];
+      illuvialsPrices[illuvialName].sort((a, b) => a - b);
+    });
+
+    const illuvialsMedianPrice = {};
+    const illuvialsPercentileBelowMedian = {};
+    const illuvialsMedianDiscount = {};
+    Object.keys(illuvialsPrices).forEach(illuvialName => {
+      const median = calculateMedian(illuvialsPrices[illuvialName]);
+      illuvialsMedianPrice[illuvialName] = median;
+      const belowMedianPrices = illuvialsPrices[illuvialName].filter(price => price < median);
+      illuvialsPercentileBelowMedian[illuvialName] = (belowMedianPrices.length / illuvialsPrices[illuvialName].length) * 100;
+      illuvialsMedianDiscount[illuvialName] = belowMedianPrices.length > 0 ? calculateMedian(belowMedianPrices) : 0;
+    });
+
+    const sortedCountData = filterNonZeroEntries(illuvialsCount);
+    const sortedValueData = filterNonZeroEntries(illuvialsValue);
+    const sortedAveragePriceData = filterNonZeroEntries(illuvialsAveragePrice);
+    const sortedMedianPriceData = filterNonZeroEntries(illuvialsMedianPrice);
+
+    const filteredCountData = removeBottomPercentile(sortedCountData);
+    const filteredValueData = removeBottomPercentile(sortedValueData);
+    const filteredAveragePriceData = removeBottomPercentile(sortedAveragePriceData);
+    const filteredMedianPriceData = removeBottomPercentile(sortedMedianPriceData);
+
+    return { floorPrice: illuvialsFloorPrice };
   };
 
   const aggregateStats = (contents) => {
@@ -118,6 +209,9 @@ const Clan = () => {
       setStats(aggregateStats(contents));
     }
 
+    const data = processOrderData(illuvialOrders);
+    setIlluvialData(data);
+
     setIsLoading(false);
   };
 
@@ -129,6 +223,9 @@ const Clan = () => {
     const contents = await fetchUserData(manualWalletAddress);
     setWalletContents(contents);
     setStats(aggregateStats(contents));
+
+    const data = processOrderData(illuvialOrders);
+    setIlluvialData(data);
 
     setIsLoading(false);
   };
@@ -159,6 +256,13 @@ const Clan = () => {
       duration: 1500,
       position: 'top',
     });
+  };
+
+  const calculateTotalValue = (illuvials, floorPrices) => {
+    return Object.entries(illuvials).reduce((sum, [name, { count }]) => {
+      const floorPrice = floorPrices && floorPrices[name] ? floorPrices[name] : 0;
+      return sum + (floorPrice * count);
+    }, 0);
   };
 
   const columns = [
@@ -219,7 +323,12 @@ const Clan = () => {
       <Heading as="h2" size="md" mb={3}>{title}</Heading>
       <SimpleGrid columns={[1, null, 8]} spacing="40px">
         {Object.entries(data || {})
-          .sort(([a], [b]) => a.localeCompare(b))
+          .sort(([nameA, dataA], [nameB, dataB]) => {
+            if (dataA.tier !== dataB.tier) {
+              return dataB.tier - dataA.tier; // Sort by tier in descending order
+            }
+            return nameA.localeCompare(nameB); // If tiers are equal, sort alphabetically
+          })
           .map(([name, { count, tier, holoCount = 0, darkHoloCount = 0 }]) => (
             <Box bg={tierColors[tier] || color} p={5} borderRadius="md" key={name}>
               <Text fontSize="xl">{name}</Text>
@@ -315,6 +424,10 @@ const Clan = () => {
                   '& .MuiDataGrid-toolbarContainer .MuiButton-text': { color: 'text.primary' },
                 }}
               />
+            </Box>
+            <Box mt={5}>
+              <Heading as="h2" size="lg" mb={3}>Total Wallet Value</Heading>
+              <Text fontSize="2xl">{calculateTotalValue(stats.illuvials, illuvialData.floorPrice).toFixed(2)} IMX</Text>
             </Box>
           </>
         )}

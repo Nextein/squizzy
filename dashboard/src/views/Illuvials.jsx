@@ -22,13 +22,6 @@ const getColor = (name, colorMapping) => {
   return colorMapping[name];
 };
 
-const getISO8601Date = (ndays=7) => {
-  const now = new Date();
-  const sevenDaysAgo = new Date(now.setDate(now.getDate() - ndays));
-  return sevenDaysAgo.toISOString();
-};
-
-console.log(getISO8601Date());
 
 
 const filterNonZeroEntries = (data) => {
@@ -193,7 +186,7 @@ const pieOptions = {
   },
 };
 
-export default function Illuvials({ illuvials }) {
+export default function Illuvials({ illuvials, historical_illuvials }) {
   const [countPieData, setCountPieData] = useState(null);
   const [valuePieData, setValuePieData] = useState(null);
   const [averagePricePieData, setAveragePricePieData] = useState(null);
