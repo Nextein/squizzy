@@ -155,6 +155,8 @@ const pieOptions = {
 const processHistoricalData = (historicalData) => {
   const groupedData = historicalData.reduce((acc, data) => {
     const timestamp = new Date(data.timestamp).toISOString().split('T')[0];
+    const tier = data.sell.data.properties.collection.name.split(' ')[1]; // Extracting the tier number from the collection name
+
     if (!acc[timestamp]) {
       acc[timestamp] = {
         totalLandsForSale: 0,
@@ -162,14 +164,62 @@ const processHistoricalData = (historicalData) => {
         totalPrice: 0,
         minPrice: Infinity,
         landCount: 0,
+        totalLandsForSaleT1: 0,
+        marketCapT1: 0,
+        totalPriceT1: 0,
+        minPriceT1: Infinity,
+        landCountT1: 0,
+        totalLandsForSaleT2: 0,
+        marketCapT2: 0,
+        totalPriceT2: 0,
+        minPriceT2: Infinity,
+        landCountT2: 0,
+        totalLandsForSaleT3: 0,
+        marketCapT3: 0,
+        totalPriceT3: 0,
+        minPriceT3: Infinity,
+        landCountT3: 0,
+        totalLandsForSaleT4: 0,
+        marketCapT4: 0,
+        totalPriceT4: 0,
+        minPriceT4: Infinity,
+        landCountT4: 0,
       };
     }
-    const ethPrice = parseFloat(data.buy.data.quantity) / 10 ** data.buy.data.decimals;
+
+    const ethPrice = parseFloat(data.buy.data.quantity_with_fees) / 10 ** parseInt(data.buy.data.decimals);
     acc[timestamp].totalLandsForSale += 1;
     acc[timestamp].marketCap += ethPrice;
     acc[timestamp].totalPrice += ethPrice;
     acc[timestamp].minPrice = Math.min(acc[timestamp].minPrice, ethPrice);
     acc[timestamp].landCount += 1;
+
+    if (tier === '1') {
+      acc[timestamp].totalLandsForSaleT1 += 1;
+      acc[timestamp].marketCapT1 += ethPrice;
+      acc[timestamp].totalPriceT1 += ethPrice;
+      acc[timestamp].minPriceT1 = Math.min(acc[timestamp].minPriceT1, ethPrice);
+      acc[timestamp].landCountT1 += 1;
+    } else if (tier === '2') {
+      acc[timestamp].totalLandsForSaleT2 += 1;
+      acc[timestamp].marketCapT2 += ethPrice;
+      acc[timestamp].totalPriceT2 += ethPrice;
+      acc[timestamp].minPriceT2 = Math.min(acc[timestamp].minPriceT2, ethPrice);
+      acc[timestamp].landCountT2 += 1;
+    } else if (tier === '3') {
+      acc[timestamp].totalLandsForSaleT3 += 1;
+      acc[timestamp].marketCapT3 += ethPrice;
+      acc[timestamp].totalPriceT3 += ethPrice;
+      acc[timestamp].minPriceT3 = Math.min(acc[timestamp].minPriceT3, ethPrice);
+      acc[timestamp].landCountT3 += 1;
+    } else if (tier === '4') {
+      acc[timestamp].totalLandsForSaleT4 += 1;
+      acc[timestamp].marketCapT4 += ethPrice;
+      acc[timestamp].totalPriceT4 += ethPrice;
+      acc[timestamp].minPriceT4 = Math.min(acc[timestamp].minPriceT4, ethPrice);
+      acc[timestamp].landCountT4 += 1;
+    }
+
     return acc;
   }, {});
 
@@ -179,12 +229,48 @@ const processHistoricalData = (historicalData) => {
   const averagePriceData = labels.map(label => groupedData[label].totalPrice / groupedData[label].landCount);
   const minPriceData = labels.map(label => groupedData[label].minPrice);
 
+  const totalLandsForSaleT1 = labels.map(label => groupedData[label].totalLandsForSaleT1);
+  const marketCapT1 = labels.map(label => groupedData[label].marketCapT1);
+  const averagePriceT1 = labels.map(label => groupedData[label].totalPriceT1 / groupedData[label].landCountT1);
+  const minPriceT1 = labels.map(label => groupedData[label].minPriceT1);
+
+  const totalLandsForSaleT2 = labels.map(label => groupedData[label].totalLandsForSaleT2);
+  const marketCapT2 = labels.map(label => groupedData[label].marketCapT2);
+  const averagePriceT2 = labels.map(label => groupedData[label].totalPriceT2 / groupedData[label].landCountT2);
+  const minPriceT2 = labels.map(label => groupedData[label].minPriceT2);
+
+  const totalLandsForSaleT3 = labels.map(label => groupedData[label].totalLandsForSaleT3);
+  const marketCapT3 = labels.map(label => groupedData[label].marketCapT3);
+  const averagePriceT3 = labels.map(label => groupedData[label].totalPriceT3 / groupedData[label].landCountT3);
+  const minPriceT3 = labels.map(label => groupedData[label].minPriceT3);
+
+  const totalLandsForSaleT4 = labels.map(label => groupedData[label].totalLandsForSaleT4);
+  const marketCapT4 = labels.map(label => groupedData[label].marketCapT4);
+  const averagePriceT4 = labels.map(label => groupedData[label].totalPriceT4 / groupedData[label].landCountT4);
+  const minPriceT4 = labels.map(label => groupedData[label].minPriceT4);
+
   return {
     labels,
     totalLandsForSaleData,
     marketCapData,
     averagePriceData,
     minPriceData,
+    totalLandsForSaleT1,
+    marketCapT1,
+    averagePriceT1,
+    minPriceT1,
+    totalLandsForSaleT2,
+    marketCapT2,
+    averagePriceT2,
+    minPriceT2,
+    totalLandsForSaleT3,
+    marketCapT3,
+    averagePriceT3,
+    minPriceT3,
+    totalLandsForSaleT4,
+    marketCapT4,
+    averagePriceT4,
+    minPriceT4,
   };
 };
 
@@ -295,6 +381,34 @@ export default function Lands({ lands, historical_lands }) {
                       backgroundColor: 'rgba(75,192,192,0.4)',
                       borderColor: 'rgba(75,192,192,1)',
                     },
+                    {
+                      label: 'Tier 1 Lands for Sale',
+                      data: historicalChartData.totalLandsForSaleT1,
+                      fill: false,
+                      backgroundColor: 'rgba(255,99,132,0.4)',
+                      borderColor: 'rgba(255,99,132,1)',
+                    },
+                    {
+                      label: 'Tier 2 Lands for Sale',
+                      data: historicalChartData.totalLandsForSaleT2,
+                      fill: false,
+                      backgroundColor: 'rgba(54,162,235,0.4)',
+                      borderColor: 'rgba(54,162,235,1)',
+                    },
+                    {
+                      label: 'Tier 3 Lands for Sale',
+                      data: historicalChartData.totalLandsForSaleT3,
+                      fill: false,
+                      backgroundColor: 'rgba(255,206,86,0.4)',
+                      borderColor: 'rgba(255,206,86,1)',
+                    },
+                    {
+                      label: 'Tier 4 Lands for Sale',
+                      data: historicalChartData.totalLandsForSaleT4,
+                      fill: false,
+                      backgroundColor: 'rgba(75,192,192,0.4)',
+                      borderColor: 'rgba(75,192,192,1)',
+                    },
                   ],
                 }}
                 options={options}
@@ -312,6 +426,34 @@ export default function Lands({ lands, historical_lands }) {
                       fill: false,
                       backgroundColor: 'rgba(153,102,255,0.4)',
                       borderColor: 'rgba(153,102,255,1)',
+                    },
+                    {
+                      label: 'Tier 1 Market Cap',
+                      data: historicalChartData.marketCapT1,
+                      fill: false,
+                      backgroundColor: 'rgba(255,99,132,0.4)',
+                      borderColor: 'rgba(255,99,132,1)',
+                    },
+                    {
+                      label: 'Tier 2 Market Cap',
+                      data: historicalChartData.marketCapT2,
+                      fill: false,
+                      backgroundColor: 'rgba(54,162,235,0.4)',
+                      borderColor: 'rgba(54,162,235,1)',
+                    },
+                    {
+                      label: 'Tier 3 Market Cap',
+                      data: historicalChartData.marketCapT3,
+                      fill: false,
+                      backgroundColor: 'rgba(255,206,86,0.4)',
+                      borderColor: 'rgba(255,206,86,1)',
+                    },
+                    {
+                      label: 'Tier 4 Market Cap',
+                      data: historicalChartData.marketCapT4,
+                      fill: false,
+                      backgroundColor: 'rgba(75,192,192,0.4)',
+                      borderColor: 'rgba(75,192,192,1)',
                     },
                   ],
                 }}
@@ -331,6 +473,34 @@ export default function Lands({ lands, historical_lands }) {
                       backgroundColor: 'rgba(255,159,64,0.4)',
                       borderColor: 'rgba(255,159,64,1)',
                     },
+                    {
+                      label: 'Tier 1 Average Price',
+                      data: historicalChartData.averagePriceT1,
+                      fill: false,
+                      backgroundColor: 'rgba(255,99,132,0.4)',
+                      borderColor: 'rgba(255,99,132,1)',
+                    },
+                    {
+                      label: 'Tier 2 Average Price',
+                      data: historicalChartData.averagePriceT2,
+                      fill: false,
+                      backgroundColor: 'rgba(54,162,235,0.4)',
+                      borderColor: 'rgba(54,162,235,1)',
+                    },
+                    {
+                      label: 'Tier 3 Average Price',
+                      data: historicalChartData.averagePriceT3,
+                      fill: false,
+                      backgroundColor: 'rgba(255,206,86,0.4)',
+                      borderColor: 'rgba(255,206,86,1)',
+                    },
+                    {
+                      label: 'Tier 4 Average Price',
+                      data: historicalChartData.averagePriceT4,
+                      fill: false,
+                      backgroundColor: 'rgba(75,192,192,0.4)',
+                      borderColor: 'rgba(75,192,192,1)',
+                    },
                   ],
                 }}
                 options={options}
@@ -348,6 +518,34 @@ export default function Lands({ lands, historical_lands }) {
                       fill: false,
                       backgroundColor: 'rgba(255,99,132,0.4)',
                       borderColor: 'rgba(255,99,132,1)',
+                    },
+                    {
+                      label: 'Tier 1 Min Price',
+                      data: historicalChartData.minPriceT1,
+                      fill: false,
+                      backgroundColor: 'rgba(255,99,132,0.4)',
+                      borderColor: 'rgba(255,99,132,1)',
+                    },
+                    {
+                      label: 'Tier 2 Min Price',
+                      data: historicalChartData.minPriceT2,
+                      fill: false,
+                      backgroundColor: 'rgba(54,162,235,0.4)',
+                      borderColor: 'rgba(54,162,235,1)',
+                    },
+                    {
+                      label: 'Tier 3 Min Price',
+                      data: historicalChartData.minPriceT3,
+                      fill: false,
+                      backgroundColor: 'rgba(255,206,86,0.4)',
+                      borderColor: 'rgba(255,206,86,1)',
+                    },
+                    {
+                      label: 'Tier 4 Min Price',
+                      data: historicalChartData.minPriceT4,
+                      fill: false,
+                      backgroundColor: 'rgba(75,192,192,0.4)',
+                      borderColor: 'rgba(75,192,192,1)',
                     },
                   ],
                 }}
