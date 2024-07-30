@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Heading, Text, SimpleGrid, Flex, Table, Thead, Tbody, Tr, Th, Td, Grid } from '@chakra-ui/react';
+import { Box, Heading, Text, SimpleGrid, Flex, Table, Thead, Tbody, Tr, Th, Td, Grid, Button, HStack } from '@chakra-ui/react';
 import { Line, Pie } from 'react-chartjs-2';
 import axios from 'axios';
 import { lineData, samplePieData, options } from '../data/charts';
@@ -224,6 +224,16 @@ export default function Illuvitars({ illuvitars, historical_illuvitars }) {
     <Box p={5}>
       <Heading as="h1" mb={5}>Illuvitars</Heading>
       <Text mb={5}>Information and trends about Illuvitars on the platform.</Text>
+      <HStack spacing={4}>
+        <a
+          href='https://immutascan.io/address/0x8cceea8cfb0f8670f4de3a6cd2152925605d19a8?tab=1&forSale=true&chartTab=UniqueOwners'
+          target="_blank"
+          rel="noopener noreferrer">
+          <Button>
+            Immutascan
+          </Button>
+        </a>
+      </HStack>
       <Flex my={10} direction="column" gap={10}>
         <Box bg="gray.100" p={5} borderRadius="md" overflow="auto" maxHeight="500px">
           <Text fontSize="2xl" mb={5}>Illuvitar Statistics</Text>

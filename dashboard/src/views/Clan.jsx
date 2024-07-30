@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Heading, Text, Select, useToast, Button, SimpleGrid, Center, VStack, Input, Spinner, IconButton } from '@chakra-ui/react';
+import { Box, Heading, Text, Select, useToast, Button, SimpleGrid, Center, VStack, Input, Spinner, IconButton, Table, Tbody, Tr, Td } from '@chakra-ui/react';
 import { FaExternalLinkAlt, FaClipboard } from 'react-icons/fa';
 import axios from 'axios';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
@@ -33,7 +33,7 @@ const Clan = ({ illuvialOrders = [] }) => {
     let cursor = '';
     try {
       do {
-        const response = await axios.get(`https://api.sandbox.x.immutable.com/v1/assets`, {
+        const response = await axios.get(`https://api.x.immutable.com/v1/assets`, {
           params: {
             user: walletAddress,
             page_size: 200,
@@ -242,12 +242,12 @@ const Clan = ({ illuvialOrders = [] }) => {
   };
 
   const handleButtonClick = (token_address, token_id) => {
-    const url = `https://sandbox.illuvidex.illuvium.io/asset/${token_address}/${token_id}`;
+    const url = `https://illuvidex.illuvium.io/asset/${token_address}/${token_id}`;
     window.open(url, '_blank');
   };
 
   const handleCopyLink = (token_address, token_id) => {
-    const url = `https://sandbox.illuvidex.illuvium.io/asset/${token_address}/${token_id}`;
+    const url = `https://illuvidex.illuvium.io/asset/${token_address}/${token_id}`;
     navigator.clipboard.writeText(url);
     toast({
       title: "Link copied to clipboard",
@@ -332,14 +332,34 @@ const Clan = ({ illuvialOrders = [] }) => {
           .map(([name, { count, tier, holoCount = 0, darkHoloCount = 0 }]) => (
             <Box bg={tierColors[tier] || color} p={5} borderRadius="md" key={name}>
               <Text fontSize="xl">{name}</Text>
-              <Text>Total: {count}</Text>
               {holoCount > 0 && <Text>Holo: {holoCount}</Text>}
               {darkHoloCount > 0 && <Text>Dark Holo: {darkHoloCount}</Text>}
+              <Table>
+                <Tbody>
+                  <Tr>
+                    <Td>
+                      <Text>Total: {count}</Text>
+                    </Td>
+                    <Td>
+                    </Td>
+                  </Tr>
+                </Tbody>
+              </Table>
             </Box>
           ))}
       </SimpleGrid>
     </Box>
   );
+
+  const calculateTotal = (counts) => {
+    let total = 0;
+    for (let key in counts) {
+      if (counts.hasOwnProperty(key)) {
+        total += counts[key];
+      }
+    }
+    return total;
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -406,6 +426,9 @@ const Clan = ({ illuvialOrders = [] }) => {
               </SimpleGrid>
             </Box>
             {renderStatsSection('Illuvials', stats.illuvials, tierColors)}
+            <Text>total illuvials: {
+              calculateTotal(stats.illuvials.totalIlluvialsCount)
+            }</Text>
             {renderStatsSection('Plants', stats.plants, 'green.100')}
             {renderStatsSection('Essences', stats.essences, 'purple.100')}
             <Box mt={10} height="75vh">

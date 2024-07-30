@@ -14,10 +14,10 @@ import axios from 'axios';
 
 const ORDERS_API_URL = "https://api.x.immutable.com/v3/orders";
 const LANDS_API_URL = "https://api.x.immutable.com/v1/assets";
-const ILLUVIUM_API_URL = "https://api.sandbox.immutable.com/v3/orders";
+const ILLUVIUM_API_URL = "https://api.immutable.com/v3/orders";
 const LANDS_TOTAL = 20000;
 const PAGE_SIZE = 200;
-const ADDRESS = "0x8cceea8cfb0f8670f4de3a6cd2152925605d19a8";
+
 
 const getISO8601Date = (ndays = 7) => {
   const now = new Date();
@@ -109,7 +109,7 @@ async function fetchAllLandsData(setProgress) {
 async function fetchAllIlluvialsData(setProgress) {
   let allIlluvials = [];
   let params = {
-    sell_token_address: "0xa732097446130b699bea80475ca571e73f9a7b17",
+    sell_token_address: "0x205634b541080afff3bbfe02dcc89f8fa8a1f1d4",
     status: "active",
     page_size: PAGE_SIZE
   };
@@ -186,7 +186,7 @@ async function fetchHistoricalLandsData(setProgress) {
 async function fetchHistoricalIlluvialsData(setProgress) {
   let allIlluvials = [];
   let params = {
-    sell_token_address: "0xa732097446130b699bea80475ca571e73f9a7b17",
+    sell_token_address: "0x205634b541080afff3bbfe02dcc89f8fa8a1f1d4",
     status: "filled",
     min_timestamp: getISO8601Date(14),
     page_size: PAGE_SIZE
@@ -299,17 +299,19 @@ async function fetchHistoricalIlluvitarData(setProgress) {
   return allIlluvitars;
 };
 
-function AppRouter() {
+export default function AppRouter() {
   const [rootData, setRootData] = useState({ historical_illuvials: [], historical_lands: [], lands: [], illuvials: [], illuvitars: [], historical_illuvitars: [] });
   const [progress, setProgress] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [prices, setPrices] = useState([1, 2, 3]);
   const toast = useToast();
 
   async function fetchData() {
     setLoading(true);
     const [lands, historical_lands, illuvials, historical_illuvials, illuvitars, historical_illuvitars] = await Promise.all([
-      fetchAllLandsData(setProgress),
-      fetchHistoricalLandsData(setProgress),
+      // fetchAllLandsData(setProgress),
+      // fetchHistoricalLandsData(setProgress),
+      null, null,
       fetchAllIlluvialsData(setProgress),
       fetchHistoricalIlluvialsData(setProgress),
       fetchIlluvitarData(setProgress),
@@ -317,18 +319,32 @@ function AppRouter() {
     ]);
     setRootData({ lands, illuvials, historical_illuvials, historical_lands, illuvitars, historical_illuvitars });
     console.log({ lands, illuvials, historical_illuvials, historical_lands, illuvitars, historical_illuvitars });
-    if (lands.length == 0
-      || illuvials.length == 0
-      || historical_illuvials.length == 0
-      || historical_lands.length == 0
-      || illuvitars.length == 0
-      || historical_illuvitars.length == 0
+    if (
+      illuvials.length === 0
+      || historical_illuvials.length === 0
+      // || lands.length === 0
+      // || historical_lands.length === 0
+      || illuvitars.length === 0
+      || historical_illuvitars.length === 0
     ) {
       toast({
         title: "Failed to load data",
         status: "error",
-        duration: 3000,
+        duration: 10000,
         position: 'top',
+        description: 
+          "illuvials: "
+          + illuvials.length
+          + "\n"
+          + "historical_illuvials: "
+          + historical_illuvials.length
+          + "\n"
+          + "illuvitars: "
+          + illuvitars.length
+          + "\n"
+          + "historical_illuvitars: "
+          + historical_illuvitars.length
+          + "\n"
       });
     }
     setLoading(false);
@@ -336,10 +352,11 @@ function AppRouter() {
 
   return (
     <>
-      {rootData.lands.length > 0
-        && rootData.illuvials.length > 0
+      {
+        rootData.illuvials.length > 0
         && rootData.historical_illuvials.length > 0
-        && rootData.historical_lands.length > 0
+        // && rootData.lands.length > 0
+        // && rootData.historical_lands.length > 0
         && rootData.illuvitars.length > 0
         && rootData.historical_illuvitars.length > 0
         ?
@@ -362,7 +379,7 @@ function AppRouter() {
       <Routes>
         <Route path="/home" element={<Home data={rootData} />} />
         <Route path="/illuvitars" element={<Illuvitars data={rootData} />} />
-        <Route path="/illuvials" element={<Illuvials illuvials={rootData.illuvials} historical_illuvials={rootData.historical_illuvials} />} />
+        <Route path="/illuvials" element={<Illuvials illuvials={rootData.illuvials} historical_illuvials={rootData.historical_illuvials} prices={prices} setPrices={setPrices} />} />
         <Route path="/lands" element={<Lands lands={rootData.lands} historical_lands={rootData.historical_lands} />} />
         <Route path="/wallets" element={<Wallets data={rootData} />} />
         <Route path="/baloth" element={<Baloth data={rootData} />} />
@@ -373,5 +390,3 @@ function AppRouter() {
     </>
   );
 }
-
-export default AppRouter;

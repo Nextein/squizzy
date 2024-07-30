@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Heading, Text, SimpleGrid, Flex, Table, Thead, Tbody, Tr, Th, Td, Grid } from '@chakra-ui/react';
+import { Box, Heading, Text, SimpleGrid, Flex, Table, Thead, Tbody, Tr, Th, Td, Grid, Input, Button, HStack, FormControl, FormLabel, Switch } from '@chakra-ui/react';
 import { Line, Pie } from 'react-chartjs-2';
 import axios from 'axios';
 import { lineData, samplePieData, options } from '../data/charts';
@@ -90,6 +90,9 @@ const processOrderData = (illuvials, colorMapping) => {
     illuvialsPrices[illuvialName].push(quantity);
     if (quantity < illuvialsFloorPrice[illuvialName]) {
       illuvialsFloorPrice[illuvialName] = quantity;
+      if (quantity === 0.0) {
+        console.log(order);
+      }
     }
   });
 
@@ -193,6 +196,10 @@ export default function Illuvials({ illuvials, historical_illuvials }) {
   const [medianPricePieData, setMedianPricePieData] = useState(null);
   const [illuvialStats, setIlluvialStats] = useState([]);
   const [colorMapping, setColorMapping] = useState({});
+  const [illuvial, setIlluvial] = useState("");
+  const [prices, setIlluvialsPrices] = useState([1, 2, 3]);
+  const [ethPrice, setEthPrice] = useState(3500);
+  const [eth, setEth] = useState(false);
 
   useEffect(() => {
     if (illuvials.length > 0) {
@@ -219,8 +226,14 @@ export default function Illuvials({ illuvials, historical_illuvials }) {
       stats.sort((a, b) => a.illuvialName.localeCompare(b.illuvialName)); // Sorting stats alphabetically by illuvialName
 
       setIlluvialStats(stats);
+      setIlluvialsPrices(data.illuvialsPrices);
+      console.log("prices", data.illuvialsPrices);
     }
   }, [illuvials]);
+
+  function handleIlluvialSearch() {
+    console.log("illuvial searched: " + illuvial)
+  }
 
   return (
     <Box p={5}>
@@ -228,7 +241,16 @@ export default function Illuvials({ illuvials, historical_illuvials }) {
       <Text mb={5}>Information and trends about Illuvials on the platform.</Text>
       <Flex my={10} direction="column" gap={10}>
         <Box bg="gray.100" p={5} borderRadius="md" overflow="auto" maxHeight="500px">
-          <Text fontSize="2xl" mb={5}>Illuvial Statistics</Text>
+          <HStack>
+            <Text fontSize="2xl" mb={5}>Illuvial Statistics</Text>
+            <Text>${ethPrice}</Text>
+            <FormControl display='flex' alignItems='center'>
+              <FormLabel htmlFor='eth-switch' mb='0'>
+                ETH
+              </FormLabel>
+              <Switch id='eth-switch' isChecked={eth} onChange={(e) => setEth(e.target.checked)} />
+            </FormControl>
+          </HStack>
           <Table variant="simple">
             <Thead>
               <Tr>
@@ -253,24 +275,24 @@ export default function Illuvials({ illuvials, historical_illuvials }) {
                     </Box>
                   </Td>
                   <Td>
-                    {stat.floorPrice.toFixed(2)}
+                    {eth ? stat.floorPrice.toFixed(5) : stat.floorPrice.toFixed(7) * ethPrice}
                     <Box as="span" color="gray.500" ml={2}>
                       ({((1 - stat.floorPrice / stat.medianPrice) * 100).toFixed(1)}%)
                     </Box>
                   </Td>
                   <Td>
-                    {stat.medianPrice.toFixed(2)}
+                    {eth ? stat.medianPrice.toFixed(5) : stat.medianPrice.toFixed(7) * ethPrice}
                     <Box as="span" color="gray.500" ml={2}>
                       ({stat.percentileBelowMedian.toFixed(1)}%)
                     </Box>
                   </Td>
                   <Td>
-                    {stat.medianDiscount.toFixed(2)}
+                    {eth ? stat.medianDiscount.toFixed(5) : stat.medianDiscount.toFixed(7) * ethPrice}
                     <Box as="span" color="gray.500" ml={2}>
                       ({((1 - stat.medianDiscount / stat.medianPrice) * 100).toFixed(1)}%)
                     </Box>
                   </Td>
-                  <Td>{stat.averagePrice.toFixed(2)}</Td>
+                  <Td>{eth ? stat.averagePrice.toFixed(5) : stat.averagePrice * ethPrice}</Td>
                 </Tr>
               ))}
             </Tbody>
@@ -307,6 +329,34 @@ export default function Illuvials({ illuvials, historical_illuvials }) {
           <Pie data={averagePricePieData || samplePieData} options={pieOptions} />
         </Box>
       </Grid>
+      <Flex my={10} direction="column" gap={10}>
+        <Box>
+          <Text fontSize={'xl'}>Illuvial</Text>
+          <Input type='text' value={illuvial} onChange={(e) => setIlluvial(e.target.value)}>
+          </Input>
+          <Button onClick={handleIlluvialSearch}>
+            search
+          </Button>
+        </Box>
+        <Box bg="gray.100" p={5} borderRadius="md" overflow="auto" maxHeight="500px">
+          <Text fontSize="2xl" mb={5}>Illuvial Statistics</Text>
+          <Table variant="simple">
+            <Thead>
+              <Tr>
+                <Th>Order</Th>
+                <Th>Price</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              <Tr>
+                <Td>test</Td>
+                <Td>test</Td>
+              </Tr>
+            </Tbody>
+          </Table>
+        </Box>
+      </Flex>
     </Box>
+
   );
 }

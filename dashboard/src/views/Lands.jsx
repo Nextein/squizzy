@@ -1,24 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Heading, Text, SimpleGrid, Flex, Table, Thead, Tbody, Tr, Th, Td } from '@chakra-ui/react';
+import { Box, Heading, Text, SimpleGrid, Flex, Table, Thead, Tbody, Tr, Th, Td, IconButton, useToast, Button, HStack } from '@chakra-ui/react';
 import { Line, Pie } from 'react-chartjs-2';
 import '../chartConfig';
-import { options, samplePieData } from '../data/charts';
-
-const sortData = (data) => {
-  const sortedEntries = Object.entries(data).sort(([, a], [, b]) => b - a);
-  return {
-    labels: sortedEntries.map(([label]) => label),
-    values: sortedEntries.map(([, value]) => value),
-  };
-};
-
-const filterNonZeroEntries = (data) => {
-  const filteredEntries = Object.entries(data).filter(([, value]) => value > 0);
-  return {
-    labels: filteredEntries.map(([label]) => label),
-    values: filteredEntries.map(([, value]) => value),
-  };
-};
+import { lineData, options, samplePieData } from '../data/charts';
+import { DataGrid, GridToolbar } from '@mui/x-data-grid';
+import { FaClipboard, FaExternalLinkAlt } from 'react-icons/fa';
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 
 const calculateMedian = (values) => {
   if (values.length === 0) return 0;
@@ -132,6 +119,34 @@ const processLandData = (lands) => {
   return { countData, valueData, averagePriceData, medianPriceData, tierPrices, tierFloorPrice, tierAveragePrice, tierMedianPrice, totalTierCount, tierPercentileBelowMedian, tierMedianDiscount };
 };
 
+const handleCellClick = (value, toast) => {
+  navigator.clipboard.writeText(value);
+  toast({
+    title: "Copied to clipboard",
+    description: value,
+    status: "success",
+    duration: 1500,
+    position: 'top',
+  });
+};
+
+const handleCopyLink = (token_address, token_id, toast) => {
+  const url = `https://sandbox.illuvidex.illuvium.io/asset/${token_address}/${token_id}`;
+  navigator.clipboard.writeText(url);
+  toast({
+    title: "Link copied to clipboard",
+    description: url,
+    status: "success",
+    duration: 1500,
+    position: 'top',
+  });
+};
+
+const handleButtonClick = (token_address, token_id) => {
+  const url = `https://sandbox.illuvidex.illuvium.io/asset/${token_address}/${token_id}`;
+  window.open(url, '_blank');
+};
+
 const pieOptions = {
   plugins: {
     legend: {
@@ -152,10 +167,28 @@ const pieOptions = {
   },
 };
 
+const filterNonZeroEntries = (data) => {
+  const filteredEntries = Object.entries(data).filter(([, value]) => value > 0);
+  return {
+    labels: filteredEntries.map(([label]) => label),
+    values: filteredEntries.map(([, value]) => value),
+  };
+};
+
 const processHistoricalData = (historicalData) => {
   const groupedData = historicalData.reduce((acc, data) => {
     const timestamp = new Date(data.timestamp).toISOString().split('T')[0];
-    const tier = data.sell.data.properties.collection.name.split(' ')[1]; // Extracting the tier number from the collection name
+    const id = data.data.token_id;
+    
+    function getTierFromTokenID(id) {
+      for (let i=0; i< historicalData.length; i++){
+        if (historicalData[i].token_id === id) {
+          return historicalData[i].metadata.tier;
+        }
+      }
+      return null;
+    }
+    const tier = getTierFromTokenID(id);
 
     if (!acc[timestamp]) {
       acc[timestamp] = {
@@ -194,34 +227,40 @@ const processHistoricalData = (historicalData) => {
     acc[timestamp].minPrice = Math.min(acc[timestamp].minPrice, ethPrice);
     acc[timestamp].landCount += 1;
 
-    if (tier === '1') {
+    if (tier === 1) {
       acc[timestamp].totalLandsForSaleT1 += 1;
       acc[timestamp].marketCapT1 += ethPrice;
       acc[timestamp].totalPriceT1 += ethPrice;
       acc[timestamp].minPriceT1 = Math.min(acc[timestamp].minPriceT1, ethPrice);
       acc[timestamp].landCountT1 += 1;
-    } else if (tier === '2') {
+      console.log("T1");
+    } else if (tier === 2) {
       acc[timestamp].totalLandsForSaleT2 += 1;
       acc[timestamp].marketCapT2 += ethPrice;
       acc[timestamp].totalPriceT2 += ethPrice;
       acc[timestamp].minPriceT2 = Math.min(acc[timestamp].minPriceT2, ethPrice);
       acc[timestamp].landCountT2 += 1;
-    } else if (tier === '3') {
+      console.log("T1");
+    } else if (tier === 3) {
       acc[timestamp].totalLandsForSaleT3 += 1;
       acc[timestamp].marketCapT3 += ethPrice;
       acc[timestamp].totalPriceT3 += ethPrice;
       acc[timestamp].minPriceT3 = Math.min(acc[timestamp].minPriceT3, ethPrice);
       acc[timestamp].landCountT3 += 1;
-    } else if (tier === '4') {
+      console.log("T1");
+    } else if (tier === 4) {
       acc[timestamp].totalLandsForSaleT4 += 1;
       acc[timestamp].marketCapT4 += ethPrice;
       acc[timestamp].totalPriceT4 += ethPrice;
       acc[timestamp].minPriceT4 = Math.min(acc[timestamp].minPriceT4, ethPrice);
       acc[timestamp].landCountT4 += 1;
+      console.log("T1");
     }
 
     return acc;
   }, {});
+
+  console.log("DATA", groupedData);
 
   const labels = Object.keys(groupedData).sort();
   const totalLandsForSaleData = labels.map(label => groupedData[label].totalLandsForSale);
@@ -248,6 +287,30 @@ const processHistoricalData = (historicalData) => {
   const marketCapT4 = labels.map(label => groupedData[label].marketCapT4);
   const averagePriceT4 = labels.map(label => groupedData[label].totalPriceT4 / groupedData[label].landCountT4);
   const minPriceT4 = labels.map(label => groupedData[label].minPriceT4);
+
+  console.log({
+    labels,
+    totalLandsForSaleData,
+    marketCapData,
+    averagePriceData,
+    minPriceData,
+    totalLandsForSaleT1,
+    marketCapT1,
+    averagePriceT1,
+    minPriceT1,
+    totalLandsForSaleT2,
+    marketCapT2,
+    averagePriceT2,
+    minPriceT2,
+    totalLandsForSaleT3,
+    marketCapT3,
+    averagePriceT3,
+    minPriceT3,
+    totalLandsForSaleT4,
+    marketCapT4,
+    averagePriceT4,
+    minPriceT4,
+  });
 
   return {
     labels,
@@ -281,9 +344,12 @@ export default function Lands({ lands, historical_lands }) {
   const [medianPricePieData, setMedianPricePieData] = useState(null);
   const [landStats, setLandStats] = useState([]);
   const [historicalChartData, setHistoricalChartData] = useState(null);
+  const toast = useToast();
+  const [rows, setRows] = useState([]);
 
   useEffect(() => {
     if (lands.length > 0) {
+      console.log("Lands Data:", lands); // Log the lands data to verify its structure
       const data = processLandData(lands);
       setCountPieData(data.countData);
       setValuePieData(data.valueData);
@@ -308,12 +374,62 @@ export default function Lands({ lands, historical_lands }) {
       const historicalData = processHistoricalData(historical_lands);
       setHistoricalChartData(historicalData);
     }
+
+    // Ensure lands data has the required 'id' field for DataGrid
+    setRows(lands.map((land, index) => ({ id: index, ...land })));
+
   }, [lands, historical_lands]);
+
+  useEffect(() => {
+    console.log(rows);
+  }, [rows]);
 
   return (
     <Box p={5}>
       <Heading as="h1" mb={5}>Lands</Heading>
       <Text mb={5}>Information and trends about Lands on the platform.</Text>
+      <HStack spacing={4}>
+        <a
+          href="https://market.immutable.com/collections/0x9e0d99b864e1ac12565125c5a82b59adea5a09cd?filters%5Btier%5D%5B%5D=4"
+          target="_blank"
+          rel="noopener noreferrer">
+          <Button>
+            IMX Market
+          </Button>
+        </a>
+        <a
+          href='https://tokentrove.com/collection/IlluviumLand'
+          target="_blank"
+          rel="noopener noreferrer">
+          <Button>
+            Token Trove
+          </Button>
+        </a>
+        <a
+          href='https://dappradar.com/nft-collection/illuvium-land?range-ncs=week'
+          target="_blank"
+          rel="noopener noreferrer">
+          <Button>
+            Analytics
+          </Button>
+        </a>
+        <a
+          href='https://immutascan.io/address/0x9e0d99b864e1ac12565125c5a82b59adea5a09cd?tab=1&forSale=true'
+          target="_blank"
+          rel="noopener noreferrer">
+          <Button>
+            Immutascan
+          </Button>
+        </a>
+        <a
+          href="https://www.livecoinwatch.com/price/EscrowedIlluvium2-SILV2"
+          target="_blank"
+          rel="noopener noreferrer">
+          <Button>
+            SILV2
+          </Button>
+        </a>
+      </HStack>
       <Flex my={10} direction="column" gap={10}>
         <Box bg="gray.100" p={5} borderRadius="md">
           <Text fontSize="2xl" mb={5}>Land Statistics</Text>
@@ -343,7 +459,7 @@ export default function Lands({ lands, historical_lands }) {
                   <Td>
                     {stat.floorPrice.toFixed(2)}
                     <Box as="span" color="gray.500" ml={2}>
-                      ({((1-stat.floorPrice/stat.medianPrice)*100).toFixed(1)}%)
+                      ({((1 - stat.floorPrice / stat.medianPrice) * 100).toFixed(1)}%)
                     </Box>
                   </Td>
                   <Td>
@@ -355,7 +471,7 @@ export default function Lands({ lands, historical_lands }) {
                   <Td>
                     {stat.medianDiscount.toFixed(2)}
                     <Box as="span" color="gray.500" ml={2}>
-                      ({((1-stat.medianDiscount/stat.medianPrice)*100).toFixed(1)}%)
+                      ({((1 - stat.medianDiscount / stat.medianPrice) * 100).toFixed(1)}%)
                     </Box>
                   </Td>
                   <Td>{stat.averagePrice.toFixed(2)}</Td>
@@ -365,195 +481,653 @@ export default function Lands({ lands, historical_lands }) {
           </Table>
         </Box>
       </Flex>
+      <Tabs>
+        <TabList>
+          <Tab>All</Tab>
+          <Tab>T1</Tab>
+          <Tab>T2</Tab>
+          <Tab>T3</Tab>
+          <Tab>T4</Tab>
+        </TabList>
+
+        <TabPanels>
+          <TabPanel>
+            <SimpleGrid columns={[1, null, 3]} spacing="40px">
+              {historicalChartData ?
+                (
+                  <>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Total Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Total Lands for Sale',
+                              data: historicalChartData.totalLandsForSaleData,
+                              fill: false,
+                              backgroundColor: 'rgba(75,192,192,0.4)',
+                              borderColor: 'rgba(75,192,192,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Market Cap of Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Market Cap',
+                              data: historicalChartData.marketCapData,
+                              fill: false,
+                              backgroundColor: 'rgba(153,102,255,0.4)',
+                              borderColor: 'rgba(153,102,255,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Average Land Price Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Average Price',
+                              data: historicalChartData.averagePriceData,
+                              fill: false,
+                              backgroundColor: 'rgba(255,159,64,0.4)',
+                              borderColor: 'rgba(255,159,64,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Floor Price Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Min Price',
+                              data: historicalChartData.minPriceData,
+                              fill: false,
+                              backgroundColor: 'rgba(255,99,132,0.4)',
+                              borderColor: 'rgba(255,99,132,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                  </>
+                )
+                :
+                (
+                  <>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Total Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Market Cap of Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Average Land Price Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Min Land Price Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                  </>
+                )}
+              <Box bg="gray.100" p={5} borderRadius="md">
+                <Text fontSize="2xl">Distribution of Lands for Sale</Text>
+                <Pie data={countPieData || samplePieData} options={pieOptions} />
+              </Box>
+              <Box bg="gray.100" p={5} borderRadius="md">
+                <Text fontSize="2xl">Market Cap of Lands</Text>
+                <Pie data={valuePieData || samplePieData} options={pieOptions} />
+              </Box>
+              <Box bg="gray.100" p={5} borderRadius="md">
+                <Text fontSize="2xl">Median Price for Sale of Lands</Text>
+                <Pie data={medianPricePieData || samplePieData} options={pieOptions} />
+              </Box>
+              <Box bg="gray.100" p={5} borderRadius="md">
+                <Text fontSize="2xl">Average Price for Sale of Lands</Text>
+                <Pie data={averagePricePieData || samplePieData} options={pieOptions} />
+              </Box>
+            </SimpleGrid>
+          </TabPanel>
+          <TabPanel>
+            <SimpleGrid columns={[1, null, 3]} spacing="40px">
+              {historicalChartData ?
+                (
+                  <>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Total Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Tier 1 Lands for Sale',
+                              data: historicalChartData.totalLandsForSaleT1,
+                              fill: false,
+                              backgroundColor: 'rgba(255,99,132,0.4)',
+                              borderColor: 'rgba(255,99,132,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Market Cap of Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Tier 1 Market Cap',
+                              data: historicalChartData.marketCapT1,
+                              fill: false,
+                              backgroundColor: 'rgba(255,99,132,0.4)',
+                              borderColor: 'rgba(255,99,132,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Average Land Price Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Tier 1 Average Price',
+                              data: historicalChartData.averagePriceT1,
+                              fill: false,
+                              backgroundColor: 'rgba(255,99,132,0.4)',
+                              borderColor: 'rgba(255,99,132,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Min Land Price Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Tier 1 Min Price',
+                              data: historicalChartData.minPriceT1,
+                              fill: false,
+                              backgroundColor: 'rgba(255,99,132,0.4)',
+                              borderColor: 'rgba(255,99,132,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                  </>
+                )
+                :
+                (
+                  <>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Total Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Market Cap of Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Average Land Price Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Min Land Price Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                  </>
+                )}
+              <Box bg="gray.100" p={5} borderRadius="md">
+                <Text fontSize="2xl">Distribution of Lands for Sale</Text>
+                <Pie data={countPieData || samplePieData} options={pieOptions} />
+              </Box>
+              <Box bg="gray.100" p={5} borderRadius="md">
+                <Text fontSize="2xl">Market Cap of Lands</Text>
+                <Pie data={valuePieData || samplePieData} options={pieOptions} />
+              </Box>
+              <Box bg="gray.100" p={5} borderRadius="md">
+                <Text fontSize="2xl">Median Price for Sale of Lands</Text>
+                <Pie data={medianPricePieData || samplePieData} options={pieOptions} />
+              </Box>
+              <Box bg="gray.100" p={5} borderRadius="md">
+                <Text fontSize="2xl">Average Price for Sale of Lands</Text>
+                <Pie data={averagePricePieData || samplePieData} options={pieOptions} />
+              </Box>
+            </SimpleGrid>
+          </TabPanel>
+          <TabPanel>
+            <SimpleGrid columns={[1, null, 3]} spacing="40px">
+              {historicalChartData ?
+                (
+                  <>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Total Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Tier 2 Lands for Sale',
+                              data: historicalChartData.totalLandsForSaleT2,
+                              fill: false,
+                              backgroundColor: 'rgba(54,162,235,0.4)',
+                              borderColor: 'rgba(54,162,235,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Market Cap of Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Tier 2 Market Cap',
+                              data: historicalChartData.marketCapT2,
+                              fill: false,
+                              backgroundColor: 'rgba(54,162,235,0.4)',
+                              borderColor: 'rgba(54,162,235,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Average Land Price Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Tier 2 Average Price',
+                              data: historicalChartData.averagePriceT2,
+                              fill: false,
+                              backgroundColor: 'rgba(54,162,235,0.4)',
+                              borderColor: 'rgba(54,162,235,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Min Land Price Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Tier 2 Min Price',
+                              data: historicalChartData.minPriceT2,
+                              fill: false,
+                              backgroundColor: 'rgba(54,162,235,0.4)',
+                              borderColor: 'rgba(54,162,235,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                  </>
+                )
+                :
+                (
+                  <>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Total Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Market Cap of Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Average Land Price Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Min Land Price Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                  </>
+                )}
+              <Box bg="gray.100" p={5} borderRadius="md">
+                <Text fontSize="2xl">Distribution of Lands for Sale</Text>
+                <Pie data={countPieData || samplePieData} options={pieOptions} />
+              </Box>
+              <Box bg="gray.100" p={5} borderRadius="md">
+                <Text fontSize="2xl">Market Cap of Lands</Text>
+                <Pie data={valuePieData || samplePieData} options={pieOptions} />
+              </Box>
+              <Box bg="gray.100" p={5} borderRadius="md">
+                <Text fontSize="2xl">Median Price for Sale of Lands</Text>
+                <Pie data={medianPricePieData || samplePieData} options={pieOptions} />
+              </Box>
+              <Box bg="gray.100" p={5} borderRadius="md">
+                <Text fontSize="2xl">Average Price for Sale of Lands</Text>
+                <Pie data={averagePricePieData || samplePieData} options={pieOptions} />
+              </Box>
+            </SimpleGrid>
+          </TabPanel>
+          <TabPanel>
+            <SimpleGrid columns={[1, null, 3]} spacing="40px">
+              {historicalChartData ?
+                (
+                  <>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Total Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Tier 2 Lands for Sale',
+                              data: historicalChartData.totalLandsForSaleT2,
+                              fill: false,
+                              backgroundColor: 'rgba(54,162,235,0.4)',
+                              borderColor: 'rgba(54,162,235,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Market Cap of Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Tier 2 Market Cap',
+                              data: historicalChartData.marketCapT2,
+                              fill: false,
+                              backgroundColor: 'rgba(54,162,235,0.4)',
+                              borderColor: 'rgba(54,162,235,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Average Land Price Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Tier 2 Average Price',
+                              data: historicalChartData.averagePriceT2,
+                              fill: false,
+                              backgroundColor: 'rgba(54,162,235,0.4)',
+                              borderColor: 'rgba(54,162,235,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Min Land Price Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Tier 2 Min Price',
+                              data: historicalChartData.minPriceT2,
+                              fill: false,
+                              backgroundColor: 'rgba(54,162,235,0.4)',
+                              borderColor: 'rgba(54,162,235,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                  </>
+                )
+                :
+                (
+                  <>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Total Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Market Cap of Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Average Land Price Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Min Land Price Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                  </>
+                )}
+              <Box bg="gray.100" p={5} borderRadius="md">
+                <Text fontSize="2xl">Distribution of Lands for Sale</Text>
+                <Pie data={countPieData || samplePieData} options={pieOptions} />
+              </Box>
+              <Box bg="gray.100" p={5} borderRadius="md">
+                <Text fontSize="2xl">Market Cap of Lands</Text>
+                <Pie data={valuePieData || samplePieData} options={pieOptions} />
+              </Box>
+              <Box bg="gray.100" p={5} borderRadius="md">
+                <Text fontSize="2xl">Median Price for Sale of Lands</Text>
+                <Pie data={medianPricePieData || samplePieData} options={pieOptions} />
+              </Box>
+              <Box bg="gray.100" p={5} borderRadius="md">
+                <Text fontSize="2xl">Average Price for Sale of Lands</Text>
+                <Pie data={averagePricePieData || samplePieData} options={pieOptions} />
+              </Box>
+            </SimpleGrid>
+          </TabPanel>
+          <TabPanel>
+            <SimpleGrid columns={[1, null, 3]} spacing="40px">
+              {historicalChartData ?
+                (
+                  <>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Total Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Tier 3 Lands for Sale',
+                              data: historicalChartData.totalLandsForSaleT3,
+                              fill: false,
+                              backgroundColor: 'rgba(255,206,86,0.4)',
+                              borderColor: 'rgba(255,206,86,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Market Cap of Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Tier 3 Market Cap',
+                              data: historicalChartData.marketCapT3,
+                              fill: false,
+                              backgroundColor: 'rgba(255,206,86,0.4)',
+                              borderColor: 'rgba(255,206,86,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Average Land Price Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Tier 3 Average Price',
+                              data: historicalChartData.averagePriceT3,
+                              fill: false,
+                              backgroundColor: 'rgba(255,206,86,0.4)',
+                              borderColor: 'rgba(255,206,86,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Min Land Price Change Over Time</Text>
+                      <Line
+                        data={{
+                          labels: historicalChartData.labels,
+                          datasets: [
+                            {
+                              label: 'Tier 3 Min Price',
+                              data: historicalChartData.minPriceT3,
+                              fill: false,
+                              backgroundColor: 'rgba(255,206,86,0.4)',
+                              borderColor: 'rgba(255,206,86,1)',
+                            },
+                          ],
+                        }}
+                        options={options}
+                      />
+                    </Box>
+                  </>
+                )
+                :
+                (
+                  <>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Total Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Market Cap of Lands for Sale Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Average Land Price Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                    <Box bg="gray.100" p={5} borderRadius="md">
+                      <Text fontSize="2xl">Min Land Price Change Over Time</Text>
+                      <Line
+                        data={lineData}
+                        options={options}
+                      />
+                    </Box>
+                  </>
+                )}
+            </SimpleGrid>
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
       <SimpleGrid columns={[1, null, 3]} spacing="40px">
-        {historicalChartData && (
-          <>
-            <Box bg="gray.100" p={5} borderRadius="md">
-              <Text fontSize="2xl">Total Lands for Sale Change Over Time</Text>
-              <Line
-                data={{
-                  labels: historicalChartData.labels,
-                  datasets: [
-                    {
-                      label: 'Total Lands for Sale',
-                      data: historicalChartData.totalLandsForSaleData,
-                      fill: false,
-                      backgroundColor: 'rgba(75,192,192,0.4)',
-                      borderColor: 'rgba(75,192,192,1)',
-                    },
-                    {
-                      label: 'Tier 1 Lands for Sale',
-                      data: historicalChartData.totalLandsForSaleT1,
-                      fill: false,
-                      backgroundColor: 'rgba(255,99,132,0.4)',
-                      borderColor: 'rgba(255,99,132,1)',
-                    },
-                    {
-                      label: 'Tier 2 Lands for Sale',
-                      data: historicalChartData.totalLandsForSaleT2,
-                      fill: false,
-                      backgroundColor: 'rgba(54,162,235,0.4)',
-                      borderColor: 'rgba(54,162,235,1)',
-                    },
-                    {
-                      label: 'Tier 3 Lands for Sale',
-                      data: historicalChartData.totalLandsForSaleT3,
-                      fill: false,
-                      backgroundColor: 'rgba(255,206,86,0.4)',
-                      borderColor: 'rgba(255,206,86,1)',
-                    },
-                    {
-                      label: 'Tier 4 Lands for Sale',
-                      data: historicalChartData.totalLandsForSaleT4,
-                      fill: false,
-                      backgroundColor: 'rgba(75,192,192,0.4)',
-                      borderColor: 'rgba(75,192,192,1)',
-                    },
-                  ],
-                }}
-                options={options}
-              />
-            </Box>
-            <Box bg="gray.100" p={5} borderRadius="md">
-              <Text fontSize="2xl">Market Cap of Lands for Sale Change Over Time</Text>
-              <Line
-                data={{
-                  labels: historicalChartData.labels,
-                  datasets: [
-                    {
-                      label: 'Market Cap',
-                      data: historicalChartData.marketCapData,
-                      fill: false,
-                      backgroundColor: 'rgba(153,102,255,0.4)',
-                      borderColor: 'rgba(153,102,255,1)',
-                    },
-                    {
-                      label: 'Tier 1 Market Cap',
-                      data: historicalChartData.marketCapT1,
-                      fill: false,
-                      backgroundColor: 'rgba(255,99,132,0.4)',
-                      borderColor: 'rgba(255,99,132,1)',
-                    },
-                    {
-                      label: 'Tier 2 Market Cap',
-                      data: historicalChartData.marketCapT2,
-                      fill: false,
-                      backgroundColor: 'rgba(54,162,235,0.4)',
-                      borderColor: 'rgba(54,162,235,1)',
-                    },
-                    {
-                      label: 'Tier 3 Market Cap',
-                      data: historicalChartData.marketCapT3,
-                      fill: false,
-                      backgroundColor: 'rgba(255,206,86,0.4)',
-                      borderColor: 'rgba(255,206,86,1)',
-                    },
-                    {
-                      label: 'Tier 4 Market Cap',
-                      data: historicalChartData.marketCapT4,
-                      fill: false,
-                      backgroundColor: 'rgba(75,192,192,0.4)',
-                      borderColor: 'rgba(75,192,192,1)',
-                    },
-                  ],
-                }}
-                options={options}
-              />
-            </Box>
-            <Box bg="gray.100" p={5} borderRadius="md">
-              <Text fontSize="2xl">Average Land Price Change Over Time</Text>
-              <Line
-                data={{
-                  labels: historicalChartData.labels,
-                  datasets: [
-                    {
-                      label: 'Average Price',
-                      data: historicalChartData.averagePriceData,
-                      fill: false,
-                      backgroundColor: 'rgba(255,159,64,0.4)',
-                      borderColor: 'rgba(255,159,64,1)',
-                    },
-                    {
-                      label: 'Tier 1 Average Price',
-                      data: historicalChartData.averagePriceT1,
-                      fill: false,
-                      backgroundColor: 'rgba(255,99,132,0.4)',
-                      borderColor: 'rgba(255,99,132,1)',
-                    },
-                    {
-                      label: 'Tier 2 Average Price',
-                      data: historicalChartData.averagePriceT2,
-                      fill: false,
-                      backgroundColor: 'rgba(54,162,235,0.4)',
-                      borderColor: 'rgba(54,162,235,1)',
-                    },
-                    {
-                      label: 'Tier 3 Average Price',
-                      data: historicalChartData.averagePriceT3,
-                      fill: false,
-                      backgroundColor: 'rgba(255,206,86,0.4)',
-                      borderColor: 'rgba(255,206,86,1)',
-                    },
-                    {
-                      label: 'Tier 4 Average Price',
-                      data: historicalChartData.averagePriceT4,
-                      fill: false,
-                      backgroundColor: 'rgba(75,192,192,0.4)',
-                      borderColor: 'rgba(75,192,192,1)',
-                    },
-                  ],
-                }}
-                options={options}
-              />
-            </Box>
-            <Box bg="gray.100" p={5} borderRadius="md">
-              <Text fontSize="2xl">Min Land Price Change Over Time</Text>
-              <Line
-                data={{
-                  labels: historicalChartData.labels,
-                  datasets: [
-                    {
-                      label: 'Min Price',
-                      data: historicalChartData.minPriceData,
-                      fill: false,
-                      backgroundColor: 'rgba(255,99,132,0.4)',
-                      borderColor: 'rgba(255,99,132,1)',
-                    },
-                    {
-                      label: 'Tier 1 Min Price',
-                      data: historicalChartData.minPriceT1,
-                      fill: false,
-                      backgroundColor: 'rgba(255,99,132,0.4)',
-                      borderColor: 'rgba(255,99,132,1)',
-                    },
-                    {
-                      label: 'Tier 2 Min Price',
-                      data: historicalChartData.minPriceT2,
-                      fill: false,
-                      backgroundColor: 'rgba(54,162,235,0.4)',
-                      borderColor: 'rgba(54,162,235,1)',
-                    },
-                    {
-                      label: 'Tier 3 Min Price',
-                      data: historicalChartData.minPriceT3,
-                      fill: false,
-                      backgroundColor: 'rgba(255,206,86,0.4)',
-                      borderColor: 'rgba(255,206,86,1)',
-                    },
-                    {
-                      label: 'Tier 4 Min Price',
-                      data: historicalChartData.minPriceT4,
-                      fill: false,
-                      backgroundColor: 'rgba(75,192,192,0.4)',
-                      borderColor: 'rgba(75,192,192,1)',
-                    },
-                  ],
-                }}
-                options={options}
-              />
-            </Box>
-          </>
-        )}
         <Box bg="gray.100" p={5} borderRadius="md">
           <Text fontSize="2xl">Distribution of Lands for Sale</Text>
           <Pie data={countPieData || samplePieData} options={pieOptions} />
