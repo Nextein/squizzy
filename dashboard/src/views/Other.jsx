@@ -1,11 +1,11 @@
 import React from 'react';
-import { Box, Heading, Button, Text, SimpleGrid, Flex, Center, useToast } from '@chakra-ui/react';
+import { Box, Heading, Button, Text, SimpleGrid, Flex, Center, useToast, Link } from '@chakra-ui/react';
 import { Line } from 'react-chartjs-2';
 import { Pie } from 'react-chartjs-2';
 import { lineData, samplePieData, options } from '../data/charts';
 import '../chartConfig';
 import ADDRESS from '../data/addresses';
-
+import { Link as RouterLink } from 'react-router-dom';
 
 export default function Other() {
   const toast = useToast();
@@ -24,7 +24,16 @@ export default function Other() {
   return (
     <Box p={5}>
       <Center>
-        <Heading as="h1" mb={5}>Squizz</Heading>
+        <Heading as="h1" mb={5}>
+          Squizz
+          <Link
+            as={RouterLink}
+            to={`/bingx`}
+            textDecoration='none'
+          >
+            .
+          </Link>
+        </Heading>
       </Center>
       <SimpleGrid columns={[1, null, 3]} spacing="40px">
         <Box bg="gray.100" p={5} borderRadius="md">

@@ -11,6 +11,7 @@ import Baloth from './views/Baloth';
 import Clan from './views/Clan';
 import { Box, Button, Center, Flex, Spinner, Text, useToast } from '@chakra-ui/react';
 import axios from 'axios';
+import BingX from './views/BingX';
 
 const ORDERS_API_URL = "https://api.x.immutable.com/v3/orders";
 const LANDS_API_URL = "https://api.x.immutable.com/v1/assets";
@@ -385,6 +386,7 @@ export default function AppRouter() {
         <Route path="/baloth" element={<Baloth data={rootData} />} />
         <Route path="/clan" element={<Clan illuvialOrders={rootData} />} />
         <Route path="/other" element={<Other data={rootData} />} />
+        <Route path="/bingx" element={<BingX />} />
         <Route path="*" element={<Home data={rootData} />} />
       </Routes>
     </>

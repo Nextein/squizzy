@@ -150,6 +150,7 @@ const Clan = ({ illuvialOrders = [] }) => {
     const shards = {};
     const plants = {};
     const essences = {};
+    const gems = {};
     let holo = 0;
     let darkHolo = 0;
 
@@ -183,10 +184,15 @@ const Clan = ({ illuvialOrders = [] }) => {
           essences[name] = { count: 0 };
         }
         essences[name].count += 1;
+      } else if (item.collection.name === 'Illuvium Gems') {
+        if (!gems[name]) {
+          gems[name] = { count: 0 };
+        }
+        gems[name].count += 1;
       }
     });
 
-    return { totalItems, totalPoints, illuvials, shards, plants, essences, holo, darkHolo };
+    return { totalItems, totalPoints, illuvials, shards, plants, essences, gems, holo, darkHolo };
   };
 
   const handleUserChange = async (event) => {
@@ -361,6 +367,11 @@ const Clan = ({ illuvialOrders = [] }) => {
     return total;
   };
 
+  function openProfile(name) {
+    const url = `https://illuvidex.illuvium.io/ranger/${name}`;
+    window.open(url, '_blank');
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -369,6 +380,12 @@ const Clan = ({ illuvialOrders = [] }) => {
           <Center>
             <VStack>
               <Heading as="h1" mb={5}>Clan</Heading>
+              <Text>Members</Text>
+              <Table>
+                <Tbody>
+                  TODO
+                </Tbody>
+              </Table>
               <Text mb={5}>Select a user to view their IMX wallet contents.</Text>
               <Select placeholder="Select user" onChange={handleUserChange}>
                 <option value="all">All Users</option>
@@ -398,6 +415,9 @@ const Clan = ({ illuvialOrders = [] }) => {
                       {selectedWalletAddress}
                     </Button>
                   </Text>
+                  <Button p={2} m={2} onClick={() =>{openProfile(selectedUser)}}>
+                    Illuvidex
+                  </Button>
                 </Box>
               )}
             </VStack>
@@ -431,6 +451,7 @@ const Clan = ({ illuvialOrders = [] }) => {
             }</Text>
             {renderStatsSection('Plants', stats.plants, 'green.100')}
             {renderStatsSection('Essences', stats.essences, 'purple.100')}
+            {renderStatsSection('Gems', stats.gems, 'purple.100')}
             <Box mt={10} height="75vh">
               <DataGrid
                 rows={walletContents}

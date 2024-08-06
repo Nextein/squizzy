@@ -189,7 +189,7 @@ const pieOptions = {
   },
 };
 
-export default function Illuvials({ illuvials, historical_illuvials }) {
+export default function Illuvials({ illuvials, historical_illuvials, prices, setIlluvialsPrices, illuvialsStat }) {
   const [countPieData, setCountPieData] = useState(null);
   const [valuePieData, setValuePieData] = useState(null);
   const [averagePricePieData, setAveragePricePieData] = useState(null);
@@ -197,7 +197,6 @@ export default function Illuvials({ illuvials, historical_illuvials }) {
   const [illuvialStats, setIlluvialStats] = useState([]);
   const [colorMapping, setColorMapping] = useState({});
   const [illuvial, setIlluvial] = useState("");
-  const [prices, setIlluvialsPrices] = useState([1, 2, 3]);
   const [ethPrice, setEthPrice] = useState(3500);
   const [eth, setEth] = useState(false);
 

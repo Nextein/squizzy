@@ -11,6 +11,7 @@ const users = [
   { username: 'Nexus3', walletAddress: '0x46f1afc9705839372a4801db44c7e457214a027b' },
   { username: '1996umbre', walletAddress: '0xfe66cb6f6571affca880d09b7a90baceeac36856' },
   { username: 'Baloth444', walletAddress: '0x2179577a53b40874a821476281c45096fe2bfd60' },
+  { username: 'SadPulpito', walletAddress: '0x1540a9c42b96b76f0d5d37e9f4afff3fdb9999ac'},
 
 ];
 
