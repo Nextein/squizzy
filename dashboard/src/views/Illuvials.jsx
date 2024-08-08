@@ -189,15 +189,13 @@ const pieOptions = {
   },
 };
 
-export default function Illuvials({ illuvials, historical_illuvials, prices, setIlluvialsPrices, illuvialsStat }) {
+export default function Illuvials({ illuvials, historical_illuvials, prices, setPrices, illuvialsStats, setIlluvialStats, ethPrice }) {
   const [countPieData, setCountPieData] = useState(null);
   const [valuePieData, setValuePieData] = useState(null);
   const [averagePricePieData, setAveragePricePieData] = useState(null);
   const [medianPricePieData, setMedianPricePieData] = useState(null);
-  const [illuvialStats, setIlluvialStats] = useState([]);
   const [colorMapping, setColorMapping] = useState({});
   const [illuvial, setIlluvial] = useState("");
-  const [ethPrice, setEthPrice] = useState(3500);
   const [eth, setEth] = useState(false);
 
   useEffect(() => {
@@ -225,7 +223,7 @@ export default function Illuvials({ illuvials, historical_illuvials, prices, set
       stats.sort((a, b) => a.illuvialName.localeCompare(b.illuvialName)); // Sorting stats alphabetically by illuvialName
 
       setIlluvialStats(stats);
-      setIlluvialsPrices(data.illuvialsPrices);
+      setPrices(data.illuvialsPrices);
       console.log("prices", data.illuvialsPrices);
     }
   }, [illuvials]);
@@ -233,6 +231,19 @@ export default function Illuvials({ illuvials, historical_illuvials, prices, set
   function handleIlluvialSearch() {
     console.log("illuvial searched: " + illuvial)
   }
+
+  const downloadJson = () => {
+    const dataStr = JSON.stringify(illuvialsStats, null, 2);
+    const blob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'market_stats.json';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <Box p={5}>
@@ -249,6 +260,7 @@ export default function Illuvials({ illuvials, historical_illuvials, prices, set
               </FormLabel>
               <Switch id='eth-switch' isChecked={eth} onChange={(e) => setEth(e.target.checked)} />
             </FormControl>
+            <Button onClick={downloadJson}>Download</Button>
           </HStack>
           <Table variant="simple">
             <Thead>
@@ -263,7 +275,7 @@ export default function Illuvials({ illuvials, historical_illuvials, prices, set
               </Tr>
             </Thead>
             <Tbody>
-              {illuvialStats.map((stat) => (
+              {illuvialsStats.map((stat) => (
                 <Tr key={stat.illuvialName}>
                   <Td>{stat.illuvialName}</Td>
                   <Td>{stat.totalCount}</Td>

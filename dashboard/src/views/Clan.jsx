@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Heading, Text, Select, useToast, Button, SimpleGrid, Center, VStack, Input, Spinner, IconButton, Table, Tbody, Tr, Td } from '@chakra-ui/react';
-import { FaExternalLinkAlt, FaClipboard } from 'react-icons/fa';
+import { Box, Heading, Text, Select, useToast, Button, SimpleGrid, Center, VStack, Input, Spinner, IconButton, Table, Tbody, Tr, Td, useClipboard } from '@chakra-ui/react';
+import { FaExternalLinkAlt, FaClipboard, FaClipboardCheck } from 'react-icons/fa';
 import axios from 'axios';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -9,7 +9,7 @@ import users from '../data/users';
 
 const theme = createTheme();
 
-const Clan = ({ illuvialOrders = [] }) => {
+const Clan = ({ illuvialOrders = [], illuvialsStats, ethPrice = 3500 }) => {
   const [selectedUser, setSelectedUser] = useState(null);
   const [walletContents, setWalletContents] = useState([]);
   const [illuvialData, setIlluvialData] = useState({ floorPrice: {} });
@@ -264,13 +264,6 @@ const Clan = ({ illuvialOrders = [] }) => {
     });
   };
 
-  const calculateTotalValue = (illuvials, floorPrices) => {
-    return Object.entries(illuvials).reduce((sum, [name, { count }]) => {
-      const floorPrice = floorPrices && floorPrices[name] ? floorPrices[name] : 0;
-      return sum + (floorPrice * count);
-    }, 0);
-  };
-
   const columns = [
     {
       field: "token_address", headerName: "Token Address", flex: 1,
@@ -345,6 +338,7 @@ const Clan = ({ illuvialOrders = [] }) => {
                   <Tr>
                     <Td>
                       <Text>Total: {count}</Text>
+                      {title === "Illuvials" && illuvialsStats.length > 0 ? <Text>$ {(count * illuvialsStats.filter(row => row.illuvialName === name)[0].floorPrice * ethPrice).toFixed(2)}</Text> : null}
                     </Td>
                     <Td>
                     </Td>
@@ -367,10 +361,38 @@ const Clan = ({ illuvialOrders = [] }) => {
     return total;
   };
 
+  function calculateTotalValuation(stats, illuvialsStats) {
+    console.log("stats++", stats);
+    console.log("prices++", illuvialsStats);
+    if (illuvialsStats == []) return null;
+    let total = 0.0;
+    illuvialsStats.forEach(entry => {
+      console.log(entry);
+    });
+    return Object.entries(stats.illuvials).reduce((sum, [name, { count }]) => {
+      const floorPrice = illuvialsStats ? illuvialsStats.filter(row => row.illuvialName === name)[0].floorPrice : 0;
+      console.log("illuvial: ", name);
+      console.log("floor: ", floorPrice);
+      console.log("count: ", count);
+      return sum + floorPrice * ethPrice * count;
+    }, 0);
+  }
+
+  const calculateTotalValue = (illuvials, floorPrices) => {
+    return Object.entries(illuvials).reduce((sum, [name, { count }]) => {
+      const floorPrice = floorPrices && floorPrices[name] ? floorPrices[name] : 0;
+      return sum + (floorPrice * count);
+    }, 0);
+  };
+
   function openProfile(name) {
     const url = `https://illuvidex.illuvium.io/ranger/${name}`;
     window.open(url, '_blank');
   }
+
+  useEffect(() => {
+    console.log("ilvStats:", illuvialsStats.filter(row => row.illuvialName === "Scarabok"));
+  }, [illuvialsStats]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -381,11 +403,11 @@ const Clan = ({ illuvialOrders = [] }) => {
             <VStack>
               <Heading as="h1" mb={5}>Clan</Heading>
               <Text>Members</Text>
-              <Table>
-                <Tbody>
-                  TODO
-                </Tbody>
-              </Table>
+              <VStack align="stretch">
+                {users.map((account, index) => (
+                  <AccountItem key={index} user={account.username} wallet={account.walletAddress} />
+                ))}
+              </VStack>
               <Text mb={5}>Select a user to view their IMX wallet contents.</Text>
               <Select placeholder="Select user" onChange={handleUserChange}>
                 <option value="all">All Users</option>
@@ -415,7 +437,7 @@ const Clan = ({ illuvialOrders = [] }) => {
                       {selectedWalletAddress}
                     </Button>
                   </Text>
-                  <Button p={2} m={2} onClick={() =>{openProfile(selectedUser)}}>
+                  <Button p={2} m={2} onClick={() => { openProfile(selectedUser) }}>
                     Illuvidex
                   </Button>
                 </Box>
@@ -431,9 +453,14 @@ const Clan = ({ illuvialOrders = [] }) => {
         }
         {selectedUser && walletContents.length > 0 && (
           <>
+          <Box p={4}>
+            <a href={`https://immutascan.io/address/${selectedUser}?tab=2&chartTab=TradeVolume`} target="_blank">
+              <Button>Immutascan</Button>
+            </a>
+          </Box>
             {renderStatsSection('Shards', stats.shards, 'gray.100')}
             <Box mt={5} overflowX="auto">
-              <Heading as="h2" size="md" mb={3}>Holos</Heading>
+              <Heading as="h2" size="md" mb={3}>Stats</Heading>
               <SimpleGrid columns={[1, null, 8]} spacing="40px" mt={5}>
                 <Box borderRadius={'md'} bg='purple.100' p={5}>
                   <Text fontSize="xl">Holos</Text>
@@ -443,6 +470,11 @@ const Clan = ({ illuvialOrders = [] }) => {
                   <Text fontSize="xl">Dark Holos</Text>
                   <Text>{stats.darkHolo}</Text>
                 </Box>
+                <Box borderRadius={'md'} bg='purple.100' p={5}>
+                  <Text fontSize="xl">$</Text>
+                  <Text>{calculateTotalValuation(stats, illuvialsStats).toFixed(2) || "na"}</Text>
+                </Box>
+
               </SimpleGrid>
             </Box>
             {renderStatsSection('Illuvials', stats.illuvials, tierColors)}
@@ -481,3 +513,27 @@ const Clan = ({ illuvialOrders = [] }) => {
 };
 
 export default Clan;
+
+const AccountItem = ({ user, wallet }) => {
+  const { hasCopied, onCopy } = useClipboard(wallet);
+
+  return (
+    <Box borderWidth="1px" borderRadius="lg" display="flex" justifyContent="space-between" alignItems="center">
+      <Button onClick={onCopy} colorScheme="teal">
+        {hasCopied ?
+          <IconButton
+            icon={<FaClipboardCheck />}
+            aria-label="Copy Link"
+            mr={2}
+          />
+        :
+        <IconButton
+          icon={<FaClipboard />}
+          aria-label="Copy Link"
+          mr={2}
+        />}
+      </Button>
+      <Text>{user}</Text>
+    </Box>
+  );
+};

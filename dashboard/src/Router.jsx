@@ -35,8 +35,8 @@ async function fetchAllActiveOrders(setProgress) {
   let totalFetched = 0;
   let progress = 0;
   let estimatedTotal = 1000;
-  let db = 0; 
-  let debug_break = 30; 
+  let db = 0;
+  let debug_break = 30;
 
   while (true) {
     try {
@@ -305,6 +305,8 @@ export default function AppRouter() {
   const [progress, setProgress] = useState(0);
   const [loading, setLoading] = useState(false);
   const [prices, setPrices] = useState([1, 2, 3]);
+  const [illuvialStats, setIlluvialStats] = useState([]);
+  const [ethPrice, setEthPrice] = useState(3500);
   const toast = useToast();
 
   async function fetchData() {
@@ -333,7 +335,7 @@ export default function AppRouter() {
         status: "error",
         duration: 10000,
         position: 'top',
-        description: 
+        description:
           "illuvials: "
           + illuvials.length
           + "\n"
@@ -355,36 +357,36 @@ export default function AppRouter() {
     <>
       {
         rootData.illuvials.length > 0
-        && rootData.historical_illuvials.length > 0
-        // && rootData.lands.length > 0
-        // && rootData.historical_lands.length > 0
-        && rootData.illuvitars.length > 0
-        && rootData.historical_illuvitars.length > 0
-        ?
-        null
-        :
-        <Flex mt={8}>
-          {loading ?
-            <Box ml={4}>
-              <Text>Loading data...</Text>
-              <Center my={2}>
-                <Spinner />
-              </Center>
-              <ProgressBar completed={progress} />
-            </Box>
-            :
-            <Button onClick={fetchData} bg={'purple.100'}>Load<br />Data</Button>
-          }
-        </Flex>
+          && rootData.historical_illuvials.length > 0
+          // && rootData.lands.length > 0
+          // && rootData.historical_lands.length > 0
+          && rootData.illuvitars.length > 0
+          && rootData.historical_illuvitars.length > 0
+          ?
+          null
+          :
+          <Flex mt={8}>
+            {loading ?
+              <Box ml={4}>
+                <Text>Loading data...</Text>
+                <Center my={2}>
+                  <Spinner />
+                </Center>
+                <ProgressBar completed={progress} />
+              </Box>
+              :
+              <Button onClick={fetchData} bg={'purple.100'}>Load<br />Data</Button>
+            }
+          </Flex>
       }
       <Routes>
         <Route path="/home" element={<Home data={rootData} />} />
         <Route path="/illuvitars" element={<Illuvitars data={rootData} />} />
-        <Route path="/illuvials" element={<Illuvials illuvials={rootData.illuvials} historical_illuvials={rootData.historical_illuvials} prices={prices} setPrices={setPrices} />} />
+        <Route path="/illuvials" element={<Illuvials illuvials={rootData.illuvials} historical_illuvials={rootData.historical_illuvials} prices={prices} setPrices={setPrices} illuvialsStats={illuvialStats} setIlluvialStats={setIlluvialStats} ethPrice={ethPrice} />} />
         <Route path="/lands" element={<Lands lands={rootData.lands} historical_lands={rootData.historical_lands} />} />
         <Route path="/wallets" element={<Wallets data={rootData} />} />
         <Route path="/baloth" element={<Baloth data={rootData} />} />
-        <Route path="/clan" element={<Clan illuvialOrders={rootData} />} />
+        <Route path="/clan" element={<Clan illuvialOrders={rootData} illuvialsStats={illuvialStats} ethPrice={ethPrice} />} />
         <Route path="/other" element={<Other data={rootData} />} />
         <Route path="/bingx" element={<BingX />} />
         <Route path="*" element={<Home data={rootData} />} />
