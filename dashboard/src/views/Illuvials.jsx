@@ -116,11 +116,13 @@ const processOrderData = (illuvials, colorMapping) => {
   const sortedValueData = filterNonZeroEntries(illuvialsValue);
   const sortedAveragePriceData = filterNonZeroEntries(illuvialsAveragePrice);
   const sortedMedianPriceData = filterNonZeroEntries(illuvialsMedianPrice);
+  const sortedFloorPriceData = filterNonZeroEntries(illuvialsFloorPrice);
 
   const filteredCountData = removeBottomPercentile(sortedCountData);
   const filteredValueData = removeBottomPercentile(sortedValueData);
   const filteredAveragePriceData = removeBottomPercentile(sortedAveragePriceData);
   const filteredMedianPriceData = removeBottomPercentile(sortedMedianPriceData);
+  const filteredFloorPriceData = removeBottomPercentile(sortedFloorPriceData);
 
   const countData = {
     labels: filteredCountData.labels,
@@ -166,7 +168,19 @@ const processOrderData = (illuvials, colorMapping) => {
     ],
   };
 
-  return { countData, valueData, averagePriceData, medianPriceData, illuvialsPrices, illuvialsFloorPrice, illuvialsAveragePrice, illuvialsMedianPrice, totalIlluvialsCount, illuvialsPercentileBelowMedian, illuvialsMedianDiscount };
+  const floorPriceData = {
+    labels: filteredFloorPriceData.labels,
+    datasets: [
+      {
+        data: filteredFloorPriceData.values,
+        backgroundColor: filteredFloorPriceData.labels.map(label => getColor(label, colorMapping)),
+        borderWidth: 0,
+      },
+    ],
+  };
+
+
+  return { countData, valueData, averagePriceData, medianPriceData, floorPriceData, illuvialsPrices, illuvialsFloorPrice, illuvialsAveragePrice, illuvialsMedianPrice, totalIlluvialsCount, illuvialsPercentileBelowMedian, illuvialsMedianDiscount };
 };
 
 const pieOptions = {
@@ -194,6 +208,7 @@ export default function Illuvials({ illuvials, historical_illuvials, prices, set
   const [valuePieData, setValuePieData] = useState(null);
   const [averagePricePieData, setAveragePricePieData] = useState(null);
   const [medianPricePieData, setMedianPricePieData] = useState(null);
+  const [floorPricePieData, setFloorPricePieData] = useState(null);
   const [colorMapping, setColorMapping] = useState({});
   const [illuvial, setIlluvial] = useState("");
   const [eth, setEth] = useState(false);
@@ -207,6 +222,7 @@ export default function Illuvials({ illuvials, historical_illuvials, prices, set
       setValuePieData(data.valueData);
       setAveragePricePieData(data.averagePriceData);
       setMedianPricePieData(data.medianPriceData);
+      setFloorPricePieData(data.floorPriceData);
 
       const stats = Object.keys(data.illuvialsPrices).map((illuvialName) => ({
         illuvialName,
@@ -330,6 +346,10 @@ export default function Illuvials({ illuvials, historical_illuvials, prices, set
         <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 6">
           <Text fontSize="2xl">Total Value of Illuvials for Sale</Text>
           <Pie data={valuePieData || samplePieData} options={pieOptions} />
+        </Box>
+        <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 6">
+          <Text fontSize="2xl">Floor Price for Sale of Illuvials</Text>
+          <Pie data={floorPricePieData || samplePieData} options={pieOptions} />
         </Box>
         <Box bg="gray.100" p={5} borderRadius="md" gridColumn="span 6">
           <Text fontSize="2xl">Median Price for Sale of Illuvials</Text>

@@ -23,7 +23,7 @@ const accountData = [
   { user: "Nancy", email: "nancysureda74", browser: "AlienB Chrome", assets: 365, open: -1, liquidation: -1, api: "", sec: "", task: "code" },
   { user: "Coco", email: "nmendicote", browser: "AlienB Opera", assets: -1, open: -1, liquidation: -1, api: "", sec: "", task: "code" },
   { user: "Maria Cristina", email: "ilv.umbre", browser: "AlienB Firefox & Alien Firefox", assets: 86, open: -1, liquidation: -1, api: "", sec: "", task: "" },
-  { user: "AcidVars", email: "acidvarsgestiones", browser: "Alien Opera", assets: 356, open: -1, liquidation: -1, api: "", sec: "", task: "" },
+  { user: "AcidVars", email: "acidvarsgestiones", browser: "Alien Opera", assets: 265, open: -1, liquidation: -1, api: "", sec: "", task: "" },
   { user: "Vikingo", email: "marcos.herreros", browser: "Alien Edge", assets: -1, open: -1, liquidation: -1, api: "", sec: "", task: "code" },
   { user: "Pep", email: "pepseguimendez", browser: "Alien Avast", assets: 314, open: -1, liquidation: -1, api: "", sec: "", task: "" },
   { user: "Rayito", email: "theekko", browser: "Aurora Brave", assets: 376, open: -1, liquidation: -1, api: "", sec: "", task: "" },

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { Box, Flex, HStack, Link, IconButton, useDisclosure, useColorModeValue, Stack } from '@chakra-ui/react';
+import { Box, Flex, HStack, Link, IconButton, useDisclosure, useColorModeValue, Stack, Text } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 const Links = ['Home', 'Illuvitars', 'Illuvials', 'Lands', 'Wallets', 'Baloth', 'Clan', 'Other'];
@@ -35,6 +35,7 @@ export default function Navbar() {
           onClick={isOpen ? onClose : onOpen}
         />
         <HStack spacing={8} alignItems={'center'}>
+          <Text mr={4} c='purple'>ILLUVINEXUS</Text>
           <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
             {Links.map((link) => (
               <NavLink key={link}>{link}</NavLink>
