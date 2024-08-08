@@ -265,6 +265,24 @@ export default function Illuvials({ illuvials, historical_illuvials, prices, set
     <Box p={5}>
       <Heading as="h1" mb={5}>Illuvials</Heading>
       <Text mb={5}>Information and trends about Illuvials on the platform.</Text>
+      <HStack spacing={4} m={5}>
+        <a
+          href='https://immutascan.io/address/0x205634b541080afff3bbfe02dcc89f8fa8a1f1d4?tab=1&forSale=true&chartTab=TradeVolume'
+          target="_blank"
+          rel="noopener noreferrer">
+          <Button>
+            Immutascan
+          </Button>
+        </a>
+        <a
+          href='https://illuvidex.illuvium.io/'
+          target="_blank"
+          rel="noopener noreferrer">
+          <Button>
+            IlluviDEX
+          </Button>
+        </a>
+      </HStack>
       <Flex my={10} direction="column" gap={10}>
         <Box bg="gray.100" p={5} borderRadius="md" overflow="auto" maxHeight="500px">
           <HStack>

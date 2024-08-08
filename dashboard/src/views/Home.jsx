@@ -1,11 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Heading, Text, SimpleGrid, Flex, Button, VStack, HStack } from '@chakra-ui/react';
 import { Line, Pie } from 'react-chartjs-2';
 import '../chartConfig';
 import { lineData, samplePieData, options } from '../data/charts';
+import axios from 'axios';
+
+
 
 const Home = () => {
+  const [ilvPrice, setIlvPrice] = useState(0.0);
 
+  async function fetchIlvPrice() {
+    let params = {};
+    let price; let color;
+
+    try {
+      const response = await axios.get("https://api.illuvium-game.io/gamedata/illuvidex/land/get-price?ids=illuvium&include_24hr_change=true&vs_currencies=usd", { params });
+      if (response.status !== 200) return;
+      const data = response.data;
+      price = data.illuvium.usd;
+      color = data.illuvium.usd_24h_change > 0 ? "green.400" : "red"
+      setIlvPrice(price);
+    } catch (error) {
+      console.error("Error fetching ILV price data:", error);
+      return;
+    }
+
+    return price;
+  }
+  useEffect(() => {
+    fetchIlvPrice();
+  }, []);
   return (
     <Box p={5} w='100vw'>
       <Heading as="h1" mb={5}>Home</Heading>
@@ -35,6 +60,7 @@ const Home = () => {
             IlluviDEX
           </Button>
         </a>
+        <Text>ILV: $ {ilvPrice ? ilvPrice : 0.4}</Text>
       </HStack>
       <SimpleGrid columns={[1, null, 3]} spacing="40px">
         <Box bg="gray.100" p={5} borderRadius="md">
