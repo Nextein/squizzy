@@ -33,7 +33,7 @@ const Home = () => {
   }, []);
   return (
     <Box p={5} w='100vw'>
-      <Heading as="h1" mb={5}>Home</Heading>
+      <Heading as="h1" mb={5}>Underground</Heading>
       <Text mb={5}>Overview of the platform with key statistics and trends.</Text>
       <HStack spacing={4} m={5}>
         <a
