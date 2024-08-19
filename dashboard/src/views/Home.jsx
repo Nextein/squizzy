@@ -19,7 +19,7 @@ const Home = () => {
       if (response.status !== 200) return;
       const data = response.data;
       price = data.illuvium.usd;
-      color = data.illuvium.usd_24h_change > 0 ? "green.400" : "red"
+      // color = data.illuvium.usd_24h_change > 0 ? "green.400" : "red"
       setIlvPrice(price);
     } catch (error) {
       console.error("Error fetching ILV price data:", error);

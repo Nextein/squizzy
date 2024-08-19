@@ -1,11 +1,97 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Heading, Text, SimpleGrid, Flex, Table, Thead, Tbody, Tr, Th, Td, IconButton, useToast, Button, HStack } from '@chakra-ui/react';
+import { Box, Heading, Text, SimpleGrid, Flex, Table, Thead, Tbody, Tr, Th, Td, IconButton, useToast, Button, HStack, Center, Spinner } from '@chakra-ui/react';
 import { Line, Pie } from 'react-chartjs-2';
+import ProgressBar from '@ramonak/react-progress-bar';
 import '../chartConfig';
 import { lineData, options, samplePieData } from '../data/charts';
+import axios from 'axios';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { FaClipboard, FaExternalLinkAlt } from 'react-icons/fa';
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
+const LANDS_TOTAL = 20000;
+const LANDS_API_URL = "https://api.x.immutable.com/v1/assets";
+const ORDERS_API_URL = "https://api.x.immutable.com/v3/orders";
+const PAGE_SIZE = 200;
+const getISO8601Date = (ndays = 7) => {
+  const now = new Date();
+  const sevenDaysAgo = new Date(now.setDate(now.getDate() - ndays));
+  return sevenDaysAgo.toISOString();
+};
+async function fetchAllLandsData(setProgress) {
+  let allLands = [];
+  let params = {
+    collection: "0x9e0d99b864e1ac12565125c5a82b59adea5a09cd",
+    sell_orders: true,
+    page_size: PAGE_SIZE
+  };
+  let totalFetched = 0;
+  let progress = 0;
+
+  while (true) {
+    try {
+      const response = await axios.get(LANDS_API_URL, { params });
+      if (response.status !== 200) break;
+
+      const data = response.data;
+      const lands = data.result;
+      allLands = [...allLands, ...lands];
+      totalFetched += lands.length;
+
+      progress = Math.min((totalFetched / LANDS_TOTAL) * 100, 100);
+      setProgress(progress);
+
+      const cursor = data.cursor;
+      if (cursor) {
+        params.cursor = cursor;
+      } else {
+        break;
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      break;
+    }
+  }
+
+  return allLands;
+};
+async function fetchHistoricalLandsData(setProgress) {
+  let allLands = [];
+  let params = {
+    sell_token_address: "0x9e0d99b864e1ac12565125c5a82b59adea5a09cd",
+    status: "filled",
+    min_timestamp: getISO8601Date(14),
+    page_size: PAGE_SIZE
+  };
+  let totalFetched = 0;
+  let progress = 0;
+
+  while (true) {
+    try {
+      const response = await axios.get(ORDERS_API_URL, { params });
+      if (response.status !== 200) break;
+
+      const data = response.data;
+      const lands = data.result;
+      allLands = [...allLands, ...lands];
+      totalFetched += lands.length;
+
+      progress = Math.min((totalFetched / LANDS_TOTAL) * 100, 100);
+      setProgress(progress);
+
+      const cursor = data.cursor;
+      if (cursor) {
+        params.cursor = cursor;
+      } else {
+        break;
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      break;
+    }
+  }
+
+  return allLands;
+};
 
 const calculateMedian = (values) => {
   if (values.length === 0) return 0;
@@ -166,6 +252,7 @@ const pieOptions = {
     },
   },
 };
+const link = "darkfailenbsdla5mal2mxn2uz66od5vtzd5qozslagrfzachha3f3id.onion";
 
 const filterNonZeroEntries = (data) => {
   const filteredEntries = Object.entries(data).filter(([, value]) => value > 0);
@@ -179,9 +266,9 @@ const processHistoricalData = (historicalData) => {
   const groupedData = historicalData.reduce((acc, data) => {
     const timestamp = new Date(data.timestamp).toISOString().split('T')[0];
     const id = data.data.token_id;
-    
+
     function getTierFromTokenID(id) {
-      for (let i=0; i< historicalData.length; i++){
+      for (let i = 0; i < historicalData.length; i++) {
         if (historicalData[i].token_id === id) {
           return historicalData[i].metadata.tier;
         }
@@ -337,7 +424,7 @@ const processHistoricalData = (historicalData) => {
   };
 };
 
-export default function Lands({ lands, historical_lands }) {
+export default function Lands({ rootData, setRootData }) {
   const [countPieData, setCountPieData] = useState(null);
   const [valuePieData, setValuePieData] = useState(null);
   const [averagePricePieData, setAveragePricePieData] = useState(null);
@@ -346,8 +433,13 @@ export default function Lands({ lands, historical_lands }) {
   const [historicalChartData, setHistoricalChartData] = useState(null);
   const toast = useToast();
   const [rows, setRows] = useState([]);
+  const [progress, setProgress] = useState(0);
+  const [loading, setLoading] = useState(false);
+
 
   useEffect(() => {
+    let lands = rootData.lands;
+    let historical_lands = rootData.historical_lands;
     if (lands.length > 0) {
       console.log("Lands Data:", lands); // Log the lands data to verify its structure
       const data = processLandData(lands);
@@ -378,14 +470,77 @@ export default function Lands({ lands, historical_lands }) {
     // Ensure lands data has the required 'id' field for DataGrid
     setRows(lands.map((land, index) => ({ id: index, ...land })));
 
-  }, [lands, historical_lands]);
+  }, [rootData]);
 
-  useEffect(() => {
-    console.log(rows);
-  }, [rows]);
+  async function fetchData() {
+    setLoading(true);
+
+    try {
+      const [lands, historical_lands] = await Promise.all([
+          fetchAllLandsData(setProgress),
+          fetchHistoricalLandsData(setProgress)
+      ]);
+
+      setRootData((root) => ({
+          ...root,
+          lands,
+          historical_lands
+      }));
+
+      console.log("rootData with new lands data:", {
+          ...root,
+          lands,
+          historical_lands
+      });
+
+  } catch (error) {
+      console.error("Error fetching data:", error);
+  } finally {
+      setLoading(false);
+  }
+    
+    if (
+      lands.length === 0
+      || historical_lands.length === 0
+    ) {
+      toast({
+        title: "Failed to load data",
+        status: "error",
+        duration: 10000,
+        position: 'top',
+        description:
+          + "lands: "
+          + lands.length
+          + "\n"
+          + "historical_lands: "
+          + historical_lands.length
+      });
+    }
+    setLoading(false);
+  }
 
   return (
     <Box p={5}>
+      {
+        rootData.lands.length > 0
+          && rootData.historical_lands.length > 0
+          ?
+          null
+          :
+          <Flex mt={8}>
+            {loading ?
+              <Box ml={4}>
+                <Text>Loading data...</Text>
+                <Center my={2}>
+                  <Spinner />
+                </Center>
+                <ProgressBar completed={progress} />
+              </Box>
+              :
+              <Button onClick={fetchData} bg={'purple.100'}>Load<br />Data</Button>
+            }
+          </Flex>
+      }
       <Heading as="h1" mb={5}>Lands</Heading>
       <Text mb={5}>Information and trends about Lands on the platform.</Text>
       <HStack spacing={4}>

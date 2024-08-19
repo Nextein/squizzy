@@ -437,9 +437,17 @@ const Clan = ({ illuvialOrders = [], illuvialsStats, ethPrice = 3500 }) => {
                       {selectedWalletAddress}
                     </Button>
                   </Text>
-                  <Button p={2} m={2} onClick={() => { openProfile(selectedUser) }}>
+                  <Button>
                     Illuvidex
                   </Button>
+                  <a
+                    href={'https://illuvidex.illuvium.io/ranger/' + selectedUser}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <Button p={2} m={2}>
+                      Illuvium
+                    </Button>
+                  </a>
                 </Box>
               )}
             </VStack>
@@ -453,11 +461,11 @@ const Clan = ({ illuvialOrders = [], illuvialsStats, ethPrice = 3500 }) => {
         }
         {selectedUser && walletContents.length > 0 && (
           <>
-          <Box p={4}>
-            <a href={`https://immutascan.io/address/${selectedUser}?tab=2&chartTab=TradeVolume`} target="_blank">
-              <Button>Immutascan</Button>
-            </a>
-          </Box>
+            <Box p={4}>
+              <a href={`https://immutascan.io/address/${selectedUser}?tab=2&chartTab=TradeVolume`} target="_blank">
+                <Button>Immutascan</Button>
+              </a>
+            </Box>
             {renderStatsSection('Shards', stats.shards, 'gray.100')}
             <Box mt={5} overflowX="auto">
               <Heading as="h2" size="md" mb={3}>Stats</Heading>
@@ -519,6 +527,14 @@ const AccountItem = ({ user, wallet }) => {
 
   return (
     <Box borderWidth="1px" borderRadius="lg" display="flex" justifyContent="space-between" alignItems="center">
+      <a
+        href={'https://illuvidex.illuvium.io/ranger/' + user}
+        target="_blank"
+        rel="noopener noreferrer">
+        <Button>
+          Illuvidex
+        </Button>
+      </a>
       <Button onClick={onCopy} colorScheme="teal">
         {hasCopied ?
           <IconButton
@@ -526,13 +542,14 @@ const AccountItem = ({ user, wallet }) => {
             aria-label="Copy Link"
             mr={2}
           />
-        :
-        <IconButton
-          icon={<FaClipboard />}
-          aria-label="Copy Link"
-          mr={2}
-        />}
+          :
+          <IconButton
+            icon={<FaClipboard />}
+            aria-label="Copy Link"
+            mr={2}
+          />}
       </Button>
+
       <Text>{user}</Text>
     </Box>
   );

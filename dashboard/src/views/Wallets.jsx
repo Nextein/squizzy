@@ -6,6 +6,7 @@ import '../chartConfig';
 import ADDRESS from '../data/addresses';
 import users from '../data/users';
 
+
 const Wallets = () => {
   const [lineData, setLineData] = useState({});
   const [samplePieData, setPieData] = useState({});

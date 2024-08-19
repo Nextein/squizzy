@@ -12,9 +12,9 @@ import Clan from './views/Clan';
 import { Box, Button, Center, Flex, Spinner, Text, useToast } from '@chakra-ui/react';
 import axios from 'axios';
 import BingX from './views/BingX';
+import Market from './views/Market';
 
 const ORDERS_API_URL = "https://api.x.immutable.com/v3/orders";
-const LANDS_API_URL = "https://api.x.immutable.com/v1/assets";
 const ILLUVIUM_API_URL = "https://api.immutable.com/v3/orders";
 const LANDS_TOTAL = 20000;
 const PAGE_SIZE = 200;
@@ -69,43 +69,6 @@ async function fetchAllActiveOrders(setProgress) {
   return allOrders;
 };
 
-async function fetchAllLandsData(setProgress) {
-  let allLands = [];
-  let params = {
-    collection: "0x9e0d99b864e1ac12565125c5a82b59adea5a09cd",
-    sell_orders: true,
-    page_size: PAGE_SIZE
-  };
-  let totalFetched = 0;
-  let progress = 0;
-
-  while (true) {
-    try {
-      const response = await axios.get(LANDS_API_URL, { params });
-      if (response.status !== 200) break;
-
-      const data = response.data;
-      const lands = data.result;
-      allLands = [...allLands, ...lands];
-      totalFetched += lands.length;
-
-      progress = Math.min((totalFetched / LANDS_TOTAL) * 100, 100);
-      setProgress(progress);
-
-      const cursor = data.cursor;
-      if (cursor) {
-        params.cursor = cursor;
-      } else {
-        break;
-      }
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      break;
-    }
-  }
-
-  return allLands;
-};
 
 async function fetchAllIlluvialsData(setProgress) {
   let allIlluvials = [];
@@ -145,44 +108,7 @@ async function fetchAllIlluvialsData(setProgress) {
   return allIlluvials;
 };
 
-async function fetchHistoricalLandsData(setProgress) {
-  let allLands = [];
-  let params = {
-    sell_token_address: "0x9e0d99b864e1ac12565125c5a82b59adea5a09cd",
-    status: "filled",
-    min_timestamp: getISO8601Date(14),
-    page_size: PAGE_SIZE
-  };
-  let totalFetched = 0;
-  let progress = 0;
 
-  while (true) {
-    try {
-      const response = await axios.get(ORDERS_API_URL, { params });
-      if (response.status !== 200) break;
-
-      const data = response.data;
-      const lands = data.result;
-      allLands = [...allLands, ...lands];
-      totalFetched += lands.length;
-
-      progress = Math.min((totalFetched / LANDS_TOTAL) * 100, 100);
-      setProgress(progress);
-
-      const cursor = data.cursor;
-      if (cursor) {
-        params.cursor = cursor;
-      } else {
-        break;
-      }
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      break;
-    }
-  }
-
-  return allLands;
-};
 
 async function fetchHistoricalIlluvialsData(setProgress) {
   let allIlluvials = [];
@@ -306,14 +232,12 @@ export default function AppRouter() {
   const [loading, setLoading] = useState(false);
   const [prices, setPrices] = useState([1, 2, 3]);
   const [illuvialStats, setIlluvialStats] = useState([]);
-  const [ethPrice, setEthPrice] = useState(3500);
+  const [ethPrice, setEthPrice] = useState(2600);
   const toast = useToast();
 
   async function fetchData() {
     setLoading(true);
     const [lands, historical_lands, illuvials, historical_illuvials, illuvitars, historical_illuvitars] = await Promise.all([
-      // fetchAllLandsData(setProgress),
-      // fetchHistoricalLandsData(setProgress),
       null, null,
       fetchAllIlluvialsData(setProgress),
       fetchHistoricalIlluvialsData(setProgress),
@@ -325,8 +249,6 @@ export default function AppRouter() {
     if (
       illuvials.length === 0
       || historical_illuvials.length === 0
-      // || lands.length === 0
-      // || historical_lands.length === 0
       || illuvitars.length === 0
       || historical_illuvitars.length === 0
     ) {
@@ -353,15 +275,11 @@ export default function AppRouter() {
     setLoading(false);
   }
 
-  
-
   return (
     <>
-      {
-        rootData.illuvials.length > 0
+      { rootData
+          && rootData.illuvials.length > 0
           && rootData.historical_illuvials.length > 0
-          // && rootData.lands.length > 0
-          // && rootData.historical_lands.length > 0
           && rootData.illuvitars.length > 0
           && rootData.historical_illuvitars.length > 0
           ?
@@ -383,9 +301,10 @@ export default function AppRouter() {
       }
       <Routes>
         <Route path="/home" element={<Home data={rootData} />} />
+        <Route path="/market" element={<Market data={rootData} />} />
         <Route path="/illuvitars" element={<Illuvitars data={rootData} />} />
         <Route path="/illuvials" element={<Illuvials illuvials={rootData.illuvials} historical_illuvials={rootData.historical_illuvials} prices={prices} setPrices={setPrices} illuvialsStats={illuvialStats} setIlluvialStats={setIlluvialStats} ethPrice={ethPrice} />} />
-        <Route path="/lands" element={<Lands lands={rootData.lands} historical_lands={rootData.historical_lands} />} />
+        <Route path="/lands" element={<Lands rootData={rootData} setRootData={setRootData} />} />
         <Route path="/wallets" element={<Wallets data={rootData} />} />
         <Route path="/baloth" element={<Baloth data={rootData} />} />
         <Route path="/clan" element={<Clan illuvialOrders={rootData} illuvialsStats={illuvialStats} ethPrice={ethPrice} />} />

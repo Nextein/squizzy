@@ -319,6 +319,7 @@ export default function Illuvials({ illuvials, historical_illuvials, prices, set
                       ({((stat.count / stat.totalCount) * 100).toFixed(1)}%)
                     </Box>
                   </Td>
+                  
                   <Td>
                     {eth ? stat.floorPrice.toFixed(5) : stat.floorPrice.toFixed(7) * ethPrice}
                     <Box as="span" color="gray.500" ml={2}>

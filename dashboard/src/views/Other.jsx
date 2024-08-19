@@ -25,13 +25,13 @@ export default function Other() {
     <Box p={5}>
       <Center>
         <Heading as="h1" mb={5}>
-          Squizz
+          Squiz
           <Link
             as={RouterLink}
             to={`/bingx`}
             textDecoration='none'
           >
-            .
+            z
           </Link>
         </Heading>
       </Center>
