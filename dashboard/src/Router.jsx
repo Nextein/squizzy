@@ -55,6 +55,7 @@ async function fetchAllActiveOrders(setProgress) {
 
       db += 1;
       const cursor = data.cursor;
+      // console.log(activeOrders);
       if (cursor && db < debug_break) {
         params.cursor = cursor;
       } else {

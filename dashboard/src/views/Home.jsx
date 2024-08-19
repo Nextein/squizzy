@@ -60,6 +60,22 @@ const Home = () => {
             IlluviDEX
           </Button>
         </a>
+        <a
+          href="https://www.livecoinwatch.com/price/EscrowedIlluvium2-SILV2"
+          target="_blank"
+          rel="noopener noreferrer">
+          <Button>
+            SILV2
+          </Button>
+        </a>
+        <a
+          href='https://immutascan.io/address/0x9e0d99b864e1ac12565125c5a82b59adea5a09cd?tab=1&forSale=true'
+          target="_blank"
+          rel="noopener noreferrer">
+          <Button>
+            Immutascan
+          </Button>
+        </a>
         <Text>ILV: $ {ilvPrice ? ilvPrice : 0.4}</Text>
       </HStack>
       <SimpleGrid columns={[1, null, 3]} spacing="40px">

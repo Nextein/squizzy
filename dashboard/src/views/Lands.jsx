@@ -568,22 +568,6 @@ export default function Lands({ rootData, setRootData }) {
             Analytics
           </Button>
         </a>
-        <a
-          href='https://immutascan.io/address/0x9e0d99b864e1ac12565125c5a82b59adea5a09cd?tab=1&forSale=true'
-          target="_blank"
-          rel="noopener noreferrer">
-          <Button>
-            Immutascan
-          </Button>
-        </a>
-        <a
-          href="https://www.livecoinwatch.com/price/EscrowedIlluvium2-SILV2"
-          target="_blank"
-          rel="noopener noreferrer">
-          <Button>
-            SILV2
-          </Button>
-        </a>
       </HStack>
       <Flex my={10} direction="column" gap={10}>
         <Box bg="gray.100" p={5} borderRadius="md">
